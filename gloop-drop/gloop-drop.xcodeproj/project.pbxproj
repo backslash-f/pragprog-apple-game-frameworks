@@ -7,75 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07D8B7D42512021B0047EBFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7D32512021B0047EBFE /* AppDelegate.swift */; };
-		07D8B7D62512021B0047EBFE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7D52512021B0047EBFE /* GameViewController.swift */; };
-		07D8B7D92512021B0047EBFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7D72512021B0047EBFE /* Main.storyboard */; };
-		07D8B7DC2512021B0047EBFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7DA2512021B0047EBFE /* LaunchScreen.storyboard */; };
-		07D8B7E12512021B0047EBFE /* gloop-drop.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07D8B7E02512021B0047EBFE /* gloop-drop.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		07D8B7E72512021B0047EBFE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7E52512021B0047EBFE /* Interface.storyboard */; };
-		07D8B7EE2512021B0047EBFE /* gloop-drop Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07D8B7ED2512021B0047EBFE /* gloop-drop Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		07D8B7F32512021B0047EBFE /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7F22512021B0047EBFE /* InterfaceController.swift */; };
-		07D8B7F52512021B0047EBFE /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7F42512021B0047EBFE /* ExtensionDelegate.swift */; };
-		07D8B7FE2512021B0047EBFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7FD2512021B0047EBFE /* AppDelegate.swift */; };
-		07D8B8002512021B0047EBFE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7FF2512021B0047EBFE /* GameViewController.swift */; };
-		07D8B8032512021B0047EBFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B8012512021B0047EBFE /* Main.storyboard */; };
-		07D8B8062512021B0047EBFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B8042512021B0047EBFE /* LaunchScreen.storyboard */; };
-		07D8B80F2512021B0047EBFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B80E2512021B0047EBFE /* AppDelegate.swift */; };
-		07D8B8112512021B0047EBFE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B8102512021B0047EBFE /* GameViewController.swift */; };
-		07D8B8142512021C0047EBFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B8122512021C0047EBFE /* Main.storyboard */; };
-		07D8B8172512021C0047EBFE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C82512021A0047EBFE /* Actions.sks */; };
-		07D8B8182512021C0047EBFE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C82512021A0047EBFE /* Actions.sks */; };
-		07D8B8192512021C0047EBFE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C82512021A0047EBFE /* Actions.sks */; };
-		07D8B81A2512021C0047EBFE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C92512021A0047EBFE /* GameScene.sks */; };
-		07D8B81B2512021C0047EBFE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C92512021A0047EBFE /* GameScene.sks */; };
-		07D8B81C2512021C0047EBFE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C92512021A0047EBFE /* GameScene.sks */; };
-		07D8B81D2512021C0047EBFE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7C92512021A0047EBFE /* GameScene.sks */; };
+		074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
+		074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
+		074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
+		075D7DA72514D62E00D90009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DA62514D62E00D90009 /* ContentView.swift */; };
+		075D7DA92514D62E00D90009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DA62514D62E00D90009 /* ContentView.swift */; };
+		075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DA62514D62E00D90009 /* ContentView.swift */; };
+		075D7DBC2514D76D00D90009 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DBB2514D76D00D90009 /* GameSceneView.swift */; };
+		075D7DBE2514D76D00D90009 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DBB2514D76D00D90009 /* GameSceneView.swift */; };
+		075D7DBF2514D76D00D90009 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DBB2514D76D00D90009 /* GameSceneView.swift */; };
+		075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		07D8B81E2512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
-		07D8B81F2512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
 		07D8B8202512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
 		07D8B8212512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
 		07D8B8222512021C0047EBFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7CB2512021B0047EBFE /* Assets.xcassets */; };
-		07D8B8232512021C0047EBFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7CB2512021B0047EBFE /* Assets.xcassets */; };
 		07D8B8242512021C0047EBFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7CB2512021B0047EBFE /* Assets.xcassets */; };
 		07D8B8252512021C0047EBFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D8B7CB2512021B0047EBFE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		07D8B7E22512021B0047EBFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07D8B7C32512021A0047EBFE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07D8B7DF2512021B0047EBFE;
-			remoteInfo = "gloop-drop watchOS App";
-		};
-		07D8B7EF2512021B0047EBFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07D8B7C32512021A0047EBFE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07D8B7EC2512021B0047EBFE;
-			remoteInfo = "gloop-drop watchOS App Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		07D8B82B2512021C0047EBFE /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				07D8B7EE2512021B0047EBFE /* gloop-drop Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		07D8B82F2512021C0047EBFE /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				07D8B7E12512021B0047EBFE /* gloop-drop.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,46 +41,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07D8B7C82512021A0047EBFE /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		07D8B7C92512021A0047EBFE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		074B4A832514A86000BB1B42 /* GloopDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropApp.swift; sourceTree = "<group>"; };
+		075D7DA62514D62E00D90009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		075D7DBB2514D76D00D90009 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
+		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
 		07D8B7CA2512021A0047EBFE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		07D8B7CB2512021B0047EBFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D8B7D02512021B0047EBFE /* gloop-drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gloop-drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D8B7D32512021B0047EBFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07D8B7D52512021B0047EBFE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		07D8B7D82512021B0047EBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		07D8B7DB2512021B0047EBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D8B7DD2512021B0047EBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07D8B7E02512021B0047EBFE /* gloop-drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gloop-drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D8B7E62512021B0047EBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		07D8B7E82512021B0047EBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07D8B7ED2512021B0047EBFE /* gloop-drop Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "gloop-drop Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D8B7F22512021B0047EBFE /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		07D8B7F42512021B0047EBFE /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		07D8B7F62512021B0047EBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D8B7FB2512021B0047EBFE /* gloop-drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gloop-drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D8B7FD2512021B0047EBFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07D8B7FF2512021B0047EBFE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		07D8B8022512021B0047EBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		07D8B8052512021B0047EBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D8B8072512021B0047EBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D8B80C2512021B0047EBFE /* gloop-drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gloop-drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D8B80E2512021B0047EBFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07D8B8102512021B0047EBFE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		07D8B8132512021C0047EBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07D8B8152512021C0047EBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D8B8162512021C0047EBFE /* gloop_drop_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gloop_drop_macOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		07D8B7CD2512021B0047EBFE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07D8B7EA2512021B0047EBFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,13 +81,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075D7DA32514D60500D90009 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				075D7DA62514D62E00D90009 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		075D7DA42514D60A00D90009 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				074B4A832514A86000BB1B42 /* GloopDropApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		075D7DA52514D60F00D90009 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				07D8B7CB2512021B0047EBFE /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		075D7DBA2514D75D00D90009 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				07D8B7CA2512021A0047EBFE /* GameScene.swift */,
+				075D7DBB2514D76D00D90009 /* GameSceneView.swift */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
+		075D7E012514DA4000D90009 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				075D7DBA2514D75D00D90009 /* GameScene */,
+				075D7E022514DA5C00D90009 /* GloopDropScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		07D8B7C22512021A0047EBFE = {
 			isa = PBXGroup;
 			children = (
 				07D8B7C72512021A0047EBFE /* gloop-drop Shared */,
 				07D8B7D22512021B0047EBFE /* gloop-drop iOS */,
-				07D8B7E42512021B0047EBFE /* gloop-drop watchOS App */,
-				07D8B7F12512021B0047EBFE /* gloop-drop watchOS App Extension */,
 				07D8B7FC2512021B0047EBFE /* gloop-drop tvOS */,
 				07D8B80D2512021B0047EBFE /* gloop-drop macOS */,
 				07D8B7D12512021B0047EBFE /* Products */,
@@ -162,10 +137,10 @@
 		07D8B7C72512021A0047EBFE /* gloop-drop Shared */ = {
 			isa = PBXGroup;
 			children = (
-				07D8B7C82512021A0047EBFE /* Actions.sks */,
-				07D8B7C92512021A0047EBFE /* GameScene.sks */,
-				07D8B7CA2512021A0047EBFE /* GameScene.swift */,
-				07D8B7CB2512021B0047EBFE /* Assets.xcassets */,
+				075D7DA42514D60A00D90009 /* App */,
+				075D7E012514DA4000D90009 /* Scene */,
+				075D7DA32514D60500D90009 /* View */,
+				075D7DA52514D60F00D90009 /* Support */,
 			);
 			path = "gloop-drop Shared";
 			sourceTree = "<group>";
@@ -174,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				07D8B7D02512021B0047EBFE /* gloop-drop.app */,
-				07D8B7E02512021B0047EBFE /* gloop-drop.app */,
-				07D8B7ED2512021B0047EBFE /* gloop-drop Extension.appex */,
 				07D8B7FB2512021B0047EBFE /* gloop-drop.app */,
 				07D8B80C2512021B0047EBFE /* gloop-drop.app */,
 			);
@@ -185,41 +158,14 @@
 		07D8B7D22512021B0047EBFE /* gloop-drop iOS */ = {
 			isa = PBXGroup;
 			children = (
-				07D8B7D32512021B0047EBFE /* AppDelegate.swift */,
-				07D8B7D52512021B0047EBFE /* GameViewController.swift */,
-				07D8B7D72512021B0047EBFE /* Main.storyboard */,
-				07D8B7DA2512021B0047EBFE /* LaunchScreen.storyboard */,
 				07D8B7DD2512021B0047EBFE /* Info.plist */,
 			);
 			path = "gloop-drop iOS";
 			sourceTree = "<group>";
 		};
-		07D8B7E42512021B0047EBFE /* gloop-drop watchOS App */ = {
-			isa = PBXGroup;
-			children = (
-				07D8B7E52512021B0047EBFE /* Interface.storyboard */,
-				07D8B7E82512021B0047EBFE /* Info.plist */,
-			);
-			path = "gloop-drop watchOS App";
-			sourceTree = "<group>";
-		};
-		07D8B7F12512021B0047EBFE /* gloop-drop watchOS App Extension */ = {
-			isa = PBXGroup;
-			children = (
-				07D8B7F22512021B0047EBFE /* InterfaceController.swift */,
-				07D8B7F42512021B0047EBFE /* ExtensionDelegate.swift */,
-				07D8B7F62512021B0047EBFE /* Info.plist */,
-			);
-			path = "gloop-drop watchOS App Extension";
-			sourceTree = "<group>";
-		};
 		07D8B7FC2512021B0047EBFE /* gloop-drop tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				07D8B7FD2512021B0047EBFE /* AppDelegate.swift */,
-				07D8B7FF2512021B0047EBFE /* GameViewController.swift */,
-				07D8B8012512021B0047EBFE /* Main.storyboard */,
-				07D8B8042512021B0047EBFE /* LaunchScreen.storyboard */,
 				07D8B8072512021B0047EBFE /* Info.plist */,
 			);
 			path = "gloop-drop tvOS";
@@ -228,9 +174,6 @@
 		07D8B80D2512021B0047EBFE /* gloop-drop macOS */ = {
 			isa = PBXGroup;
 			children = (
-				07D8B80E2512021B0047EBFE /* AppDelegate.swift */,
-				07D8B8102512021B0047EBFE /* GameViewController.swift */,
-				07D8B8122512021C0047EBFE /* Main.storyboard */,
 				07D8B8152512021C0047EBFE /* Info.plist */,
 				07D8B8162512021C0047EBFE /* gloop_drop_macOS.entitlements */,
 			);
@@ -252,46 +195,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				07D8B7E32512021B0047EBFE /* PBXTargetDependency */,
 			);
 			name = "gloop-drop iOS";
 			productName = "gloop-drop iOS";
 			productReference = 07D8B7D02512021B0047EBFE /* gloop-drop.app */;
 			productType = "com.apple.product-type.application";
-		};
-		07D8B7DF2512021B0047EBFE /* gloop-drop watchOS App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07D8B82C2512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop watchOS App" */;
-			buildPhases = (
-				07D8B7DE2512021B0047EBFE /* Resources */,
-				07D8B82B2512021C0047EBFE /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				07D8B7F02512021B0047EBFE /* PBXTargetDependency */,
-			);
-			name = "gloop-drop watchOS App";
-			productName = "gloop-drop watchOS App";
-			productReference = 07D8B7E02512021B0047EBFE /* gloop-drop.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		07D8B7EC2512021B0047EBFE /* gloop-drop watchOS App Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07D8B8282512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop watchOS App Extension" */;
-			buildPhases = (
-				07D8B7E92512021B0047EBFE /* Sources */,
-				07D8B7EA2512021B0047EBFE /* Frameworks */,
-				07D8B7EB2512021B0047EBFE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "gloop-drop watchOS App Extension";
-			productName = "gloop-drop watchOS App Extension";
-			productReference = 07D8B7ED2512021B0047EBFE /* gloop-drop Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		07D8B7FA2512021B0047EBFE /* gloop-drop tvOS */ = {
 			isa = PBXNativeTarget;
@@ -334,15 +242,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					07D8B7CF2512021B0047EBFE = {
-						CreatedOnToolsVersion = 12.0;
-					};
-					07D8B7DF2512021B0047EBFE = {
-						CreatedOnToolsVersion = 12.0;
-					};
-					07D8B7EC2512021B0047EBFE = {
 						CreatedOnToolsVersion = 12.0;
 					};
 					07D8B7FA2512021B0047EBFE = {
@@ -367,8 +269,6 @@
 			projectRoot = "";
 			targets = (
 				07D8B7CF2512021B0047EBFE /* gloop-drop iOS */,
-				07D8B7DF2512021B0047EBFE /* gloop-drop watchOS App */,
-				07D8B7EC2512021B0047EBFE /* gloop-drop watchOS App Extension */,
 				07D8B7FA2512021B0047EBFE /* gloop-drop tvOS */,
 				07D8B80B2512021B0047EBFE /* gloop-drop macOS */,
 			);
@@ -380,28 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D8B81A2512021C0047EBFE /* GameScene.sks in Resources */,
-				07D8B7D92512021B0047EBFE /* Main.storyboard in Resources */,
-				07D8B8172512021C0047EBFE /* Actions.sks in Resources */,
-				07D8B7DC2512021B0047EBFE /* LaunchScreen.storyboard in Resources */,
 				07D8B8222512021C0047EBFE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07D8B7DE2512021B0047EBFE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07D8B8232512021C0047EBFE /* Assets.xcassets in Resources */,
-				07D8B7E72512021B0047EBFE /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07D8B7EB2512021B0047EBFE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07D8B81B2512021C0047EBFE /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +288,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D8B81C2512021C0047EBFE /* GameScene.sks in Resources */,
-				07D8B8032512021B0047EBFE /* Main.storyboard in Resources */,
-				07D8B8182512021C0047EBFE /* Actions.sks in Resources */,
-				07D8B8062512021B0047EBFE /* LaunchScreen.storyboard in Resources */,
 				07D8B8242512021C0047EBFE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,10 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D8B8142512021C0047EBFE /* Main.storyboard in Resources */,
-				07D8B81D2512021C0047EBFE /* GameScene.sks in Resources */,
 				07D8B8252512021C0047EBFE /* Assets.xcassets in Resources */,
-				07D8B8192512021C0047EBFE /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,19 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */,
+				075D7DBC2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */,
+				075D7DA72514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B81E2512021C0047EBFE /* GameScene.swift in Sources */,
-				07D8B7D62512021B0047EBFE /* GameViewController.swift in Sources */,
-				07D8B7D42512021B0047EBFE /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07D8B7E92512021B0047EBFE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07D8B81F2512021C0047EBFE /* GameScene.swift in Sources */,
-				07D8B7F52512021B0047EBFE /* ExtensionDelegate.swift in Sources */,
-				07D8B7F32512021B0047EBFE /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */,
+				075D7DBE2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */,
+				075D7DA92514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8202512021C0047EBFE /* GameScene.swift in Sources */,
-				07D8B8002512021B0047EBFE /* GameViewController.swift in Sources */,
-				07D8B7FE2512021B0047EBFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,77 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */,
+				075D7DBF2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */,
+				075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8212512021C0047EBFE /* GameScene.swift in Sources */,
-				07D8B8112512021B0047EBFE /* GameViewController.swift in Sources */,
-				07D8B80F2512021B0047EBFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		07D8B7E32512021B0047EBFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07D8B7DF2512021B0047EBFE /* gloop-drop watchOS App */;
-			targetProxy = 07D8B7E22512021B0047EBFE /* PBXContainerItemProxy */;
-		};
-		07D8B7F02512021B0047EBFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07D8B7EC2512021B0047EBFE /* gloop-drop watchOS App Extension */;
-			targetProxy = 07D8B7EF2512021B0047EBFE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		07D8B7D72512021B0047EBFE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D8B7D82512021B0047EBFE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		07D8B7DA2512021B0047EBFE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D8B7DB2512021B0047EBFE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		07D8B7E52512021B0047EBFE /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D8B7E62512021B0047EBFE /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		07D8B8012512021B0047EBFE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D8B8022512021B0047EBFE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		07D8B8042512021B0047EBFE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D8B8052512021B0047EBFE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		07D8B8122512021C0047EBFE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D8B8132512021C0047EBFE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		07D8B8262512021C0047EBFE /* Debug */ = {
@@ -649,90 +453,6 @@
 			};
 			name = Release;
 		};
-		07D8B8292512021C0047EBFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UKS358BH88;
-				INFOPLIST_FILE = "gloop-drop watchOS App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.gloop-drop.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "gloop-drop Extension";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		07D8B82A2512021C0047EBFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UKS358BH88;
-				INFOPLIST_FILE = "gloop-drop watchOS App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.gloop-drop.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "gloop-drop Extension";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		07D8B82D2512021C0047EBFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UKS358BH88;
-				IBSC_MODULE = gloop_drop_Extension;
-				INFOPLIST_FILE = "gloop-drop watchOS App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.gloop-drop.watchkitapp";
-				PRODUCT_NAME = "gloop-drop";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		07D8B82E2512021C0047EBFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UKS358BH88;
-				IBSC_MODULE = gloop_drop_Extension;
-				INFOPLIST_FILE = "gloop-drop watchOS App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.gloop-drop.watchkitapp";
-				PRODUCT_NAME = "gloop-drop";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
 		07D8B8312512021C0047EBFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -825,6 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "gloop-drop macOS/gloop_drop_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UKS358BH88;
@@ -834,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.gloop-drop";
 				PRODUCT_NAME = "gloop-drop";
 				SDKROOT = macosx;
@@ -848,6 +569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "gloop-drop macOS/gloop_drop_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UKS358BH88;
@@ -857,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.gloop-drop";
 				PRODUCT_NAME = "gloop-drop";
 				SDKROOT = macosx;
@@ -873,24 +595,6 @@
 			buildConfigurations = (
 				07D8B8262512021C0047EBFE /* Debug */,
 				07D8B8272512021C0047EBFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		07D8B8282512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop watchOS App Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07D8B8292512021C0047EBFE /* Debug */,
-				07D8B82A2512021C0047EBFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		07D8B82C2512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop watchOS App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07D8B82D2512021C0047EBFE /* Debug */,
-				07D8B82E2512021C0047EBFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
