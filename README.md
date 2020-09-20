@@ -4,15 +4,16 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ## Notes
 Although the chapters in the book target only **iOS**, the projects in this repo target **macOS**, and **tvOS** too because why not. Let's see how that goes... ⚰️
 
-Also the projects in here use `SwiftUI` whenever possible. They rely on [the new Apple's `SceneView` structure](https://developer.apple.com/documentation/scenekit/sceneview). There will be no `AppDelegate`, `ViewControllers` and/or `Storyboards`. We are living in the future. 🦾
+Also the projects in here use `SwiftUI` and `Combine` whenever possible. They rely on [the new Apple's `SceneView` structure](https://developer.apple.com/documentation/scenekit/sceneview) too. There is no `AppDelegate`, `ViewControllers` and/or `Storyboards`. We are living in the future. 🦾
 
 ## Labels
 ✅ Finished  
-⏳ To be finished
+🔨 In progress  
+⏳ To be started
 
 ## Status
-(Tested on Xcode 12 GM and Swift 5.3)
+(Tested on Xcode 12.2 beta and Swift 5.3.1)
 
-⏳ Gloop Drop 💧  
+🔨 Gloop Drop 💧  
 ⏳ Val's Revenge ⚔️  
 ⏳ Hog 🎲  
