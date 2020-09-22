@@ -13,12 +13,12 @@ class ​GameScene​: GloopDropScene {
 
     init(size: CGSize) {
         super.init(size: size)
-        setup()
+        initialSetup()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        initialSetup()
     }
 }
 
@@ -29,6 +29,7 @@ extension ​GameScene​ {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         setupBackground()
+        setupForeground()
     }
 }
 
@@ -36,7 +37,7 @@ extension ​GameScene​ {
 
 private extension ​GameScene​ {
 
-    func setup() {
+    func initialSetup() {
         view?.ignoresSiblingOrder = false
         scaleMode = .aspectFill
         backgroundColor = UIColor(
@@ -51,5 +52,12 @@ private extension ​GameScene​ {
         let background = SKSpriteNode(imageNamed: "background_1")
         background.anchorPoint = .zero
         addChild(background)
+    }
+
+    func setupForeground() {
+        let foreground = SKSpriteNode(imageNamed: "foreground_1")
+        foreground.anchorPoint = .zero
+        foreground.position = CGPoint(x: 0, y: 0)
+        addChild(foreground)
     }
 }
