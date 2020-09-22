@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AppLogger",
+        "repositoryURL": "git@github.com:backslash-f/applogger.git",
+        "state": {
+          "branch": null,
+          "revision": "aa31c2a984e02a211f3e959baa1b2b6becb6327a",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

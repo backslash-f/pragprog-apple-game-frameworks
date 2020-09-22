@@ -32,6 +32,7 @@ class GloopDropScene: SKScene {
     required init?(coder aDecoder: NSCoder) {
         self.debugSettings = DebugSettings()
         super.init(coder: aDecoder)
+        logInformation()
     }
 }
 
@@ -42,6 +43,7 @@ extension GloopDropScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         setupDebugSettings()
+        logInformation()
     }
 }
 
@@ -58,5 +60,9 @@ private extension GloopDropScene {
         view?.showsNodeCount = debugSettings.showsNodeCount
         view?.showsQuadCount = debugSettings.showsQuadCount
         #endif
+    }
+
+    func logInformation() {
+        GloopDropApp.log("Scene size: \(size)", category: .spriteKit)
     }
 }

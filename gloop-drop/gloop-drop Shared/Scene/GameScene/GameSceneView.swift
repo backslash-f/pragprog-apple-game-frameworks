@@ -14,7 +14,8 @@ struct GameSceneView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            SpriteView(scene: makeScene(size: geometry.size))
+            let size = CGSize(width: 1336, height: 1024)
+            SpriteView(scene: makeScene(size: size))
         }
     }
 }

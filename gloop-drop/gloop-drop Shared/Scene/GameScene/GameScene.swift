@@ -49,6 +49,7 @@ private extension ​GameScene​ {
 
     func setupBackground() {
         let background = SKSpriteNode(imageNamed: "background_1")
+        background.anchorPoint = .zero
         addChild(background)
     }
 }

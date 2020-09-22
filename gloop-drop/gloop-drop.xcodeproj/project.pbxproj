@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 0700A1752519E85F00DB8DFB /* AppLogger */; };
 		074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
+		075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */; };
+		075D0DE82519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */; };
+		075D0DE92519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */; };
 		075D7DA72514D62E00D90009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DA62514D62E00D90009 /* ContentView.swift */; };
 		075D7DA92514D62E00D90009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DA62514D62E00D90009 /* ContentView.swift */; };
 		075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7DA62514D62E00D90009 /* ContentView.swift */; };
@@ -42,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		074B4A832514A86000BB1B42 /* GloopDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropApp.swift; sourceTree = "<group>"; };
+		075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+Logging.swift"; sourceTree = "<group>"; };
 		075D7DA62514D62E00D90009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		075D7DBB2514D76D00D90009 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
 		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				074B4A832514A86000BB1B42 /* GloopDropApp.swift */,
+				075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -197,6 +204,9 @@
 			dependencies = (
 			);
 			name = "gloop-drop iOS";
+			packageProductDependencies = (
+				0700A1752519E85F00DB8DFB /* AppLogger */,
+			);
 			productName = "gloop-drop iOS";
 			productReference = 07D8B7D02512021B0047EBFE /* gloop-drop.app */;
 			productType = "com.apple.product-type.application";
@@ -264,6 +274,9 @@
 				Base,
 			);
 			mainGroup = 07D8B7C22512021A0047EBFE;
+			packageReferences = (
+				0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */,
+			);
 			productRefGroup = 07D8B7D12512021B0047EBFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -309,6 +322,7 @@
 			files = (
 				074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DA72514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B81E2512021C0047EBFE /* GameScene.swift in Sources */,
@@ -321,6 +335,7 @@
 			files = (
 				074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				075D0DE82519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DA92514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8202512021C0047EBFE /* GameScene.swift in Sources */,
@@ -333,6 +348,7 @@
 			files = (
 				074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				075D0DE92519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8212512021C0047EBFE /* GameScene.swift in Sources */,
@@ -627,6 +643,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:backslash-f/applogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0700A1752519E85F00DB8DFB /* AppLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */;
+			productName = AppLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07D8B7C32512021A0047EBFE /* Project object */;
 }
