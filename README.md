@@ -14,7 +14,7 @@ Also, the projects in here use `SwiftUI` and `Combine` whenever possible. They r
 ⏳ To be started
 
 ## Status
-(Tested on Xcode 12.2 beta and Swift 5.3.1)
+👉🏻 Tested on Xcode 12.2 beta and Swift 5.3.1 👈🏻
 
 🔨 Gloop Drop 💧  
 ⏳ Val's Revenge ⚔️  
