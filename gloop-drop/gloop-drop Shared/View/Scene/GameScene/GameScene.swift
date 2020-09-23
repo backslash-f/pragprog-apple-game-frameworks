@@ -30,12 +30,15 @@ extension ​GameScene​ {
         super.didMove(to: view)
         setupBackground()
         setupForeground()
+        setupPlayer()
     }
 }
 
 // MARK: - Private
 
 private extension ​GameScene​ {
+
+    // MARK: Setup
 
     func initialSetup() {
         view?.ignoresSiblingOrder = false
@@ -49,15 +52,26 @@ private extension ​GameScene​ {
     }
 
     func setupBackground() {
-        let background = SKSpriteNode(imageNamed: "background_1")
+        let backgroundName = Constant.Scenario.firstBackground
+        let background = SKSpriteNode(imageNamed: backgroundName)
+        background.name = backgroundName
         background.anchorPoint = .zero
         addChild(background)
     }
 
     func setupForeground() {
-        let foreground = SKSpriteNode(imageNamed: "foreground_1")
+        let foregroundName = Constant.Scenario.firstForeground
+        let foreground = SKSpriteNode(imageNamed: foregroundName)
+        foreground.name = foregroundName
         foreground.anchorPoint = .zero
-        foreground.position = CGPoint(x: 0, y: 0)
+        foreground.position = .zero
         addChild(foreground)
+    }
+
+    func setupPlayer() {
+        let player = Player()
+        let foreground = childNode(withName: Constant.Scenario.firstForeground)
+        player.position = CGPoint(x: size.width/2, y: foreground?.frame.maxY ?? size.height/2)
+        addChild(player)
     }
 }

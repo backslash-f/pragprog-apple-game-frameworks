@@ -8,6 +8,7 @@
 import AppLogger
 
 enum LoggingCategories: String {
+    case error = "Error"
     case spriteKit = "SpriteKit"
 }
 
@@ -19,5 +20,13 @@ extension GloopDropApp {
             category: category.rawValue
         )
         logger.log(information)
+    }
+
+    static func logError(_ error: String) {
+        let logger = AppLogger(
+            subsystem: AppLogger.Defaults.subsystem,
+            category: LoggingCategories.error.rawValue
+        )
+        logger.log(error)
     }
 }

@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 0700A1752519E85F00DB8DFB /* AppLogger */; };
+		07013886251BE11E0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
+		0701388B251BE1EA0092595E /* Constant+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Characters.swift */; };
+		07013890251BE57A0092595E /* Constant+Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenario.swift */; };
 		074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
+		075092DC251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075092DB251B97DD002CB9C6 /* SKSpriteNode+Extension.swift */; };
+		075092DD251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075092DB251B97DD002CB9C6 /* SKSpriteNode+Extension.swift */; };
+		075092DE251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075092DB251B97DD002CB9C6 /* SKSpriteNode+Extension.swift */; };
+		075092E5251B97EA002CB9C6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D46C08251B388B008317C9 /* Player.swift */; };
+		075092E9251B97EA002CB9C6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D46C08251B388B008317C9 /* Player.swift */; };
 		075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */; };
 		075D0DE82519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */; };
 		075D0DE92519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */; };
@@ -23,6 +31,7 @@
 		075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		07D46C09251B388B008317C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D46C08251B388B008317C9 /* Player.swift */; };
 		07D8B81E2512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
 		07D8B8202512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
 		07D8B8212512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
@@ -45,11 +54,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07013885251BE11E0092595E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0701388A251BE1EA0092595E /* Constant+Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Characters.swift"; sourceTree = "<group>"; };
+		0701388F251BE57A0092595E /* Constant+Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenario.swift"; sourceTree = "<group>"; };
 		074B4A832514A86000BB1B42 /* GloopDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropApp.swift; sourceTree = "<group>"; };
+		075092DB251B97DD002CB9C6 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
 		075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+Logging.swift"; sourceTree = "<group>"; };
 		075D7DA62514D62E00D90009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		075D7DBB2514D76D00D90009 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
 		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
+		07D46C08251B388B008317C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		07D8B7CA2512021A0047EBFE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		07D8B7CB2512021B0047EBFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D8B7D02512021B0047EBFE /* gloop-drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gloop-drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,9 +101,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07013884251BE0DE0092595E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				07013885251BE11E0092595E /* Constant.swift */,
+				0701388A251BE1EA0092595E /* Constant+Characters.swift */,
+				0701388F251BE57A0092595E /* Constant+Scenario.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		075092DA251B97AB002CB9C6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				075092DB251B97DD002CB9C6 /* SKSpriteNode+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		075D7DA32514D60500D90009 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07D46C07251B387F008317C9 /* Player */,
+				075D7E012514DA4000D90009 /* Scene */,
 				075D7DA62514D62E00D90009 /* ContentView.swift */,
 			);
 			path = View;
@@ -130,6 +164,14 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		07D46C07251B387F008317C9 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				07D46C08251B388B008317C9 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		07D8B7C22512021A0047EBFE = {
 			isa = PBXGroup;
 			children = (
@@ -145,9 +187,10 @@
 			isa = PBXGroup;
 			children = (
 				075D7DA42514D60A00D90009 /* App */,
-				075D7E012514DA4000D90009 /* Scene */,
-				075D7DA32514D60500D90009 /* View */,
+				07013884251BE0DE0092595E /* Constant */,
+				075092DA251B97AB002CB9C6 /* Extension */,
 				075D7DA52514D60F00D90009 /* Support */,
+				075D7DA32514D60500D90009 /* View */,
 			);
 			path = "gloop-drop Shared";
 			sourceTree = "<group>";
@@ -321,11 +364,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */,
+				0701388B251BE1EA0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				07013886251BE11E0092595E /* Constant.swift in Sources */,
+				075092DC251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */,
+				07D46C09251B388B008317C9 /* Player.swift in Sources */,
 				075D7DA72514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B81E2512021C0047EBFE /* GameScene.swift in Sources */,
+				07013890251BE57A0092595E /* Constant+Scenario.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +384,8 @@
 				074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* GameSceneView.swift in Sources */,
 				075D0DE82519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
+				075092DD251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
+				075092E5251B97EA002CB9C6 /* Player.swift in Sources */,
 				075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DA92514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8202512021C0047EBFE /* GameScene.swift in Sources */,
@@ -349,6 +399,8 @@
 				074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* GameSceneView.swift in Sources */,
 				075D0DE92519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
+				075092DE251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
+				075092E9251B97EA002CB9C6 /* Player.swift in Sources */,
 				075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8212512021C0047EBFE /* GameScene.swift in Sources */,
