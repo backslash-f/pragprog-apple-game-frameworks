@@ -31,7 +31,7 @@ private extension GameSceneView {
 
 // MARK: - Preview
 
-struct Level001View_Previews: PreviewProvider {
+struct GameSceneView_Previews: PreviewProvider {
     static var previews: some View {
         GameSceneView()
     }
