@@ -56,6 +56,7 @@ private extension ​GameScene​ {
         let background = SKSpriteNode(imageNamed: backgroundName)
         background.name = backgroundName
         background.anchorPoint = .zero
+        background.zPosition = Layer.background.rawValue
         addChild(background)
     }
 
@@ -65,6 +66,7 @@ private extension ​GameScene​ {
         foreground.name = foregroundName
         foreground.anchorPoint = .zero
         foreground.position = .zero
+        foreground.zPosition = Layer.foreground.rawValue
         addChild(foreground)
     }
 

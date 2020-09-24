@@ -46,6 +46,7 @@ private extension Player {
         name = Constant.Character.Blob.name
         setScale(1.0)
         anchorPoint = CGPoint(x: 0.5, y: 0.0) // center-bottom
+        zPosition = Layer.player.rawValue
     }
 
     func loadWalkTextures() {
