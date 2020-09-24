@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  BlobPlayer.swift
 //  gloop-drop iOS
 //
 //  Created by Fernando Fernandes on 23.09.20.
@@ -13,7 +13,7 @@ enum PlayerAnimationType: String {
     case walk
 }
 
-class Player: SKSpriteNode {
+class BlobPlayer: SKSpriteNode {
 
     // MARK: - Private Properties
 
@@ -36,9 +36,29 @@ class Player: SKSpriteNode {
     }
 }
 
+// MARK: - Interface
+
+extension BlobPlayer {
+
+    func walk() {
+        guard let walkTextures = walkTextures else {
+            let errorMessage = "Could not find textures."
+            GloopDropApp.logError(errorMessage)
+            preconditionFailure(errorMessage)
+        }
+
+        startAnimation(
+            textures: walkTextures,
+            speed: 0.25,
+            name: PlayerAnimationType.walk.rawValue,
+            resize: true
+        )
+    }
+}
+
 // MARK: - Private
 
-private extension Player {
+private extension BlobPlayer {
 
     // MARK: Setup
 
@@ -46,7 +66,7 @@ private extension Player {
         name = Constant.Character.Blob.name
         setScale(1.0)
         anchorPoint = CGPoint(x: 0.5, y: 0.0) // center-bottom
-        zPosition = Layer.player.rawValue
+        zPosition = Layer.blobPlayer.rawValue
     }
 
     func loadWalkTextures() {
@@ -55,6 +75,7 @@ private extension Player {
             prefix: Constant.Character.Blob.walkTexturePrefix
         ) { [weak self] textures in
             self?.walkTextures = textures
+            self?.walk()
         }
     }
 }

@@ -71,9 +71,9 @@ private extension ​GameScene​ {
     }
 
     func setupPlayer() {
-        let player = Player()
+        let blobPlayer = BlobPlayer()
         let foreground = childNode(withName: Constant.Scenario.firstForeground)
-        player.position = CGPoint(x: size.width/2, y: foreground?.frame.maxY ?? size.height/2)
-        addChild(player)
+        blobPlayer.position = CGPoint(x: size.width/2, y: foreground?.frame.maxY ?? size.height/2)
+        addChild(blobPlayer)
     }
 }

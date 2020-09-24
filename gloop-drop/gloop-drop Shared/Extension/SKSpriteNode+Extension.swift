@@ -11,7 +11,7 @@ import SpriteKit
 enum Layer: CGFloat {
     case background
     case foreground
-    case player
+    case blobPlayer
 }
 
 extension SKSpriteNode {
@@ -34,6 +34,40 @@ extension SKSpriteNode {
                 characterAtlasArray.textureNamed($0)
             }
             completion(textures)
+        }
+    }
+
+    /// Start the animation. Default `count` is zero (repeat forever).
+    /// Default `resize` is `false`.
+    /// Default `restore` is `true`.
+    func startAnimation(textures: [SKTexture],
+                        speed: Double,
+                        name: String,
+                        count: Int = 0,
+                        resize: Bool = false,
+                        restore: Bool = true) {
+
+        // Run animation only if "animation key" doesn't already exist.
+        guard action(forKey: name) == nil else {
+            return
+        }
+
+        let animation = SKAction.animate(
+            with: textures,
+            timePerFrame: speed,
+            resize: resize,
+            restore: restore
+        )
+
+        switch count {
+        case 0:
+            let repeatAction = SKAction.repeatForever(animation)
+            run(repeatAction, withKey: name)
+        case 1:
+            run(animation, withKey: name)
+        default:
+            let repeatAction = SKAction.repeat(animation, count: count)
+            run(repeatAction, withKey: name)
         }
     }
 }
