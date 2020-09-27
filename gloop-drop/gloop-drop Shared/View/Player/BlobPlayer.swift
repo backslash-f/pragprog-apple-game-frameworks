@@ -54,12 +54,17 @@ extension BlobPlayer {
             resize: true
         )
     }
+
+    func move(toPosition position: CGPoint, duration: TimeInterval) {
+        let moveAction = SKAction.move(to: position, duration: duration)
+        run(moveAction)
+    }
 }
 
 // MARK: - Private
 
 private extension BlobPlayer {
-
+    
     // MARK: Setup
 
     func setupPlayer() {

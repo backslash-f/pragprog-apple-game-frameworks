@@ -9,6 +9,10 @@ import SpriteKit
 
 class ​GameScene​: GloopDropScene {
 
+    // MARK: - Properties
+
+    let blobPlayer = BlobPlayer()
+
     // MARK: - Lifecycle
 
     init(size: CGSize) {
@@ -71,9 +75,23 @@ private extension ​GameScene​ {
     }
 
     func setupPlayer() {
-        let blobPlayer = BlobPlayer()
         let foreground = childNode(withName: Constant.Scenario.firstForeground)
         blobPlayer.position = CGPoint(x: size.width/2, y: foreground?.frame.maxY ?? size.height/2)
         addChild(blobPlayer)
+    }
+}
+
+// MARK: - Touch Handling
+
+extension ​GameScene​ {
+
+    func touchDown(atPoint position: CGPoint) {
+        blobPlayer.move(toPosition: position, duration: 1.0)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touches.forEach { touch in
+            touchDown(atPoint: touch.location(in: self))
+        }
     }
 }
