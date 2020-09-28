@@ -88,18 +88,3 @@ private extension ​GameScene​ {
         addChild(blobPlayer)
     }
 }
-
-// MARK: - Touch Handling
-
-extension ​GameScene​ {
-
-    func touchDown(atPoint position: CGPoint) {
-        blobPlayer.move(toPosition: position, duration: 1.0)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touches.forEach { touch in
-            touchDown(atPoint: touch.location(in: self))
-        }
-    }
-}
