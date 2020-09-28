@@ -5,6 +5,7 @@
 //  Created by Fernando Fernandes on 16.09.20.
 //
 
+import SwiftUI
 import SpriteKit
 
 class ​GameScene​: GloopDropScene {
@@ -32,8 +33,9 @@ extension ​GameScene​ {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        setupBackground()
-        setupForeground()
+        setupBackgroundColor()
+        setupBackgroundImage()
+        setupForegroundImage()
         setupPlayer()
     }
 }
@@ -47,15 +49,21 @@ private extension ​GameScene​ {
     func initialSetup() {
         view?.ignoresSiblingOrder = false
         scaleMode = .aspectFill
-        backgroundColor = UIColor(
+    }
+
+    func setupBackgroundColor() {
+        // By using SwiftUI, Color and finally SKColor, the three
+        // target platforms can be supported: iOS, macOS and tvOS.
+        let color = Color(
             red: 105/255,
             green: 157/255,
             blue: 181/255,
-            alpha: 1.0
+            opacity: 1.0
         )
+        backgroundColor = SKColor(color)
     }
 
-    func setupBackground() {
+    func setupBackgroundImage() {
         let backgroundName = Constant.Scenario.firstBackground
         let background = SKSpriteNode(imageNamed: backgroundName)
         background.name = backgroundName
@@ -64,7 +72,7 @@ private extension ​GameScene​ {
         addChild(background)
     }
 
-    func setupForeground() {
+    func setupForegroundImage() {
         let foregroundName = Constant.Scenario.firstForeground
         let foreground = SKSpriteNode(imageNamed: foregroundName)
         foreground.name = foregroundName
