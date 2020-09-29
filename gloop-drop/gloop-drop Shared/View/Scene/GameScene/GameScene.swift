@@ -83,8 +83,14 @@ private extension ​GameScene​ {
     }
 
     func setupPlayer() {
-        let foreground = childNode(withName: Constant.Scenario.firstForeground)
-        blobPlayer.position = CGPoint(x: size.width/2, y: foreground?.frame.maxY ?? size.height/2)
+        guard let foreground = childNode(withName: Constant.Scenario.firstForeground) else {
+            let errorMessage = "Couldn't find the foreground node"
+            GloopDropApp.logError(errorMessage)
+            preconditionFailure(errorMessage)
+        }
+
+        blobPlayer.position = CGPoint(x: size.width/2, y: foreground.frame.maxY)
+        blobPlayer.constrainPositionY(lowerAndUpperLimit: foreground.frame.maxY)
         addChild(blobPlayer)
     }
 }

@@ -40,9 +40,15 @@ class BlobPlayer: SKSpriteNode {
 
 extension BlobPlayer {
 
+    func constrainPositionY(lowerAndUpperLimit: CGFloat) {
+        let range = SKRange(lowerLimit: lowerAndUpperLimit, upperLimit: lowerAndUpperLimit)
+        let lockToPlatform = SKConstraint.positionY(range)
+        constraints = [lockToPlatform]
+    }
+
     func walk() {
         guard let walkTextures = walkTextures else {
-            let errorMessage = "Could not find textures."
+            let errorMessage = "Could not find textures"
             GloopDropApp.logError(errorMessage)
             preconditionFailure(errorMessage)
         }
