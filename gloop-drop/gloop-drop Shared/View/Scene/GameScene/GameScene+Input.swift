@@ -28,6 +28,10 @@ extension ​GameScene​ {
     override func mouseDown(with event: NSEvent) {
         handleTouch(atPoint: event.location(in: self))
     }
+
+    override func mouseDragged(with event: NSEvent) {
+        handleTouch(atPoint: event.location(in: self))
+    }
     #endif
 }
 
