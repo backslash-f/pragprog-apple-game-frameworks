@@ -14,13 +14,19 @@ extension ​GameScene​ {
     #if os(iOS) || os(tvOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touches.forEach { touch in
-            touchDown(atPoint: touch.location(in: self))
+            handleTouch(atPoint: touch.location(in: self))
+        }
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touches.forEach { touch in
+            handleTouch(atPoint: touch.location(in: self))
         }
     }
     #endif
     #if os(OSX)
     override func mouseDown(with event: NSEvent) {
-        touchDown(atPoint: event.location(in: self))
+        handleTouch(atPoint: event.location(in: self))
     }
     #endif
 }
@@ -29,8 +35,9 @@ extension ​GameScene​ {
 
 private extension ​GameScene​ {
 
-    func touchDown(atPoint position: CGPoint) {
-        GloopDropApp.log("TouchDown! To position: \(position)", category: .spriteKit)
+    func handleTouch(atPoint position: CGPoint) {
+        GloopDropApp.log("🏃🏻‍♂️ Touch received! Will move to position: \(position)", category: .spriteKit)
+        GloopDropApp.log("Current position: \(blobPlayer.position)", category: .spriteKit)
         blobPlayer.move(toPosition: position, duration: 1.0)
     }
 }
