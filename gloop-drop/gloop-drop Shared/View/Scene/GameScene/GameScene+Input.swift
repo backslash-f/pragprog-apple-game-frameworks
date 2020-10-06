@@ -9,6 +9,8 @@ import SpriteKit
 
 // MARK: - Touch Handling
 
+#warning("TODO: add (and test) joystick support")
+
 extension ​GameScene​ {
 
     #if os(iOS) || os(tvOS)
@@ -42,6 +44,12 @@ private extension ​GameScene​ {
     func handleTouch(atPoint position: CGPoint) {
         GloopDropApp.log("🏃🏻‍♂️ Touch received! Will move to position: \(position)", category: .spriteKit)
         GloopDropApp.log("Current position: \(blobPlayer.position)", category: .spriteKit)
-        blobPlayer.move(toPosition: position, duration: 1.0)
+        
+        let duration = 1.0
+        if position.x < blobPlayer.position.x {
+            blobPlayer.move(to: position, direction: .left, duration: duration)
+        } else {
+            blobPlayer.move(to: position, direction: .right, duration: duration)
+        }
     }
 }

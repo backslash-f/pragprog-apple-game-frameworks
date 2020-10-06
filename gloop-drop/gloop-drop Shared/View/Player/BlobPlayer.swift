@@ -61,7 +61,13 @@ extension BlobPlayer {
         )
     }
 
-    func move(toPosition position: CGPoint, duration: TimeInterval) {
+    func move(to position: CGPoint, direction: SKTransitionDirection, duration: TimeInterval) {
+        switch direction {
+        case .left:
+            xScale = -abs(xScale)
+        default:
+            xScale = abs(xScale)
+        }
         let moveAction = SKAction.move(to: position, duration: duration)
         run(moveAction)
     }
