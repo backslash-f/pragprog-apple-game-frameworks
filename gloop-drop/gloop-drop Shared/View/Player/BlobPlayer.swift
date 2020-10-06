@@ -15,6 +15,10 @@ enum PlayerAnimationType: String {
 
 class BlobPlayer: SKSpriteNode {
 
+    // MARK: - Properties
+
+    let baseSpeed: CGFloat = 1.5
+
     // MARK: - Private Properties
 
     private var walkTextures: [SKTexture]?
