@@ -14,6 +14,9 @@ class ​GameScene​: GloopDropScene {
 
     let blobPlayer = BlobPlayer()
 
+    #warning("TODO: Inject via App?")
+    let gameControllerOverseer = GameControllerOverseer()
+
     // MARK: - Lifecycle
 
     init(size: CGSize) {
@@ -22,8 +25,9 @@ class ​GameScene​: GloopDropScene {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialSetup()
+        let errorMessage = "init(coder:) has not been implemented"
+        GloopDropApp.logError(errorMessage)
+        fatalError(errorMessage)
     }
 }
 

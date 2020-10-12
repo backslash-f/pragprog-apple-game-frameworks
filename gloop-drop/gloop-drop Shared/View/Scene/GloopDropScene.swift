@@ -30,9 +30,9 @@ class GloopDropScene: SKScene {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        self.debugSettings = DebugSettings()
-        super.init(coder: aDecoder)
-        logInformation()
+        let errorMessage = "init(coder:) has not been implemented"
+        GloopDropApp.logError(errorMessage)
+        fatalError(errorMessage)
     }
 }
 

@@ -9,8 +9,6 @@ import SpriteKit
 
 // MARK: - Touch Handling
 
-#warning("TODO: add (and test) joystick support")
-
 extension ​GameScene​ {
 
     #if os(iOS) || os(tvOS)

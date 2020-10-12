@@ -9,6 +9,15 @@
           "revision": "aa31c2a984e02a211f3e959baa1b2b6becb6327a",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "Worker",
+        "repositoryURL": "git@github.com:backslash-f/worker.git",
+        "state": {
+          "branch": null,
+          "revision": "77458061c037fb1b521a9701e2ea8f02603d5732",
+          "version": "1.1.1"
+        }
       }
     ]
   },
