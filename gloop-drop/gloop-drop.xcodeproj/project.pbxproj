@@ -43,9 +43,6 @@
 		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		0787009E2534455A006BB0C0 /* GameControllerOverseer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787009D2534455A006BB0C0 /* GameControllerOverseer.swift */; };
-		078700A725344B6B006BB0C0 /* Worker in Frameworks */ = {isa = PBXBuildFile; productRef = 078700A625344B6B006BB0C0 /* Worker */; };
-		078700AC25344B79006BB0C0 /* Worker in Frameworks */ = {isa = PBXBuildFile; productRef = 078700AB25344B79006BB0C0 /* Worker */; };
-		078700AE25344B7E006BB0C0 /* Worker in Frameworks */ = {isa = PBXBuildFile; productRef = 078700AD25344B7E006BB0C0 /* Worker */; };
 		078700B825344F6A006BB0C0 /* GameControllerOverseer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787009D2534455A006BB0C0 /* GameControllerOverseer.swift */; };
 		078700BC25344F6B006BB0C0 /* GameControllerOverseer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787009D2534455A006BB0C0 /* GameControllerOverseer.swift */; };
 		07D46C09251B388B008317C9 /* BlobPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D46C08251B388B008317C9 /* BlobPlayer.swift */; };
@@ -99,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078700A725344B6B006BB0C0 /* Worker in Frameworks */,
 				0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078700AC25344B79006BB0C0 /* Worker in Frameworks */,
 				07013896251BE91A0092595E /* AppLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078700AE25344B7E006BB0C0 /* Worker in Frameworks */,
 				07013898251BE9200092595E /* AppLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +285,6 @@
 			name = "gloop-drop iOS";
 			packageProductDependencies = (
 				0700A1752519E85F00DB8DFB /* AppLogger */,
-				078700A625344B6B006BB0C0 /* Worker */,
 			);
 			productName = "gloop-drop iOS";
 			productReference = 07D8B7D02512021B0047EBFE /* gloop-drop.app */;
@@ -312,7 +305,6 @@
 			name = "gloop-drop tvOS";
 			packageProductDependencies = (
 				07013895251BE91A0092595E /* AppLogger */,
-				078700AB25344B79006BB0C0 /* Worker */,
 			);
 			productName = "gloop-drop tvOS";
 			productReference = 07D8B7FB2512021B0047EBFE /* gloop-drop.app */;
@@ -333,7 +325,6 @@
 			name = "gloop-drop macOS";
 			packageProductDependencies = (
 				07013897251BE9200092595E /* AppLogger */,
-				078700AD25344B7E006BB0C0 /* Worker */,
 			);
 			productName = "gloop-drop macOS";
 			productReference = 07D8B80C2512021B0047EBFE /* gloop-drop.app */;
@@ -370,7 +361,6 @@
 			mainGroup = 07D8B7C22512021A0047EBFE;
 			packageReferences = (
 				0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */,
-				078700A525344B6B006BB0C0 /* XCRemoteSwiftPackageReference "worker" */,
 			);
 			productRefGroup = 07D8B7D12512021B0047EBFE /* Products */;
 			projectDirPath = "";
@@ -769,14 +759,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		078700A525344B6B006BB0C0 /* XCRemoteSwiftPackageReference "worker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:backslash-f/worker.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -794,21 +776,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */;
 			productName = AppLogger;
-		};
-		078700A625344B6B006BB0C0 /* Worker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 078700A525344B6B006BB0C0 /* XCRemoteSwiftPackageReference "worker" */;
-			productName = Worker;
-		};
-		078700AB25344B79006BB0C0 /* Worker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 078700A525344B6B006BB0C0 /* XCRemoteSwiftPackageReference "worker" */;
-			productName = Worker;
-		};
-		078700AD25344B7E006BB0C0 /* Worker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 078700A525344B6B006BB0C0 /* XCRemoteSwiftPackageReference "worker" */;
-			productName = Worker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

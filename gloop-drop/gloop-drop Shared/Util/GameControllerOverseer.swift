@@ -8,7 +8,6 @@
 import Foundation
 import GameController
 import Combine
-import Worker
 
 /// Observes MFI or Remote Controllers in the area. Sets them up.
 class GameControllerOverseer: ObservableObject {
@@ -81,10 +80,7 @@ private extension GameControllerOverseer {
     func handle(controllerNotification: Notification, isConnected: Bool) {
         GloopDropApp.log("Receive notification: \(controllerNotification)", category: .gameController)
         #warning("FIXME: User .receive(on...) instead")
-        Worker.doMainThreadWork { [weak self] in
-            guard let self = self else { return }
-            self.isGameControllerConnected = isConnected
-            self.objectWillChange.send(self)
-        }
+        self.isGameControllerConnected = isConnected
+        self.objectWillChange.send(self)
     }
 }
