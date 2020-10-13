@@ -35,6 +35,14 @@ extension ​GameScene​ {
     #endif
 }
 
+// MARK: - Controller Handling
+
+extension ​GameScene​ {
+    #warning("TODO: add controller support")
+    // https://medium.com/@samdubois18/adding-controller-support-to-your-ios-app-a9b8308ce0b4
+    #warning("TODO: test all platforms")
+}
+
 // MARK: - Private
 
 private extension ​GameScene​ {
@@ -44,7 +52,7 @@ private extension ​GameScene​ {
         let distance = hypot(position.x - blobPlayer.position.x, position.y - blobPlayer.position.y)
         let duration = TimeInterval(distance / blobPlayer.baseSpeed) / 255
 
-        GloopDropApp.log("🏃🏻‍♂️ Touch received! Will move to position: \(position)", category: .spriteKit)
+        GloopDropApp.log("👇🏻 Touch received! 🏃🏻‍♂️ Will move to position: \(position)", category: .spriteKit)
         GloopDropApp.log("Current position: \(blobPlayer.position)", category: .spriteKit)
         GloopDropApp.log("Distance: \(distance)", category: .spriteKit)
         GloopDropApp.log("Duration (speed): \(duration)", category: .spriteKit)

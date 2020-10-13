@@ -6,6 +6,7 @@
 //
 
 import SpriteKit
+import Combine
 
 /// A `SKScene` subclass that has default debug settings that can be customized.
 class GloopDropScene: SKScene {
@@ -21,6 +22,10 @@ class GloopDropScene: SKScene {
         let showsQuadCount: Bool = true
     }
     let debugSettings: DebugSettings
+
+    let gameControllerOverseer = GameControllerOverseer()
+
+    var cancellables = Set<AnyCancellable>()
 
     // MARK: - Lifecycle
 

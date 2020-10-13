@@ -14,14 +14,12 @@ class ​GameScene​: GloopDropScene {
 
     let blobPlayer = BlobPlayer()
 
-    #warning("TODO: Inject via App?")
-    let gameControllerOverseer = GameControllerOverseer()
-
     // MARK: - Lifecycle
 
     init(size: CGSize) {
         super.init(size: size)
-        initialSetup()
+        setupScene()
+        setupGameControllerListener()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -50,7 +48,7 @@ private extension ​GameScene​ {
 
     // MARK: Setup
 
-    func initialSetup() {
+    func setupScene() {
         view?.ignoresSiblingOrder = false
         scaleMode = .aspectFill
     }
@@ -96,5 +94,13 @@ private extension ​GameScene​ {
         blobPlayer.position = CGPoint(x: size.width/2, y: foreground.frame.maxY)
         blobPlayer.constrainPositionY(lowerAndUpperLimit: foreground.frame.maxY)
         addChild(blobPlayer)
+    }
+
+    func setupGameControllerListener() {
+        gameControllerOverseer.$isGameControllerConnected
+            .sink { isConnected in
+                GloopDropApp.log("Is controller connected: \(isConnected)", category: .gameController)
+            }
+            .store(in: &cancellables)
     }
 }
