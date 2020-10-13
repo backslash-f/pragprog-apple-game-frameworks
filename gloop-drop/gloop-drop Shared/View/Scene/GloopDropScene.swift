@@ -7,6 +7,7 @@
 
 import SpriteKit
 import Combine
+import GCOverseer
 
 /// A `SKScene` subclass that has default debug settings that can be customized.
 class GloopDropScene: SKScene {
@@ -23,7 +24,7 @@ class GloopDropScene: SKScene {
     }
     let debugSettings: DebugSettings
 
-    let gameControllerOverseer = GameControllerOverseer()
+    let gcOverseer = GCOverseer()
 
     var cancellables = Set<AnyCancellable>()
 

@@ -97,9 +97,9 @@ private extension ​GameScene​ {
     }
 
     func setupGameControllerListener() {
-        gameControllerOverseer.$isGameControllerConnected
+        gcOverseer.$isGameControllerConnected
             .sink { isConnected in
-                GloopDropApp.log("Is controller connected: \(isConnected)", category: .gameController)
+                #warning("TODO: do something")
             }
             .store(in: &cancellables)
     }

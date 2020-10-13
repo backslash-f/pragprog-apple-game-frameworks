@@ -9,6 +9,15 @@
           "revision": "aa31c2a984e02a211f3e959baa1b2b6becb6327a",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "GCOverseer",
+        "repositoryURL": "git@github.com:backslash-f/gcoverseer.git",
+        "state": {
+          "branch": null,
+          "revision": "30560ffb65bd0cc5e0b8cd3b0840e49757ea423c",
+          "version": "0.1.0"
+        }
       }
     ]
   },
