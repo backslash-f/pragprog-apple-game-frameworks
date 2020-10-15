@@ -39,7 +39,6 @@ extension ​GameScene​ {
 
 extension ​GameScene​ {
     #warning("TODO: add controller support")
-    // https://medium.com/@samdubois18/adding-controller-support-to-your-ios-app-a9b8308ce0b4
     #warning("TODO: test all platforms")
 }
 

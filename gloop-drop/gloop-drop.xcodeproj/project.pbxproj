@@ -19,8 +19,6 @@
 		070138A8251BE94F0092595E /* Constant+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Characters.swift */; };
 		070138AC251BE9520092595E /* Constant+Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenario.swift */; };
 		070138B0251BE9520092595E /* Constant+Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenario.swift */; };
-		07109A8B25371967000A72B6 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07109A8A25371967000A72B6 /* GameController.framework */; };
-		07109A8D25371A38000A72B6 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07109A8C25371A38000A72B6 /* GameController.framework */; };
 		07183B512521D3DE00010135 /* GameScene+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* GameScene+Input.swift */; };
 		07183B522521D3DE00010135 /* GameScene+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* GameScene+Input.swift */; };
 		07183B532521D3DE00010135 /* GameScene+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* GameScene+Input.swift */; };
@@ -101,7 +99,6 @@
 			files = (
 				0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */,
 				07EC2BB9253646810007A25A /* GCOverseer in Frameworks */,
-				07109A8B25371967000A72B6 /* GameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +108,6 @@
 			files = (
 				07013896251BE91A0092595E /* AppLogger in Frameworks */,
 				07EC2BC4253646DB0007A25A /* GCOverseer in Frameworks */,
-				07109A8D25371A38000A72B6 /* GameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
