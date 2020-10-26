@@ -1,5 +1,5 @@
 //
-//  GameScene+Input.swift
+//  GameScene+InputTouch.swift
 //  gloop-drop
 //
 //  Created by Fernando Fernandes on 28.09.20.
@@ -7,8 +7,7 @@
 
 import SpriteKit
 
-// MARK: - Touch Handling
-
+/// Handles touch inputs (users interacting with the game via screen touching).
 extension ​GameScene​ {
 
     #if os(iOS) || os(tvOS)
@@ -35,13 +34,6 @@ extension ​GameScene​ {
     #endif
 }
 
-// MARK: - Controller Handling
-
-extension ​GameScene​ {
-    #warning("TODO: add controller support")
-    #warning("TODO: test all platforms")
-}
-
 // MARK: - Private
 
 private extension ​GameScene​ {
@@ -51,10 +43,10 @@ private extension ​GameScene​ {
         let distance = hypot(position.x - blobPlayer.position.x, position.y - blobPlayer.position.y)
         let duration = TimeInterval(distance / blobPlayer.baseSpeed) / 255
 
-        GloopDropApp.log("👇🏻 Touch received! 🏃🏻‍♂️ Will move to position: \(position)", category: .spriteKit)
-        GloopDropApp.log("Current position: \(blobPlayer.position)", category: .spriteKit)
-        GloopDropApp.log("Distance: \(distance)", category: .spriteKit)
-        GloopDropApp.log("Duration (speed): \(duration)", category: .spriteKit)
+        GloopDropApp.log("👇🏻 Touch received! 🏃🏻‍♂️ Will move to position: \(position)", category: .inputTouch)
+        GloopDropApp.log("Current position: \(blobPlayer.position)", category: .inputTouch)
+        GloopDropApp.log("Distance: \(distance)", category: .inputTouch)
+        GloopDropApp.log("Duration (speed): \(duration)", category: .inputTouch)
 
         let direction: SKTransitionDirection = (position.x < blobPlayer.position.x) ? .left : .right
         blobPlayer.move(to: position, direction: direction, duration: duration)

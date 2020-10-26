@@ -9,6 +9,8 @@ import AppLogger
 
 enum LoggingCategories: String {
     case error = "Error"
+    case inputController = "InputController"
+    case inputTouch = "InputTouch"
     case spriteKit = "SpriteKit"
 }
 

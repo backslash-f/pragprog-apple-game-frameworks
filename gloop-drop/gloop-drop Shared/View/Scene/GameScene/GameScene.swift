@@ -98,8 +98,8 @@ private extension ​GameScene​ {
 
     func setupGameControllerListener() {
         gcOverseer.$isGameControllerConnected
-            .sink { isConnected in
-                #warning("TODO: do something")
+            .sink { [weak self] isConnected in
+                self?.setupControllers()
             }
             .store(in: &cancellables)
     }
