@@ -66,6 +66,7 @@ extension BlobPlayer {
     }
 
     func move(to position: CGPoint, direction: SKTransitionDirection, duration: TimeInterval) {
+        #warning("TODO: don't go beyond the screen bounds")
         switch direction {
         case .left:
             xScale = -abs(xScale)

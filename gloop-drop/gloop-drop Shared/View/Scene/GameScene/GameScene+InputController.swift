@@ -26,21 +26,41 @@ extension ​GameScene​ {
         }
 
         #warning("TODO: could be encapsulated for both extended and micro controllers?")
-        extendedGamepadController.valueChangedHandler = { gamepad, element in
+        extendedGamepadController.valueChangedHandler = { [weak self] gamepad, element in
+            guard let self = self else { return }
             switch element {
-            case gamepad.leftThumbstick:
-                // Do I need gamepad.leftThumbstick.left.value?
-                // Do I need .left.isPressed == false?
-                #warning("TODO: got to left")
+            case gamepad.leftThumbstick where gamepad.leftThumbstick.left.isPressed:
+                let value = CGFloat(gamepad.leftThumbstick.left.value)
+                let player = self.blobPlayer
+                GloopDropApp.log(
+                    "Left thumbstick pressed. Value: \(value)",
+                    category: .inputController
+                )
+                let duration = TimeInterval(1 / player.baseSpeed) / 255
+                let delta: CGFloat = player.position.x + player.baseSpeed
+                let newPosition = CGPoint(x: delta, y: player.position.y)
+                player.move(to: newPosition, direction: .left, duration: duration)
             case gamepad.rightThumbstick:
+                GloopDropApp.log(
+                    "Right thumbstick pressed. Value: \(gamepad.rightThumbstick.left.value)",
+                    category: .inputController
+                )
                 // Do I need .right.value?
                 // Do I need .right.isPressed == false?
                 #warning("TODO: go to right ")
             case gamepad.dpad where gamepad.dpad.left.isPressed:
+                GloopDropApp.log(
+                    "Dpad left thumbstick pressed",
+                    category: .inputController
+                )
                 // Do I need .left.isPressed == false?
                 #warning("TODO: go to left")
             // Do I need .right.isPressed == false?
             case gamepad.dpad where gamepad.dpad.right.isPressed:
+                GloopDropApp.log(
+                    "Dpad right thumbstick pressed",
+                    category: .inputController
+                )
                 #warning("TODO: go to right")
             default:
                 break
