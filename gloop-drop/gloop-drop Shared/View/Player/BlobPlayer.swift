@@ -19,6 +19,9 @@ class BlobPlayer: SKSpriteNode {
 
     let baseSpeed: CGFloat = 1.5
 
+    /// The "distance" this character moves when players use a controller to go to the left / right.
+    let controllerTravelUnits: CGFloat = 50
+
     // MARK: - Private Properties
 
     private var walkTextures: [SKTexture]?
@@ -50,7 +53,17 @@ extension BlobPlayer {
         constraints = [lockToPlatform]
     }
 
-    func walk() {
+    func durationOfMoveAnimation(to newPosition: CGPoint) -> TimeInterval {
+        let distance = hypot(newPosition.x - position.x, newPosition.y - position.y)
+        GloopDropApp.log("Distance: \(distance)", category: .player)
+
+        let duration = TimeInterval(distance / baseSpeed) / 255
+        GloopDropApp.log("Duration (speed): \(duration)", category: .player)
+
+        return TimeInterval(duration)
+    }
+
+    func startWalkAnimation() {
         guard let walkTextures = walkTextures else {
             let errorMessage = "Could not find textures"
             GloopDropApp.logError(errorMessage)
@@ -65,15 +78,13 @@ extension BlobPlayer {
         )
     }
 
-    func move(to position: CGPoint, direction: SKTransitionDirection, duration: TimeInterval) {
-        #warning("TODO: don't go beyond the screen bounds")
-        switch direction {
-        case .left:
-            xScale = -abs(xScale)
-        default:
-            xScale = abs(xScale)
+    func move(to newPosition: CGPoint) {
+        guard shouldMove(to: newPosition) else {
+            return
         }
-        let moveAction = SKAction.move(to: position, duration: duration)
+        turnLeftOrRight(on: newPosition)
+        let duration = durationOfMoveAnimation(to: newPosition)
+        let moveAction = SKAction.move(to: newPosition, duration: duration)
         run(moveAction)
     }
 }
@@ -97,7 +108,20 @@ private extension BlobPlayer {
             prefix: Constant.Character.Blob.walkTexturePrefix
         ) { [weak self] textures in
             self?.walkTextures = textures
-            self?.walk()
+            self?.startWalkAnimation()
+        }
+    }
+
+    func shouldMove(to newPosition: CGPoint) -> Bool {
+        #warning("TODO: don't move beyond the screen bounds")
+        return true
+    }
+
+    func turnLeftOrRight(on newPosition: CGPoint) {
+        if newPosition.x < position.x {
+            xScale = -abs(xScale)
+        } else {
+            xScale = abs(xScale)
         }
     }
 }

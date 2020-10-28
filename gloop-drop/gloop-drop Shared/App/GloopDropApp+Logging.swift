@@ -11,6 +11,7 @@ enum LoggingCategories: String {
     case error = "Error"
     case inputController = "InputController"
     case inputTouch = "InputTouch"
+    case player = "Player"
     case spriteKit = "SpriteKit"
 }
 

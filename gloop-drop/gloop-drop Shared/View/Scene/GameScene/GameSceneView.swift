@@ -22,7 +22,7 @@ struct GameSceneView: View {
 
 // MARK: - Private
 
-private extension GameSceneView {
+fileprivate extension GameSceneView {
 
     func makeScene(size: CGSize) -> SKScene {
         ​GameScene​(size: size)

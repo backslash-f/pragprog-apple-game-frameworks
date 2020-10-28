@@ -5,7 +5,7 @@
 //  Created by Fernando Fernandes on 26.10.20.
 //
 
-import Foundation
+import SwiftUI
 
 #warning("TODO: test all platforms")
 
@@ -25,43 +25,34 @@ extension ​GameScene​ {
             return
         }
 
+        #warning("FIXME: Choppy movement. Investigate")
+
         #warning("TODO: could be encapsulated for both extended and micro controllers?")
         extendedGamepadController.valueChangedHandler = { [weak self] gamepad, element in
-            guard let self = self else { return }
             switch element {
-            case gamepad.leftThumbstick where gamepad.leftThumbstick.left.isPressed:
-                let value = CGFloat(gamepad.leftThumbstick.left.value)
-                let player = self.blobPlayer
-                GloopDropApp.log(
-                    "Left thumbstick pressed. Value: \(value)",
-                    category: .inputController
-                )
-                let duration = TimeInterval(1 / player.baseSpeed) / 255
-                let delta: CGFloat = player.position.x + player.baseSpeed
-                let newPosition = CGPoint(x: delta, y: player.position.y)
-                player.move(to: newPosition, direction: .left, duration: duration)
-            case gamepad.rightThumbstick:
-                GloopDropApp.log(
-                    "Right thumbstick pressed. Value: \(gamepad.rightThumbstick.left.value)",
-                    category: .inputController
-                )
-                // Do I need .right.value?
-                // Do I need .right.isPressed == false?
-                #warning("TODO: go to right ")
-            case gamepad.dpad where gamepad.dpad.left.isPressed:
-                GloopDropApp.log(
-                    "Dpad left thumbstick pressed",
-                    category: .inputController
-                )
-                // Do I need .left.isPressed == false?
-                #warning("TODO: go to left")
-            // Do I need .right.isPressed == false?
-            case gamepad.dpad where gamepad.dpad.right.isPressed:
-                GloopDropApp.log(
-                    "Dpad right thumbstick pressed",
-                    category: .inputController
-                )
-                #warning("TODO: go to right")
+
+            // ⬅️
+            case gamepad.leftThumbstick
+                    where gamepad.leftThumbstick.left.value > 0
+                    && gamepad.leftThumbstick.left.isPressed:
+                self?.move(toRight: false)
+
+            case gamepad.dpad
+                    where gamepad.dpad.left.value > 0
+                    && gamepad.dpad.left.isPressed:
+                self?.move(toRight: false)
+
+            // ➡️
+            case gamepad.leftThumbstick
+                    where gamepad.leftThumbstick.right.value > 0
+                    && gamepad.leftThumbstick.right.isPressed:
+                self?.move(toRight: true)
+
+            case gamepad.dpad
+                    where gamepad.dpad.right.value > 0
+                    && gamepad.dpad.right.isPressed:
+                self?.move(toRight: true)
+
             default:
                 break
             }
@@ -70,5 +61,22 @@ extension ​GameScene​ {
 
     func setupMicroControllers() {
         #warning("TODO: setup micro controllers")
+    }
+}
+
+// MARK: - Private
+
+fileprivate extension ​GameScene​ {
+
+    /// Moves the player to the right or to the left.
+    ///
+    /// - Parameter toRight: If `true`, the player will move to the right. If `false`, the player will move to the left.
+    func move(toRight: Bool) {
+        let distance = toRight ? blobPlayer.controllerTravelUnits : -blobPlayer.controllerTravelUnits
+        let newPosition = CGPoint(
+            x: blobPlayer.position.x + distance,
+            y: blobPlayer.position.y
+        )
+        blobPlayer.move(to: newPosition)
     }
 }

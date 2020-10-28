@@ -44,7 +44,7 @@ extension ​GameScene​ {
 
 // MARK: - Private
 
-private extension ​GameScene​ {
+fileprivate extension ​GameScene​ {
 
     // MARK: Setup
 

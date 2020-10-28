@@ -36,19 +36,12 @@ extension ​GameScene​ {
 
 // MARK: - Private
 
-private extension ​GameScene​ {
+fileprivate extension ​GameScene​ {
 
     func handleTouch(atPoint position: CGPoint) {
-        // Calculate the duration based on current position and location of the touch.
-        let distance = hypot(position.x - blobPlayer.position.x, position.y - blobPlayer.position.y)
-        let duration = TimeInterval(distance / blobPlayer.baseSpeed) / 255
-
-        GloopDropApp.log("👇🏻 Touch received! 🏃🏻‍♂️ Will move to position: \(position)", category: .inputTouch)
-        GloopDropApp.log("Current position: \(blobPlayer.position)", category: .inputTouch)
-        GloopDropApp.log("Distance: \(distance)", category: .inputTouch)
-        GloopDropApp.log("Duration (speed): \(duration)", category: .inputTouch)
-
-        let direction: SKTransitionDirection = (position.x < blobPlayer.position.x) ? .left : .right
-        blobPlayer.move(to: position, direction: direction, duration: duration)
+        GloopDropApp.log("👇🏻 Touch received!", category: .inputTouch)
+        GloopDropApp.log("🧎🏻‍♂️ Current position: \(blobPlayer.position)", category: .inputTouch)
+        GloopDropApp.log("🚶🏻‍♂️ Will move to position: \(position)", category: .inputTouch)
+        blobPlayer.move(to: position)
     }
 }
