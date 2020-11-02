@@ -8,11 +8,11 @@
 import AppLogger
 
 enum LoggingCategories: String {
-    case error = "Error"
-    case inputController = "InputController"
-    case inputTouch = "InputTouch"
-    case player = "Player"
-    case spriteKit = "SpriteKit"
+    case error              = "GloopDrop_Error"
+    case inputController    = "GloopDrop_InputController"
+    case inputTouch         = "GloopDrop_InputTouch"
+    case player             = "GloopDrop_Player"
+    case spriteKit          = "GloopDrop_SpriteKit"
 }
 
 extension GloopDropApp {
