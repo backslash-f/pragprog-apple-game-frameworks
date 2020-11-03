@@ -40,8 +40,6 @@ fileprivate extension ​GameScene​ {
 
     func handleTouch(atPoint position: CGPoint) {
         GloopDropApp.log("👇🏻 Touch received!", category: .inputTouch)
-        GloopDropApp.log("🧎🏻‍♂️ Current position: \(blobPlayer.position)", category: .inputTouch)
-        GloopDropApp.log("🚶🏻‍♂️ Will move to position: \(position)", category: .inputTouch)
-        blobPlayer.move(to: position)
+        blobPlayer.newPosition = position
     }
 }

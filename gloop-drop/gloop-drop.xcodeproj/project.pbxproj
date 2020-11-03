@@ -144,6 +144,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		074280302550190400ED4056 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				07E447452546C153003A13FD /* GameScene+InputController.swift */,
+				07183B502521D3DE00010135 /* GameScene+InputTouch.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		075092DA251B97AB002CB9C6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,9 +191,8 @@
 		075D7DBA2514D75D00D90009 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				074280302550190400ED4056 /* Input */,
 				07D8B7CA2512021A0047EBFE /* GameScene.swift */,
-				07E447452546C153003A13FD /* GameScene+InputController.swift */,
-				07183B502521D3DE00010135 /* GameScene+InputTouch.swift */,
 				075D7DBB2514D76D00D90009 /* GameSceneView.swift */,
 			);
 			path = GameScene;

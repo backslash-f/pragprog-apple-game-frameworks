@@ -19,6 +19,14 @@ class BlobPlayer: SKSpriteNode {
 
     let baseSpeed: CGFloat = 1.5
 
+    var newPosition: CGPoint = .zero {
+        didSet {
+            GloopDropApp.log("Current position: \(position)", category: .inputTouch)
+            GloopDropApp.log("New position: \(newPosition)", category: .inputTouch)
+            move()
+        }
+    }
+
     /// The "distance" this character moves when players use a controller to go to the left / right.
     let controllerTravelUnits: CGFloat = 50
 
@@ -77,16 +85,6 @@ extension BlobPlayer {
             resize: true
         )
     }
-
-    func move(to newPosition: CGPoint) {
-        guard shouldMove(to: newPosition) else {
-            return
-        }
-        turnLeftOrRight(on: newPosition)
-        let duration = durationOfMoveAnimation(to: newPosition)
-        let moveAction = SKAction.move(to: newPosition, duration: duration)
-        run(moveAction)
-    }
 }
 
 // MARK: - Private
@@ -112,16 +110,30 @@ private extension BlobPlayer {
         }
     }
 
-    func shouldMove(to newPosition: CGPoint) -> Bool {
-        #warning("TODO: don't move beyond the screen bounds")
-        return true
+    // MARK: - Displacement
+
+    func move() {
+        if shouldMove() {
+            flipRightOrLeft()
+            let duration = durationOfMoveAnimation(to: newPosition)
+            let moveAction = SKAction.move(to: newPosition, duration: duration)
+            run(moveAction)
+        }
     }
 
-    func turnLeftOrRight(on newPosition: CGPoint) {
-        if newPosition.x < position.x {
-            xScale = -abs(xScale)
-        } else {
-            xScale = abs(xScale)
-        }
+    func shouldMove() -> Bool {
+        newPosition != position
+    }
+
+    func flipRightOrLeft() {
+        (newPosition.x > position.x) ? flipRight() : flipLeft()
+    }
+
+    func flipRight() {
+        xScale = abs(xScale)
+    }
+
+    func flipLeft() {
+        xScale = -abs(xScale)
     }
 }
