@@ -21,35 +21,51 @@ extension ​GameScene​ {
     func setupExtendedControllers() {
         // Ideally the `-[GCController playerIndex]` property should be used, but as this is just single
         // player game, just get the first one and move on.
-        guard let extendedGamepadController = GCController.controllers().first?.extendedGamepad else {
+        guard let extendedGamepadController = gcOverseer.controllers().first?.extendedGamepad else {
             GloopDropApp.log("No extended gamepad controllers detected", category: .inputController)
             return
         }
 
-        #warning("TODO: could be encapsulated for both extended and micro controllers?")
-        // Move toward the direction of the axis.
-        //let displacement = SIMD2<Float>(x: x, y: y)
-        //GloopDropApp.log("\(displacement)", category: .inputController)
-        let leftThumbstickHandler: GCControllerDirectionPadValueChangedHandler = {
-            [weak self] leftThumbstick, x, y in
-            switch leftThumbstick {
-            case leftThumbstick.left where leftThumbstick.left.value >= 0:
-                while leftThumbstick.left.isPressed {
-                    #warning("TODO: move to the left")
-                }
-            case leftThumbstick.left where leftThumbstick.right.value >= 0:
-                while leftThumbstick.right.isPressed {
-                    #warning("TODO: move to the right")
-                }
-            default:
-                break
-            }
+        let directionalControlHandler: GCControllerDirectionPadValueChangedHandler = {
+            [weak self] thumbstick, _, _ in
+            self?.isLeftPressed = thumbstick.left.isPressed
+            self?.isRightPressed = thumbstick.right.isPressed
         }
 
-        extendedGamepadController.leftThumbstick.valueChangedHandler = leftThumbstickHandler
+        extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler
+        extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler
     }
 
     func setupMicroControllers() {
-        #warning("TODO: setup micro controllers")
+        #warning("TODO: could the logic encapsulated for both extended and micro controllers?")
+    }
+
+    func pollControllerInput() {
+        if isRightPressed {
+            movePlayerToRight()
+        } else if isLeftPressed {
+            movePlayerToLeft()
+        }
+    }
+}
+
+// MARK: - Private
+
+private extension ​GameScene​ {
+
+    func movePlayerToRight() {
+        let newPosition = CGPoint(
+            x: blobPlayer.position.x + blobPlayer.travelUnitsController,
+            y: blobPlayer.position.y
+        )
+        blobPlayer.move(to: newPosition)
+    }
+
+    func movePlayerToLeft() {
+        let newPosition = CGPoint(
+            x: blobPlayer.position.x - blobPlayer.travelUnitsController,
+            y: blobPlayer.position.y
+        )
+        blobPlayer.move(to: newPosition)
     }
 }

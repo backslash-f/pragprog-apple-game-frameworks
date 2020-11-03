@@ -17,18 +17,10 @@ class BlobPlayer: SKSpriteNode {
 
     // MARK: - Properties
 
-    let baseSpeed: CGFloat = 1.5
-
-    var newPosition: CGPoint = .zero {
-        didSet {
-            GloopDropApp.log("Current position: \(position)", category: .inputTouch)
-            GloopDropApp.log("New position: \(newPosition)", category: .inputTouch)
-            move()
-        }
-    }
+    let baseSpeed: CGFloat = 2
 
     /// The "distance" this character moves when players use a controller to go to the left / right.
-    let controllerTravelUnits: CGFloat = 50
+    let travelUnitsController: CGFloat = 80
 
     // MARK: - Private Properties
 
@@ -85,6 +77,17 @@ extension BlobPlayer {
             resize: true
         )
     }
+
+    func move(to newPosition: CGPoint) {
+        GloopDropApp.log("Current position: \(position)", category: .player)
+        GloopDropApp.log("New position: \(newPosition)", category: .player)
+        if newPosition != position {
+            flipRightOrLeft(to: newPosition)
+            let duration = durationOfMoveAnimation(to: newPosition)
+            let moveAction = SKAction.move(to: newPosition, duration: duration)
+            run(moveAction)
+        }
+    }
 }
 
 // MARK: - Private
@@ -112,20 +115,7 @@ private extension BlobPlayer {
 
     // MARK: - Displacement
 
-    func move() {
-        if shouldMove() {
-            flipRightOrLeft()
-            let duration = durationOfMoveAnimation(to: newPosition)
-            let moveAction = SKAction.move(to: newPosition, duration: duration)
-            run(moveAction)
-        }
-    }
-
-    func shouldMove() -> Bool {
-        newPosition != position
-    }
-
-    func flipRightOrLeft() {
+    func flipRightOrLeft(to newPosition: CGPoint) {
         (newPosition.x > position.x) ? flipRight() : flipLeft()
     }
 

@@ -14,6 +14,13 @@ class ​GameScene​: GloopDropScene {
 
     let blobPlayer = BlobPlayer()
 
+    // MARK: - Internal Properties
+
+    // MARK: Controller Input
+
+    var isLeftPressed: Bool = false
+    var isRightPressed: Bool = false
+
     // MARK: - Lifecycle
 
     init(size: CGSize) {
@@ -39,6 +46,10 @@ extension ​GameScene​ {
         setupBackgroundImage()
         setupForegroundImage()
         setupPlayer()
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        pollControllerInput()
     }
 }
 
