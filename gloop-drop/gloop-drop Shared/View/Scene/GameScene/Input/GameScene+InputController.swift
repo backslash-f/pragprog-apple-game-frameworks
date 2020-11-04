@@ -41,10 +41,10 @@ extension ​GameScene​ {
     }
 
     func pollControllerInput() {
-        if isRightPressed {
-            movePlayerToRight()
-        } else if isLeftPressed {
+        if isLeftPressed {
             movePlayerToLeft()
+        } else if isRightPressed {
+            movePlayerToRight()
         }
     }
 }
@@ -53,17 +53,17 @@ extension ​GameScene​ {
 
 private extension ​GameScene​ {
 
-    func movePlayerToRight() {
+    func movePlayerToLeft() {
         let newPosition = CGPoint(
-            x: blobPlayer.position.x + blobPlayer.travelUnitsController,
+            x: blobPlayer.position.x - blobPlayer.travelUnitsController,
             y: blobPlayer.position.y
         )
         blobPlayer.move(to: newPosition)
     }
 
-    func movePlayerToLeft() {
+    func movePlayerToRight() {
         let newPosition = CGPoint(
-            x: blobPlayer.position.x - blobPlayer.travelUnitsController,
+            x: blobPlayer.position.x + blobPlayer.travelUnitsController,
             y: blobPlayer.position.y
         )
         blobPlayer.move(to: newPosition)

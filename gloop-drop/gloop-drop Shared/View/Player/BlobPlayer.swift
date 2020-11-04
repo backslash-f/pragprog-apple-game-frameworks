@@ -81,8 +81,8 @@ extension BlobPlayer {
     func move(to newPosition: CGPoint) {
         GloopDropApp.log("Current position: \(position)", category: .player)
         GloopDropApp.log("New position: \(newPosition)", category: .player)
-        if newPosition != position {
-            flipRightOrLeft(to: newPosition)
+        if shouldMove(to: newPosition) {
+            flipLeftOrRight(to: newPosition)
             let duration = durationOfMoveAnimation(to: newPosition)
             let moveAction = SKAction.move(to: newPosition, duration: duration)
             run(moveAction)
@@ -115,15 +115,29 @@ private extension BlobPlayer {
 
     // MARK: - Displacement
 
-    func flipRightOrLeft(to newPosition: CGPoint) {
-        (newPosition.x > position.x) ? flipRight() : flipLeft()
+    func shouldMove(to newPosition: CGPoint) -> Bool {
+        isPositionValid(newPosition) && (newPosition != position)
     }
 
-    func flipRight() {
-        xScale = abs(xScale)
+    func isPositionValid(_ position: CGPoint) -> Bool {
+        guard let sceneWidth = scene?.size.width else {
+            return false
+        }
+        let playerHalfWidth = size.width * anchorPoint.x
+        let maximumLeft = playerHalfWidth
+        let maximumRight = sceneWidth - playerHalfWidth
+        return (position.x >= maximumLeft) && (position.x <= maximumRight)
+    }
+
+    func flipLeftOrRight(to newPosition: CGPoint) {
+        (newPosition.x < position.x) ? flipLeft() : flipRight()
     }
 
     func flipLeft() {
         xScale = -abs(xScale)
+    }
+
+    func flipRight() {
+        xScale = abs(xScale)
     }
 }
