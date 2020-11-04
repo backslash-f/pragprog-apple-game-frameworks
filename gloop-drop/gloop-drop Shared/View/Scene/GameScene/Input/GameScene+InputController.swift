@@ -32,7 +32,7 @@ extension ​GameScene​ {
         }
         // Couldn't get rotation to work:
         // https://developer.apple.com/forums/thread/21562?page=1#644496022
-        // microGamepadController.allowsRotation = true
+        microGamepadController.allowsRotation = true
         microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
     }
 
