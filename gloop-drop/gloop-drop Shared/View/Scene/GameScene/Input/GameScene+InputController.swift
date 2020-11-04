@@ -8,8 +8,6 @@
 import SwiftUI
 import GameController
 
-#warning("TODO: test all platforms")
-
 /// Handles controller inputs (users interacting with the game via controllers: *Dualshock*, *Xbox*, *Siri Remote*, etc).
 extension ​GameScene​ {
 
@@ -19,25 +17,23 @@ extension ​GameScene​ {
     }
 
     func setupExtendedControllers() {
-        // Ideally the `-[GCController playerIndex]` property should be used, but as this is just single
-        // player game, just get the first one and move on.
         guard let extendedGamepadController = gcOverseer.controllers().first?.extendedGamepad else {
             GloopDropApp.log("No extended gamepad controllers detected", category: .inputController)
             return
         }
-
-        let directionalControlHandler: GCControllerDirectionPadValueChangedHandler = {
-            [weak self] thumbstick, _, _ in
-            self?.isLeftPressed = thumbstick.left.isPressed
-            self?.isRightPressed = thumbstick.right.isPressed
-        }
-
-        extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler
-        extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler
+        extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
+        extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler()
     }
 
     func setupMicroControllers() {
-        #warning("TODO: could the logic encapsulated for both extended and micro controllers?")
+        guard let microGamepadController = gcOverseer.controllers().first?.microGamepad else {
+            GloopDropApp.log("No micro gamepad controllers detected", category: .inputController)
+            return
+        }
+        // Couldn't get rotation to work:
+        // https://developer.apple.com/forums/thread/21562?page=1#644496022
+        // microGamepadController.allowsRotation = true
+        microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
     }
 
     func pollControllerInput() {
@@ -52,6 +48,13 @@ extension ​GameScene​ {
 // MARK: - Private
 
 private extension ​GameScene​ {
+
+    func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
+        { [weak self] thumbstickOrDpad, x, y in
+            self?.isLeftPressed = thumbstickOrDpad.left.isPressed
+            self?.isRightPressed = thumbstickOrDpad.right.isPressed
+        }
+    }
 
     func movePlayerToLeft() {
         let newPosition = CGPoint(

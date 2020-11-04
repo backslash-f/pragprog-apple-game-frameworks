@@ -10,7 +10,7 @@ import SpriteKit
 /// Handles touch inputs (users interacting with the game via screen touching).
 extension ​GameScene​ {
 
-    #if os(iOS) || os(tvOS)
+    #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touches.forEach { touch in
             handleTouch(atPoint: touch.location(in: self))
