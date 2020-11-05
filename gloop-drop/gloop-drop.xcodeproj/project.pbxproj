@@ -42,6 +42,9 @@
 		075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		078B5CC92553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
+		078B5CCA2553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
+		078B5CCB2553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
 		07D46C09251B388B008317C9 /* BlobPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D46C08251B388B008317C9 /* BlobPlayer.swift */; };
 		07D8B81E2512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
 		07D8B8202512021C0047EBFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B7CA2512021A0047EBFE /* GameScene.swift */; };
@@ -82,6 +85,7 @@
 		075D7DA62514D62E00D90009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		075D7DBB2514D76D00D90009 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
 		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
+		078B5CC82553F8FB007B63F1 /* Collectibles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectibles.swift; sourceTree = "<group>"; };
 		07D46C08251B388B008317C9 /* BlobPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPlayer.swift; sourceTree = "<group>"; };
 		07D8B7CA2512021A0047EBFE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		07D8B7CB2512021B0047EBFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 		075D7DA32514D60500D90009 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				078B5CC72553F8E8007B63F1 /* Collectibles */,
 				07D46C07251B387F008317C9 /* Player */,
 				075D7E012514DA4000D90009 /* Scene */,
 				075D7DA62514D62E00D90009 /* ContentView.swift */,
@@ -205,6 +210,14 @@
 				075D7E022514DA5C00D90009 /* GloopDropScene.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		078B5CC72553F8E8007B63F1 /* Collectibles */ = {
+			isa = PBXGroup;
+			children = (
+				078B5CC82553F8FB007B63F1 /* Collectibles.swift */,
+			);
+			path = Collectibles;
 			sourceTree = "<group>";
 		};
 		07D46C07251B387F008317C9 /* Player */ = {
@@ -421,6 +434,7 @@
 				074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */,
 				0701388B251BE1EA0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				078B5CC92553F8FB007B63F1 /* Collectibles.swift in Sources */,
 				07013886251BE11E0092595E /* Constant.swift in Sources */,
 				075092DC251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
@@ -441,6 +455,7 @@
 				074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */,
 				070138A4251BE94E0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				078B5CCA2553F8FB007B63F1 /* Collectibles.swift in Sources */,
 				0701389C251BE94C0092595E /* Constant.swift in Sources */,
 				075D0DE82519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075092DD251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
@@ -461,6 +476,7 @@
 				074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */,
 				070138A8251BE94F0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* GameSceneView.swift in Sources */,
+				078B5CCB2553F8FB007B63F1 /* Collectibles.swift in Sources */,
 				070138A0251BE94C0092595E /* Constant.swift in Sources */,
 				075D0DE92519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075092DE251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,

@@ -12,6 +12,7 @@ enum Layer: CGFloat {
     case background
     case foreground
     case blobPlayer
+    case collectible
 }
 
 extension SKSpriteNode {
