@@ -5,7 +5,6 @@
 //  Created by Fernando Fernandes on 05.11.20.
 //
 
-import Foundation
 import SpriteKit
 
 /// Stores different types of collectibles and can return heir textures.

@@ -46,6 +46,7 @@ extension ​GameScene​ {
         setupBackgroundImage()
         setupForegroundImage()
         setupPlayer()
+        spawnGloop()
     }
 
     override func update(_ currentTime: TimeInterval) {

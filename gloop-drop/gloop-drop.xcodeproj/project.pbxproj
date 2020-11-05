@@ -22,6 +22,7 @@
 		07183B512521D3DE00010135 /* GameScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* GameScene+InputTouch.swift */; };
 		07183B522521D3DE00010135 /* GameScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* GameScene+InputTouch.swift */; };
 		07183B532521D3DE00010135 /* GameScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* GameScene+InputTouch.swift */; };
+		071B166625540E350041A963 /* GameScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* GameScene+Gloop.swift */; };
 		074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
@@ -79,6 +80,7 @@
 		0701388F251BE57A0092595E /* Constant+Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenario.swift"; sourceTree = "<group>"; };
 		07109A8C25371A38000A72B6 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS14.2.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		07183B502521D3DE00010135 /* GameScene+InputTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+InputTouch.swift"; sourceTree = "<group>"; };
+		071B166525540E350041A963 /* GameScene+Gloop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+Gloop.swift"; sourceTree = "<group>"; };
 		074B4A832514A86000BB1B42 /* GloopDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropApp.swift; sourceTree = "<group>"; };
 		075092DB251B97DD002CB9C6 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
 		075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+Logging.swift"; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		071B166425540E030041A963 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				071B166525540E350041A963 /* GameScene+Gloop.swift */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
 		074280302550190400ED4056 /* Input */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		075D7DBA2514D75D00D90009 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				071B166425540E030041A963 /* Function */,
 				074280302550190400ED4056 /* Input */,
 				07D8B7CA2512021A0047EBFE /* GameScene.swift */,
 				075D7DBB2514D76D00D90009 /* GameSceneView.swift */,
@@ -431,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E447462546C153003A13FD /* GameScene+InputController.swift in Sources */,
+				071B166625540E350041A963 /* GameScene+Gloop.swift in Sources */,
 				074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */,
 				0701388B251BE1EA0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* GameSceneView.swift in Sources */,

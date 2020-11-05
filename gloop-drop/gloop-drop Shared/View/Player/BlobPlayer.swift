@@ -5,7 +5,6 @@
 //  Created by Fernando Fernandes on 23.09.20.
 //
 
-import Foundation
 import SpriteKit
 
 /// Easily switch between animations.
