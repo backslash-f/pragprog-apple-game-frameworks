@@ -43,6 +43,8 @@
 		075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		078507382554A45C0020E9BE /* GameScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* GameScene+Gloop.swift */; };
+		0785073C2554A45D0020E9BE /* GameScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* GameScene+Gloop.swift */; };
 		078B5CC92553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
 		078B5CCA2553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
 		078B5CCB2553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
@@ -464,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E447472546C153003A13FD /* GameScene+InputController.swift in Sources */,
+				078507382554A45C0020E9BE /* GameScene+Gloop.swift in Sources */,
 				074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */,
 				070138A4251BE94E0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* GameSceneView.swift in Sources */,
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E447482546C153003A13FD /* GameScene+InputController.swift in Sources */,
+				0785073C2554A45D0020E9BE /* GameScene+Gloop.swift in Sources */,
 				074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */,
 				070138A8251BE94F0092595E /* Constant+Characters.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* GameSceneView.swift in Sources */,
