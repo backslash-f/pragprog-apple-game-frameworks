@@ -13,7 +13,7 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ⏳ To be started
 
 ## Status
-👉🏻 Tested on Xcode 12.2 beta and Swift 5.3.1 👈🏻
+👉🏻 Tested on Xcode 12.2 beta 4 (RC) and Swift 5.3.1 👈🏻
 
 🔨 Gloop Drop 💧  
 ⏳ Val's Revenge ⚔️  
