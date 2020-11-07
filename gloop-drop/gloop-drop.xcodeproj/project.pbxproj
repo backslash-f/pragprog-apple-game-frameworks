@@ -152,12 +152,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		071B166425540E030041A963 /* Function */ = {
+		071B166425540E030041A963 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
 				071B166525540E350041A963 /* MainScene+Gloop.swift */,
 			);
-			path = Function;
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		074280302550190400ED4056 /* Input */ = {
@@ -208,7 +208,7 @@
 		075D7DBA2514D75D00D90009 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
-				071B166425540E030041A963 /* Function */,
+				071B166425540E030041A963 /* Functions */,
 				074280302550190400ED4056 /* Input */,
 				07D8B7CA2512021A0047EBFE /* MainScene.swift */,
 				075D7DBB2514D76D00D90009 /* MainSceneView.swift */,

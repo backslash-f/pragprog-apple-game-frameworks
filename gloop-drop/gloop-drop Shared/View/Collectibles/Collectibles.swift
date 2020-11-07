@@ -42,6 +42,32 @@ class Collectible: SKSpriteNode {
     }
 }
 
+// MARK: - Interface
+
+extension Collectible {
+
+    func drop(dropSpeed: TimeInterval, floorLevel: CGFloat) {
+        // Appear action.
+        let appearAction = SKAction.fadeAlpha(to: 1.0, duration: 0.25)
+
+        // Scale action.
+        let scaleX = SKAction.scaleX(to: 1.0, duration: 1.0)
+        let scaleY = SKAction.scaleY(to: 1.3, duration: 1.0)
+        let scaleAction = SKAction.group([scaleX, scaleY])
+
+        // Move action.
+        let targetPosition = CGPoint(x: position.x, y: floorLevel)
+        let moveAction = SKAction.move(to: targetPosition, duration: dropSpeed)
+
+        // Fall sequence action.
+        let fallSequenceAction = SKAction.sequence([appearAction, scaleAction, moveAction])
+
+        // Shrink first, then run fall sequence action.
+        self.scale(to: CGSize(width: 0.25, height: 1.0))
+        self.run(fallSequenceAction, withKey: Constant.Node.Collectible.animationKeyDrop)
+    }
+}
+
 // MARK: - Private
 
 private extension Collectible {
