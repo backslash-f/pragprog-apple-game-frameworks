@@ -25,7 +25,7 @@ class BlobPlayer: SKSpriteNode {
 
     private var walkTextures: [SKTexture]?
 
-    private let defaultTexture = SKTexture(imageNamed: "\(Constant.Character.Blob.walkTexturePrefix)0")
+    private let defaultTexture = SKTexture(imageNamed: "\(Constant.Node.Blob.walkTexturePrefix)0")
 
     // MARK: - Lifecycle
 
@@ -96,7 +96,7 @@ private extension BlobPlayer {
     // MARK: Setup
 
     func setupPlayer() {
-        name = Constant.Character.Blob.name
+        name = Constant.Node.Blob.name
         setScale(1.0)
         anchorPoint = CGPoint(x: 0.5, y: 0.0) // center-bottom
         zPosition = Layer.blobPlayer.rawValue
@@ -104,8 +104,8 @@ private extension BlobPlayer {
 
     func loadWalkTextures() {
         loadTextures(
-            atlasName: Constant.Character.Blob.atlasName,
-            prefix: Constant.Character.Blob.walkTexturePrefix
+            atlasName: Constant.Node.Blob.atlasName,
+            prefix: Constant.Node.Blob.walkTexturePrefix
         ) { [weak self] textures in
             self?.walkTextures = textures
             self?.startWalkAnimation()

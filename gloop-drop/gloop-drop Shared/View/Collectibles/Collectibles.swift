@@ -15,7 +15,7 @@ enum CollectibleType: String {
     var texture: SKTexture? {
         switch self {
         case .gloop:
-            return SKTexture(imageNamed: "gloop")
+            return SKTexture(imageNamed: Constant.Node.Collectible.imageName)
         case .none:
             return nil
         }
@@ -45,18 +45,9 @@ class Collectible: SKSpriteNode {
 // MARK: - Private
 
 private extension Collectible {
-
-    static func createTexture(for collectibleType: CollectibleType) -> SKTexture? {
-        switch collectibleType {
-        case .gloop:
-            return SKTexture(imageNamed: "gloop")
-        case .none:
-            return nil
-        }
-    }
     
     func setup() {
-        name = "co_\(collectibleType)"
+        name = "\(Constant.Node.Collectible.namePrefix)\(collectibleType)"
         anchorPoint = CGPoint(x: 0.5, y: 1.0)
         zPosition = Layer.collectible.rawValue
     }
