@@ -1,0 +1,20 @@
+---
+# Rules in this file will be automatically fixed. The script in Xcode must be
+# changed to:
+#
+# if which swiftlint >/dev/null; then
+#   swiftlint autocorrect --config ".swiftlint.auto.yml" && swiftlint
+# else
+#   echo "SwiftLint (https://github.com/realm/SwiftLint) isn't installed. Run:"
+#   echo "brew install swiftlint"
+# fi
+#
+# Rules that support autocorrect:
+# https://github.com/realm/SwiftLint/blob/master/Rules.md
+
+whitelist_rules:
+  - trailing_whitespace
+  - trailing_newline
+  - vertical_whitespace
+  - comma
+  - colon

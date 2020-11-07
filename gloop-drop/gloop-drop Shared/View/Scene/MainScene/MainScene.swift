@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  MainScene.swift
 //  gloop-drop Shared
 //
 //  Created by Fernando Fernandes on 16.09.20.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SpriteKit
 
-class ​GameScene​: GloopDropScene {
+class MainScene: GloopDropScene {
 
     // MARK: - Properties
 
@@ -38,7 +38,7 @@ class ​GameScene​: GloopDropScene {
 
 // MARK: - SpriteKit
 
-extension ​GameScene​ {
+extension MainScene {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -56,7 +56,7 @@ extension ​GameScene​ {
 
 // MARK: - Private
 
-fileprivate extension ​GameScene​ {
+fileprivate extension MainScene {
 
     // MARK: Setup
 
@@ -111,7 +111,9 @@ fileprivate extension ​GameScene​ {
     func setupGameControllerListener() {
         gcOverseer.$isGameControllerConnected
             .sink { [weak self] isConnected in
-                self?.setupControllers()
+                if isConnected {
+                    self?.setupControllers()
+                }
             }
             .store(in: &cancellables)
     }

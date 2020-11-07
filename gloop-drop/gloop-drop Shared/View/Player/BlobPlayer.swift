@@ -92,7 +92,7 @@ extension BlobPlayer {
 // MARK: - Private
 
 private extension BlobPlayer {
-    
+
     // MARK: Setup
 
     func setupPlayer() {

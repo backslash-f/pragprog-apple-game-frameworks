@@ -1,5 +1,5 @@
 //
-//  GameScene+InputController.swift
+//  MainScene+InputController.swift
 //  gloop-drop
 //
 //  Created by Fernando Fernandes on 26.10.20.
@@ -8,8 +8,8 @@
 import SwiftUI
 import GameController
 
-/// Handles controller inputs (users interacting with the game via controllers: *Dualshock*, *Xbox*, *Siri Remote*, etc).
-extension ​GameScene​ {
+/// Handles controller inputs via controllers (*Dualshock*, *Xbox*, *Siri Remote*, etc).
+extension MainScene {
 
     func setupControllers() {
         setupExtendedControllers()
@@ -47,10 +47,10 @@ extension ​GameScene​ {
 
 // MARK: - Private
 
-private extension ​GameScene​ {
+private extension MainScene {
 
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
-        { [weak self] thumbstickOrDpad, x, y in
+        { [weak self] thumbstickOrDpad, _, _ in
             self?.isLeftPressed = thumbstickOrDpad.left.isPressed
             self?.isRightPressed = thumbstickOrDpad.right.isPressed
         }

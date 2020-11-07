@@ -19,7 +19,7 @@ extension SKSpriteNode {
 
     /// Loads texture arrays for animations via `SKTextureAtlas.preloadTextureAtlasesNamed(_:withCompletionHandler:)`.
     func loadTextures(atlasName: String, prefix: String, completion: @escaping ([SKTexture]) -> Void) {
-        
+
         SKTextureAtlas.preloadTextureAtlasesNamed([atlasName]) { error, characterAtlas in
             guard let characterAtlasArray = characterAtlas.first else {
                 let error = String(describing: error)

@@ -12,7 +12,7 @@ struct ContentView: View {
     // MARK: - Properties
 
     var body: some View {
-        GameSceneView()
+        MainSceneView()
             .edgesIgnoringSafeArea(.all)
     }
 }

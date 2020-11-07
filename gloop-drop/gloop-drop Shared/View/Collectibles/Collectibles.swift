@@ -45,7 +45,7 @@ class Collectible: SKSpriteNode {
 // MARK: - Private
 
 private extension Collectible {
-    
+
     func setup() {
         name = "\(Constant.Node.Collectible.namePrefix)\(collectibleType)"
         anchorPoint = CGPoint(x: 0.5, y: 1.0)

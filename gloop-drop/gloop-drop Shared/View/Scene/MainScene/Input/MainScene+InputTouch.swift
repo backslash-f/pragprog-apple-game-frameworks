@@ -1,5 +1,5 @@
 //
-//  GameScene+InputTouch.swift
+//  MainScene+InputTouch.swift
 //  gloop-drop
 //
 //  Created by Fernando Fernandes on 28.09.20.
@@ -8,7 +8,7 @@
 import SpriteKit
 
 /// Handles touch inputs (users interacting with the game via screen touching).
-extension ​GameScene​ {
+extension MainScene {
 
     #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,7 +36,7 @@ extension ​GameScene​ {
 
 // MARK: - Private
 
-fileprivate extension ​GameScene​ {
+fileprivate extension MainScene {
 
     func handleTouch(atPoint position: CGPoint) {
         GloopDropApp.log("👇🏻 Touch received!", category: .inputTouch)

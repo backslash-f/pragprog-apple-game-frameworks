@@ -1,5 +1,5 @@
 //
-//  GameScene+Gloop.swift
+//  MainScene+Gloop.swift
 //  gloop-drop iOS
 //
 //  Created by Fernando Fernandes on 05.11.20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension ​GameScene​ {
+extension MainScene {
 
     func spawnGloop() {
         let collectible = Collectible(collectibleType: .gloop)
