@@ -10,16 +10,22 @@ import SpriteKit
 
 class MainScene: GloopDropScene {
 
-    // MARK: - Properties
-
-    let blobPlayer = BlobPlayer()
-
     // MARK: - Internal Properties
+
+    internal let blobPlayer = BlobPlayer()
+
+    // MARK: Level Data
+
+    internal var level: Int = 8
+    internal var numberOfDrops: Int = 10
+    internal var dropSpeed: CGFloat = 1.0
+    internal var minDropSpeed: CGFloat = 0.12 // Fastest drop.
+    internal var maxDropSpeed: CGFloat = 1.0 // Slowest drop.
 
     // MARK: Controller Input
 
-    var isLeftPressed: Bool = false
-    var isRightPressed: Bool = false
+    internal var isLeftPressed: Bool = false
+    internal var isRightPressed: Bool = false
 
     // MARK: - Lifecycle
 

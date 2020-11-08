@@ -11,13 +11,16 @@ import SpriteKit
 extension MainScene {
 
     func spawnMultipleGloops() {
+        setupDropNumber()
+        setupDropSpeed()
+
         // Set up repeating action.
-        let wait = SKAction.wait(forDuration: TimeInterval(1.0))
+        let wait = SKAction.wait(forDuration: TimeInterval(dropSpeed))
         let spawn = SKAction.run { [weak self] in
             self?.spawnGloop()
         }
         let dropGloopsSequence = SKAction.sequence([wait, spawn])
-        let dropGloopsRepeatingSequence = SKAction.repeat(dropGloopsSequence, count: 10)
+        let dropGloopsRepeatingSequence = SKAction.repeat(dropGloopsSequence, count: numberOfDrops)
 
         run(dropGloopsRepeatingSequence, withKey: Constant.ActionKey.dropGloops)
     }
@@ -26,6 +29,32 @@ extension MainScene {
 // MARK: - Private
 
 private extension MainScene {
+
+    /// Sets the number of drops based on the level.
+    func setupDropNumber() {
+        switch level {
+        case 1...5:
+            numberOfDrops = level * 10
+        case 6:
+            numberOfDrops = 75
+        case 7:
+            numberOfDrops = 100
+        case 8:
+            numberOfDrops = 150
+        default:
+            numberOfDrops = 150
+        }
+    }
+
+    // Sets the drop speed based on the level.
+    func setupDropSpeed() {
+        dropSpeed = 1 / (CGFloat(level) + (CGFloat(level) / CGFloat(numberOfDrops)))
+        if dropSpeed < minDropSpeed {
+            dropSpeed = minDropSpeed
+        } else if dropSpeed > maxDropSpeed {
+            dropSpeed = maxDropSpeed
+        }
+    }
 
     func spawnGloop() {
         let collectible = Collectible(collectibleType: CollectibleType.gloop)
