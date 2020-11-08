@@ -7,15 +7,22 @@ jobs:
     runs-on: macos-11.0
     env:
       DEVELOPER_DIR: /Applications/Xcode_12.2.app/Contents/Developer
+
     steps:
+      - name: SSH fingerprint workaround
+        run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+
       - name: Check out
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
+
       - name: Build iOS
         working-directory: gloop-drop
         run: xcodebuild clean build -scheme iOS CODE_SIGNING_ALLOWED=NO
+
       - name: Build macOS
         working-directory: gloop-drop
         run: xcodebuild clean build -scheme macOS CODE_SIGNING_ALLOWED=NO
+
       - name: Build tvOS
         working-directory: gloop-drop
         run: xcodebuild clean build -scheme tvOS CODE_SIGNING_ALLOWED=NO
