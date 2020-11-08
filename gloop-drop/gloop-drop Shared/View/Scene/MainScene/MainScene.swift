@@ -46,7 +46,7 @@ extension MainScene {
         setupBackgroundImage()
         setupForegroundImage()
         setupPlayer()
-        spawnGloop()
+        spawnMultipleGloops()
     }
 
     override func update(_ currentTime: TimeInterval) {

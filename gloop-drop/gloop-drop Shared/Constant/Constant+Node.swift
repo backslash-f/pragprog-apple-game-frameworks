@@ -16,7 +16,6 @@ extension Constant {
         }
 
         struct Collectible {
-            static let animationKeyDrop = "drop"
             static let namePrefix = "co_"
             static let imageName = "gloop"
         }

@@ -64,7 +64,7 @@ extension Collectible {
 
         // Shrink first, then run fall sequence action.
         self.scale(to: CGSize(width: 0.25, height: 1.0))
-        self.run(fallSequenceAction, withKey: Constant.Node.Collectible.animationKeyDrop)
+        self.run(fallSequenceAction, withKey: Constant.ActionKey.dropGloop)
     }
 }
 
