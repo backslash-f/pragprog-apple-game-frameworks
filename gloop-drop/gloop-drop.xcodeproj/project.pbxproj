@@ -303,9 +303,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07D8B7CF2512021B0047EBFE /* gloop-drop iOS */ = {
+		07D8B7CF2512021B0047EBFE /* gloop-drop-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07D8B8302512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop iOS" */;
+			buildConfigurationList = 07D8B8302512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop-iOS" */;
 			buildPhases = (
 				07D8B7CC2512021B0047EBFE /* Sources */,
 				07D8B7CD2512021B0047EBFE /* Frameworks */,
@@ -317,7 +317,7 @@
 			);
 			dependencies = (
 			);
-			name = "gloop-drop iOS";
+			name = "gloop-drop-iOS";
 			packageProductDependencies = (
 				0700A1752519E85F00DB8DFB /* AppLogger */,
 				07EC2BB8253646810007A25A /* GCOverseer */,
@@ -326,9 +326,9 @@
 			productReference = 07D8B7D02512021B0047EBFE /* gloop-drop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07D8B7FA2512021B0047EBFE /* gloop-drop tvOS */ = {
+		07D8B7FA2512021B0047EBFE /* gloop-drop-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07D8B8332512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop tvOS" */;
+			buildConfigurationList = 07D8B8332512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop-tvOS" */;
 			buildPhases = (
 				07D8B7F72512021B0047EBFE /* Sources */,
 				07D8B7F82512021B0047EBFE /* Frameworks */,
@@ -339,7 +339,7 @@
 			);
 			dependencies = (
 			);
-			name = "gloop-drop tvOS";
+			name = "gloop-drop-tvOS";
 			packageProductDependencies = (
 				07013895251BE91A0092595E /* AppLogger */,
 				07EC2BC3253646DB0007A25A /* GCOverseer */,
@@ -348,9 +348,9 @@
 			productReference = 07D8B7FB2512021B0047EBFE /* gloop-drop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07D8B80B2512021B0047EBFE /* gloop-drop macOS */ = {
+		07D8B80B2512021B0047EBFE /* gloop-drop-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07D8B8362512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop macOS" */;
+			buildConfigurationList = 07D8B8362512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop-macOS" */;
 			buildPhases = (
 				07D8B8082512021B0047EBFE /* Sources */,
 				07D8B8092512021B0047EBFE /* Frameworks */,
@@ -361,7 +361,7 @@
 			);
 			dependencies = (
 			);
-			name = "gloop-drop macOS";
+			name = "gloop-drop-macOS";
 			packageProductDependencies = (
 				07013897251BE9200092595E /* AppLogger */,
 				07EC2BC5253646DF0007A25A /* GCOverseer */,
@@ -407,9 +407,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07D8B7CF2512021B0047EBFE /* gloop-drop iOS */,
-				07D8B7FA2512021B0047EBFE /* gloop-drop tvOS */,
-				07D8B80B2512021B0047EBFE /* gloop-drop macOS */,
+				07D8B7CF2512021B0047EBFE /* gloop-drop-iOS */,
+				07D8B80B2512021B0047EBFE /* gloop-drop-macOS */,
+				07D8B7FA2512021B0047EBFE /* gloop-drop-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -825,7 +825,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07D8B8302512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop iOS" */ = {
+		07D8B8302512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07D8B8312512021C0047EBFE /* Debug */,
@@ -834,7 +834,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07D8B8332512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop tvOS" */ = {
+		07D8B8332512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07D8B8342512021C0047EBFE /* Debug */,
@@ -843,7 +843,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07D8B8362512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop macOS" */ = {
+		07D8B8362512021C0047EBFE /* Build configuration list for PBXNativeTarget "gloop-drop-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07D8B8372512021C0047EBFE /* Debug */,

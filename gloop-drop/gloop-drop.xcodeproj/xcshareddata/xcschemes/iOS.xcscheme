@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07D8B7CF2512021B0047EBFE"
                BuildableName = "gloop-drop.app"
-               BlueprintName = "gloop-drop iOS"
+               BlueprintName = "gloop-drop-iOS"
                ReferencedContainer = "container:gloop-drop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07D8B7CF2512021B0047EBFE"
             BuildableName = "gloop-drop.app"
-            BlueprintName = "gloop-drop iOS"
+            BlueprintName = "gloop-drop-iOS"
             ReferencedContainer = "container:gloop-drop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07D8B7CF2512021B0047EBFE"
             BuildableName = "gloop-drop.app"
-            BlueprintName = "gloop-drop iOS"
+            BlueprintName = "gloop-drop-iOS"
             ReferencedContainer = "container:gloop-drop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
