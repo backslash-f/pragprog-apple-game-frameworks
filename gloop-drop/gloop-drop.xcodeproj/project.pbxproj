@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 0700A1752519E85F00DB8DFB /* AppLogger */; };
 		07013886251BE11E0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
 		0701388B251BE1EA0092595E /* Constant+Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Node.swift */; };
 		07013890251BE57A0092595E /* Constant+Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenario.swift */; };
-		07013896251BE91A0092595E /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 07013895251BE91A0092595E /* AppLogger */; };
-		07013898251BE9200092595E /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 07013897251BE9200092595E /* AppLogger */; };
 		0701389C251BE94C0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
 		070138A0251BE94C0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
 		070138A4251BE94E0092595E /* Constant+Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Node.swift */; };
@@ -22,6 +19,12 @@
 		07183B512521D3DE00010135 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* MainScene+InputTouch.swift */; };
 		07183B522521D3DE00010135 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* MainScene+InputTouch.swift */; };
 		07183B532521D3DE00010135 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183B502521D3DE00010135 /* MainScene+InputTouch.swift */; };
+		0719E4EB2557796D006F43B7 /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 0719E4EA2557796D006F43B7 /* AppLogger */; };
+		0719E4F125577980006F43B7 /* GCOverseer in Frameworks */ = {isa = PBXBuildFile; productRef = 0719E4F025577980006F43B7 /* GCOverseer */; };
+		0719E4F62557798E006F43B7 /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 0719E4F52557798E006F43B7 /* AppLogger */; };
+		0719E4F825577991006F43B7 /* GCOverseer in Frameworks */ = {isa = PBXBuildFile; productRef = 0719E4F725577991006F43B7 /* GCOverseer */; };
+		0719E4FA25577996006F43B7 /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 0719E4F925577996006F43B7 /* AppLogger */; };
+		0719E4FC25577999006F43B7 /* GCOverseer in Frameworks */ = {isa = PBXBuildFile; productRef = 0719E4FB25577999006F43B7 /* GCOverseer */; };
 		071B166625540E350041A963 /* MainScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* MainScene+Gloop.swift */; };
 		074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
 		074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B4A832514A86000BB1B42 /* GloopDropApp.swift */; };
@@ -58,9 +61,6 @@
 		07E447462546C153003A13FD /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E447452546C153003A13FD /* MainScene+InputController.swift */; };
 		07E447472546C153003A13FD /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E447452546C153003A13FD /* MainScene+InputController.swift */; };
 		07E447482546C153003A13FD /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E447452546C153003A13FD /* MainScene+InputController.swift */; };
-		07EC2BB9253646810007A25A /* GCOverseer in Frameworks */ = {isa = PBXBuildFile; productRef = 07EC2BB8253646810007A25A /* GCOverseer */; };
-		07EC2BC4253646DB0007A25A /* GCOverseer in Frameworks */ = {isa = PBXBuildFile; productRef = 07EC2BC3253646DB0007A25A /* GCOverseer */; };
-		07EC2BC6253646DF0007A25A /* GCOverseer in Frameworks */ = {isa = PBXBuildFile; productRef = 07EC2BC5253646DF0007A25A /* GCOverseer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0700A1762519E85F00DB8DFB /* AppLogger in Frameworks */,
-				07EC2BB9253646810007A25A /* GCOverseer in Frameworks */,
+				0719E4EB2557796D006F43B7 /* AppLogger in Frameworks */,
+				0719E4F125577980006F43B7 /* GCOverseer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07013896251BE91A0092595E /* AppLogger in Frameworks */,
-				07EC2BC4253646DB0007A25A /* GCOverseer in Frameworks */,
+				0719E4FA25577996006F43B7 /* AppLogger in Frameworks */,
+				0719E4FC25577999006F43B7 /* GCOverseer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07013898251BE9200092595E /* AppLogger in Frameworks */,
-				07EC2BC6253646DF0007A25A /* GCOverseer in Frameworks */,
+				0719E4F62557798E006F43B7 /* AppLogger in Frameworks */,
+				0719E4F825577991006F43B7 /* GCOverseer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,8 +319,8 @@
 			);
 			name = "gloop-drop-iOS";
 			packageProductDependencies = (
-				0700A1752519E85F00DB8DFB /* AppLogger */,
-				07EC2BB8253646810007A25A /* GCOverseer */,
+				0719E4EA2557796D006F43B7 /* AppLogger */,
+				0719E4F025577980006F43B7 /* GCOverseer */,
 			);
 			productName = "gloop-drop iOS";
 			productReference = 07D8B7D02512021B0047EBFE /* gloop-drop.app */;
@@ -341,8 +341,8 @@
 			);
 			name = "gloop-drop-tvOS";
 			packageProductDependencies = (
-				07013895251BE91A0092595E /* AppLogger */,
-				07EC2BC3253646DB0007A25A /* GCOverseer */,
+				0719E4F925577996006F43B7 /* AppLogger */,
+				0719E4FB25577999006F43B7 /* GCOverseer */,
 			);
 			productName = "gloop-drop tvOS";
 			productReference = 07D8B7FB2512021B0047EBFE /* gloop-drop.app */;
@@ -363,8 +363,8 @@
 			);
 			name = "gloop-drop-macOS";
 			packageProductDependencies = (
-				07013897251BE9200092595E /* AppLogger */,
-				07EC2BC5253646DF0007A25A /* GCOverseer */,
+				0719E4F52557798E006F43B7 /* AppLogger */,
+				0719E4F725577991006F43B7 /* GCOverseer */,
 			);
 			productName = "gloop-drop macOS";
 			productReference = 07D8B80C2512021B0047EBFE /* gloop-drop.app */;
@@ -400,8 +400,8 @@
 			);
 			mainGroup = 07D8B7C22512021A0047EBFE;
 			packageReferences = (
-				0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */,
-				07EC2BB7253646810007A25A /* XCRemoteSwiftPackageReference "gcoverseer" */,
+				0719E4E92557796D006F43B7 /* XCRemoteSwiftPackageReference "applogger" */,
+				0719E4EF25577980006F43B7 /* XCRemoteSwiftPackageReference "gcoverseer" */,
 			);
 			productRefGroup = 07D8B7D12512021B0047EBFE /* Products */;
 			projectDirPath = "";
@@ -855,53 +855,53 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */ = {
+		0719E4E92557796D006F43B7 /* XCRemoteSwiftPackageReference "applogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:backslash-f/applogger.git";
+			repositoryURL = "https://github.com/backslash-f/applogger.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
 			};
 		};
-		07EC2BB7253646810007A25A /* XCRemoteSwiftPackageReference "gcoverseer" */ = {
+		0719E4EF25577980006F43B7 /* XCRemoteSwiftPackageReference "gcoverseer" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:backslash-f/gcoverseer.git";
+			repositoryURL = "https://github.com/backslash-f/gcoverseer.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 0.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0700A1752519E85F00DB8DFB /* AppLogger */ = {
+		0719E4EA2557796D006F43B7 /* AppLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */;
+			package = 0719E4E92557796D006F43B7 /* XCRemoteSwiftPackageReference "applogger" */;
 			productName = AppLogger;
 		};
-		07013895251BE91A0092595E /* AppLogger */ = {
+		0719E4F025577980006F43B7 /* GCOverseer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */;
-			productName = AppLogger;
-		};
-		07013897251BE9200092595E /* AppLogger */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0700A1742519E85F00DB8DFB /* XCRemoteSwiftPackageReference "applogger" */;
-			productName = AppLogger;
-		};
-		07EC2BB8253646810007A25A /* GCOverseer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 07EC2BB7253646810007A25A /* XCRemoteSwiftPackageReference "gcoverseer" */;
+			package = 0719E4EF25577980006F43B7 /* XCRemoteSwiftPackageReference "gcoverseer" */;
 			productName = GCOverseer;
 		};
-		07EC2BC3253646DB0007A25A /* GCOverseer */ = {
+		0719E4F52557798E006F43B7 /* AppLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 07EC2BB7253646810007A25A /* XCRemoteSwiftPackageReference "gcoverseer" */;
+			package = 0719E4E92557796D006F43B7 /* XCRemoteSwiftPackageReference "applogger" */;
+			productName = AppLogger;
+		};
+		0719E4F725577991006F43B7 /* GCOverseer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0719E4EF25577980006F43B7 /* XCRemoteSwiftPackageReference "gcoverseer" */;
 			productName = GCOverseer;
 		};
-		07EC2BC5253646DF0007A25A /* GCOverseer */ = {
+		0719E4F925577996006F43B7 /* AppLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 07EC2BB7253646810007A25A /* XCRemoteSwiftPackageReference "gcoverseer" */;
+			package = 0719E4E92557796D006F43B7 /* XCRemoteSwiftPackageReference "applogger" */;
+			productName = AppLogger;
+		};
+		0719E4FB25577999006F43B7 /* GCOverseer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0719E4EF25577980006F43B7 /* XCRemoteSwiftPackageReference "gcoverseer" */;
 			productName = GCOverseer;
 		};
 /* End XCSwiftPackageProductDependency section */
