@@ -17,8 +17,9 @@ jobs:
 
       - name: Build iOS
         working-directory: gloop-drop
-        run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
-        run: xcodebuild clean build -scheme iOS CODE_SIGNING_ALLOWED=NO
+        run: |
+          for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+          xcodebuild clean build -scheme iOS CODE_SIGNING_ALLOWED=NO
 
       - name: Build macOS
         working-directory: gloop-drop
