@@ -21,6 +21,12 @@ class BlobPlayer: SKSpriteNode {
     /// The "distance" this character moves when players use a controller to go to the left / right.
     let travelUnitsController: CGFloat = 80
 
+    // MARK: Player Movement
+
+    var isPlayerMoving = false
+
+    var lastKnownPosition: CGPoint?
+
     // MARK: - Private Properties
 
     private var walkTextures: [SKTexture]?
@@ -52,16 +58,6 @@ extension BlobPlayer {
         constraints = [lockToPlatform]
     }
 
-    func durationOfMoveAnimation(to newPosition: CGPoint) -> TimeInterval {
-        let distance = hypot(newPosition.x - position.x, newPosition.y - position.y)
-        GloopDropApp.log("Distance: \(distance)", category: .player)
-
-        let duration = TimeInterval(distance / baseSpeed) / 255
-        GloopDropApp.log("Duration (speed): \(duration)", category: .player)
-
-        return TimeInterval(duration)
-    }
-
     func startWalkAnimation() {
         guard let walkTextures = walkTextures else {
             let errorMessage = "Could not find textures"
@@ -80,12 +76,10 @@ extension BlobPlayer {
     func move(to newPosition: CGPoint) {
         GloopDropApp.log("Current position: \(position)", category: .player)
         GloopDropApp.log("New position: \(newPosition)", category: .player)
-        if shouldMove(to: newPosition) {
-            flipLeftOrRight(to: newPosition)
-            let duration = durationOfMoveAnimation(to: newPosition)
-            let moveAction = SKAction.move(to: newPosition, duration: duration)
-            run(moveAction)
-        }
+        flipLeftOrRight(to: newPosition)
+        let adjustedNewPosition = adjust(newPosition)
+        position = adjustedNewPosition
+        lastKnownPosition = position
     }
 }
 
@@ -114,18 +108,26 @@ private extension BlobPlayer {
 
     // MARK: - Displacement
 
-    func shouldMove(to newPosition: CGPoint) -> Bool {
-        isPositionValid(newPosition) && (newPosition != position)
-    }
-
-    func isPositionValid(_ position: CGPoint) -> Bool {
+    /// Adjusts the given `position` to not allow the player to slide beyond the screen bounds.
+    func adjust(_ position: CGPoint) -> CGPoint {
         guard let sceneWidth = scene?.size.width else {
-            return false
+            return position
         }
+
         let playerHalfWidth = size.width * anchorPoint.x
         let maximumLeft = playerHalfWidth
         let maximumRight = sceneWidth - playerHalfWidth
-        return (position.x >= maximumLeft) && (position.x <= maximumRight)
+
+        let adjustedX: CGFloat
+        if position.x < maximumLeft {
+            adjustedX = maximumLeft
+        } else if position.x > maximumRight {
+            adjustedX = maximumRight
+        } else {
+            adjustedX = position.x
+        }
+
+        return CGPoint(x: adjustedX, y: position.y)
     }
 
     func flipLeftOrRight(to newPosition: CGPoint) {
