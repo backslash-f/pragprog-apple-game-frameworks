@@ -34,8 +34,6 @@ extension MainScene {
         // https://developer.apple.com/forums/thread/21562?page=1#644496022
         microGamepadController.allowsRotation = true
         microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
-
-        #warning("TODO: add turbo mode (controller)")
     }
 
     func pollControllerInput() {
