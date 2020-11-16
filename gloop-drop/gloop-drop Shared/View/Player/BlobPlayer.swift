@@ -38,6 +38,7 @@ class BlobPlayer: SKSpriteNode {
     init() {
         super.init(texture: defaultTexture, color: .clear, size: defaultTexture.size())
         setupPlayer()
+        setupPhysicsBody()
         loadWalkTextures()
     }
 
@@ -94,6 +95,17 @@ private extension BlobPlayer {
         setScale(1.0)
         anchorPoint = CGPoint(x: 0.5, y: 0.0) // center-bottom
         zPosition = Layer.blobPlayer.rawValue
+    }
+
+    func setupPhysicsBody() {
+        physicsBody = SKPhysicsBody(
+            rectangleOf: size,
+            center: CGPoint(
+                x: 0.0,
+                y: size.height/2
+            )
+        )
+        physicsBody?.affectedByGravity = false
     }
 
     func loadWalkTextures() {

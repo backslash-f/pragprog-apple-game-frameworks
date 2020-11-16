@@ -16,7 +16,7 @@ class MainScene: GloopDropScene {
 
     // MARK: Level Data
 
-    internal var level: Int = 8
+    internal var level: Int = 1
     internal var numberOfDrops: Int = 10
     internal var dropSpeed: CGFloat = 1.0
     internal var minDropSpeed: CGFloat = 0.12 // Fastest drop.
@@ -99,6 +99,11 @@ fileprivate extension MainScene {
         foreground.anchorPoint = .zero
         foreground.position = .zero
         foreground.zPosition = Layer.foreground.rawValue
+
+        // Add physics body
+        foreground.physicsBody = SKPhysicsBody(edgeLoopFrom: foreground.frame)
+        foreground.physicsBody?.affectedByGravity = false
+
         addChild(foreground)
     }
 

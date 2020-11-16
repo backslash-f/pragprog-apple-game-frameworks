@@ -35,6 +35,7 @@ class Collectible: SKSpriteNode {
         let texture = collectibleType.texture
         super.init(texture: texture, color: .clear, size: texture?.size() ?? .zero)
         setup()
+        setupPhysicsBody()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -76,5 +77,16 @@ private extension Collectible {
         name = "\(Constant.Node.Collectible.namePrefix)\(collectibleType)"
         anchorPoint = CGPoint(x: 0.5, y: 1.0)
         zPosition = Layer.collectible.rawValue
+    }
+
+    func setupPhysicsBody() {
+        physicsBody = SKPhysicsBody(
+            rectangleOf: size,
+            center: CGPoint(
+                x: 0.0,
+                y: -size.height/2
+            )
+        )
+        physicsBody?.affectedByGravity = false
     }
 }
