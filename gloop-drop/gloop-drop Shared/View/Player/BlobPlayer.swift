@@ -108,6 +108,12 @@ private extension BlobPlayer {
         physicsBody?.affectedByGravity = false
     }
 
+    func setupPhysicsCategories() {
+        physicsBody?.categoryBitMask = PhysicsCategory.player.rawValue
+        physicsBody?.contactTestBitMask = PhysicsCategory.collectible.rawValue
+        physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
+    }
+
     func loadWalkTextures() {
         loadTextures(
             atlasName: Constant.Node.Blob.atlasName,

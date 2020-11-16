@@ -100,9 +100,14 @@ fileprivate extension MainScene {
         foreground.position = .zero
         foreground.zPosition = Layer.foreground.rawValue
 
-        // Add physics body
+        // Add physics body.
         foreground.physicsBody = SKPhysicsBody(edgeLoopFrom: foreground.frame)
         foreground.physicsBody?.affectedByGravity = false
+
+        // Set up physics categories.
+        foreground.physicsBody?.categoryBitMask = PhysicsCategory.foreground.rawValue
+        foreground.physicsBody?.contactTestBitMask = PhysicsCategory.collectible.rawValue
+        foreground.physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
 
         addChild(foreground)
     }

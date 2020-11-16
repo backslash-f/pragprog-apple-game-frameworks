@@ -36,6 +36,7 @@ class Collectible: SKSpriteNode {
         super.init(texture: texture, color: .clear, size: texture?.size() ?? .zero)
         setup()
         setupPhysicsBody()
+        setupPhysicsCategories()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -88,5 +89,11 @@ private extension Collectible {
             )
         )
         physicsBody?.affectedByGravity = false
+    }
+
+    func setupPhysicsCategories() {
+        physicsBody?.categoryBitMask = PhysicsCategory.collectible.rawValue
+        physicsBody?.contactTestBitMask = PhysicsCategory.player.rawValue | PhysicsCategory.foreground.rawValue
+        physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
     }
 }

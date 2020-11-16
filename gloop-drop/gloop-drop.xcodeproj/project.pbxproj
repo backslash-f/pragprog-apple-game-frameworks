@@ -49,6 +49,9 @@
 		075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		0775655A2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */; };
+		0775655B2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */; };
+		0775655C2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */; };
 		078507382554A45C0020E9BE /* MainScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* MainScene+Gloop.swift */; };
 		0785073C2554A45D0020E9BE /* MainScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* MainScene+Gloop.swift */; };
 		078B5CC92553F8FB007B63F1 /* Collectibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectibles.swift */; };
@@ -93,6 +96,7 @@
 		075D7DA62514D62E00D90009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		075D7DBB2514D76D00D90009 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
 		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
+		077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+PhysicsCategory.swift"; sourceTree = "<group>"; };
 		078B5CC82553F8FB007B63F1 /* Collectibles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectibles.swift; sourceTree = "<group>"; };
 		07D46C08251B388B008317C9 /* BlobPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPlayer.swift; sourceTree = "<group>"; };
 		07D8B7CA2512021A0047EBFE /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			children = (
 				074B4A832514A86000BB1B42 /* GloopDropApp.swift */,
 				075D0DE62519E88A00F409BE /* GloopDropApp+Logging.swift */,
+				077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				07E447462546C153003A13FD /* MainScene+InputController.swift in Sources */,
 				071B166625540E350041A963 /* MainScene+Gloop.swift in Sources */,
 				074B4A842514A86000BB1B42 /* GloopDropApp.swift in Sources */,
+				0775655A2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */,
 				0701388B251BE1EA0092595E /* Constant+Node.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				078B5CC92553F8FB007B63F1 /* Collectibles.swift in Sources */,
@@ -534,6 +540,7 @@
 				07E447472546C153003A13FD /* MainScene+InputController.swift in Sources */,
 				078507382554A45C0020E9BE /* MainScene+Gloop.swift in Sources */,
 				074B4A8A2514A87100BB1B42 /* GloopDropApp.swift in Sources */,
+				0775655C2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */,
 				070138A4251BE94E0092595E /* Constant+Node.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				078B5CCA2553F8FB007B63F1 /* Collectibles.swift in Sources */,
@@ -557,6 +564,7 @@
 				07E447482546C153003A13FD /* MainScene+InputController.swift in Sources */,
 				0785073C2554A45D0020E9BE /* MainScene+Gloop.swift in Sources */,
 				074B4A902514A87200BB1B42 /* GloopDropApp.swift in Sources */,
+				0775655B2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */,
 				070138A8251BE94F0092595E /* Constant+Node.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				078B5CCB2553F8FB007B63F1 /* Collectibles.swift in Sources */,
