@@ -12,5 +12,5 @@ struct PhysicsCategory: OptionSet {
     static let none         = PhysicsCategory(rawValue: 1 << 0)
     static let player       = PhysicsCategory(rawValue: 1 << 1)
     static let collectible  = PhysicsCategory(rawValue: 1 << 2)
-    static let foreground   = PhysicsCategory(rawValue: 1 << 3)
+    static let floor        = PhysicsCategory(rawValue: 1 << 3)
 }

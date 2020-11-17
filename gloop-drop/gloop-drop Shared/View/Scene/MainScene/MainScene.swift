@@ -48,6 +48,7 @@ extension MainScene {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        setupPhysicsWorld()
         setupBackgroundColor()
         setupBackgroundImage()
         setupForegroundImage()
@@ -69,6 +70,10 @@ fileprivate extension MainScene {
     func setupScene() {
         view?.ignoresSiblingOrder = false
         scaleMode = .aspectFill
+    }
+
+    func setupPhysicsWorld() {
+        physicsWorld.contactDelegate = self
     }
 
     func setupBackgroundColor() {
@@ -105,7 +110,7 @@ fileprivate extension MainScene {
         foreground.physicsBody?.affectedByGravity = false
 
         // Set up physics categories.
-        foreground.physicsBody?.categoryBitMask = PhysicsCategory.foreground.rawValue
+        foreground.physicsBody?.categoryBitMask = PhysicsCategory.floor.rawValue
         foreground.physicsBody?.contactTestBitMask = PhysicsCategory.collectible.rawValue
         foreground.physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
 

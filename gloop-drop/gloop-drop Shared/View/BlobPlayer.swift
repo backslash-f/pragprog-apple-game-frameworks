@@ -39,6 +39,7 @@ class BlobPlayer: SKSpriteNode {
         super.init(texture: defaultTexture, color: .clear, size: defaultTexture.size())
         setupPlayer()
         setupPhysicsBody()
+        setupPhysicsCategories()
         loadWalkTextures()
     }
 

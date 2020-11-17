@@ -1,5 +1,5 @@
 //
-//  Collectibles.swift
+//  Collectible.swift
 //  gloop-drop
 //
 //  Created by Fernando Fernandes on 05.11.20.
@@ -68,6 +68,16 @@ extension Collectible {
         self.scale(to: CGSize(width: 0.25, height: 1.0))
         self.run(fallSequenceAction, withKey: Constant.ActionKey.dropGloop)
     }
+
+    // MARK: Handle Contact
+
+    func collected() {
+        runRemoveFromParentAction()
+    }
+
+    func missed() {
+        runRemoveFromParentAction()
+    }
 }
 
 // MARK: - Private
@@ -93,7 +103,13 @@ private extension Collectible {
 
     func setupPhysicsCategories() {
         physicsBody?.categoryBitMask = PhysicsCategory.collectible.rawValue
-        physicsBody?.contactTestBitMask = PhysicsCategory.player.rawValue | PhysicsCategory.foreground.rawValue
+        physicsBody?.contactTestBitMask = PhysicsCategory.player.rawValue | PhysicsCategory.floor.rawValue
         physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
+    }
+
+    // MARK: Actions
+
+    func runRemoveFromParentAction() {
+        run(SKAction.removeFromParent())
     }
 }

@@ -69,6 +69,6 @@ private extension GloopDropScene {
     }
 
     func logInformation() {
-        GloopDropApp.log("Scene size: \(size)", category: .spriteKit)
+        GloopDropApp.log("Scene size: \(size)", category: .scene)
     }
 }
