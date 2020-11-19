@@ -19,7 +19,7 @@ class BlobPlayer: SKSpriteNode {
     let baseSpeed: CGFloat = 2
 
     /// The "distance" this character moves when players use a controller to go to the left / right.
-    let travelUnitsController: CGFloat = 80
+    let travelUnitsController: CGFloat = 40
 
     // MARK: Player Movement
 
