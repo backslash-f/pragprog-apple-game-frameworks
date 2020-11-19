@@ -84,19 +84,6 @@
 		07E447482546C153003A13FD /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E447452546C153003A13FD /* MainScene+InputController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		07D8B82F2512021C0047EBFE /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		07013885251BE11E0092595E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0701388A251BE1EA0092595E /* Constant+Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Nodes.swift"; sourceTree = "<group>"; };
@@ -345,7 +332,6 @@
 				07D8B7CC2512021B0047EBFE /* Sources */,
 				07D8B7CD2512021B0047EBFE /* Frameworks */,
 				07D8B7CE2512021B0047EBFE /* Resources */,
-				07D8B82F2512021C0047EBFE /* Embed Watch Content */,
 				076C57A32556C4DD00BE4055 /* SwiftLint */,
 			);
 			buildRules = (

@@ -10,23 +10,8 @@ import SpriteKit
 extension MainScene {
 
     func setupLabels() {
-        setupScoreLabel()
         setupLevelLabel()
-    }
-
-    func setupScoreLabel() {
-        let scoreLabelName = Constant.Label.Score.name
-        guard scene?.childNode(withName: scoreLabelName) == nil else {
-            // Avoid re-adding the same label over and over again.
-            return
-        }
-        let scoreLabel = baseLabel()
-        scoreLabel.name = scoreLabelName
-        scoreLabel.horizontalAlignmentMode = .right
-        #warning("FIXME: macOS position")
-        scoreLabel.position = CGPoint(x: frame.maxX - 50, y: viewTop() - 100)
-        scoreLabel.text = Constant.Label.Score.text
-        addChild(scoreLabel)
+        setupScoreLabel()
     }
 
     func setupLevelLabel() {
@@ -38,10 +23,23 @@ extension MainScene {
         let levelLabel = baseLabel()
         levelLabel.name = levelLabelName
         levelLabel.horizontalAlignmentMode = .left
-        #warning("FIXME: macOS position")
         levelLabel.position = CGPoint(x: frame.minX + 50, y: viewTop() - 100)
         levelLabel.text = "\(Constant.Label.Level.text)\(level)"
         addChild(levelLabel)
+    }
+
+    func setupScoreLabel() {
+        let scoreLabelName = Constant.Label.Score.name
+        guard scene?.childNode(withName: scoreLabelName) == nil else {
+            // Avoid re-adding the same label over and over again.
+            return
+        }
+        let scoreLabel = baseLabel()
+        scoreLabel.name = scoreLabelName
+        scoreLabel.horizontalAlignmentMode = .right
+        scoreLabel.position = CGPoint(x: frame.maxX - 50, y: viewTop() - 100)
+        scoreLabel.text = "\(Constant.Label.Score.text)"
+        addChild(scoreLabel)
     }
 }
 
@@ -51,8 +49,7 @@ private extension MainScene {
 
     /// Creates a base `SKLabelNode` with common attributes.
     func baseLabel() -> SKLabelNode {
-        let label = SKLabelNode()
-        label.fontName = Constant.Font.nosifer
+        let label = SKLabelNode(fontNamed: Constant.Font.nosifer)
         label.fontColor = .yellow
         label.fontSize = Constant.Font.size
         label.verticalAlignmentMode = .center
