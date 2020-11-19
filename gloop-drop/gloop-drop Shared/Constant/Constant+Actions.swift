@@ -5,7 +5,7 @@
 //  Created by Fernando Fernandes on 08.11.20.
 //
 
-import Foundation
+import SwiftUI
 
 extension Constant {
 

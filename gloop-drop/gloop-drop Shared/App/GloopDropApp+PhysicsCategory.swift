@@ -5,7 +5,7 @@
 //  Created by Fernando Fernandes on 16.11.20.
 //
 
-import Foundation
+import SwiftUI
 
 struct PhysicsCategory: OptionSet {
     let rawValue: UInt32

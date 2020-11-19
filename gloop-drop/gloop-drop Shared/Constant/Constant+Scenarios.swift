@@ -1,5 +1,5 @@
 //
-//  Constant+Scenario.swift
+//  Constant+Scenarios.swift
 //  gloop-drop iOS
 //
 //  Created by Fernando Fernandes on 23.09.20.

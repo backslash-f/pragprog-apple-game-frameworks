@@ -5,4 +5,12 @@
 //  Created by Fernando Fernandes on 23.09.20.
 //
 
-struct Constant {}
+import SwiftUI
+
+struct Constant {
+
+    struct Font {
+        static let nosifer = "Nosifer"
+        static let size: CGFloat = 35
+    }
+}
