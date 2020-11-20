@@ -65,8 +65,8 @@ extension Collectible {
         let fallSequenceAction = SKAction.sequence([appearAction, scaleAction, moveAction])
 
         // Shrink first, then run fall sequence action.
-        self.scale(to: CGSize(width: 0.25, height: 1.0))
-        self.run(fallSequenceAction, withKey: Constant.ActionKey.dropGloop)
+        scale(to: CGSize(width: 0.25, height: 1.0))
+        run(fallSequenceAction, withKey: Constant.ActionKey.dropGloop)
     }
 
     // MARK: Handle Contact

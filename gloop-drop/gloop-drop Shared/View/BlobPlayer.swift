@@ -9,7 +9,7 @@ import SpriteKit
 
 /// Easily switch between animations.
 enum PlayerAnimationType: String {
-    case walk
+    case walk, die
 }
 
 class BlobPlayer: SKSpriteNode {
@@ -24,13 +24,12 @@ class BlobPlayer: SKSpriteNode {
     // MARK: Player Movement
 
     var isPlayerMoving = false
-
     var lastKnownPosition: CGPoint?
 
     // MARK: - Private Properties
 
     private var walkTextures: [SKTexture]?
-
+    private var dieTextures: [SKTexture]?
     private let defaultTexture = SKTexture(imageNamed: "\(Constant.Node.Blob.walkTexturePrefix)0")
 
     // MARK: - Lifecycle
@@ -41,6 +40,7 @@ class BlobPlayer: SKSpriteNode {
         setupPhysicsBody()
         setupPhysicsCategories()
         loadWalkTextures()
+        loadDieTextures()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -62,7 +62,7 @@ extension BlobPlayer {
 
     func startWalkAnimation() {
         guard let walkTextures = walkTextures else {
-            let errorMessage = "Could not find textures"
+            let errorMessage = "Could not find walking textures"
             GloopDropApp.logError(errorMessage)
             preconditionFailure(errorMessage)
         }
@@ -71,6 +71,24 @@ extension BlobPlayer {
             textures: walkTextures,
             speed: 0.25,
             name: PlayerAnimationType.walk.rawValue,
+            resize: true
+        )
+    }
+
+    func startDieAnimation() {
+        guard let dieTextures = dieTextures else {
+            let errorMessage = "Could not find dying textures"
+            GloopDropApp.logError(errorMessage)
+            preconditionFailure(errorMessage)
+        }
+        // Stop the walk animation.
+        removeAction(forKey: PlayerAnimationType.walk.rawValue)
+
+        // Run dying animation (forever).
+        startAnimation(
+            textures: dieTextures,
+            speed: 0.25,
+            name: PlayerAnimationType.die.rawValue,
             resize: true
         )
     }
@@ -122,6 +140,15 @@ private extension BlobPlayer {
         ) { [weak self] textures in
             self?.walkTextures = textures
             self?.startWalkAnimation()
+        }
+    }
+
+    func loadDieTextures() {
+        loadTextures(
+            atlasName: Constant.Node.Blob.atlasName,
+            prefix: Constant.Node.Blob.dieTexturePrefix
+        ) { [weak self] textures in
+            self?.dieTextures = textures
         }
     }
 

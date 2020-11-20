@@ -13,6 +13,7 @@ extension Constant {
             static let atlasName = "blob"
             static let name = "Blob Player"
             static let walkTexturePrefix = "blob-walk_"
+            static let dieTexturePrefix = "blob-die_"
         }
 
         struct Collectible {

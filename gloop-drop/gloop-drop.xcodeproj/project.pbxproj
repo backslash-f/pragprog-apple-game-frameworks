@@ -58,6 +58,9 @@
 		075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
 		075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D7E022514DA5C00D90009 /* GloopDropScene.swift */; };
+		07726F632567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */; };
+		07726F642567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */; };
+		07726F652567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */; };
 		0775655A2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */; };
 		0775655B2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */; };
 		0775655C2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */; };
@@ -101,6 +104,7 @@
 		075D7DA62514D62E00D90009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		075D7DBB2514D76D00D90009 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
 		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
+		07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+GameOver.swift"; sourceTree = "<group>"; };
 		077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+PhysicsCategory.swift"; sourceTree = "<group>"; };
 		077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+PhysicsContact.swift"; sourceTree = "<group>"; };
 		078B5CC82553F8FB007B63F1 /* Collectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectible.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				074280302550190400ED4056 /* Input */,
 				07D8B7CA2512021A0047EBFE /* MainScene.swift */,
 				075D7DBB2514D76D00D90009 /* MainSceneView.swift */,
+				07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */,
 				070B6C7E25669F1600A2D6A4 /* MainScene+Labels.swift */,
 				077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */,
 			);
@@ -544,6 +549,7 @@
 				075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				07183B512521D3DE00010135 /* MainScene+InputTouch.swift in Sources */,
 				070B6C2325657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */,
+				07726F632567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */,
 				07D46C09251B388B008317C9 /* BlobPlayer.swift in Sources */,
 				075D7DA72514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B81E2512021C0047EBFE /* MainScene.swift in Sources */,
@@ -572,6 +578,7 @@
 				075092E5251B97EA002CB9C6 /* BlobPlayer.swift in Sources */,
 				07183B522521D3DE00010135 /* MainScene+InputTouch.swift in Sources */,
 				070B6C2525657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */,
+				07726F652567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */,
 				075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DA92514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8202512021C0047EBFE /* MainScene.swift in Sources */,
@@ -600,6 +607,7 @@
 				075092E9251B97EA002CB9C6 /* BlobPlayer.swift in Sources */,
 				07183B532521D3DE00010135 /* MainScene+InputTouch.swift in Sources */,
 				070B6C2425657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */,
+				07726F642567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */,
 				075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8212512021C0047EBFE /* MainScene.swift in Sources */,

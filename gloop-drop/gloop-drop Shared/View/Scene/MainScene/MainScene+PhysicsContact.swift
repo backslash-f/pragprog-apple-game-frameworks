@@ -44,6 +44,7 @@ private extension MainScene {
                 score += level
             } else {
                 collectible.missed()
+                gameOver()
             }
         }
     }
