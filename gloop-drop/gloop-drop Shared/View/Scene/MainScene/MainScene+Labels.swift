@@ -20,7 +20,6 @@ extension MainScene {
             // Avoid re-adding the same label over and over again.
             return
         }
-        let levelLabel = baseLabel()
         levelLabel.name = levelLabelName
         levelLabel.horizontalAlignmentMode = .left
         levelLabel.position = CGPoint(x: frame.minX + 50, y: viewTop() - 100)
@@ -34,18 +33,13 @@ extension MainScene {
             // Avoid re-adding the same label over and over again.
             return
         }
-        let scoreLabel = baseLabel()
+        let initialScore = 0
         scoreLabel.name = scoreLabelName
         scoreLabel.horizontalAlignmentMode = .right
         scoreLabel.position = CGPoint(x: frame.maxX - 50, y: viewTop() - 100)
-        scoreLabel.text = "\(Constant.Label.Score.text)"
+        scoreLabel.text = "\(Constant.Label.Score.text)\(initialScore)"
         addChild(scoreLabel)
     }
-}
-
-// MARK: - Private
-
-private extension MainScene {
 
     /// Creates a base `SKLabelNode` with common attributes.
     func baseLabel() -> SKLabelNode {

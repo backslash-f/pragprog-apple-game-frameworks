@@ -14,9 +14,25 @@ class MainScene: GloopDropScene {
 
     internal let blobPlayer = BlobPlayer()
 
+    // MARK: Labels
+
+    internal lazy var levelLabel = baseLabel()
+    internal lazy var scoreLabel = baseLabel()
+
     // MARK: Level Data
 
-    internal var level: Int = 1
+    var level: Int = 1 {
+        didSet {
+            levelLabel.text = "\(Constant.Label.Level.text)\(level)"
+        }
+    }
+
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = "\(Constant.Label.Score.text)\(score)"
+        }
+    }
+
     internal var numberOfDrops: Int = 10
     internal var dropSpeed: CGFloat = 1.0
     internal var minDropSpeed: CGFloat = 0.12 // Fastest drop.

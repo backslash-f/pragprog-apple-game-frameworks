@@ -39,7 +39,12 @@ private extension MainScene {
 
         // Verify the object is a collectible.
         if let collectible = body as? Collectible {
-            isCollectibleCollected ? collectible.collected() : collectible.missed()
+            if isCollectibleCollected {
+                collectible.collected()
+                score += level
+            } else {
+                collectible.missed()
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ extension Constant {
 
         struct Score {
             static let name = "score"
-            static let text = "Score: 0"
+            static let text = "Score: "
         }
 
         struct Level {
