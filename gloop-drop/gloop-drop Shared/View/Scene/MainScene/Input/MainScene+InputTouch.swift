@@ -60,7 +60,11 @@ fileprivate extension MainScene {
 
     func touchDown(atPosition position: CGPoint) {
         GloopDropApp.log("👇🏻 Touch down!", category: .inputTouch)
-        blobPlayer.isPlayerMoving = (atPoint(position).name == Constant.Node.Blob.name)
+        if isGameInProgress {
+            blobPlayer.isPlayerMoving = (atPoint(position).name == Constant.Node.Blob.name)
+        } else {
+            startGame()
+        }
     }
 
     func touchMoved(atPosition position: CGPoint) {

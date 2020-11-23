@@ -22,5 +22,7 @@ extension MainScene {
             // Remove body so no collisions occur.
             node.physicsBody = nil
         }
+
+        stopGame()
     }
 }

@@ -16,6 +16,8 @@ extension MainScene {
         setupMicroControllers()
     }
 
+    #warning("TODO: Press X to start the game")
+
     func setupExtendedControllers() {
         guard let extendedGamepadController = gcOverseer.controllers().first?.extendedGamepad else {
             GloopDropApp.log("No extended gamepad controllers detected", category: .inputController)

@@ -12,6 +12,7 @@ enum LoggingCategories: String {
     case error              = "GloopDrop_Error"
     case inputController    = "GloopDrop_InputController"
     case inputTouch         = "GloopDrop_InputTouch"
+    case gameLoop           = "GloopDrop_GameLoop"
     case player             = "GloopDrop_Player"
     case scene              = "GloopDrop_Scene"
 }

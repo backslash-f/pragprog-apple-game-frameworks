@@ -14,6 +14,8 @@ class MainScene: GloopDropScene {
 
     internal let blobPlayer = BlobPlayer()
 
+    internal var isGameInProgress = false
+
     // MARK: Labels
 
     internal lazy var levelLabel = baseLabel()
@@ -69,7 +71,6 @@ extension MainScene {
         setupBackgroundImage()
         setupForegroundImage()
         setupPlayer()
-        spawnMultipleGloops()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -80,6 +81,25 @@ extension MainScene {
         // Anyway, calling it here does the trick. If labels are already added, the function
         // just returns.
         setupLabels()
+    }
+}
+
+// MARK: - Internal
+
+internal extension MainScene {
+
+    func startGame() {
+        guard !isGameInProgress else {
+            return
+        }
+        GloopDropApp.log("The game is about to start.", category: .gameLoop)
+        spawnMultipleGloops()
+        isGameInProgress = true
+    }
+
+    func stopGame() {
+        GloopDropApp.log("The game is about to stop.", category: .gameLoop)
+        isGameInProgress = false
     }
 }
 
