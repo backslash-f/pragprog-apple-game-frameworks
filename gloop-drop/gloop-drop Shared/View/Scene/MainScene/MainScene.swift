@@ -44,6 +44,7 @@ class MainScene: GloopDropScene {
 
     internal var isLeftPressed: Bool = false
     internal var isRightPressed: Bool = false
+    internal var isXButtonPressed: Bool = false
 
     // MARK: - Lifecycle
 

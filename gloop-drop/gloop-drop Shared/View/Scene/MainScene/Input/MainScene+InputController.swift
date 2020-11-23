@@ -16,8 +16,6 @@ extension MainScene {
         setupMicroControllers()
     }
 
-    #warning("TODO: Press X to start the game")
-
     func setupExtendedControllers() {
         guard let extendedGamepadController = gcOverseer.controllers().first?.extendedGamepad else {
             GloopDropApp.log("No extended gamepad controllers detected", category: .inputController)
@@ -25,6 +23,7 @@ extension MainScene {
         }
         extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
         extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler()
+        extendedGamepadController.buttonX.valueChangedHandler = buttonXHandler()
     }
 
     func setupMicroControllers() {
@@ -36,6 +35,7 @@ extension MainScene {
         // https://developer.apple.com/forums/thread/21562?page=1#644496022
         microGamepadController.allowsRotation = true
         microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
+        microGamepadController.buttonX.valueChangedHandler = buttonXHandler()
     }
 
     func pollControllerInput() {
@@ -43,6 +43,8 @@ extension MainScene {
             movePlayerToLeft()
         } else if isRightPressed {
             movePlayerToRight()
+        } else if isXButtonPressed {
+            startGame()
         }
     }
 }
@@ -52,9 +54,16 @@ extension MainScene {
 private extension MainScene {
 
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
-        { [weak self] thumbstickOrDpad, _, _ in
+        return { [weak self] thumbstickOrDpad, _, _ in
             self?.isLeftPressed = thumbstickOrDpad.left.isPressed
             self?.isRightPressed = thumbstickOrDpad.right.isPressed
+        }
+    }
+
+    /// Notice: The `X` button is the `square` button in a Sony's Dualshock 􀨄
+    func buttonXHandler() -> GCControllerButtonValueChangedHandler {
+        return { [weak self] _, _, isPressed in
+            self?.isXButtonPressed = isPressed
         }
     }
 
