@@ -137,7 +137,6 @@ private extension BlobPlayer {
             prefix: Constant.Node.Blob.walkTexturePrefix
         ) { [weak self] textures in
             self?.walkTextures = textures
-            self?.startWalkAnimation()
         }
     }
 

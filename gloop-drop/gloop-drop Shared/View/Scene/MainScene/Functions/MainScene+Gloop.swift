@@ -24,6 +24,12 @@ extension MainScene {
 
         run(dropGloopsRepeatingSequence, withKey: Constant.ActionKey.dropGloops)
     }
+
+    func checkForRemainingDrops() {
+        if dropsCollected == dropsExpected {
+            nextLevel()
+        }
+    }
 }
 
 // MARK: - Private
@@ -68,5 +74,16 @@ private extension MainScene {
         addChild(collectible)
 
         collectible.drop(dropSpeed: TimeInterval(1.0), floorLevel: blobPlayer.frame.minY)
+    }
+
+    func nextLevel() {
+        #warning("FIXME: This currently is breaking the game.")
+        dropsCollected = 0
+        dropsExpected = numberOfDrops
+        let waitAction = SKAction.wait(forDuration: 2.25)
+        run(waitAction) { [weak self] in
+            self?.level += 1
+            self?.spawnGloop()
+        }
     }
 }

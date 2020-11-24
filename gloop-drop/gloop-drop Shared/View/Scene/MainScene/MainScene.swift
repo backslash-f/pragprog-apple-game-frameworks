@@ -40,6 +40,11 @@ class MainScene: GloopDropScene {
     internal var minDropSpeed: CGFloat = 0.12 // Fastest drop.
     internal var maxDropSpeed: CGFloat = 1.0 // Slowest drop.
 
+    // MARK: Level Progression
+
+    internal var dropsExpected = 10
+    internal var dropsCollected = 0
+
     // MARK: Controller Input
 
     internal var isLeftPressed: Bool = false
@@ -82,6 +87,8 @@ extension MainScene {
         // Anyway, calling it here does the trick. If labels are already added, the function
         // just returns.
         setupLabels()
+
+        checkForRemainingDrops()
     }
 }
 
@@ -94,8 +101,10 @@ internal extension MainScene {
             return
         }
         GloopDropApp.log("The game is about to start.", category: .gameLoop)
-        blobPlayer.startWalkAnimation()
+        score = 0
+        level = 1
         isGameInProgress = true
+        blobPlayer.startWalkAnimation()
         spawnMultipleGloops()
     }
 

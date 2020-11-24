@@ -42,6 +42,7 @@ private extension MainScene {
             if isCollectibleCollected {
                 collectible.collected()
                 score += level
+                dropsCollected += 1
             } else {
                 collectible.missed()
                 gameOver()
