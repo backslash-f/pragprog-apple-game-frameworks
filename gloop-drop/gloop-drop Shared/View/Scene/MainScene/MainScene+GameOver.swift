@@ -5,24 +5,51 @@
 //  Created by Fernando Fernandes on 20.11.20.
 //
 
-import Foundation
+import SpriteKit
 
 extension MainScene {
 
     func gameOver() {
-        blobPlayer.startDieAnimation()
+        stopGame()
+        stopDroppingGloops()
+        removeRemainingGloops()
+        centerPlayer()
+    }
+}
 
+// MARK: - Private
+
+private extension MainScene {
+
+    func stopDroppingGloops() {
         // Remove repeatable action on main scene.
         removeAction(forKey: Constant.ActionKey.dropGloops)
 
         // Loop through child nodes and stop actions on collectibles.
-        enumerateChildNodes(withName: "//\(Constant.Node.Collectible.namePrefix)*") { node, _ in
+        enumerateChildNodes(withName: Constant.Node.Collectible.namePrefixRegex) { node, _ in
             // Stop and remove drops.
             node.removeAllActions()
             // Remove body so no collisions occur.
             node.physicsBody = nil
         }
+    }
 
-        stopGame()
+    func removeRemainingGloops() {
+        var waitingTime: CGFloat = .zero
+        enumerateChildNodes(withName: Constant.Node.Collectible.namePrefixRegex) { node, _ in
+            // Pop remaining drops in sequence.
+            let initialWaitAction = SKAction.wait(forDuration: 1.0)
+            let waitAction = SKAction.wait(forDuration: TimeInterval(0.15 * waitingTime))
+            let removeFromParentAction = SKAction.removeFromParent()
+            let actionSequence = SKAction.sequence([initialWaitAction, waitAction, removeFromParentAction])
+
+            node.run(actionSequence)
+            waitingTime += 1
+        }
+    }
+
+    func centerPlayer() {
+        let moveToCenterAction = SKAction.moveTo(x: size.width/2, duration: 0.5)
+        blobPlayer.run(moveToCenterAction)
     }
 }

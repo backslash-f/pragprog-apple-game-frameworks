@@ -39,6 +39,9 @@ extension MainScene {
     }
 
     func pollControllerInput() {
+        guard isGameInProgress else {
+            return
+        }
         if isLeftPressed {
             movePlayerToLeft()
         } else if isRightPressed {

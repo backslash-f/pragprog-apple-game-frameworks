@@ -24,7 +24,6 @@ class BlobPlayer: SKSpriteNode {
     // MARK: Player Movement
 
     var isPlayerMoving = false
-    var lastKnownPosition: CGPoint?
 
     // MARK: - Private Properties
 
@@ -99,7 +98,6 @@ extension BlobPlayer {
         flipLeftOrRight(to: newPosition)
         let adjustedNewPosition = adjust(newPosition)
         position = adjustedNewPosition
-        lastKnownPosition = position
     }
 }
 

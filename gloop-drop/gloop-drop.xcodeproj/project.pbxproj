@@ -243,10 +243,10 @@
 				071B166425540E030041A963 /* Functions */,
 				074280302550190400ED4056 /* Input */,
 				07D8B7CA2512021A0047EBFE /* MainScene.swift */,
-				075D7DBB2514D76D00D90009 /* MainSceneView.swift */,
 				07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */,
 				070B6C7E25669F1600A2D6A4 /* MainScene+Labels.swift */,
 				077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */,
+				075D7DBB2514D76D00D90009 /* MainSceneView.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";

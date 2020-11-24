@@ -94,12 +94,14 @@ internal extension MainScene {
             return
         }
         GloopDropApp.log("The game is about to start.", category: .gameLoop)
-        spawnMultipleGloops()
+        blobPlayer.startWalkAnimation()
         isGameInProgress = true
+        spawnMultipleGloops()
     }
 
     func stopGame() {
         GloopDropApp.log("The game is about to stop.", category: .gameLoop)
+        blobPlayer.startDieAnimation()
         isGameInProgress = false
     }
 }

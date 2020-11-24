@@ -18,6 +18,7 @@ extension Constant {
 
         struct Collectible {
             static let namePrefix = "co_"
+            static let namePrefixRegex = "//\(Constant.Node.Collectible.namePrefix)*"
             static let imageName = "gloop"
         }
     }

@@ -69,7 +69,7 @@ fileprivate extension MainScene {
 
     func touchMoved(atPosition position: CGPoint) {
         GloopDropApp.log("👉🏻 Touch moved!", category: .inputTouch)
-        guard blobPlayer.isPlayerMoving else {
+        guard isGameInProgress, blobPlayer.isPlayerMoving else {
             return
         }
 
