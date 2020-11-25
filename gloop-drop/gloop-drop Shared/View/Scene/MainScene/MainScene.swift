@@ -80,15 +80,12 @@ extension MainScene {
     }
 
     override func update(_ currentTime: TimeInterval) {
-        pollControllerInput()
-
-        // Calling this from "MainScene.didMove(to:)" won't work because "view" is still "nil"
-        // there. Perhaps it's because I'm using SwiftUI, which may have a different lifecycle.
-        // Anyway, calling it here does the trick. If labels are already added, the function
-        // just returns.
+        // Calling "setupLabels()" from "MainScene.didMove(to:)" won't work because "view" is
+        // still "nil" there. Perhaps it's because I'm using SwiftUI, which may have a different
+        // lifecycle. Anyway, calling it here does the trick. If labels are already added, the
+        // function will just return.
         setupLabels()
-
-        checkForRemainingDrops()
+        pollControllerInput()
     }
 }
 

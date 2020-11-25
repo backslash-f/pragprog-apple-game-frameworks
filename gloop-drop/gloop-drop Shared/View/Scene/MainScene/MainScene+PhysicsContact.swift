@@ -41,8 +41,9 @@ private extension MainScene {
         if let collectible = body as? Collectible {
             if isCollectibleCollected {
                 collectible.collected()
-                score += level
                 dropsCollected += 1
+                score += level
+                checkForRemainingDrops()
             } else {
                 collectible.missed()
                 gameOver()

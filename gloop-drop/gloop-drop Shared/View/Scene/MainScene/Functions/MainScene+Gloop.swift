@@ -26,6 +26,8 @@ extension MainScene {
     }
 
     func checkForRemainingDrops() {
+        GloopDropApp.log("Drops collected: \(dropsCollected)", category: .gameLoop)
+        GloopDropApp.log("Drops expected: \(dropsExpected)", category: .gameLoop)
         if dropsCollected == dropsExpected {
             nextLevel()
         }
@@ -77,11 +79,13 @@ private extension MainScene {
     }
 
     func nextLevel() {
+        let nextLevel = level + 1
+        GloopDropApp.log("Level completed! Next level: \(nextLevel)", category: .gameLoop)
         dropsCollected = 0
         dropsExpected = numberOfDrops
         let waitAction = SKAction.wait(forDuration: 2.25)
         run(waitAction) { [weak self] in
-            self?.level += 1
+            self?.level = nextLevel
             self?.spawnMultipleGloops()
         }
     }
