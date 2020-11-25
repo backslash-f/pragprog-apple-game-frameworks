@@ -41,6 +41,21 @@ extension MainScene {
         addChild(scoreLabel)
     }
 
+    func showMessage(_ message: String) {
+        let messageLabel = baseLabel()
+        messageLabel.name = Constant.Label.Message.name
+        messageLabel.position = CGPoint(x: frame.midX, y: blobPlayer.frame.maxY + 100)
+        messageLabel.numberOfLines = 2
+        messageLabel.attributedText = NSAttributedString(
+            string: message,
+            attributes: createMessageAttributes()
+        )
+
+        let fadeAction = SKAction.fadeIn(withDuration: 0.25)
+        messageLabel.run(fadeAction)
+        addChild(messageLabel)
+    }
+
     /// Creates a base `SKLabelNode` with common attributes.
     func baseLabel() -> SKLabelNode {
         let label = SKLabelNode(fontNamed: Constant.Font.nosifer)
@@ -49,5 +64,43 @@ extension MainScene {
         label.verticalAlignmentMode = .center
         label.zPosition = Layer.interface.rawValue
         return label
+    }
+}
+
+// MARK: - Private
+
+fileprivate extension MainScene {
+
+    func createMessageAttributes() -> [NSAttributedString.Key: Any] {
+        let color = SKColor(
+            red: 251.0/255.0,
+            green: 155.0/255.0,
+            blue: 24.0/255.0,
+            alpha: 1.0
+        )
+
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.alignment = .center
+
+        var attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: color,
+            .paragraphStyle: paragraph,
+            .backgroundColor: SKColor.clear
+        ]
+
+        // Handle the font attribute.
+        let fontName = Constant.Font.nosifer
+        let fontSize: CGFloat = 45
+        #if os(iOS) || os(tvOS)
+        if let font = UIFont(name: fontName, size: fontSize) {
+            attributes.updateValue(font, forKey: .font)
+        }
+        #elseif os(OSX)
+        if let font = NSFont(name: fontName, size: fontSize) {
+            attributes.updateValue(font, forKey: .font)
+        }
+        #endif
+
+        return attributes
     }
 }

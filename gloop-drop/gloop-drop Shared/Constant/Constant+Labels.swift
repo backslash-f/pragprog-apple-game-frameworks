@@ -20,5 +20,9 @@ extension Constant {
             static let name = "level"
             static let text = "Level: "
         }
+
+        struct Message {
+            static let name = "message"
+        }
     }
 }
