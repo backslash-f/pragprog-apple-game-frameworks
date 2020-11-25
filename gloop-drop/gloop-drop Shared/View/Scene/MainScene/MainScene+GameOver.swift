@@ -10,6 +10,7 @@ import SpriteKit
 extension MainScene {
 
     func gameOver() {
+        showMessage(Constant.Label.Message.gameOver)
         stopGame()
         stopDroppingGloops()
         removeRemainingGloops()

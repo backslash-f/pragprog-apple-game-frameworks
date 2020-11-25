@@ -11,6 +11,7 @@ import SpriteKit
 extension MainScene {
 
     func spawnMultipleGloops() {
+        hideMessage()
         setupDropNumber()
         setupDropSpeed()
 
@@ -52,6 +53,8 @@ private extension MainScene {
         default:
             numberOfDrops = 150
         }
+        dropsCollected = 0
+        dropsExpected = numberOfDrops
     }
 
     // Sets the drop speed based on the level.
@@ -79,10 +82,9 @@ private extension MainScene {
     }
 
     func nextLevel() {
+        showMessage(Constant.Label.Message.getReady)
         let nextLevel = level + 1
         GloopDropApp.log("Level completed! Next level: \(nextLevel)", category: .gameLoop)
-        dropsCollected = 0
-        dropsExpected = numberOfDrops
         let waitAction = SKAction.wait(forDuration: 2.25)
         run(waitAction) { [weak self] in
             self?.level = nextLevel

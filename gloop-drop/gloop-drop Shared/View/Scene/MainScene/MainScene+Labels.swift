@@ -9,6 +9,8 @@ import SpriteKit
 
 extension MainScene {
 
+    // MARK: - Labels
+
     func setupLabels() {
         setupLevelLabel()
         setupScoreLabel()
@@ -41,6 +43,18 @@ extension MainScene {
         addChild(scoreLabel)
     }
 
+    /// Creates a base `SKLabelNode` with common attributes.
+    func baseLabel() -> SKLabelNode {
+        let label = SKLabelNode(fontNamed: Constant.Font.nosifer)
+        label.fontColor = .yellow
+        label.fontSize = Constant.Font.size
+        label.verticalAlignmentMode = .center
+        label.zPosition = Layer.interface.rawValue
+        return label
+    }
+
+    // MARK: - Messages
+
     func showMessage(_ message: String) {
         let messageLabel = baseLabel()
         messageLabel.name = Constant.Label.Message.name
@@ -51,19 +65,21 @@ extension MainScene {
             attributes: createMessageAttributes()
         )
 
-        let fadeAction = SKAction.fadeIn(withDuration: 0.25)
-        messageLabel.run(fadeAction)
+        let fadeInAction = SKAction.fadeIn(withDuration: 0.25)
+        messageLabel.run(fadeInAction)
         addChild(messageLabel)
     }
 
-    /// Creates a base `SKLabelNode` with common attributes.
-    func baseLabel() -> SKLabelNode {
-        let label = SKLabelNode(fontNamed: Constant.Font.nosifer)
-        label.fontColor = .yellow
-        label.fontSize = Constant.Font.size
-        label.verticalAlignmentMode = .center
-        label.zPosition = Layer.interface.rawValue
-        return label
+    func hideMessage() {
+        if let messageLabel = childNode(withName: Constant.Label.Message.name) as? SKLabelNode {
+            let fadeOutAction = SKAction.fadeOut(withDuration: 0.25)
+            let removeFromParentAction = SKAction.removeFromParent()
+            let removeSequenceAction = SKAction.sequence([
+                fadeOutAction,
+                removeFromParentAction
+            ])
+            messageLabel.run(removeSequenceAction)
+        }
     }
 }
 

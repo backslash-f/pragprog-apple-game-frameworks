@@ -77,8 +77,7 @@ extension MainScene {
         setupBackgroundImage()
         setupForegroundImage()
         setupPlayer()
-        showMessage("Test")
-        #warning("TODO: Constant")
+        showMessage(Constant.Label.Message.tapToStart)
     }
 
     override func update(_ currentTime: TimeInterval) {

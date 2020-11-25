@@ -23,6 +23,9 @@ extension Constant {
 
         struct Message {
             static let name = "message"
+            static let tapToStart = "Tap to start game"
+            static let getReady = "Get Ready!"
+            static let gameOver = "Game Over\nTap to try again"
         }
     }
 }
