@@ -77,13 +77,12 @@ private extension MainScene {
     }
 
     func nextLevel() {
-        #warning("FIXME: This currently is breaking the game.")
         dropsCollected = 0
         dropsExpected = numberOfDrops
         let waitAction = SKAction.wait(forDuration: 2.25)
         run(waitAction) { [weak self] in
             self?.level += 1
-            self?.spawnGloop()
+            self?.spawnMultipleGloops()
         }
     }
 }
