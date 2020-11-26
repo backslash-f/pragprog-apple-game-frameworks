@@ -54,7 +54,8 @@ class MainScene: GloopDropScene {
     // MARK: - Lifecycle
 
     init(size: CGSize) {
-        super.init(size: size)
+        let debugSettings = DebugSettings(disableAll: true)
+        super.init(size: size, debugSettings: debugSettings)
         setupScene()
         setupGameControllerListener()
     }

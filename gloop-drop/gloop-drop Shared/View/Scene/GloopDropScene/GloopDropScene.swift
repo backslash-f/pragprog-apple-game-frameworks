@@ -15,13 +15,29 @@ class GloopDropScene: SKScene {
     // MARK: - Properties
 
     struct DebugSettings {
-        let showFPS: Bool = true
-        let showsFields: Bool = true
-        let showsPhysics: Bool = true
-        let showsDrawCount: Bool = true
-        let showsNodeCount: Bool = true
-        let showsQuadCount: Bool = true
+        let disableAll: Bool
+        let showsFPS: Bool
+        let showsFields: Bool
+        let showsPhysics: Bool
+        let showsDrawCount: Bool
+        let showsNodeCount: Bool
+        let showsQuadCount: Bool
+
+        /// By default, all debugging options are shown (`true`) in `DEBUG` mode.
+        /// To disable all of them at once, set `disableAll` to `true`
+        init(disableAll: Bool = false, showsFPS: Bool = true, showsFields: Bool = true,
+             showsPhysics: Bool = true, showsDrawCount: Bool = true, showsNodeCount: Bool = true,
+             showsQuadCount: Bool = true) {
+            self.disableAll     = disableAll
+            self.showsFPS       = disableAll ? false : showsFPS
+            self.showsFields    = disableAll ? false : showsFields
+            self.showsPhysics   = disableAll ? false : showsPhysics
+            self.showsDrawCount = disableAll ? false : showsDrawCount
+            self.showsNodeCount = disableAll ? false : showsNodeCount
+            self.showsQuadCount = disableAll ? false : showsQuadCount
+        }
     }
+
     let debugSettings: DebugSettings
 
     let gcOverseer = GCOverseer()
@@ -59,12 +75,12 @@ private extension GloopDropScene {
 
     func setupDebugSettings() {
         #if DEBUG
-        view?.showsFPS = debugSettings.showFPS
-        view?.showsFields = debugSettings.showsFields
-        view?.showsPhysics = debugSettings.showsPhysics
-        view?.showsDrawCount = debugSettings.showsDrawCount
-        view?.showsNodeCount = debugSettings.showsNodeCount
-        view?.showsQuadCount = debugSettings.showsQuadCount
+        view?.showsFPS          = debugSettings.showsFPS
+        view?.showsFields       = debugSettings.showsFields
+        view?.showsPhysics      = debugSettings.showsPhysics
+        view?.showsDrawCount    = debugSettings.showsDrawCount
+        view?.showsNodeCount    = debugSettings.showsNodeCount
+        view?.showsQuadCount    = debugSettings.showsQuadCount
         #endif
     }
 
