@@ -28,8 +28,8 @@ private extension MainScene {
 
         // Loop through child nodes and stop actions on collectibles.
         enumerateChildNodes(withName: Constant.Node.Collectible.namePrefixRegex) { node, _ in
-            // Stop and remove drops.
-            node.removeAllActions()
+            // Stop gloop from dropping.
+            node.removeAction(forKey: Constant.ActionKey.dropGloop)
             // Remove body so no collisions occur.
             node.physicsBody = nil
         }

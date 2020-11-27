@@ -72,11 +72,13 @@ extension Collectible {
     // MARK: Handle Contact
 
     func collected() {
-        runRemoveFromParentAction()
+        let actionGroup = SKAction.group([collectSoundAction(), removeFromParentAction()])
+        run(actionGroup)
     }
 
     func missed() {
-        runRemoveFromParentAction()
+        let actionGroup = SKAction.group([missSoundAction(), removeFromParentAction()])
+        run(actionGroup)
     }
 }
 
@@ -109,7 +111,15 @@ private extension Collectible {
 
     // MARK: Actions
 
-    func runRemoveFromParentAction() {
-        run(SKAction.removeFromParent())
+    func removeFromParentAction() -> SKAction {
+        SKAction.removeFromParent()
+    }
+
+    func collectSoundAction() -> SKAction {
+        SKAction.playSoundFileNamed(Constant.Sound.collect, waitForCompletion: false)
+    }
+
+    func missSoundAction() -> SKAction {
+        SKAction.playSoundFileNamed(Constant.Sound.miss, waitForCompletion: false)
     }
 }

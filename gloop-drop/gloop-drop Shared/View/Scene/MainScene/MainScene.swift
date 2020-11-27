@@ -7,14 +7,15 @@
 
 import SwiftUI
 import SpriteKit
+import AVFoundation
 
 class MainScene: GloopDropScene {
 
     // MARK: - Internal Properties
 
     internal let blobPlayer = BlobPlayer()
-
     internal var isGameInProgress = false
+    internal let musicAudioNode = SKAudioNode(fileNamed: Constant.Sound.music)
 
     // MARK: Labels
 
@@ -73,6 +74,7 @@ extension MainScene {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        setupMusic()
         setupPhysicsWorld()
         setupBackgroundColor()
         setupBackgroundImage()
@@ -123,6 +125,23 @@ fileprivate extension MainScene {
     func setupScene() {
         view?.ignoresSiblingOrder = false
         scaleMode = .aspectFill
+    }
+
+    func setupMusic() {
+        // Decrease the audio engine's volume.
+        audioEngine.mainMixerNode.outputVolume = 0.0
+        // Use an action to adjust the audio node's volume to 0.
+        musicAudioNode.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+
+        musicAudioNode.autoplayLooped = true
+        musicAudioNode.isPositional = false
+        addChild(musicAudioNode)
+
+        // Run a delayed action on the scene that fades-in the music.
+        run(SKAction.wait(forDuration: 1.0), completion: { [weak self] in
+            self?.audioEngine.mainMixerNode.outputVolume = 1.0
+            self?.musicAudioNode.run(SKAction.changeVolume(to: 0.75, duration: 2.0))
+        })
     }
 
     func setupPhysicsWorld() {

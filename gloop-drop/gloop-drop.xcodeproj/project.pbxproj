@@ -72,6 +72,30 @@
 		078B5CC92553F8FB007B63F1 /* Collectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectible.swift */; };
 		078B5CCA2553F8FB007B63F1 /* Collectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectible.swift */; };
 		078B5CCB2553F8FB007B63F1 /* Collectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectible.swift */; };
+		079A4A182570FCA40082B20E /* bubbles.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A122570FCA40082B20E /* bubbles.mp3 */; };
+		079A4A192570FCA40082B20E /* bubbles.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A122570FCA40082B20E /* bubbles.mp3 */; };
+		079A4A1A2570FCA40082B20E /* bubbles.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A122570FCA40082B20E /* bubbles.mp3 */; };
+		079A4A1B2570FCA40082B20E /* collect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A132570FCA40082B20E /* collect.wav */; };
+		079A4A1C2570FCA40082B20E /* collect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A132570FCA40082B20E /* collect.wav */; };
+		079A4A1D2570FCA40082B20E /* collect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A132570FCA40082B20E /* collect.wav */; };
+		079A4A1E2570FCA40082B20E /* miss.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A142570FCA40082B20E /* miss.wav */; };
+		079A4A1F2570FCA40082B20E /* miss.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A142570FCA40082B20E /* miss.wav */; };
+		079A4A202570FCA40082B20E /* miss.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A142570FCA40082B20E /* miss.wav */; };
+		079A4A212570FCA40082B20E /* blob_mumble-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A152570FCA40082B20E /* blob_mumble-2.wav */; };
+		079A4A222570FCA40082B20E /* blob_mumble-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A152570FCA40082B20E /* blob_mumble-2.wav */; };
+		079A4A232570FCA40082B20E /* blob_mumble-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A152570FCA40082B20E /* blob_mumble-2.wav */; };
+		079A4A242570FCA40082B20E /* blob_mumble-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A162570FCA40082B20E /* blob_mumble-3.wav */; };
+		079A4A252570FCA40082B20E /* blob_mumble-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A162570FCA40082B20E /* blob_mumble-3.wav */; };
+		079A4A262570FCA40082B20E /* blob_mumble-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A162570FCA40082B20E /* blob_mumble-3.wav */; };
+		079A4A272570FCA40082B20E /* blob_mumble-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A172570FCA40082B20E /* blob_mumble-1.wav */; };
+		079A4A282570FCA40082B20E /* blob_mumble-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A172570FCA40082B20E /* blob_mumble-1.wav */; };
+		079A4A292570FCA40082B20E /* blob_mumble-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A172570FCA40082B20E /* blob_mumble-1.wav */; };
+		079A4A2E2570FE070082B20E /* Constant+Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079A4A2D2570FE070082B20E /* Constant+Sounds.swift */; };
+		079A4A2F2570FE070082B20E /* Constant+Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079A4A2D2570FE070082B20E /* Constant+Sounds.swift */; };
+		079A4A302570FE070082B20E /* Constant+Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079A4A2D2570FE070082B20E /* Constant+Sounds.swift */; };
+		079A4A3625710F080082B20E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A3525710F080082B20E /* music.mp3 */; };
+		079A4A3725710F080082B20E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A3525710F080082B20E /* music.mp3 */; };
+		079A4A3825710F080082B20E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079A4A3525710F080082B20E /* music.mp3 */; };
 		079B5313256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079B5312256523F800BC6F4D /* Nosifer-Regular.ttf */; };
 		079B5314256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079B5312256523F800BC6F4D /* Nosifer-Regular.ttf */; };
 		079B5315256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079B5312256523F800BC6F4D /* Nosifer-Regular.ttf */; };
@@ -108,6 +132,14 @@
 		077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+PhysicsCategory.swift"; sourceTree = "<group>"; };
 		077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+PhysicsContact.swift"; sourceTree = "<group>"; };
 		078B5CC82553F8FB007B63F1 /* Collectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectible.swift; sourceTree = "<group>"; };
+		079A4A122570FCA40082B20E /* bubbles.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubbles.mp3; sourceTree = "<group>"; };
+		079A4A132570FCA40082B20E /* collect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collect.wav; sourceTree = "<group>"; };
+		079A4A142570FCA40082B20E /* miss.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = miss.wav; sourceTree = "<group>"; };
+		079A4A152570FCA40082B20E /* blob_mumble-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "blob_mumble-2.wav"; sourceTree = "<group>"; };
+		079A4A162570FCA40082B20E /* blob_mumble-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "blob_mumble-3.wav"; sourceTree = "<group>"; };
+		079A4A172570FCA40082B20E /* blob_mumble-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "blob_mumble-1.wav"; sourceTree = "<group>"; };
+		079A4A2D2570FE070082B20E /* Constant+Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Sounds.swift"; sourceTree = "<group>"; };
+		079A4A3525710F080082B20E /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		079B5312256523F800BC6F4D /* Nosifer-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nosifer-Regular.ttf"; sourceTree = "<group>"; };
 		07D46C08251B388B008317C9 /* BlobPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPlayer.swift; sourceTree = "<group>"; };
 		07D8B7CA2512021A0047EBFE /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
@@ -161,6 +193,7 @@
 				070B6C6825667EB500A2D6A4 /* Constant+Labels.swift */,
 				0701388A251BE1EA0092595E /* Constant+Nodes.swift */,
 				0701388F251BE57A0092595E /* Constant+Scenarios.swift */,
+				079A4A2D2570FE070082B20E /* Constant+Sounds.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -228,13 +261,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		075D7DA52514D60F00D90009 /* Support */ = {
+		075D7DA52514D60F00D90009 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				079B5311256523E400BC6F4D /* Fonts */,
+				079A4A3425710F080082B20E /* Music */,
+				079A4A112570FCA40082B20E /* Sounds */,
 				07D8B7CB2512021B0047EBFE /* Assets.xcassets */,
 			);
-			path = Support;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		075D7DBA2514D75D00D90009 /* MainScene */ = {
@@ -258,6 +293,27 @@
 				075D7DBA2514D75D00D90009 /* MainScene */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		079A4A112570FCA40082B20E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				079A4A122570FCA40082B20E /* bubbles.mp3 */,
+				079A4A132570FCA40082B20E /* collect.wav */,
+				079A4A142570FCA40082B20E /* miss.wav */,
+				079A4A152570FCA40082B20E /* blob_mumble-2.wav */,
+				079A4A162570FCA40082B20E /* blob_mumble-3.wav */,
+				079A4A172570FCA40082B20E /* blob_mumble-1.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		079A4A3425710F080082B20E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				079A4A3525710F080082B20E /* music.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		079B5311256523E400BC6F4D /* Fonts */ = {
@@ -286,7 +342,7 @@
 				075D7DA42514D60A00D90009 /* App */,
 				07013884251BE0DE0092595E /* Constant */,
 				075092DA251B97AB002CB9C6 /* Extension */,
-				075D7DA52514D60F00D90009 /* Support */,
+				075D7DA52514D60F00D90009 /* Resources */,
 				075D7DA32514D60500D90009 /* View */,
 			);
 			path = "gloop-drop Shared";
@@ -445,8 +501,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079A4A1E2570FCA40082B20E /* miss.wav in Resources */,
 				079B5313256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */,
+				079A4A3625710F080082B20E /* music.mp3 in Resources */,
+				079A4A1B2570FCA40082B20E /* collect.wav in Resources */,
+				079A4A272570FCA40082B20E /* blob_mumble-1.wav in Resources */,
+				079A4A242570FCA40082B20E /* blob_mumble-3.wav in Resources */,
 				07D8B8222512021C0047EBFE /* Assets.xcassets in Resources */,
+				079A4A212570FCA40082B20E /* blob_mumble-2.wav in Resources */,
+				079A4A182570FCA40082B20E /* bubbles.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,8 +517,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079A4A202570FCA40082B20E /* miss.wav in Resources */,
 				079B5315256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */,
+				079A4A3825710F080082B20E /* music.mp3 in Resources */,
+				079A4A1D2570FCA40082B20E /* collect.wav in Resources */,
+				079A4A292570FCA40082B20E /* blob_mumble-1.wav in Resources */,
+				079A4A262570FCA40082B20E /* blob_mumble-3.wav in Resources */,
 				07D8B8242512021C0047EBFE /* Assets.xcassets in Resources */,
+				079A4A232570FCA40082B20E /* blob_mumble-2.wav in Resources */,
+				079A4A1A2570FCA40082B20E /* bubbles.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,8 +533,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079A4A1F2570FCA40082B20E /* miss.wav in Resources */,
 				079B5314256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */,
+				079A4A3725710F080082B20E /* music.mp3 in Resources */,
+				079A4A1C2570FCA40082B20E /* collect.wav in Resources */,
+				079A4A282570FCA40082B20E /* blob_mumble-1.wav in Resources */,
+				079A4A252570FCA40082B20E /* blob_mumble-3.wav in Resources */,
 				07D8B8252512021C0047EBFE /* Assets.xcassets in Resources */,
+				079A4A222570FCA40082B20E /* blob_mumble-2.wav in Resources */,
+				079A4A192570FCA40082B20E /* bubbles.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +615,7 @@
 				0775655A2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */,
 				070B6C6925667EB500A2D6A4 /* Constant+Labels.swift in Sources */,
 				0701388B251BE1EA0092595E /* Constant+Nodes.swift in Sources */,
+				079A4A2E2570FE070082B20E /* Constant+Sounds.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				070B6C7F25669F1600A2D6A4 /* MainScene+Labels.swift in Sources */,
 				077565AC2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */,
@@ -567,6 +645,7 @@
 				0775655C2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */,
 				070B6C6B25667EB500A2D6A4 /* Constant+Labels.swift in Sources */,
 				070138A4251BE94E0092595E /* Constant+Nodes.swift in Sources */,
+				079A4A302570FE070082B20E /* Constant+Sounds.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				070B6C8125669F1600A2D6A4 /* MainScene+Labels.swift in Sources */,
 				077565AE2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */,
@@ -596,6 +675,7 @@
 				0775655B2562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift in Sources */,
 				070B6C6A25667EB500A2D6A4 /* Constant+Labels.swift in Sources */,
 				070138A8251BE94F0092595E /* Constant+Nodes.swift in Sources */,
+				079A4A2F2570FE070082B20E /* Constant+Sounds.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				070B6C8025669F1600A2D6A4 /* MainScene+Labels.swift in Sources */,
 				077565AD2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */,
