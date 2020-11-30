@@ -70,6 +70,15 @@
 		077565AC2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */; };
 		077565AD2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */; };
 		077565AE2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */; };
+		077A84FC25752C8600AEEEDE /* GloopFlow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 077A84FA25752C8600AEEEDE /* GloopFlow.sks */; };
+		077A84FD25752C8600AEEEDE /* GloopFlow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 077A84FA25752C8600AEEEDE /* GloopFlow.sks */; };
+		077A84FE25752C8600AEEEDE /* GloopFlow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 077A84FA25752C8600AEEEDE /* GloopFlow.sks */; };
+		077A850A257541AD00AEEEDE /* Constant+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A8509257541AD00AEEEDE /* Constant+Effects.swift */; };
+		077A850B257541AD00AEEEDE /* Constant+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A8509257541AD00AEEEDE /* Constant+Effects.swift */; };
+		077A850C257541AD00AEEEDE /* Constant+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A8509257541AD00AEEEDE /* Constant+Effects.swift */; };
+		077A8517257541BE00AEEEDE /* Constant+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A8516257541BE00AEEEDE /* Constant+Fonts.swift */; };
+		077A8518257541BE00AEEEDE /* Constant+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A8516257541BE00AEEEDE /* Constant+Fonts.swift */; };
+		077A8519257541BE00AEEEDE /* Constant+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A8516257541BE00AEEEDE /* Constant+Fonts.swift */; };
 		078507382554A45C0020E9BE /* MainScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* MainScene+Gloop.swift */; };
 		0785073C2554A45D0020E9BE /* MainScene+Gloop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B166525540E350041A963 /* MainScene+Gloop.swift */; };
 		078B5CC92553F8FB007B63F1 /* Collectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CC82553F8FB007B63F1 /* Collectible.swift */; };
@@ -135,6 +144,9 @@
 		07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+GameOver.swift"; sourceTree = "<group>"; };
 		077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+PhysicsCategory.swift"; sourceTree = "<group>"; };
 		077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+PhysicsContact.swift"; sourceTree = "<group>"; };
+		077A84FA25752C8600AEEEDE /* GloopFlow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GloopFlow.sks; sourceTree = "<group>"; };
+		077A8509257541AD00AEEEDE /* Constant+Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Effects.swift"; sourceTree = "<group>"; };
+		077A8516257541BE00AEEEDE /* Constant+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Fonts.swift"; sourceTree = "<group>"; };
 		078B5CC82553F8FB007B63F1 /* Collectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectible.swift; sourceTree = "<group>"; };
 		079A4A122570FCA40082B20E /* bubbles.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubbles.mp3; sourceTree = "<group>"; };
 		079A4A132570FCA40082B20E /* collect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collect.wav; sourceTree = "<group>"; };
@@ -194,8 +206,10 @@
 			children = (
 				07013885251BE11E0092595E /* Constant.swift */,
 				0719E50025588577006F43B7 /* Constant+Actions.swift */,
+				077A8516257541BE00AEEEDE /* Constant+Fonts.swift */,
 				070B6C6825667EB500A2D6A4 /* Constant+Labels.swift */,
 				0701388A251BE1EA0092595E /* Constant+Nodes.swift */,
+				077A8509257541AD00AEEEDE /* Constant+Effects.swift */,
 				0701388F251BE57A0092595E /* Constant+Scenarios.swift */,
 				079A4A2D2570FE070082B20E /* Constant+Sounds.swift */,
 			);
@@ -269,6 +283,7 @@
 		075D7DA52514D60F00D90009 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				077A850825752CFB00AEEEDE /* Effects */,
 				079B5311256523E400BC6F4D /* Fonts */,
 				079A4A3425710F080082B20E /* Music */,
 				079A4A112570FCA40082B20E /* Sounds */,
@@ -298,6 +313,14 @@
 				075D7DBA2514D75D00D90009 /* MainScene */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		077A850825752CFB00AEEEDE /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				077A84FA25752C8600AEEEDE /* GloopFlow.sks */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 		079A4A112570FCA40082B20E /* Sounds */ = {
@@ -507,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079A4A1E2570FCA40082B20E /* miss.wav in Resources */,
+				077A84FC25752C8600AEEEDE /* GloopFlow.sks in Resources */,
 				079B5313256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */,
 				079A4A3625710F080082B20E /* music.mp3 in Resources */,
 				079A4A1B2570FCA40082B20E /* collect.wav in Resources */,
@@ -523,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079A4A202570FCA40082B20E /* miss.wav in Resources */,
+				077A84FE25752C8600AEEEDE /* GloopFlow.sks in Resources */,
 				079B5315256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */,
 				079A4A3825710F080082B20E /* music.mp3 in Resources */,
 				079A4A1D2570FCA40082B20E /* collect.wav in Resources */,
@@ -539,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079A4A1F2570FCA40082B20E /* miss.wav in Resources */,
+				077A84FD25752C8600AEEEDE /* GloopFlow.sks in Resources */,
 				079B5314256523F800BC6F4D /* Nosifer-Regular.ttf in Resources */,
 				079A4A3725710F080082B20E /* music.mp3 in Resources */,
 				079A4A1C2570FCA40082B20E /* collect.wav in Resources */,
@@ -622,6 +648,7 @@
 				0701388B251BE1EA0092595E /* Constant+Nodes.swift in Sources */,
 				079A4A2E2570FE070082B20E /* Constant+Sounds.swift in Sources */,
 				07620BF22574FC30009E3E37 /* SKNode+Extensions.swift in Sources */,
+				077A8517257541BE00AEEEDE /* Constant+Fonts.swift in Sources */,
 				075D7DBC2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				070B6C7F25669F1600A2D6A4 /* MainScene+Labels.swift in Sources */,
 				077565AC2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */,
@@ -632,6 +659,7 @@
 				075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				07183B512521D3DE00010135 /* MainScene+InputTouch.swift in Sources */,
+				077A850A257541AD00AEEEDE /* Constant+Effects.swift in Sources */,
 				070B6C2325657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */,
 				07726F632567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */,
 				07D46C09251B388B008317C9 /* BlobPlayer.swift in Sources */,
@@ -653,6 +681,7 @@
 				070138A4251BE94E0092595E /* Constant+Nodes.swift in Sources */,
 				079A4A302570FE070082B20E /* Constant+Sounds.swift in Sources */,
 				07620BF42574FC30009E3E37 /* SKNode+Extensions.swift in Sources */,
+				077A8519257541BE00AEEEDE /* Constant+Fonts.swift in Sources */,
 				075D7DBE2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				070B6C8125669F1600A2D6A4 /* MainScene+Labels.swift in Sources */,
 				077565AE2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */,
@@ -663,6 +692,7 @@
 				075092DD251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075092E5251B97EA002CB9C6 /* BlobPlayer.swift in Sources */,
 				07183B522521D3DE00010135 /* MainScene+InputTouch.swift in Sources */,
+				077A850C257541AD00AEEEDE /* Constant+Effects.swift in Sources */,
 				070B6C2525657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */,
 				07726F652567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */,
 				075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */,
@@ -684,6 +714,7 @@
 				070138A8251BE94F0092595E /* Constant+Nodes.swift in Sources */,
 				079A4A2F2570FE070082B20E /* Constant+Sounds.swift in Sources */,
 				07620BF32574FC30009E3E37 /* SKNode+Extensions.swift in Sources */,
+				077A8518257541BE00AEEEDE /* Constant+Fonts.swift in Sources */,
 				075D7DBF2514D76D00D90009 /* MainSceneView.swift in Sources */,
 				070B6C8025669F1600A2D6A4 /* MainScene+Labels.swift in Sources */,
 				077565AD2563DAD100C488B4 /* MainScene+PhysicsContact.swift in Sources */,
@@ -694,6 +725,7 @@
 				075092DE251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075092E9251B97EA002CB9C6 /* BlobPlayer.swift in Sources */,
 				07183B532521D3DE00010135 /* MainScene+InputTouch.swift in Sources */,
+				077A850B257541AD00AEEEDE /* Constant+Effects.swift in Sources */,
 				070B6C2425657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */,
 				07726F642567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */,
 				075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */,

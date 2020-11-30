@@ -209,6 +209,7 @@ fileprivate extension MainScene {
         gloopFlowNode.setupScrollingView(
             imageNamed: Constant.Node.GloopFlow.imageName,
             layer: Layer.foreground,
+            emitterNamed: Constant.Effects.gloopFlowEmitter,
             blocks: 3, speed: 30.0
         )
 

@@ -5,8 +5,6 @@
 //  Created by Fernando Fernandes on 19.11.20.
 //
 
-import SwiftUI
-
 extension Constant {
 
     struct Label {

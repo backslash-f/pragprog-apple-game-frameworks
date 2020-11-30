@@ -7,10 +7,4 @@
 
 import SwiftUI
 
-struct Constant {
-
-    struct Font {
-        static let nosifer = "Nosifer"
-        static let size: CGFloat = 35
-    }
-}
+struct Constant {}
