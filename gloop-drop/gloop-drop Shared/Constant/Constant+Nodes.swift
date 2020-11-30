@@ -21,5 +21,10 @@ extension Constant {
             static let namePrefixRegex = "//\(Constant.Node.Collectible.namePrefix)*"
             static let imageName = "gloop"
         }
+
+        struct GloopFlow {
+            static let name = "gloopFlow"
+            static let imageName = "flow_1"
+        }
     }
 }

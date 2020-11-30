@@ -18,6 +18,8 @@ enum Layer: CGFloat {
 
 extension SKSpriteNode {
 
+    // MARK: - Textures
+
     /// Loads texture arrays for animations via `SKTextureAtlas.preloadTextureAtlasesNamed(_:withCompletionHandler:)`.
     func loadTextures(atlasName: String, prefix: String, completion: @escaping ([SKTexture]) -> Void) {
 
@@ -38,6 +40,8 @@ extension SKSpriteNode {
             completion(textures)
         }
     }
+
+    // MARK: - Animation
 
     /// Start the animation. Default `count` is zero (repeat forever).
     /// Default `resize` is `false`.
@@ -71,5 +75,22 @@ extension SKSpriteNode {
             let repeatAction = SKAction.repeat(animation, count: count)
             run(repeatAction, withKey: name)
         }
+    }
+
+    // MARK: - Scrolling Background
+
+    // Creates an endless scrolling background.
+    func endlessScroll(speed: TimeInterval) {
+
+        // Set up actions to move and reset nodes.
+        let moveAction = SKAction.moveBy(x: -size.width, y: 0, duration: speed)
+        let resetAction = SKAction.moveBy(x: size.width, y: 0, duration: 0.0)
+
+        // Set up a sequence of repeating actions.
+        let sequenceAction = SKAction.sequence([moveAction, resetAction])
+        let repeatAction = SKAction.repeatForever(sequenceAction)
+
+        // Run the repeating action.
+        self.run(repeatAction)
     }
 }

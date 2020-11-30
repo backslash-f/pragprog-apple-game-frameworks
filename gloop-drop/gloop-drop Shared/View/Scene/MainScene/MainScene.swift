@@ -79,6 +79,7 @@ extension MainScene {
         setupBackgroundColor()
         setupBackgroundImage()
         setupForegroundImage()
+        setupGloopFlow()
         setupPlayer()
         showMessage(Constant.Label.Message.tapToStart)
     }
@@ -187,6 +188,21 @@ fileprivate extension MainScene {
         foreground.physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
 
         addChild(foreground)
+    }
+
+    func setupGloopFlow() {
+        let gloopFlowNode = SKNode()
+        gloopFlowNode.name = Constant.Node.GloopFlow.name
+        gloopFlowNode.zPosition = Layer.foreground.rawValue
+        gloopFlowNode.position = CGPoint(x: 0.0, y: -60)
+
+        gloopFlowNode.setupScrollingView(
+            imageNamed: Constant.Node.GloopFlow.imageName,
+            layer: Layer.foreground,
+            blocks: 3, speed: 30.0
+        )
+
+        addChild(gloopFlowNode)
     }
 
     func setupPlayer() {
