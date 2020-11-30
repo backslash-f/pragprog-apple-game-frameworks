@@ -47,6 +47,10 @@ class MainScene: GloopDropScene {
     internal var dropsExpected = 10
     internal var dropsCollected = 0
 
+    // MARK: Game Logic
+
+    var previousDropLocation: CGFloat = .zero
+
     // MARK: Controller Input
 
     internal var isLeftPressed: Bool = false

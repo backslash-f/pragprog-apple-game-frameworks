@@ -73,12 +73,46 @@ private extension MainScene {
         // Set random position.
         let margin = collectible.size.width * 2
         let dropRange = SKRange(lowerLimit: frame.minX + margin, upperLimit: frame.maxX - margin)
-        let randomX = CGFloat.random(in: dropRange.lowerLimit...dropRange.upperLimit)
+        var randomX = CGFloat.random(in: dropRange.lowerLimit...dropRange.upperLimit)
+
+        enhanceDropMovement(margin: margin, randomX: &randomX)
 
         collectible.position = CGPoint(x: randomX, y: blobPlayer.position.y * 2.5)
         addChild(collectible)
 
         collectible.drop(dropSpeed: TimeInterval(1.0), floorLevel: blobPlayer.frame.minY)
+    }
+
+    /// Creates a "snake-like" pattern.
+    func enhanceDropMovement(margin: CGFloat, randomX: inout CGFloat) {
+         // Set a range.
+         let randomModifier = SKRange(lowerLimit: 50 + CGFloat(level), upperLimit: 60 * CGFloat(level))
+         var modifier = CGFloat.random(in: randomModifier.lowerLimit...randomModifier.upperLimit)
+         if modifier > 400 {
+            modifier = 400
+         }
+
+         // Set the previous drop location.
+         if previousDropLocation == 0.0 {
+            previousDropLocation = randomX
+         }
+
+         // Clamp its x-position.
+         if previousDropLocation < randomX {
+           randomX = previousDropLocation + modifier
+         } else {
+           randomX = previousDropLocation - modifier
+         }
+
+         // Make sure the collectible stays within the frame.
+         if randomX <= (frame.minX + margin) {
+           randomX = frame.minX + margin
+         } else if randomX >= (frame.maxX - margin) {
+           randomX = frame.maxX - margin
+         }
+
+         // Store the location.
+        previousDropLocation = randomX
     }
 
     func nextLevel() {
