@@ -61,7 +61,9 @@ fileprivate extension MainScene {
     func touchDown(atPosition position: CGPoint) {
         GloopDropApp.log("👇🏻 Touch down!", category: .inputTouch)
         if isGameInProgress {
-            blobPlayer.isPlayerMoving = (atPoint(position).name == Constant.Node.Blob.name)
+            blobPlayer.isPlayerMoving = nodes(at: position)
+                .compactMap { $0.name }
+                .contains(Constant.Node.Blob.name)
         } else {
             startGame()
         }

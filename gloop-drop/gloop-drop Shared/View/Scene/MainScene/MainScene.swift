@@ -78,8 +78,8 @@ extension MainScene {
         setupMusic()
         setupPhysicsWorld()
         setupBackgroundColor()
-        setupBackgroundImage()
-        setupForegroundImage()
+        setupBackgroundNode()
+        setupForegroundNode()
         setupGloopFlow()
         setupPlayer()
         showMessage(Constant.Label.Message.tapToStart)
@@ -171,33 +171,31 @@ fileprivate extension MainScene {
         backgroundColor = SKColor(color)
     }
 
-    func setupBackgroundImage() {
-        let backgroundName = Constant.Scenario.firstBackground
-        let background = SKSpriteNode(imageNamed: backgroundName)
-        background.name = backgroundName
-        background.anchorPoint = .zero
-        background.zPosition = Layer.background.rawValue
-        addChild(background)
+    func setupBackgroundNode() {
+        let backgroundNode = SKSpriteNode(imageNamed: Constant.Node.Background.imageName)
+        backgroundNode.name = Constant.Node.Background.name
+        backgroundNode.anchorPoint = .zero
+        backgroundNode.zPosition = Layer.background.rawValue
+        addChild(backgroundNode)
     }
 
-    func setupForegroundImage() {
-        let foregroundName = Constant.Scenario.firstForeground
-        let foreground = SKSpriteNode(imageNamed: foregroundName)
-        foreground.name = foregroundName
-        foreground.anchorPoint = .zero
-        foreground.position = .zero
-        foreground.zPosition = Layer.foreground.rawValue
+    func setupForegroundNode() {
+        let foregroundNode = SKSpriteNode(imageNamed: Constant.Node.Foreground.imageName)
+        foregroundNode.name = Constant.Node.Foreground.name
+        foregroundNode.anchorPoint = .zero
+        foregroundNode.position = .zero
+        foregroundNode.zPosition = Layer.foreground.rawValue
 
         // Add physics body.
-        foreground.physicsBody = SKPhysicsBody(edgeLoopFrom: foreground.frame)
-        foreground.physicsBody?.affectedByGravity = false
+        foregroundNode.physicsBody = SKPhysicsBody(edgeLoopFrom: foregroundNode.frame)
+        foregroundNode.physicsBody?.affectedByGravity = false
 
         // Set up physics categories.
-        foreground.physicsBody?.categoryBitMask = PhysicsCategory.floor.rawValue
-        foreground.physicsBody?.contactTestBitMask = PhysicsCategory.collectible.rawValue
-        foreground.physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
+        foregroundNode.physicsBody?.categoryBitMask = PhysicsCategory.floor.rawValue
+        foregroundNode.physicsBody?.contactTestBitMask = PhysicsCategory.collectible.rawValue
+        foregroundNode.physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
 
-        addChild(foreground)
+        addChild(foregroundNode)
     }
 
     func setupGloopFlow() {
@@ -217,7 +215,7 @@ fileprivate extension MainScene {
     }
 
     func setupPlayer() {
-        guard let foreground = childNode(withName: Constant.Scenario.firstForeground) else {
+        guard let foreground = childNode(withName: Constant.Node.Foreground.name) else {
             let errorMessage = "Couldn't find the foreground node"
             GloopDropApp.logError(errorMessage)
             preconditionFailure(errorMessage)

@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		07013886251BE11E0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
 		0701388B251BE1EA0092595E /* Constant+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Nodes.swift */; };
-		07013890251BE57A0092595E /* Constant+Scenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenarios.swift */; };
 		0701389C251BE94C0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
 		070138A0251BE94C0092595E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07013885251BE11E0092595E /* Constant.swift */; };
 		070138A4251BE94E0092595E /* Constant+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Nodes.swift */; };
 		070138A8251BE94F0092595E /* Constant+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388A251BE1EA0092595E /* Constant+Nodes.swift */; };
-		070138AC251BE9520092595E /* Constant+Scenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenarios.swift */; };
-		070138B0251BE9520092595E /* Constant+Scenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701388F251BE57A0092595E /* Constant+Scenarios.swift */; };
 		070B6C2325657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B6C2225657EB800A2D6A4 /* GloopDropScene+UIView.swift */; };
 		070B6C2425657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B6C2225657EB800A2D6A4 /* GloopDropScene+UIView.swift */; };
 		070B6C2525657EB800A2D6A4 /* GloopDropScene+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B6C2225657EB800A2D6A4 /* GloopDropScene+UIView.swift */; };
@@ -126,7 +123,6 @@
 /* Begin PBXFileReference section */
 		07013885251BE11E0092595E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0701388A251BE1EA0092595E /* Constant+Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Nodes.swift"; sourceTree = "<group>"; };
-		0701388F251BE57A0092595E /* Constant+Scenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenarios.swift"; sourceTree = "<group>"; };
 		070B6C2225657EB800A2D6A4 /* GloopDropScene+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropScene+UIView.swift"; sourceTree = "<group>"; };
 		070B6C6825667EB500A2D6A4 /* Constant+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Labels.swift"; sourceTree = "<group>"; };
 		070B6C7E25669F1600A2D6A4 /* MainScene+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+Labels.swift"; sourceTree = "<group>"; };
@@ -210,7 +206,6 @@
 				070B6C6825667EB500A2D6A4 /* Constant+Labels.swift */,
 				0701388A251BE1EA0092595E /* Constant+Nodes.swift */,
 				077A8509257541AD00AEEEDE /* Constant+Effects.swift */,
-				0701388F251BE57A0092595E /* Constant+Scenarios.swift */,
 				079A4A2D2570FE070082B20E /* Constant+Sounds.swift */,
 			);
 			path = Constant;
@@ -665,7 +660,6 @@
 				07D46C09251B388B008317C9 /* BlobPlayer.swift in Sources */,
 				075D7DA72514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B81E2512021C0047EBFE /* MainScene.swift in Sources */,
-				07013890251BE57A0092595E /* Constant+Scenarios.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,7 +692,6 @@
 				075D7E052514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DA92514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8202512021C0047EBFE /* MainScene.swift in Sources */,
-				070138AC251BE9520092595E /* Constant+Scenarios.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +724,6 @@
 				075D7E062514DA5C00D90009 /* GloopDropScene.swift in Sources */,
 				075D7DAA2514D62E00D90009 /* ContentView.swift in Sources */,
 				07D8B8212512021C0047EBFE /* MainScene.swift in Sources */,
-				070138B0251BE9520092595E /* Constant+Scenarios.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
