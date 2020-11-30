@@ -11,5 +11,6 @@ extension Constant {
         static let collect = "collect.wav"
         static let miss = "miss.wav"
         static let music = "music.mp3"
+        static let bubbles = "bubbles.mp3"
     }
 }

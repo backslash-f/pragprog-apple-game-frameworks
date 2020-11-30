@@ -16,6 +16,7 @@ class MainScene: GloopDropScene {
     internal let blobPlayer = BlobPlayer()
     internal var isGameInProgress = false
     internal let musicAudioNode = SKAudioNode(fileNamed: Constant.Sound.music)
+    internal let bubblesAudioNode = SKAudioNode(fileNamed: Constant.Sound.bubbles)
 
     // MARK: Labels
 
@@ -142,6 +143,15 @@ fileprivate extension MainScene {
         run(SKAction.wait(forDuration: 1.0), completion: { [weak self] in
             self?.audioEngine.mainMixerNode.outputVolume = 1.0
             self?.musicAudioNode.run(SKAction.changeVolume(to: 0.75, duration: 2.0))
+
+            // Run a delayed action to add bubble audio to the scene.
+            self?.run(SKAction.wait(forDuration: 1.5), completion: { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.bubblesAudioNode.autoplayLooped = true
+                self.addChild(self.bubblesAudioNode)
+            })
         })
     }
 
