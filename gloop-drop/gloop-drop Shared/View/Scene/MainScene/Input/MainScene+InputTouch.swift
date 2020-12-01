@@ -61,7 +61,7 @@ fileprivate extension MainScene {
     func touchDown(atPosition position: CGPoint) {
         GloopDropApp.log("👇🏻 Touch down!", category: .inputTouch)
         if isGameInProgress {
-            blobPlayer.isPlayerMoving = nodes(at: position)
+            player.isPlayerMoving = nodes(at: position)
                 .compactMap { $0.name }
                 .contains(Constant.Node.Blob.name)
         } else {
@@ -71,17 +71,17 @@ fileprivate extension MainScene {
 
     func touchMoved(atPosition position: CGPoint) {
         GloopDropApp.log("👉🏻 Touch moved!", category: .inputTouch)
-        guard isGameInProgress, blobPlayer.isPlayerMoving else {
+        guard isGameInProgress, player.isPlayerMoving else {
             return
         }
 
         // Clamp position.
-        let newPosition = CGPoint(x: position.x, y: blobPlayer.position.y)
-        blobPlayer.move(to: newPosition)
+        let newPosition = CGPoint(x: position.x, y: player.position.y)
+        player.move(to: newPosition)
     }
 
     func touchUp() {
         GloopDropApp.log("👆🏻 Touch up!", category: .inputTouch)
-        blobPlayer.isPlayerMoving = false
+        player.isPlayerMoving = false
     }
 }

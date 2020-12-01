@@ -72,17 +72,17 @@ private extension MainScene {
 
     func movePlayerToLeft() {
         let newPosition = CGPoint(
-            x: blobPlayer.position.x - blobPlayer.travelUnitsController,
-            y: blobPlayer.position.y
+            x: player.position.x - player.travelUnitsController,
+            y: player.position.y
         )
-        blobPlayer.move(to: newPosition)
+        player.move(to: newPosition)
     }
 
     func movePlayerToRight() {
         let newPosition = CGPoint(
-            x: blobPlayer.position.x + blobPlayer.travelUnitsController,
-            y: blobPlayer.position.y
+            x: player.position.x + player.travelUnitsController,
+            y: player.position.y
         )
-        blobPlayer.move(to: newPosition)
+        player.move(to: newPosition)
     }
 }

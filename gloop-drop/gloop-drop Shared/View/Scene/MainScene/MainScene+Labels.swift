@@ -58,7 +58,7 @@ extension MainScene {
     func showMessage(_ message: String) {
         let messageLabel = baseLabel()
         messageLabel.name = Constant.Label.Message.name
-        messageLabel.position = CGPoint(x: frame.midX, y: blobPlayer.frame.maxY + 100)
+        messageLabel.position = CGPoint(x: frame.midX, y: player.frame.maxY + 100)
         messageLabel.numberOfLines = 2
         messageLabel.attributedText = NSAttributedString(
             string: message,

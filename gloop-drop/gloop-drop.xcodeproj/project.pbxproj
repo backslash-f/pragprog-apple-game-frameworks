@@ -326,12 +326,12 @@
 		079A4A112570FCA40082B20E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				079A4A172570FCA40082B20E /* blob_mumble-1.wav */,
+				079A4A152570FCA40082B20E /* blob_mumble-2.wav */,
+				079A4A162570FCA40082B20E /* blob_mumble-3.wav */,
 				079A4A122570FCA40082B20E /* bubbles.mp3 */,
 				079A4A132570FCA40082B20E /* collect.wav */,
 				079A4A142570FCA40082B20E /* miss.wav */,
-				079A4A152570FCA40082B20E /* blob_mumble-2.wav */,
-				079A4A162570FCA40082B20E /* blob_mumble-3.wav */,
-				079A4A172570FCA40082B20E /* blob_mumble-1.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";

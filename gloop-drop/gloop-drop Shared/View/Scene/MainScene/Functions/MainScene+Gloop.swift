@@ -78,10 +78,10 @@ private extension MainScene {
         enhanceDropMovement(margin: margin, randomX: &randomX)
         addNumberLabel(to: collectible)
 
-        collectible.position = CGPoint(x: randomX, y: blobPlayer.position.y * 2.5)
+        collectible.position = CGPoint(x: randomX, y: player.position.y * 2.5)
         addChild(collectible)
 
-        collectible.drop(dropSpeed: TimeInterval(1.0), floorLevel: blobPlayer.frame.minY)
+        collectible.drop(dropSpeed: TimeInterval(1.0), floorLevel: player.frame.minY)
     }
 
     /// Creates a "snake-like" pattern.

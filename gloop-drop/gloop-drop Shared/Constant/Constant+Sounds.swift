@@ -12,5 +12,10 @@ extension Constant {
         static let miss = "miss.wav"
         static let music = "music.mp3"
         static let bubbles = "bubbles.mp3"
+
+        struct Mumble {
+            static let key = "mumble"
+            static let filenamePrefix = "blob_mumble-"
+        }
     }
 }

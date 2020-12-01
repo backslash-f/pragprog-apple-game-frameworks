@@ -51,6 +51,6 @@ private extension MainScene {
 
     func centerPlayer() {
         let moveToCenterAction = SKAction.moveTo(x: size.width/2, duration: 0.5)
-        blobPlayer.run(moveToCenterAction)
+        player.run(moveToCenterAction)
     }
 }

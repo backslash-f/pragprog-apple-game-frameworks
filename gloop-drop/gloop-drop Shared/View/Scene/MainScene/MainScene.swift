@@ -13,7 +13,7 @@ class MainScene: GloopDropScene {
 
     // MARK: - Internal Properties
 
-    internal let blobPlayer = BlobPlayer()
+    internal let player = BlobPlayer()
     internal var isGameInProgress = false
     internal let musicAudioNode = SKAudioNode(fileNamed: Constant.Sound.music)
     internal let bubblesAudioNode = SKAudioNode(fileNamed: Constant.Sound.bubbles)
@@ -111,13 +111,14 @@ internal extension MainScene {
         score = 0
         level = 1
         isGameInProgress = true
-        blobPlayer.startWalkAnimation()
+        player.mumble()
+        player.startWalkAnimation()
         spawnMultipleGloops()
     }
 
     func stopGame() {
         GloopDropApp.log("The game is about to stop.", category: .gameLoop)
-        blobPlayer.startDieAnimation()
+        player.startDieAnimation()
         isGameInProgress = false
     }
 }
@@ -225,9 +226,9 @@ fileprivate extension MainScene {
             preconditionFailure(errorMessage)
         }
 
-        blobPlayer.position = CGPoint(x: size.width/2, y: foreground.frame.maxY)
-        blobPlayer.constrainPositionY(lowerAndUpperLimit: foreground.frame.maxY)
-        addChild(blobPlayer)
+        player.position = CGPoint(x: size.width/2, y: foreground.frame.maxY)
+        player.constrainPositionY(lowerAndUpperLimit: foreground.frame.maxY)
+        addChild(player)
     }
 
     func setupGameControllerListener() {

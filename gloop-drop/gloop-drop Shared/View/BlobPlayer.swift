@@ -53,6 +53,13 @@ class BlobPlayer: SKSpriteNode {
 
 extension BlobPlayer {
 
+    func mumble() {
+        let random = Int.random(in: 1...3)
+        let mumbleSoundFilename = "\(Constant.Sound.Mumble.filenamePrefix)\(random)"
+        let playMumbleSoundAction = SKAction.playSoundFileNamed(mumbleSoundFilename, waitForCompletion: true)
+        run(playMumbleSoundAction, withKey: Constant.Sound.Mumble.key)
+    }
+
     func constrainPositionY(lowerAndUpperLimit: CGFloat) {
         let range = SKRange(lowerLimit: lowerAndUpperLimit, upperLimit: lowerAndUpperLimit)
         let lockToPlatform = SKConstraint.positionY(range)

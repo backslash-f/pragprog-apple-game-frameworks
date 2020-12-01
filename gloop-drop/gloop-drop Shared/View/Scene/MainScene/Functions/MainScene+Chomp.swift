@@ -19,7 +19,7 @@ extension MainScene {
         chompLabel.text = Constant.Label.Chomp.text
         chompLabel.horizontalAlignmentMode = .center
         chompLabel.verticalAlignmentMode = .bottom
-        chompLabel.position = CGPoint(x: blobPlayer.position.x, y: blobPlayer.frame.maxY + 25)
+        chompLabel.position = CGPoint(x: player.position.x, y: player.frame.maxY + 25)
         chompLabel.zRotation = CGFloat.random(in: -0.15...0.15)
         addChild(chompLabel)
 

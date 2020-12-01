@@ -89,7 +89,7 @@ extension Collectible {
                 splatYAction
             ]
         )
-        
+
         self.run(actionGroup)
     }
 }
