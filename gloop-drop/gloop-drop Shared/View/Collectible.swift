@@ -77,8 +77,20 @@ extension Collectible {
     }
 
     func missed() {
-        let actionGroup = SKAction.group([missSoundAction(), removeFromParentAction()])
-        run(actionGroup)
+        let moveAction = SKAction.moveBy(x: 0, y: -size.height/1.5, duration: 0.0)
+        let splatXAction = SKAction.scaleX(to: 1.5, duration: 0.0) // Make wider.
+        let splatYAction = SKAction.scaleY(to: 0.5, duration: 0.0) // Make shorter.
+
+        let actionGroup = SKAction.group(
+            [
+                missSoundAction(),
+                moveAction,
+                splatXAction,
+                splatYAction
+            ]
+        )
+        
+        self.run(actionGroup)
     }
 }
 
