@@ -22,6 +22,6 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ⏳ To be started
 
 ## Status
-✅ Gloop Drop💧  
-🔨 Val's Revenge ⚔️  
-⏳ Hog 🎲  
+✅ Gloop Drop  
+🔨 Val's Revenge   
+⏳ Hog
