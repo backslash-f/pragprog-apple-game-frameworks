@@ -12,8 +12,23 @@ extension MainScene {
     // MARK: - Labels
 
     func setupLabels() {
+        setupBannerLabel()
         setupLevelLabel()
         setupScoreLabel()
+    }
+
+    func setupBannerLabel() {
+        let bannerLabelName = Constant.Node.Banner.name
+        guard scene?.childNode(withName: bannerLabelName) == nil else {
+            // Avoid re-adding the same label over and over again.
+            return
+        }
+        let bannerNode = SKSpriteNode(imageNamed: Constant.Node.Banner.imageName)
+        bannerNode.name = bannerLabelName
+        bannerNode.zPosition = Layer.interface.rawValue
+        bannerNode.position = CGPoint(x: frame.midX, y: viewTop() - 20)
+        bannerNode.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        addChild(bannerNode)
     }
 
     func setupLevelLabel() {

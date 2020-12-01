@@ -14,6 +14,11 @@ extension Constant {
             static let imageName = "background_1"
         }
 
+        struct Banner {
+            static let name = "banner"
+            static let imageName = "banner"
+        }
+
         struct Blob {
             static let atlasName = "blob"
             static let name = "Blob Player"
