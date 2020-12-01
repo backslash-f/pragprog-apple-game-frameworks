@@ -9,9 +9,9 @@ extension Constant {
 
     struct Label {
 
-        struct Score {
-            static let name = "score"
-            static let text = "Score: "
+        struct Chomp {
+            static let name = "chomp"
+            static let text = "gloop"
         }
 
         struct Level {
@@ -24,6 +24,11 @@ extension Constant {
             static let tapToStart = "Tap to start game"
             static let getReady = "Get Ready!"
             static let gameOver = "Game Over\nTap to try again"
+        }
+
+        struct Score {
+            static let name = "score"
+            static let text = "Score: "
         }
     }
 }

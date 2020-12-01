@@ -44,6 +44,7 @@ private extension MainScene {
                 dropsCollected += 1
                 score += level
                 checkForRemainingDrops()
+                addChompLabel()
             } else {
                 collectible.missed()
                 gameOver()

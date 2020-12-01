@@ -58,6 +58,9 @@
 		07620BF22574FC30009E3E37 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07620BF12574FC30009E3E37 /* SKNode+Extensions.swift */; };
 		07620BF32574FC30009E3E37 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07620BF12574FC30009E3E37 /* SKNode+Extensions.swift */; };
 		07620BF42574FC30009E3E37 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07620BF12574FC30009E3E37 /* SKNode+Extensions.swift */; };
+		076F64E22576D8D10050959B /* MainScene+Chomp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076F64E12576D8D10050959B /* MainScene+Chomp.swift */; };
+		076F64E32576D8D10050959B /* MainScene+Chomp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076F64E12576D8D10050959B /* MainScene+Chomp.swift */; };
+		076F64E42576D8D10050959B /* MainScene+Chomp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076F64E12576D8D10050959B /* MainScene+Chomp.swift */; };
 		07726F632567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */; };
 		07726F642567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */; };
 		07726F652567BE6F004A2EEE /* MainScene+GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */; };
@@ -137,6 +140,7 @@
 		075D7DBB2514D76D00D90009 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
 		075D7E022514DA5C00D90009 /* GloopDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloopDropScene.swift; sourceTree = "<group>"; };
 		07620BF12574FC30009E3E37 /* SKNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
+		076F64E12576D8D10050959B /* MainScene+Chomp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+Chomp.swift"; sourceTree = "<group>"; };
 		07726F622567BE6F004A2EEE /* MainScene+GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+GameOver.swift"; sourceTree = "<group>"; };
 		077565592562D1AE00C488B4 /* GloopDropApp+PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GloopDropApp+PhysicsCategory.swift"; sourceTree = "<group>"; };
 		077565AB2563DAD100C488B4 /* MainScene+PhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+PhysicsContact.swift"; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 		071B166425540E030041A963 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				076F64E12576D8D10050959B /* MainScene+Chomp.swift */,
 				071B166525540E350041A963 /* MainScene+Gloop.swift */,
 			);
 			path = Functions;
@@ -650,6 +655,7 @@
 				078B5CC92553F8FB007B63F1 /* Collectible.swift in Sources */,
 				07013886251BE11E0092595E /* Constant.swift in Sources */,
 				0719E50125588577006F43B7 /* Constant+Actions.swift in Sources */,
+				076F64E22576D8D10050959B /* MainScene+Chomp.swift in Sources */,
 				075092DC251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075D0DE72519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075D7E032514DA5C00D90009 /* GloopDropScene.swift in Sources */,
@@ -682,6 +688,7 @@
 				078B5CCA2553F8FB007B63F1 /* Collectible.swift in Sources */,
 				0701389C251BE94C0092595E /* Constant.swift in Sources */,
 				0719E50325588577006F43B7 /* Constant+Actions.swift in Sources */,
+				076F64E42576D8D10050959B /* MainScene+Chomp.swift in Sources */,
 				075D0DE82519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075092DD251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075092E5251B97EA002CB9C6 /* BlobPlayer.swift in Sources */,
@@ -714,6 +721,7 @@
 				078B5CCB2553F8FB007B63F1 /* Collectible.swift in Sources */,
 				070138A0251BE94C0092595E /* Constant.swift in Sources */,
 				0719E50225588577006F43B7 /* Constant+Actions.swift in Sources */,
+				076F64E32576D8D10050959B /* MainScene+Chomp.swift in Sources */,
 				075D0DE92519E88A00F409BE /* GloopDropApp+Logging.swift in Sources */,
 				075092DE251B97DD002CB9C6 /* SKSpriteNode+Extension.swift in Sources */,
 				075092E9251B97EA002CB9C6 /* BlobPlayer.swift in Sources */,
