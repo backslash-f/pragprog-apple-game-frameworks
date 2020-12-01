@@ -10,7 +10,15 @@ import SwiftUI
 extension Constant {
 
     struct Font {
-        static let nosifer = "Nosifer"
-        static let size: CGFloat = 35
+
+        struct Nosifer {
+            static let name = "Nosifer"
+            static let size: CGFloat = 35
+        }
+
+        struct Avenir {
+            static let name = "AvenirNext-DemiBold"
+            static let size: CGFloat = 22
+        }
     }
 }

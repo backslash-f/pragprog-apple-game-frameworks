@@ -45,9 +45,9 @@ extension MainScene {
 
     /// Creates a base `SKLabelNode` with common attributes.
     func baseLabel() -> SKLabelNode {
-        let label = SKLabelNode(fontNamed: Constant.Font.nosifer)
+        let label = SKLabelNode(fontNamed: Constant.Font.Nosifer.name)
         label.fontColor = .yellow
-        label.fontSize = Constant.Font.size
+        label.fontSize = Constant.Font.Nosifer.size
         label.verticalAlignmentMode = .center
         label.zPosition = Layer.interface.rawValue
         return label
@@ -105,7 +105,7 @@ fileprivate extension MainScene {
         ]
 
         // Handle the font attribute.
-        let fontName = Constant.Font.nosifer
+        let fontName = Constant.Font.Nosifer.name
         let fontSize: CGFloat = 45
         #if os(iOS) || os(tvOS)
         if let font = UIFont(name: fontName, size: fontSize) {

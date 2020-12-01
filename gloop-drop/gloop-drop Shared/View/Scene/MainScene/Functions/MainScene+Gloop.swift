@@ -76,6 +76,7 @@ private extension MainScene {
         var randomX = CGFloat.random(in: dropRange.lowerLimit...dropRange.upperLimit)
 
         enhanceDropMovement(margin: margin, randomX: &randomX)
+        addNumberLabel(to: collectible)
 
         collectible.position = CGPoint(x: randomX, y: blobPlayer.position.y * 2.5)
         addChild(collectible)
@@ -113,6 +114,18 @@ private extension MainScene {
 
          // Store the location.
         previousDropLocation = randomX
+    }
+
+    func addNumberLabel(to collectible: SKSpriteNode) {
+        let numberLabel = SKLabelNode()
+        numberLabel.name = "dropNumber"
+        numberLabel.fontName = Constant.Font.Avenir.name
+        numberLabel.fontColor = SKColor.yellow
+        numberLabel.fontSize = Constant.Font.Avenir.size
+        numberLabel.text = "\(numberOfDrops)"
+        numberLabel.position = CGPoint(x: 0, y: 2)
+        collectible.addChild(numberLabel)
+        numberOfDrops -= 1
     }
 
     func nextLevel() {
