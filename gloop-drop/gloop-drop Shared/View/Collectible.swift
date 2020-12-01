@@ -37,6 +37,7 @@ class Collectible: SKSpriteNode {
         setup()
         setupPhysicsBody()
         setupPhysicsCategories()
+        addGlowEffect()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -119,6 +120,17 @@ private extension Collectible {
         physicsBody?.categoryBitMask = PhysicsCategory.collectible.rawValue
         physicsBody?.contactTestBitMask = PhysicsCategory.player.rawValue | PhysicsCategory.floor.rawValue
         physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
+    }
+
+    func addGlowEffect() {
+        let effectNode = SKEffectNode()
+        effectNode.shouldRasterize = true
+        addChild(effectNode)
+        effectNode.addChild(SKSpriteNode(texture: texture))
+        effectNode.filter = CIFilter(
+            name: Constant.Effects.gaussianBlur,
+            parameters: [Constant.Effects.inputRadius: 40.0]
+        )
     }
 
     // MARK: Actions

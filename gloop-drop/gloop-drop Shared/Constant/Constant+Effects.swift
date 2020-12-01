@@ -10,5 +10,7 @@ extension Constant {
     struct Effects {
         static let particles = "particles"
         static let gloopFlowEmitter = "GloopFlow.sks"
+        static let gaussianBlur = "CIGaussianBlur"
+        static let inputRadius = "inputRadius"
     }
 }
