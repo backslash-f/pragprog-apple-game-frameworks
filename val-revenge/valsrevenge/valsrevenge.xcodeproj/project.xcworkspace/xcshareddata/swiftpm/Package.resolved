@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AppLogger",
+        "repositoryURL": "https://github.com/backslash-f/applogger",
+        "state": {
+          "branch": null,
+          "revision": "aa31c2a984e02a211f3e959baa1b2b6becb6327a",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "CSKScene",
+        "repositoryURL": "https://github.com/backslash-f/cskscene",
+        "state": {
+          "branch": null,
+          "revision": "ad19c340617ca225b6fff2f574e317b3227594eb",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "GCOverseer",
+        "repositoryURL": "https://github.com/backslash-f/gcoverseer",
+        "state": {
+          "branch": null,
+          "revision": "0809c26546d12c38ab179d6bb2cbb259b60b9aa4",
+          "version": "0.2.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

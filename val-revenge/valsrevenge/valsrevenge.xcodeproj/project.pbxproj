@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801E6257E6CBE00CFFA1F /* CSKScene */; };
+		072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EC257E6CDB00CFFA1F /* CSKScene */; };
+		072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EE257E6CDF00CFFA1F /* CSKScene */; };
+		079ADA98257E23EB0018D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079ADA5C257E23EA0018D7F0 /* Assets.xcassets */; };
+		079ADA99257E23EB0018D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079ADA5C257E23EA0018D7F0 /* Assets.xcassets */; };
+		079ADA9A257E23EB0018D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079ADA5C257E23EA0018D7F0 /* Assets.xcassets */; };
+		079ADAC7257E26AE0018D7F0 /* ValsRevenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */; };
+		079ADAC8257E26AE0018D7F0 /* ValsRevenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */; };
+		079ADAC9257E26AE0018D7F0 /* ValsRevenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */; };
+		079ADACF257E26E40018D7F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADACE257E26E40018D7F0 /* ContentView.swift */; };
+		079ADAD0257E26E40018D7F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADACE257E26E40018D7F0 /* ContentView.swift */; };
+		079ADAD1257E26E40018D7F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADACE257E26E40018D7F0 /* ContentView.swift */; };
+		079ADADB257E27170018D7F0 /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADADA257E27170018D7F0 /* MainSceneView.swift */; };
+		079ADADC257E27170018D7F0 /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADADA257E27170018D7F0 /* MainSceneView.swift */; };
+		079ADADD257E27170018D7F0 /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADADA257E27170018D7F0 /* MainSceneView.swift */; };
+		079ADAE5257E27420018D7F0 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAE4257E27420018D7F0 /* MainScene.swift */; };
+		079ADAE6257E27420018D7F0 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAE4257E27420018D7F0 /* MainScene.swift */; };
+		079ADAE7257E27420018D7F0 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAE4257E27420018D7F0 /* MainScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		079ADA5C257E23EA0018D7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		079ADA61257E23EB0018D7F0 /* Val's Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Val's Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		079ADA6E257E23EB0018D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		079ADA73257E23EB0018D7F0 /* Val's Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Val's Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		079ADA7F257E23EB0018D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		079ADA84257E23EB0018D7F0 /* Val's Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Val's Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		079ADA8D257E23EB0018D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		079ADA8E257E23EB0018D7F0 /* valsrevenge_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = valsrevenge_macOS.entitlements; sourceTree = "<group>"; };
+		079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValsRevenge.swift; sourceTree = "<group>"; };
+		079ADACE257E26E40018D7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		079ADADA257E27170018D7F0 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
+		079ADAE4257E27420018D7F0 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		079ADA5E257E23EB0018D7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079ADA70257E23EB0018D7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079ADA81257E23EB0018D7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		072801EB257E6CDB00CFFA1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		079ADA53257E23E40018D7F0 = {
+			isa = PBXGroup;
+			children = (
+				079ADA58257E23E40018D7F0 /* valsrevenge Shared */,
+				079ADA63257E23EB0018D7F0 /* valsrevenge iOS */,
+				079ADA74257E23EB0018D7F0 /* valsrevenge tvOS */,
+				079ADA85257E23EB0018D7F0 /* valsrevenge macOS */,
+				079ADA62257E23EB0018D7F0 /* Products */,
+				072801EB257E6CDB00CFFA1F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		079ADA58257E23E40018D7F0 /* valsrevenge Shared */ = {
+			isa = PBXGroup;
+			children = (
+				079ADAC5257E26720018D7F0 /* App */,
+				079ADAAC257E26130018D7F0 /* Resource */,
+				079ADACD257E26CC0018D7F0 /* View */,
+			);
+			path = "valsrevenge Shared";
+			sourceTree = "<group>";
+		};
+		079ADA62257E23EB0018D7F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				079ADA61257E23EB0018D7F0 /* Val's Revenge.app */,
+				079ADA73257E23EB0018D7F0 /* Val's Revenge.app */,
+				079ADA84257E23EB0018D7F0 /* Val's Revenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		079ADA63257E23EB0018D7F0 /* valsrevenge iOS */ = {
+			isa = PBXGroup;
+			children = (
+				079ADA6E257E23EB0018D7F0 /* Info.plist */,
+			);
+			path = "valsrevenge iOS";
+			sourceTree = "<group>";
+		};
+		079ADA74257E23EB0018D7F0 /* valsrevenge tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				079ADA7F257E23EB0018D7F0 /* Info.plist */,
+			);
+			path = "valsrevenge tvOS";
+			sourceTree = "<group>";
+		};
+		079ADA85257E23EB0018D7F0 /* valsrevenge macOS */ = {
+			isa = PBXGroup;
+			children = (
+				079ADA8D257E23EB0018D7F0 /* Info.plist */,
+				079ADA8E257E23EB0018D7F0 /* valsrevenge_macOS.entitlements */,
+			);
+			path = "valsrevenge macOS";
+			sourceTree = "<group>";
+		};
+		079ADAAC257E26130018D7F0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				079ADA5C257E23EA0018D7F0 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		079ADAC5257E26720018D7F0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		079ADACD257E26CC0018D7F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				079ADAD8257E26FE0018D7F0 /* Scene */,
+				079ADACE257E26E40018D7F0 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		079ADAD8257E26FE0018D7F0 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				079ADAD9257E270B0018D7F0 /* MainScene */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		079ADAD9257E270B0018D7F0 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				079ADAE4257E27420018D7F0 /* MainScene.swift */,
+				079ADADA257E27170018D7F0 /* MainSceneView.swift */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		079ADA60257E23EB0018D7F0 /* iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 079ADA9D257E23EB0018D7F0 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildPhases = (
+				079ADA5D257E23EB0018D7F0 /* Sources */,
+				079ADA5E257E23EB0018D7F0 /* Frameworks */,
+				079ADA5F257E23EB0018D7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS;
+			packageProductDependencies = (
+				072801E6257E6CBE00CFFA1F /* CSKScene */,
+			);
+			productName = "valsrevenge iOS";
+			productReference = 079ADA61257E23EB0018D7F0 /* Val's Revenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		079ADA72257E23EB0018D7F0 /* tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 079ADAA0257E23EB0018D7F0 /* Build configuration list for PBXNativeTarget "tvOS" */;
+			buildPhases = (
+				079ADA6F257E23EB0018D7F0 /* Sources */,
+				079ADA70257E23EB0018D7F0 /* Frameworks */,
+				079ADA71257E23EB0018D7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tvOS;
+			packageProductDependencies = (
+				072801EC257E6CDB00CFFA1F /* CSKScene */,
+			);
+			productName = "valsrevenge tvOS";
+			productReference = 079ADA73257E23EB0018D7F0 /* Val's Revenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		079ADA83257E23EB0018D7F0 /* macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 079ADAA3257E23EB0018D7F0 /* Build configuration list for PBXNativeTarget "macOS" */;
+			buildPhases = (
+				079ADA80257E23EB0018D7F0 /* Sources */,
+				079ADA81257E23EB0018D7F0 /* Frameworks */,
+				079ADA82257E23EB0018D7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macOS;
+			packageProductDependencies = (
+				072801EE257E6CDF00CFFA1F /* CSKScene */,
+			);
+			productName = "valsrevenge macOS";
+			productReference = 079ADA84257E23EB0018D7F0 /* Val's Revenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		079ADA54257E23E40018D7F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					079ADA60257E23EB0018D7F0 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					079ADA72257E23EB0018D7F0 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					079ADA83257E23EB0018D7F0 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+				};
+			};
+			buildConfigurationList = 079ADA57257E23E40018D7F0 /* Build configuration list for PBXProject "valsrevenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 079ADA53257E23E40018D7F0;
+			packageReferences = (
+				072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */,
+			);
+			productRefGroup = 079ADA62257E23EB0018D7F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				079ADA60257E23EB0018D7F0 /* iOS */,
+				079ADA72257E23EB0018D7F0 /* tvOS */,
+				079ADA83257E23EB0018D7F0 /* macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		079ADA5F257E23EB0018D7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079ADA98257E23EB0018D7F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079ADA71257E23EB0018D7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079ADA99257E23EB0018D7F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079ADA82257E23EB0018D7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079ADA9A257E23EB0018D7F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		079ADA5D257E23EB0018D7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079ADACF257E26E40018D7F0 /* ContentView.swift in Sources */,
+				079ADAE5257E27420018D7F0 /* MainScene.swift in Sources */,
+				079ADAC7257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
+				079ADADB257E27170018D7F0 /* MainSceneView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079ADA6F257E23EB0018D7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079ADAD0257E26E40018D7F0 /* ContentView.swift in Sources */,
+				079ADAE6257E27420018D7F0 /* MainScene.swift in Sources */,
+				079ADAC8257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
+				079ADADC257E27170018D7F0 /* MainSceneView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079ADA80257E23EB0018D7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079ADAD1257E26E40018D7F0 /* ContentView.swift in Sources */,
+				079ADAE7257E27420018D7F0 /* MainScene.swift in Sources */,
+				079ADAC9257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
+				079ADADD257E27170018D7F0 /* MainSceneView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		079ADA9B257E23EB0018D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Val's Revenge";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		079ADA9C257E23EB0018D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Val's Revenge";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		079ADA9E257E23EB0018D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				INFOPLIST_FILE = "valsrevenge iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.valsrevenge";
+				PRODUCT_NAME = "Val's Revenge";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		079ADA9F257E23EB0018D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				INFOPLIST_FILE = "valsrevenge iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.valsrevenge";
+				PRODUCT_NAME = "Val's Revenge";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		079ADAA1257E23EB0018D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				INFOPLIST_FILE = "valsrevenge tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.valsrevenge";
+				PRODUCT_NAME = "Val's Revenge";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.2;
+			};
+			name = Debug;
+		};
+		079ADAA2257E23EB0018D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				INFOPLIST_FILE = "valsrevenge tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.valsrevenge";
+				PRODUCT_NAME = "Val's Revenge";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		079ADAA4257E23EB0018D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "valsrevenge macOS/valsrevenge_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "valsrevenge macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.valsrevenge";
+				PRODUCT_NAME = "Val's Revenge";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		079ADAA5257E23EB0018D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "valsrevenge macOS/valsrevenge_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "valsrevenge macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.valsrevenge";
+				PRODUCT_NAME = "Val's Revenge";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		079ADA57257E23E40018D7F0 /* Build configuration list for PBXProject "valsrevenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				079ADA9B257E23EB0018D7F0 /* Debug */,
+				079ADA9C257E23EB0018D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		079ADA9D257E23EB0018D7F0 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				079ADA9E257E23EB0018D7F0 /* Debug */,
+				079ADA9F257E23EB0018D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		079ADAA0257E23EB0018D7F0 /* Build configuration list for PBXNativeTarget "tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				079ADAA1257E23EB0018D7F0 /* Debug */,
+				079ADAA2257E23EB0018D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		079ADAA3257E23EB0018D7F0 /* Build configuration list for PBXNativeTarget "macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				079ADAA4257E23EB0018D7F0 /* Debug */,
+				079ADAA5257E23EB0018D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/backslash-f/cskscene";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		072801E6257E6CBE00CFFA1F /* CSKScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */;
+			productName = CSKScene;
+		};
+		072801EC257E6CDB00CFFA1F /* CSKScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */;
+			productName = CSKScene;
+		};
+		072801EE257E6CDF00CFFA1F /* CSKScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */;
+			productName = CSKScene;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 079ADA54257E23E40018D7F0 /* Project object */;
+}
