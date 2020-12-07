@@ -186,6 +186,7 @@
 				079ADA5D257E23EB0018D7F0 /* Sources */,
 				079ADA5E257E23EB0018D7F0 /* Frameworks */,
 				079ADA5F257E23EB0018D7F0 /* Resources */,
+				07280228257E85AB00CFFA1F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -206,6 +207,7 @@
 				079ADA6F257E23EB0018D7F0 /* Sources */,
 				079ADA70257E23EB0018D7F0 /* Frameworks */,
 				079ADA71257E23EB0018D7F0 /* Resources */,
+				07280229257E85B900CFFA1F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -226,6 +228,7 @@
 				079ADA80257E23EB0018D7F0 /* Sources */,
 				079ADA81257E23EB0018D7F0 /* Frameworks */,
 				079ADA82257E23EB0018D7F0 /* Resources */,
+				0728022A257E85C400CFFA1F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -311,6 +314,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07280228257E85AB00CFFA1F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n  echo \"SwiftLint (https://github.com/realm/SwiftLint) isn't installed. Run:\"\n  echo \"brew install swiftlint\"\nfi\n";
+		};
+		07280229257E85B900CFFA1F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n  echo \"SwiftLint (https://github.com/realm/SwiftLint) isn't installed. Run:\"\n  echo \"brew install swiftlint\"\nfi\n";
+		};
+		0728022A257E85C400CFFA1F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n  echo \"SwiftLint (https://github.com/realm/SwiftLint) isn't installed. Run:\"\n  echo \"brew install swiftlint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		079ADA5D257E23EB0018D7F0 /* Sources */ = {
