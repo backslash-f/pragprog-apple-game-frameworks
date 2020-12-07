@@ -17,7 +17,7 @@
                BlueprintIdentifier = "079ADA72257E23EB0018D7F0"
                BuildableName = "Val&apos;s Revenge.app"
                BlueprintName = "tvOS"
-               ReferencedContainer = "container:valsrevenge.xcodeproj">
+               ReferencedContainer = "container:val-revenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "079ADA72257E23EB0018D7F0"
             BuildableName = "Val&apos;s Revenge.app"
             BlueprintName = "tvOS"
-            ReferencedContainer = "container:valsrevenge.xcodeproj">
+            ReferencedContainer = "container:val-revenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "079ADA72257E23EB0018D7F0"
             BuildableName = "Val&apos;s Revenge.app"
             BlueprintName = "tvOS"
-            ReferencedContainer = "container:valsrevenge.xcodeproj">
+            ReferencedContainer = "container:val-revenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -35,7 +35,7 @@
 		079ADA7F257E23EB0018D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079ADA84257E23EB0018D7F0 /* Val's Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Val's Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		079ADA8D257E23EB0018D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		079ADA8E257E23EB0018D7F0 /* valsrevenge_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = valsrevenge_macOS.entitlements; sourceTree = "<group>"; };
+		079ADA8E257E23EB0018D7F0 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValsRevenge.swift; sourceTree = "<group>"; };
 		079ADACE257E26E40018D7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		079ADADA257E27170018D7F0 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
@@ -80,23 +80,23 @@
 		079ADA53257E23E40018D7F0 = {
 			isa = PBXGroup;
 			children = (
-				079ADA58257E23E40018D7F0 /* valsrevenge Shared */,
-				079ADA63257E23EB0018D7F0 /* valsrevenge iOS */,
-				079ADA74257E23EB0018D7F0 /* valsrevenge tvOS */,
-				079ADA85257E23EB0018D7F0 /* valsrevenge macOS */,
+				079ADA58257E23E40018D7F0 /* val-revenge Shared */,
+				079ADA63257E23EB0018D7F0 /* val-revenge iOS */,
+				079ADA74257E23EB0018D7F0 /* val-revenge tvOS */,
+				079ADA85257E23EB0018D7F0 /* val-revenge macOS */,
 				079ADA62257E23EB0018D7F0 /* Products */,
 				072801EB257E6CDB00CFFA1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		079ADA58257E23E40018D7F0 /* valsrevenge Shared */ = {
+		079ADA58257E23E40018D7F0 /* val-revenge Shared */ = {
 			isa = PBXGroup;
 			children = (
 				079ADAC5257E26720018D7F0 /* App */,
 				079ADAAC257E26130018D7F0 /* Resource */,
 				079ADACD257E26CC0018D7F0 /* View */,
 			);
-			path = "valsrevenge Shared";
+			path = "val-revenge Shared";
 			sourceTree = "<group>";
 		};
 		079ADA62257E23EB0018D7F0 /* Products */ = {
@@ -109,29 +109,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		079ADA63257E23EB0018D7F0 /* valsrevenge iOS */ = {
+		079ADA63257E23EB0018D7F0 /* val-revenge iOS */ = {
 			isa = PBXGroup;
 			children = (
 				079ADA6E257E23EB0018D7F0 /* Info.plist */,
 			);
-			path = "valsrevenge iOS";
+			path = "val-revenge iOS";
 			sourceTree = "<group>";
 		};
-		079ADA74257E23EB0018D7F0 /* valsrevenge tvOS */ = {
+		079ADA74257E23EB0018D7F0 /* val-revenge tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				079ADA7F257E23EB0018D7F0 /* Info.plist */,
 			);
-			path = "valsrevenge tvOS";
+			path = "val-revenge tvOS";
 			sourceTree = "<group>";
 		};
-		079ADA85257E23EB0018D7F0 /* valsrevenge macOS */ = {
+		079ADA85257E23EB0018D7F0 /* val-revenge macOS */ = {
 			isa = PBXGroup;
 			children = (
 				079ADA8D257E23EB0018D7F0 /* Info.plist */,
-				079ADA8E257E23EB0018D7F0 /* valsrevenge_macOS.entitlements */,
+				079ADA8E257E23EB0018D7F0 /* macOS.entitlements */,
 			);
-			path = "valsrevenge macOS";
+			path = "val-revenge macOS";
 			sourceTree = "<group>";
 		};
 		079ADAAC257E26130018D7F0 /* Resource */ = {
@@ -262,7 +262,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 079ADA57257E23E40018D7F0 /* Build configuration list for PBXProject "valsrevenge" */;
+			buildConfigurationList = 079ADA57257E23E40018D7F0 /* Build configuration list for PBXProject "val-revenge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -470,7 +470,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKS358BH88;
-				INFOPLIST_FILE = "valsrevenge iOS/Info.plist";
+				INFOPLIST_FILE = "val-revenge iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,7 +493,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKS358BH88;
-				INFOPLIST_FILE = "valsrevenge iOS/Info.plist";
+				INFOPLIST_FILE = "val-revenge iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +516,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKS358BH88;
-				INFOPLIST_FILE = "valsrevenge tvOS/Info.plist";
+				INFOPLIST_FILE = "val-revenge tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,7 +539,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKS358BH88;
-				INFOPLIST_FILE = "valsrevenge tvOS/Info.plist";
+				INFOPLIST_FILE = "val-revenge tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,12 +560,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "valsrevenge macOS/valsrevenge_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "val-revenge macOS/macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UKS358BH88;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "valsrevenge macOS/Info.plist";
+				INFOPLIST_FILE = "val-revenge macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -585,12 +585,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "valsrevenge macOS/valsrevenge_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "val-revenge macOS/macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UKS358BH88;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "valsrevenge macOS/Info.plist";
+				INFOPLIST_FILE = "val-revenge macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -606,7 +606,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		079ADA57257E23E40018D7F0 /* Build configuration list for PBXProject "valsrevenge" */ = {
+		079ADA57257E23E40018D7F0 /* Build configuration list for PBXProject "val-revenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				079ADA9B257E23EB0018D7F0 /* Debug */,

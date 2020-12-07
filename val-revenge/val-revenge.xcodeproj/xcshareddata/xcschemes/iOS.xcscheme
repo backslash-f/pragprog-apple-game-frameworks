@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "079ADA83257E23EB0018D7F0"
+               BlueprintIdentifier = "079ADA60257E23EB0018D7F0"
                BuildableName = "Val&apos;s Revenge.app"
-               BlueprintName = "macOS"
-               ReferencedContainer = "container:valsrevenge.xcodeproj">
+               BlueprintName = "iOS"
+               ReferencedContainer = "container:val-revenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "079ADA83257E23EB0018D7F0"
+            BlueprintIdentifier = "079ADA60257E23EB0018D7F0"
             BuildableName = "Val&apos;s Revenge.app"
-            BlueprintName = "macOS"
-            ReferencedContainer = "container:valsrevenge.xcodeproj">
+            BlueprintName = "iOS"
+            ReferencedContainer = "container:val-revenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "079ADA83257E23EB0018D7F0"
+            BlueprintIdentifier = "079ADA60257E23EB0018D7F0"
             BuildableName = "Val&apos;s Revenge.app"
-            BlueprintName = "macOS"
-            ReferencedContainer = "container:valsrevenge.xcodeproj">
+            BlueprintName = "iOS"
+            ReferencedContainer = "container:val-revenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
