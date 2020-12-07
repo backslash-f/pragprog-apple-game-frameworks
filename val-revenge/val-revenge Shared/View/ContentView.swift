@@ -3,6 +3,7 @@
 //  valsrevenge
 //
 //  Created by Fernando Fernandes on 07.12.20.
+//  Copyright © 2020 backslash-f. All rights reserved.
 //
 
 import SwiftUI
@@ -12,8 +13,7 @@ struct ContentView: View {
     // MARK: - Properties
 
     var body: some View {
-        MainSceneView()
-            .edgesIgnoringSafeArea(.all)
+        MainSceneView().edgesIgnoringSafeArea(.all)
     }
 }
 

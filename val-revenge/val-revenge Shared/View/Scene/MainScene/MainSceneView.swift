@@ -3,6 +3,7 @@
 //  valsrevenge
 //
 //  Created by Fernando Fernandes on 07.12.20.
+//  Copyright © 2020 backslash-f. All rights reserved.
 //
 
 import SwiftUI
@@ -13,8 +14,7 @@ struct MainSceneView: View {
     // MARK: - Properties
 
     var body: some View {
-        let size = CGSize(width: 1336, height: 1024)
-        SpriteView(scene: makeScene(size: size))
+        SpriteView(scene: makeScene())
     }
 }
 
@@ -22,8 +22,8 @@ struct MainSceneView: View {
 
 fileprivate extension MainSceneView {
 
-    func makeScene(size: CGSize) -> SKScene {
-        MainScene(size: size)
+    func makeScene() -> SKScene {
+        MainScene(fileNamed: Constant.Scene.MainScene)!
     }
 }
 
