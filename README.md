@@ -11,7 +11,7 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 - Although the chapters in the book target only **iOS**, the projects in this repo target **macOS** and **tvOS** too.
 - The projects rely on [the new Apple's `SceneView` structure](https://developer.apple.com/documentation/scenekit/sceneview). There is no `AppDelegate`, `ViewControllers` and/or `Storyboards`. We are living in the future. 🦾
 - `SwiftUI` and `Combine` are used whenever possible.
-- 🎮 Controller support via [Apple's Game Controller Framework](https://developer.apple.com/documentation/gamecontroller) is added when possible.
+- 🎮 Controller support via [GCOverseer](https://github.com/backslash-f/gcoverseer) is added when possible.
 
 ## Requirements
 - [SwiftLint](https://github.com/realm/SwiftLint) (`brew install swiftlint`)
