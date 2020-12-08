@@ -8,6 +8,7 @@
 
 import SwiftUI
 import SpriteKit
+import GameplayKit
 
 struct MainSceneView: View {
 
@@ -20,10 +21,29 @@ struct MainSceneView: View {
 
 // MARK: - Private
 
-fileprivate extension MainSceneView {
+private extension MainSceneView {
 
     func makeScene() -> SKScene {
-        MainScene(fileNamed: Constant.Scene.MainScene)!
+
+        // Load 'MainScene.sks' as a GKScene. This provides gameplay related content including entities and graphs.
+        guard let gkScene = GKScene(fileNamed: Constant.Scene.MainScene) else {
+            let errorMessage = "Could not load \"MainScene.sks\" as \"GKScene\""
+            ValsRevenge.logError(errorMessage)
+            fatalError(errorMessage)
+        }
+
+        // Load 'MainScene.sks' as a GKScene. This provides gameplay related content including entities and graphs.
+        guard let mainScene = gkScene.rootNode as? MainScene else {
+            let errorMessage = "Could not load \"MainScene\" as GKScene's root node"
+            ValsRevenge.logError(errorMessage)
+            fatalError(errorMessage)
+        }
+
+        // Copy gameplay related content over to the scene.
+        mainScene.entities = gkScene.entities
+        mainScene.graphs = gkScene.graphs
+
+        return mainScene
     }
 }
 

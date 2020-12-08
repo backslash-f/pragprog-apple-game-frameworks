@@ -8,8 +8,16 @@
 
 import CSKScene
 import SpriteKit
+import GameplayKit
 
 class MainScene: CSKScene {
+
+    // MARK: - Properties
+
+    // MARK: GameplayKit
+
+    var entities = [GKEntity]()
+    var graphs = [String: GKGraph]()
 
     // MARK: - Lifecycle
 
@@ -39,6 +47,7 @@ class MainScene: CSKScene {
 private extension MainScene {
 
     func setupScene() {
+        view?.ignoresSiblingOrder = true
         scaleMode = .aspectFill
     }
 }

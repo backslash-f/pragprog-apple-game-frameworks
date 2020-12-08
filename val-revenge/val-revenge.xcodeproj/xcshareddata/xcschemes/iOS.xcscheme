@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "079ADA60257E23EB0018D7F0"
-               BuildableName = "Val&apos;s Revenge.app"
+               BuildableName = "val-revenge.app"
                BlueprintName = "iOS"
                ReferencedContainer = "container:val-revenge.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "079ADA60257E23EB0018D7F0"
-            BuildableName = "Val&apos;s Revenge.app"
+            BuildableName = "val-revenge.app"
             BlueprintName = "iOS"
             ReferencedContainer = "container:val-revenge.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "079ADA60257E23EB0018D7F0"
-            BuildableName = "Val&apos;s Revenge.app"
+            BuildableName = "val-revenge.app"
             BlueprintName = "iOS"
             ReferencedContainer = "container:val-revenge.xcodeproj">
          </BuildableReference>
