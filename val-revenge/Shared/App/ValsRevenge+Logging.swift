@@ -9,7 +9,8 @@
 import AppLogger
 
 enum LoggingCategories: String {
-    case error = "ValsRevenge_Error"
+    case error  = "ValsRevenge_Error"
+    case player = "ValsRevenge_Player"
 }
 
 extension ValsRevenge {

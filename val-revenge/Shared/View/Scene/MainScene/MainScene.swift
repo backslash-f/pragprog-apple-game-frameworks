@@ -19,6 +19,10 @@ class MainScene: CSKScene {
     var entities = [GKEntity]()
     var graphs = [String: GKGraph]()
 
+    // MARK: Private Properties
+
+    private var player: Player?
+
     // MARK: - Lifecycle
 
     override init(size: CGSize, debugSettings: DebugSettings = DebugSettings()) {
@@ -42,6 +46,16 @@ class MainScene: CSKScene {
     }
 }
 
+// MARK: - SpriteKit
+
+extension MainScene {
+
+    override func didMove(to view: SKView) {
+        setupPlayer()
+        super.didMove(to: view)
+    }
+}
+
 // MARK: - Private
 
 private extension MainScene {
@@ -49,5 +63,10 @@ private extension MainScene {
     func setupScene() {
         view?.ignoresSiblingOrder = true
         scaleMode = .aspectFill
+    }
+
+    func setupPlayer() {
+        player = childNode(withName: Constant.Node.Player.name) as? Player
+        player?.move(.stop)
     }
 }
