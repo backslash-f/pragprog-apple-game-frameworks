@@ -19,9 +19,13 @@ class MainScene: CSKScene {
     var entities = [GKEntity]()
     var graphs = [String: GKGraph]()
 
+    // MARK: Internal Properties
+
+    internal var player: Player?
+
     // MARK: Private Properties
 
-    private var player: Player?
+    private var lastUpdateTime: TimeInterval = .zero
 
     // MARK: - Lifecycle
 
@@ -50,6 +54,12 @@ class MainScene: CSKScene {
 
 extension MainScene {
 
+    override func update(_ currentTime: TimeInterval) {
+        updateEntitiesDeltaTime(with: currentTime)
+        player?.updatePosition()
+        player?.updateAction()
+    }
+
     override func didMove(to view: SKView) {
         setupPlayer()
         super.didMove(to: view)
@@ -67,6 +77,17 @@ private extension MainScene {
 
     func setupPlayer() {
         player = childNode(withName: Constant.Node.Player.name) as? Player
-        player?.move(.stop)
+    }
+
+    func updateEntitiesDeltaTime(with currentTime: TimeInterval) {
+        // Calculate time since last update.
+        let deltaTime: TimeInterval
+        if lastUpdateTime > .zero {
+            deltaTime = currentTime - lastUpdateTime
+        } else {
+            deltaTime = .zero
+        }
+        entities.forEach { $0.update(deltaTime: deltaTime) }
+        lastUpdateTime = currentTime
     }
 }
