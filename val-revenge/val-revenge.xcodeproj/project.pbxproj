@@ -71,7 +71,6 @@
 		079ADACE257E26E40018D7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		079ADADA257E27170018D7F0 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
 		079ADAE4257E27420018D7F0 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
-		07CAA70F25812DFA005FADF7 /* cskscene */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cskscene; path = ../../cskscene; sourceTree = "<group>"; };
 		07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValsRevenge+Logging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +138,6 @@
 		079ADA53257E23E40018D7F0 = {
 			isa = PBXGroup;
 			children = (
-				07CAA70F25812DFA005FADF7 /* cskscene */,
 				079ADA63257E23EB0018D7F0 /* iOS */,
 				079ADA74257E23EB0018D7F0 /* tvOS */,
 				079ADA85257E23EB0018D7F0 /* macOS */,
