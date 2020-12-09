@@ -62,30 +62,22 @@ private extension MainScene {
 
     func touchDown(atPosition position: CGPoint) {
         ValsRevenge.log("👇🏻 Touch down!", category: .inputTouch)
-        switch (atPoint(position) as? SKSpriteNode)?.name {
-        case Constant.Node.ButtonAttack.name:
-            player?.isAttacking = true
-        case Constant.Node.Controller.stop:
-            player?.stance = .stop
-        case Constant.Node.Controller.up:
-            player?.stance = .up
-        case Constant.Node.Controller.down:
-            player?.stance = .down
-        case Constant.Node.Controller.left:
-            player?.stance = .left
-        case Constant.Node.Controller.right:
-            player?.stance = .right
-        case Constant.Node.Controller.topLeft:
-            player?.stance = .topLeft
-        case Constant.Node.Controller.topRight:
-            player?.stance = .topRight
-        case Constant.Node.Controller.bottomLeft:
-            player?.stance = .bottomLeft
-        case Constant.Node.Controller.bottomRight:
-            player?.stance = .bottomRight
-        default:
+
+        guard let nodeName = (atPoint(position) as? SKSpriteNode)?.name else {
             player?.stance = .stop
             player?.isAttacking = false
+            return
+        }
+
+        if nodeName == Constant.Node.ButtonAttack.name {
+            player?.isAttacking = true
+
+        } else {
+            // Format stances, for example: "Up" -> "up"; "BottomLeft" -> "bottomLeft"
+            let stanceSuffix = nodeName.deletingPrefix(Constant.Node.Controller.namePrefix)
+            let stanceSuffixFirstLowercased = String(stanceSuffix.prefix(1).lowercased())
+            let stance = stanceSuffixFirstLowercased + stanceSuffix.dropFirst()
+            player?.stance = Stance(rawValue: stance) ?? .stop
         }
     }
 

@@ -28,6 +28,9 @@
 		0768BD11257FBC2500628758 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */; };
 		0768BD12257FBC2500628758 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */; };
 		0768BD13257FBC2500628758 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */; };
+		078D24C22580FAC800CB653D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D24C12580FAC800CB653D /* String+Extensions.swift */; };
+		078D24C32580FAC800CB653D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D24C12580FAC800CB653D /* String+Extensions.swift */; };
+		078D24C42580FAC800CB653D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D24C12580FAC800CB653D /* String+Extensions.swift */; };
 		079ADA98257E23EB0018D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079ADA5C257E23EA0018D7F0 /* Assets.xcassets */; };
 		079ADA99257E23EB0018D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079ADA5C257E23EA0018D7F0 /* Assets.xcassets */; };
 		079ADA9A257E23EB0018D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079ADA5C257E23EA0018D7F0 /* Assets.xcassets */; };
@@ -55,6 +58,7 @@
 		074CCA17257FAE5F00EA60BB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		074CCA28257FB03200EA60BB /* Constant+Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Nodes.swift"; sourceTree = "<group>"; };
 		0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+InputTouch.swift"; sourceTree = "<group>"; };
+		078D24C12580FAC800CB653D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		079ADA5C257E23EA0018D7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		079ADA61257E23EB0018D7F0 /* val-revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "val-revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		079ADA6E257E23EB0018D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +127,14 @@
 			path = Input;
 			sourceTree = "<group>";
 		};
+		078D24C02580FAAC00CB653D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				078D24C12580FAC800CB653D /* String+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		079ADA53257E23E40018D7F0 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +152,7 @@
 			children = (
 				079ADAC5257E26720018D7F0 /* App */,
 				072E9104257EBD000001E1DA /* Constant */,
+				078D24C02580FAAC00CB653D /* Extension */,
 				079ADAAC257E26130018D7F0 /* Resource */,
 				079ADACD257E26CC0018D7F0 /* View */,
 			);
@@ -433,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079ADACF257E26E40018D7F0 /* ContentView.swift in Sources */,
+				078D24C22580FAC800CB653D /* String+Extensions.swift in Sources */,
 				079ADAE5257E27420018D7F0 /* MainScene.swift in Sources */,
 				072E9113257EBD4E0001E1DA /* Constant.swift in Sources */,
 				079ADAC7257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
@@ -450,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079ADAD0257E26E40018D7F0 /* ContentView.swift in Sources */,
+				078D24C32580FAC800CB653D /* String+Extensions.swift in Sources */,
 				079ADAE6257E27420018D7F0 /* MainScene.swift in Sources */,
 				072E9114257EBD4E0001E1DA /* Constant.swift in Sources */,
 				079ADAC8257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
@@ -467,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079ADAD1257E26E40018D7F0 /* ContentView.swift in Sources */,
+				078D24C42580FAC800CB653D /* String+Extensions.swift in Sources */,
 				079ADAE7257E27420018D7F0 /* MainScene.swift in Sources */,
 				072E9115257EBD4E0001E1DA /* Constant.swift in Sources */,
 				079ADAC9257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,

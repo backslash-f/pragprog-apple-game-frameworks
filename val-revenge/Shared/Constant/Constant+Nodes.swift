@@ -20,15 +20,16 @@ extension Constant {
 
         // swiftlint:disable identifier_name
         struct Controller {
-            static let stop         = "ControllerStop"
-            static let left         = "ControllerLeft"
-            static let right        = "ControllerRight"
-            static let up           = "ControllerUp"
-            static let down         = "ControllerDown"
-            static let topLeft      = "ControllerTopLeft"
-            static let topRight     = "ControllerTopRight"
-            static let bottomLeft   = "ControllerBottomLeft"
-            static let bottomRight  = "ControllerBottomRight"
+            static let namePrefix   = "Controller"
+            static let stop         = "\(namePrefix)Stop"
+            static let left         = "\(namePrefix)Left"
+            static let right        = "\(namePrefix)Right"
+            static let up           = "\(namePrefix)Up"
+            static let down         = "\(namePrefix)Down"
+            static let topLeft      = "\(namePrefix)TopLeft"
+            static let topRight     = "\(namePrefix)TopRight"
+            static let bottomLeft   = "\(namePrefix)BottomLeft"
+            static let bottomRight  = "\(namePrefix)BottomRight"
         }
 
         struct Player {
