@@ -15,43 +15,59 @@ extension MainScene {
 
     #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        ValsRevenge.log("👇🏻 Touches began!", category: .inputTouch)
         touches.forEach { [weak self] touch in
             guard let self = self else {
                 return
             }
-            self.touchDown(atPosition: touch.location(in: self))
+            let position = touch.location(in: self)
+            self.handleStance(atPosition: position)
+            self.handleAction(atPosition: position)
         }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        ValsRevenge.log("👉🏻 Touches moved!", category: .inputTouch)
         touches.forEach { [weak self] touch in
             guard let self = self else {
                 return
             }
-            self.touchDown(atPosition: touch.location(in: self))
+            self.handleStance(atPosition: touch.location(in: self))
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchUp()
+        touches.forEach { [weak self] touch in
+            guard let self = self else {
+                return
+            }
+            self.touchUp(atPosition: touch.location(in: self))
+        }
     }
 
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchUp()
+        touches.forEach { [weak self] touch in
+            guard let self = self else {
+                return
+            }
+            self.touchUp(atPosition: touch.location(in: self))
+        }
     }
     #endif
 
     #if os(OSX)
     override func mouseDown(with event: NSEvent) {
-        touchDown(atPosition: event.location(in: self))
+        let position = event.location(in: self)
+        self.handleStance(atPosition: position)
+        self.handleAction(atPosition: position)
     }
 
     override func mouseDragged(with event: NSEvent) {
-        touchDown(atPosition: event.location(in: self))
+        self.touchUp(atPosition: event.location(in: self))
     }
 
     override func mouseUp(with event: NSEvent) {
-        touchUp()
+        self.touchUp(atPosition: event.location(in: self))
     }
     #endif
 }
@@ -60,19 +76,9 @@ extension MainScene {
 
 private extension MainScene {
 
-    func touchDown(atPosition position: CGPoint) {
-        ValsRevenge.log("👇🏻 Touch down!", category: .inputTouch)
-
-        guard let nodeName = (atPoint(position) as? SKSpriteNode)?.name else {
-            player?.stance = .stop
-            player?.isAttacking = false
-            return
-        }
-
-        if nodeName == Constant.Node.ButtonAttack.name {
-            player?.isAttacking = true
-
-        } else {
+    func handleStance(atPosition position: CGPoint) {
+        if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,
+           nodeName != Constant.Node.ButtonAttack.name {
             // Format stances, for example: "Up" -> "up"; "BottomLeft" -> "bottomLeft"
             let stanceSuffix = nodeName.deletingPrefix(Constant.Node.Controller.namePrefix)
             let stanceSuffixFirstLowercased = String(stanceSuffix.prefix(1).lowercased())
@@ -81,9 +87,16 @@ private extension MainScene {
         }
     }
 
-    func touchUp() {
+    func handleAction(atPosition position: CGPoint) {
+        let nodeName = (atPoint(position) as? SKSpriteNode)?.name
+        player?.isAttacking = (nodeName == Constant.Node.ButtonAttack.name)
+    }
+
+    func touchUp(atPosition position: CGPoint) {
         ValsRevenge.log("👆🏻 Touch up!", category: .inputTouch)
-        player?.isAttacking = false
-        player?.stance = .stop
+        if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,
+           nodeName.starts(with: Constant.Node.Controller.namePrefix) {
+            player?.stance = .stop
+        }
     }
 }

@@ -32,6 +32,11 @@ extension Constant {
             static let bottomRight  = "\(namePrefix)BottomRight"
         }
 
+        struct Knife {
+            static let name = "Knife"
+            static let imageName = "knife"
+        }
+
         struct Player {
             static let name = "Player"
         }

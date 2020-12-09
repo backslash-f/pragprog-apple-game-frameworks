@@ -34,16 +34,6 @@ class MainScene: CSKScene {
         setupScene()
     }
 
-    override init() {
-        super.init()
-        setupScene()
-    }
-
-    override init(size: CGSize) {
-        super.init(size: size)
-        setupScene()
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupScene()
@@ -61,8 +51,8 @@ extension MainScene {
     }
 
     override func didMove(to view: SKView) {
-        setupPlayer()
         super.didMove(to: view)
+        setupPlayer()
     }
 }
 
@@ -71,7 +61,6 @@ extension MainScene {
 private extension MainScene {
 
     func setupScene() {
-        view?.ignoresSiblingOrder = true
         scaleMode = .aspectFill
     }
 
