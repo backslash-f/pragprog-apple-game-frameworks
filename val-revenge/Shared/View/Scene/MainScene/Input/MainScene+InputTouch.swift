@@ -75,6 +75,14 @@ private extension MainScene {
             player?.stance = .left
         case Constant.Node.Controller.right:
             player?.stance = .right
+        case Constant.Node.Controller.topLeft:
+            player?.stance = .topLeft
+        case Constant.Node.Controller.topRight:
+            player?.stance = .topRight
+        case Constant.Node.Controller.bottomLeft:
+            player?.stance = .bottomLeft
+        case Constant.Node.Controller.bottomRight:
+            player?.stance = .bottomRight
         default:
             player?.stance = .stop
             player?.isAttacking = false

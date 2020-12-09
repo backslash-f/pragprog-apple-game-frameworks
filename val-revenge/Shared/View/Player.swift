@@ -10,7 +10,7 @@ import SpriteKit
 
 // swiftlint:disable identifier_name
 enum Stance: String {
-    case stop, left, right, up, down
+    case stop, left, right, up, down, topLeft, topRight, bottomLeft, bottomRight
 }
 
 class Player: SKSpriteNode {
@@ -48,6 +48,14 @@ extension Player {
             goLeft()
         case .right:
             goRight()
+        case .topLeft:
+            goTopLeft()
+        case .topRight:
+            goTopRight()
+        case .bottomLeft:
+            goBottomLeft()
+        case .bottomRight:
+            goBottomRight()
         }
         lastStance = stance
     }
@@ -81,6 +89,22 @@ private extension Player {
 
     func goRight() {
         physicsBody?.velocity = CGVector(dx: defaultMovementUnits, dy: 0)
+    }
+
+    func goTopLeft() {
+        physicsBody?.velocity = CGVector(dx: -defaultMovementUnits, dy: defaultMovementUnits)
+    }
+
+    func goTopRight() {
+        physicsBody?.velocity = CGVector(dx: defaultMovementUnits, dy: defaultMovementUnits)
+    }
+
+    func goBottomLeft() {
+        physicsBody?.velocity = CGVector(dx: -defaultMovementUnits, dy: -defaultMovementUnits)
+    }
+
+    func goBottomRight() {
+        physicsBody?.velocity = CGVector(dx: defaultMovementUnits, dy: -defaultMovementUnits)
     }
 
     func attack() {
