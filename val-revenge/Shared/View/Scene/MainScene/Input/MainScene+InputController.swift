@@ -43,7 +43,7 @@ private extension MainScene {
         }
         extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
         extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler()
-        extendedGamepadController.buttonX.valueChangedHandler = buttonXHandler()
+        extendedGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
     }
 
     func setupMicroControllers() {
@@ -55,7 +55,7 @@ private extension MainScene {
         // https://developer.apple.com/forums/thread/21562?page=1#644496022
         microGamepadController.allowsRotation = true
         microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
-        microGamepadController.buttonX.valueChangedHandler = buttonXHandler()
+        microGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
     }
 
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
@@ -65,11 +65,10 @@ private extension MainScene {
         }
     }
 
-    /// Notice: The `X` button is the `square` button in a Sony's Dualshock 􀨄
-    func buttonXHandler() -> GCControllerButtonValueChangedHandler {
+    /// Notice: `buttonA` is the 􀁡 button in a Sony's Dualshock.
+    func buttonHandlerA() -> GCControllerButtonValueChangedHandler {
         return { [weak self] _, _, isPressed in
-            #warning("TODO: handle X button")
-            //player?.isAttacking
+            self?.player?.isAttacking = isPressed
         }
     }
 }
