@@ -8,9 +8,34 @@
 
 import SpriteKit
 
-#warning("TODO: handle controller")
-
 /// Handles touch inputs (users interacting with the game via screen touching) and also mouse input (`macOS`).
+extension MainScene {
+
+    /// Shows the virtual pad and the attack button.
+    func showVirtualButtons() {
+        let unhideAction = SKAction.unhide()
+        enumerateChildNodes(withName: Constant.Node.Controller.name) { virtualController, _ in
+            virtualController.run(unhideAction)
+        }
+        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { attackButton, _ in
+            attackButton.run(unhideAction)
+        }
+    }
+
+    /// Hides the virtual pad and the attack button.
+    func hideVirtualButtons() {
+        let hideAction = SKAction.hide()
+        enumerateChildNodes(withName: Constant.Node.Controller.name) { virtualController, _ in
+            virtualController.run(hideAction)
+        }
+        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { attackButton, _ in
+            attackButton.run(hideAction)
+        }
+    }
+}
+
+// MARK: - UIResponder
+
 extension MainScene {
 
     #if os(iOS)
@@ -54,6 +79,11 @@ extension MainScene {
         }
     }
     #endif
+}
+
+// MARK: - NSResponder
+
+extension MainScene {
 
     #if os(OSX)
     override func mouseDown(with event: NSEvent) {
@@ -80,7 +110,7 @@ private extension MainScene {
         if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,
            nodeName != Constant.Node.ButtonAttack.name {
             // Format stances, for example: "Up" -> "up"; "BottomLeft" -> "bottomLeft"
-            let stanceSuffix = nodeName.deletingPrefix(Constant.Node.Controller.namePrefix)
+            let stanceSuffix = nodeName.deletingPrefix(Constant.Node.Controller.name)
             let stanceSuffixFirstLowercased = String(stanceSuffix.prefix(1).lowercased())
             let stance = stanceSuffixFirstLowercased + stanceSuffix.dropFirst()
             player?.stance = Stance(rawValue: stance) ?? .stop
@@ -95,7 +125,7 @@ private extension MainScene {
     func touchUp(atPosition position: CGPoint) {
         ValsRevenge.log("👆🏻 Touch up!", category: .inputTouch)
         if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,
-           nodeName.starts(with: Constant.Node.Controller.namePrefix) {
+           nodeName.starts(with: Constant.Node.Controller.name) {
             player?.stance = .stop
         }
     }

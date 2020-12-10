@@ -25,6 +25,9 @@
 		074CCA29257FB03200EA60BB /* Constant+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074CCA28257FB03200EA60BB /* Constant+Nodes.swift */; };
 		074CCA2A257FB03200EA60BB /* Constant+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074CCA28257FB03200EA60BB /* Constant+Nodes.swift */; };
 		074CCA2B257FB03200EA60BB /* Constant+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074CCA28257FB03200EA60BB /* Constant+Nodes.swift */; };
+		074E952C258276D200A4E89D /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E952B258276D200A4E89D /* MainScene+InputController.swift */; };
+		074E952D258276D200A4E89D /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E952B258276D200A4E89D /* MainScene+InputController.swift */; };
+		074E952E258276D200A4E89D /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E952B258276D200A4E89D /* MainScene+InputController.swift */; };
 		0768BD11257FBC2500628758 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */; };
 		0768BD12257FBC2500628758 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */; };
 		0768BD13257FBC2500628758 /* MainScene+InputTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */; };
@@ -57,6 +60,7 @@
 		072E9120257EC4A90001E1DA /* Constant+Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenes.swift"; sourceTree = "<group>"; };
 		074CCA17257FAE5F00EA60BB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		074CCA28257FB03200EA60BB /* Constant+Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Nodes.swift"; sourceTree = "<group>"; };
+		074E952B258276D200A4E89D /* MainScene+InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+InputController.swift"; sourceTree = "<group>"; };
 		0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+InputTouch.swift"; sourceTree = "<group>"; };
 		078D24C12580FAC800CB653D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		079ADA5C257E23EA0018D7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		0768BD0F257FBC0600628758 /* Input */ = {
 			isa = PBXGroup;
 			children = (
+				074E952B258276D200A4E89D /* MainScene+InputController.swift */,
 				0768BD10257FBC2500628758 /* MainScene+InputTouch.swift */,
 			);
 			path = Input;
@@ -453,6 +458,7 @@
 				074CCA18257FAE5F00EA60BB /* Player.swift in Sources */,
 				074CCA29257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				0768BD11257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
+				074E952C258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				072E9121257EC4A90001E1DA /* Constant+Scenes.swift in Sources */,
 				079ADADB257E27170018D7F0 /* MainSceneView.swift in Sources */,
 				07CD5209257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */,
@@ -471,6 +477,7 @@
 				074CCA19257FAE5F00EA60BB /* Player.swift in Sources */,
 				074CCA2A257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				0768BD12257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
+				074E952D258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				072E9122257EC4A90001E1DA /* Constant+Scenes.swift in Sources */,
 				079ADADC257E27170018D7F0 /* MainSceneView.swift in Sources */,
 				07CD520A257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */,
@@ -489,6 +496,7 @@
 				074CCA1A257FAE5F00EA60BB /* Player.swift in Sources */,
 				074CCA2B257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				0768BD13257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
+				074E952E258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				072E9123257EC4A90001E1DA /* Constant+Scenes.swift in Sources */,
 				079ADADD257E27170018D7F0 /* MainSceneView.swift in Sources */,
 				07CD520B257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */,

@@ -32,11 +32,13 @@ class MainScene: CSKScene {
     override init(size: CGSize, debugSettings: DebugSettings = DebugSettings()) {
         super.init(size: size, debugSettings: debugSettings)
         setupScene()
+        setupGameControllerListener()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupScene()
+        setupGameControllerListener()
     }
 }
 
