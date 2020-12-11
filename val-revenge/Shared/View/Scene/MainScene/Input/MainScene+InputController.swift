@@ -17,7 +17,6 @@ extension MainScene {
         gcOverseer.$isGameControllerConnected
             .sink { [weak self] isConnected in
                 if isConnected {
-                    self?.hideVirtualButtons()
                     self?.setupControllers()
                 } else {
                     self?.showVirtualButtons()
@@ -27,8 +26,15 @@ extension MainScene {
     }
 
     func setupControllers() {
-        setupExtendedControllers()
-        setupMicroControllers()
+        guard let gameController = setupGameController() else {
+            return
+        }
+        if !setupExtendedController(in: gameController) {
+            if !setupMicroControllers(in: gameController) {
+                return
+            }
+        }
+        hideVirtualButtons()
     }
 }
 
@@ -36,32 +42,72 @@ extension MainScene {
 
 private extension MainScene {
 
-    func setupExtendedControllers() {
-        guard let extendedGamepadController = gcOverseer.controllers().first?.extendedGamepad else {
+    func setupGameController() -> GCController? {
+        guard let gameController = gcOverseer.controllers().first else {
+            ValsRevenge.log("No connected controllers", category: .inputController)
+            return nil
+        }
+        guard let firstPlayerIndex = GCControllerPlayerIndex(rawValue: 1) else {
+            ValsRevenge.log("Can't create a GCControllerPlayerIndex for player 1", category: .inputController)
+            return nil
+        }
+        gameController.playerIndex = firstPlayerIndex
+        return gameController
+    }
+
+    func setupExtendedController(in gameController: GCController) -> Bool {
+        guard let extendedGamepadController = gameController.extendedGamepad else {
             ValsRevenge.log("No extended gamepad controllers detected", category: .inputTouch)
-            return
+            return false
         }
         extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
         extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler()
         extendedGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
+        return true
     }
 
-    func setupMicroControllers() {
+    func setupMicroControllers(in gameController: GCController) -> Bool {
         guard let microGamepadController = gcOverseer.controllers().first?.microGamepad else {
             ValsRevenge.log("No micro gamepad controllers detected", category: .inputController)
-            return
+            return false
         }
         // Couldn't get rotation to work:
         // https://developer.apple.com/forums/thread/21562?page=1#644496022
         microGamepadController.allowsRotation = true
         microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
         microGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
+        return true
     }
 
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
         return { [weak self] thumbstickOrDpad, xValue, yValue in
-            #warning("TODO: handle stances")
-            //player?.stance
+
+            let deadZone: ClosedRange<Float> = -0.35...0.35
+            let positiveDisplacement: PartialRangeFrom<Float> = 0.35...
+            let negativeDisplacement: ClosedRange<Float> = -1.0...(-0.35)
+
+            let stance: Stance
+            switch (xValue, yValue) {
+            case (deadZone, positiveDisplacement):
+                stance = .up
+            case (positiveDisplacement, positiveDisplacement):
+                stance = .topRight
+            case (positiveDisplacement, deadZone):
+                stance = .right
+            case (positiveDisplacement, negativeDisplacement):
+                stance = .bottomRight
+            case (deadZone, negativeDisplacement):
+                stance = .down
+            case (negativeDisplacement, negativeDisplacement):
+                stance = .bottomLeft
+            case (negativeDisplacement, deadZone):
+                stance = .left
+            case (negativeDisplacement, positiveDisplacement):
+                stance = .topLeft
+            default:
+                stance = .stop
+            }
+            self?.player?.stance = stance
         }
     }
 
