@@ -80,7 +80,7 @@ private extension MainScene {
     }
 
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
-        return { [weak self] thumbstickOrDpad, xValue, yValue in
+        return { [weak self] _, xValue, yValue in
 
             let deadZone: ClosedRange<Float> = -0.35...0.35
             let positiveDisplacement: PartialRangeFrom<Float> = 0.35...
