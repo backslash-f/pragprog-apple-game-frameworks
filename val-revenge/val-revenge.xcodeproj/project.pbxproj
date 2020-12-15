@@ -49,6 +49,12 @@
 		079ADAE5257E27420018D7F0 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAE4257E27420018D7F0 /* MainScene.swift */; };
 		079ADAE6257E27420018D7F0 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAE4257E27420018D7F0 /* MainScene.swift */; };
 		079ADAE7257E27420018D7F0 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079ADAE4257E27420018D7F0 /* MainScene.swift */; };
+		07BD94412589120E0052243F /* Controller.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07BD94402589120E0052243F /* Controller.sks */; };
+		07BD94422589120E0052243F /* Controller.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07BD94402589120E0052243F /* Controller.sks */; };
+		07BD94432589120E0052243F /* Controller.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07BD94402589120E0052243F /* Controller.sks */; };
+		07BD944C2589131C0052243F /* AttackButton.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07BD944B2589131C0052243F /* AttackButton.sks */; };
+		07BD944D2589131C0052243F /* AttackButton.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07BD944B2589131C0052243F /* AttackButton.sks */; };
+		07BD944E2589131C0052243F /* AttackButton.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07BD944B2589131C0052243F /* AttackButton.sks */; };
 		07CD5209257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
 		07CD520A257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
 		07CD520B257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
@@ -75,6 +81,8 @@
 		079ADACE257E26E40018D7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		079ADADA257E27170018D7F0 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
 		079ADAE4257E27420018D7F0 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		07BD94402589120E0052243F /* Controller.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Controller.sks; sourceTree = "<group>"; };
+		07BD944B2589131C0052243F /* AttackButton.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AttackButton.sks; sourceTree = "<group>"; };
 		07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValsRevenge+Logging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +227,7 @@
 		079ADACD257E26CC0018D7F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07BD944A258913060052243F /* Controller */,
 				079ADAD8257E26FE0018D7F0 /* Scene */,
 				079ADACE257E26E40018D7F0 /* ContentView.swift */,
 				074CCA17257FAE5F00EA60BB /* Player.swift */,
@@ -243,6 +252,15 @@
 				079ADADA257E27170018D7F0 /* MainSceneView.swift */,
 			);
 			path = MainScene;
+			sourceTree = "<group>";
+		};
+		07BD944A258913060052243F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07BD944B2589131C0052243F /* AttackButton.sks */,
+				07BD94402589120E0052243F /* Controller.sks */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,7 +382,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				079ADA98257E23EB0018D7F0 /* Assets.xcassets in Resources */,
+				07BD94412589120E0052243F /* Controller.sks in Resources */,
 				072E90F8257EB2250001E1DA /* MainScene.sks in Resources */,
+				07BD944C2589131C0052243F /* AttackButton.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				079ADA99257E23EB0018D7F0 /* Assets.xcassets in Resources */,
+				07BD94422589120E0052243F /* Controller.sks in Resources */,
 				072E90F9257EB2250001E1DA /* MainScene.sks in Resources */,
+				07BD944D2589131C0052243F /* AttackButton.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +404,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				079ADA9A257E23EB0018D7F0 /* Assets.xcassets in Resources */,
+				07BD94432589120E0052243F /* Controller.sks in Resources */,
 				072E90FA257EB2250001E1DA /* MainScene.sks in Resources */,
+				07BD944E2589131C0052243F /* AttackButton.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

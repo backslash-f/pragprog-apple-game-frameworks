@@ -55,6 +55,7 @@ extension MainScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         setupPlayer()
+        setupCamera()
     }
 }
 
@@ -68,6 +69,16 @@ private extension MainScene {
 
     func setupPlayer() {
         player = childNode(withName: Constant.Node.Player.name) as? Player
+    }
+
+    func setupCamera() {
+        guard let player = player else {
+            return
+        }
+        let distance = SKRange(constantValue: 0)
+        let playerConstraint = SKConstraint.distance(distance, to: player)
+
+        camera?.constraints = [playerConstraint]
     }
 
     func updateEntitiesDeltaTime(with currentTime: TimeInterval) {

@@ -18,6 +18,12 @@ extension Constant {
             static let name = "ButtonAttack"
         }
 
+        struct Camera {
+            struct PrimaryCamera {
+                static let name = "PrimaryCamera"
+            }
+        }
+
         // swiftlint:disable identifier_name
         struct Controller {
             static let name         = "Controller"
