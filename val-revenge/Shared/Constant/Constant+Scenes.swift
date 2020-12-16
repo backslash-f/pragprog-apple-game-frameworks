@@ -11,6 +11,11 @@ import Foundation
 extension Constant {
 
     struct Scene {
-        static let MainScene = "MainScene"
+
+        struct MainScene {
+            static let name = "MainScene"
+            static let defaultWidth = 1024
+            static let defaultHeight = 1336
+        }
     }
 }

@@ -26,7 +26,7 @@ private extension MainSceneView {
     func makeScene() -> SKScene {
 
         // Load 'MainScene.sks' as a GKScene. This provides gameplay related content including entities and graphs.
-        guard let gkScene = GKScene(fileNamed: Constant.Scene.MainScene) else {
+        guard let gkScene = GKScene(fileNamed: Constant.Scene.MainScene.name) else {
             let errorMessage = "Could not load \"MainScene.sks\" as \"GKScene\""
             ValsRevenge.logError(errorMessage)
             fatalError(errorMessage)
