@@ -58,6 +58,9 @@
 		07BD9456258919070052243F /* MainScene+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD9455258919070052243F /* MainScene+Orientation.swift */; };
 		07BD9457258919070052243F /* MainScene+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD9455258919070052243F /* MainScene+Orientation.swift */; };
 		07BD9458258919070052243F /* MainScene+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD9455258919070052243F /* MainScene+Orientation.swift */; };
+		07BD9461258A1B8F0052243F /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 07BD9460258A1B8F0052243F /* Device */; };
+		07BD9466258A1BA50052243F /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 07BD9465258A1BA50052243F /* Device */; };
+		07BD9468258A1BA90052243F /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 07BD9467258A1BA90052243F /* Device */; };
 		07CD5209257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
 		07CD520A257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
 		07CD520B257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
@@ -95,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BD9461258A1B8F0052243F /* Device in Frameworks */,
 				072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BD9466258A1BA50052243F /* Device in Frameworks */,
 				072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BD9468258A1BA90052243F /* Device in Frameworks */,
 				072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +293,7 @@
 			name = iOS;
 			packageProductDependencies = (
 				072801E6257E6CBE00CFFA1F /* CSKScene */,
+				07BD9460258A1B8F0052243F /* Device */,
 			);
 			productName = "valsrevenge iOS";
 			productReference = 079ADA61257E23EB0018D7F0 /* val-revenge.app */;
@@ -308,6 +315,7 @@
 			name = tvOS;
 			packageProductDependencies = (
 				072801EC257E6CDB00CFFA1F /* CSKScene */,
+				07BD9465258A1BA50052243F /* Device */,
 			);
 			productName = "valsrevenge tvOS";
 			productReference = 079ADA73257E23EB0018D7F0 /* val-revenge.app */;
@@ -329,6 +337,7 @@
 			name = macOS;
 			packageProductDependencies = (
 				072801EE257E6CDF00CFFA1F /* CSKScene */,
+				07BD9467258A1BA90052243F /* Device */,
 			);
 			productName = "valsrevenge macOS";
 			productReference = 079ADA84257E23EB0018D7F0 /* val-revenge.app */;
@@ -369,6 +378,7 @@
 			mainGroup = 079ADA53257E23E40018D7F0;
 			packageReferences = (
 				072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */,
+				07BD945F258A1B8F0052243F /* XCRemoteSwiftPackageReference "device" */,
 			);
 			productRefGroup = 079ADA62257E23EB0018D7F0 /* Products */;
 			projectDirPath = "";
@@ -842,6 +852,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		07BD945F258A1B8F0052243F /* XCRemoteSwiftPackageReference "device" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/backslash-f/device";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -859,6 +877,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 072801E5257E6CBE00CFFA1F /* XCRemoteSwiftPackageReference "cskscene" */;
 			productName = CSKScene;
+		};
+		07BD9460258A1B8F0052243F /* Device */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07BD945F258A1B8F0052243F /* XCRemoteSwiftPackageReference "device" */;
+			productName = Device;
+		};
+		07BD9465258A1BA50052243F /* Device */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07BD945F258A1B8F0052243F /* XCRemoteSwiftPackageReference "device" */;
+			productName = Device;
+		};
+		07BD9467258A1BA90052243F /* Device */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07BD945F258A1B8F0052243F /* XCRemoteSwiftPackageReference "device" */;
+			productName = Device;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

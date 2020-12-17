@@ -8,18 +8,19 @@
 
 extension MainScene {
 
-    func didChangeLayout() {
-        let width = view?.bounds.size.width ?? 1024
-        let height = view?.bounds.size.height ?? 1336
-
-        if height >= width {
-            // Portrait.
-            camera?.setScale(1.0)
-
-        } else {
-            // Landscape.
-            // Helps to keep relative size. Larger numbers results in "smaller" scenes.
-            camera?.setScale(1.25)
+    func setupOrientationListener() {
+        device.$orientation.sink { [weak self] orientation in
+            switch orientation {
+            case .portrait, .portraitUpsideDown:
+                ValsRevenge.log("Device orientation changed to portrait", category: .orientation)
+                self?.camera?.setScale(1.0)
+            case .landscapeRight, .landscapeLeft:
+                ValsRevenge.log("Device orientation changed to landscape", category: .orientation)
+                self?.camera?.setScale(1.25)
+            default:
+                break
+            }
         }
+        .store(in: &cancellables)
     }
 }

@@ -7,8 +7,9 @@
 //
 
 import CSKScene
-import SpriteKit
+import Device
 import GameplayKit
+import SpriteKit
 
 class MainScene: CSKScene {
 
@@ -23,6 +24,8 @@ class MainScene: CSKScene {
 
     internal var player: Player?
 
+    internal let device = Device()
+
     // MARK: Private Properties
 
     private var lastUpdateTime: TimeInterval = .zero
@@ -33,12 +36,14 @@ class MainScene: CSKScene {
         super.init(size: size, debugSettings: debugSettings)
         setupScene()
         setupGameControllerListener()
+        setupOrientationListener()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupScene()
         setupGameControllerListener()
+        setupOrientationListener()
     }
 }
 

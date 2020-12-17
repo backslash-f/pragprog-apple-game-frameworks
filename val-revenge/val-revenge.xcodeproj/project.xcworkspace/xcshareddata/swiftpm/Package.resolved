@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Device",
+        "repositoryURL": "https://github.com/backslash-f/device",
+        "state": {
+          "branch": null,
+          "revision": "c97839d24b18770f92e6b479cd832222c9b63f90",
+          "version": "1.1.0"
+        }
+      },
+      {
         "package": "GCOverseer",
         "repositoryURL": "https://github.com/backslash-f/gcoverseer",
         "state": {

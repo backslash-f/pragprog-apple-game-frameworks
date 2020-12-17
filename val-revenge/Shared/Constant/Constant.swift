@@ -6,7 +6,4 @@
 //  Copyright © 2020 backslash-f. All rights reserved.
 //
 
-import Foundation
-
-struct Constant {
-}
+struct Constant {}

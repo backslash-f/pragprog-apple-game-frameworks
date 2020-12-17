@@ -6,8 +6,6 @@
 //  Copyright © 2020 backslash-f. All rights reserved.
 //
 
-import Foundation
-
 extension Constant {
 
     struct Scene {
