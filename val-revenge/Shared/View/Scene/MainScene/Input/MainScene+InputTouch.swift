@@ -12,24 +12,33 @@ import SpriteKit
 extension MainScene {
 
     /// Shows the virtual pad and the attack button.
-    func showVirtualButtons() {
+    func showVirtualController() {
         let unhideAction = SKAction.unhide()
         enumerateChildNodes(withName: Constant.Node.Controller.name) { virtualController, _ in
             virtualController.run(unhideAction)
         }
-        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { attackButton, _ in
-            attackButton.run(unhideAction)
+        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { buttonAttack, _ in
+            buttonAttack.run(unhideAction)
         }
     }
 
     /// Hides the virtual pad and the attack button.
-    func hideVirtualButtons() {
+    func hideVirtualController() {
         let hideAction = SKAction.hide()
         enumerateChildNodes(withName: Constant.Node.Controller.name) { virtualController, _ in
             virtualController.run(hideAction)
         }
-        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { attackButton, _ in
-            attackButton.run(hideAction)
+        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { buttonAttack, _ in
+            buttonAttack.run(hideAction)
+        }
+    }
+
+    func updateVirtualControllerLocation() {
+        if let controller = childNode(withName: Constant.Node.Controller.name) {
+            controller.position = CGPoint(x: viewLeft, y: viewBottom)
+        }
+        if let buttonAttack = childNode(withName: Constant.Node.ButtonAttack.name) {
+            buttonAttack.position = CGPoint(x: viewRight, y: viewBottom)
         }
     }
 }

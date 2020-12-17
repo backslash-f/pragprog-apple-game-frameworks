@@ -9,6 +9,7 @@
 extension MainScene {
 
     func setupOrientationListener() {
+        #if os(iOS)
         device.$orientation.sink { [weak self] orientation in
             switch orientation {
             case .portrait, .portraitUpsideDown:
@@ -22,5 +23,6 @@ extension MainScene {
             }
         }
         .store(in: &cancellables)
+        #endif
     }
 }

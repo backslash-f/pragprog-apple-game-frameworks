@@ -51,16 +51,20 @@ class MainScene: CSKScene {
 
 extension MainScene {
 
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        setupPlayer()
+        setupCamera()
+    }
+
     override func update(_ currentTime: TimeInterval) {
         updateEntitiesDeltaTime(with: currentTime)
         player?.updatePosition()
         player?.updateAction()
     }
 
-    override func didMove(to view: SKView) {
-        super.didMove(to: view)
-        setupPlayer()
-        setupCamera()
+    override func didFinishUpdate() {
+        updateVirtualControllerLocation()
     }
 }
 

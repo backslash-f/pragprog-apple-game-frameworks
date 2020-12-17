@@ -19,7 +19,7 @@ extension MainScene {
                 if isConnected {
                     self?.setupControllers()
                 } else {
-                    self?.showVirtualButtons()
+                    self?.showVirtualController()
                 }
             }
             .store(in: &cancellables)
@@ -34,7 +34,7 @@ extension MainScene {
                 return
             }
         }
-        hideVirtualButtons()
+        hideVirtualController()
     }
 }
 
