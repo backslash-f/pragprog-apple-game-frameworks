@@ -33,4 +33,10 @@ extension SKScene {
         let point = CGPoint(x: .zero, y: view.bounds.size.height)
         return convertPoint(fromView: point).y
     }
+
+    #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+    var insets: UIEdgeInsets {
+        UIApplication.shared.delegate?.window??.safeAreaInsets ?? .zero
+    }
+    #endif
 }

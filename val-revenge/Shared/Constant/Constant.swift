@@ -6,4 +6,9 @@
 //  Copyright © 2020 backslash-f. All rights reserved.
 //
 
-struct Constant {}
+import SwiftUI
+
+struct Constant {
+
+    static let virtualControllerMargin: CGFloat = 20
+}

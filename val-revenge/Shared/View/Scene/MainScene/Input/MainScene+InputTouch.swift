@@ -34,12 +34,8 @@ extension MainScene {
     }
 
     func updateVirtualControllerLocation() {
-        if let controller = childNode(withName: Constant.Node.Controller.name) {
-            controller.position = CGPoint(x: viewLeft, y: viewBottom)
-        }
-        if let buttonAttack = childNode(withName: Constant.Node.ButtonAttack.name) {
-            buttonAttack.position = CGPoint(x: viewRight, y: viewBottom)
-        }
+        childNode(withName: Constant.Node.Controller.name)?.position = controllerPosition()
+        childNode(withName: Constant.Node.ButtonAttack.name)?.position = buttonAttackPosition()
     }
 }
 
@@ -137,5 +133,39 @@ private extension MainScene {
            nodeName.starts(with: Constant.Node.Controller.name) {
             player?.stance = .stop
         }
+    }
+
+    func controllerPosition() -> CGPoint {
+        let position: CGPoint
+        #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+        position = CGPoint(
+            x: viewLeft + Constant.virtualControllerMargin + insets.left,
+            y: viewBottom + Constant.virtualControllerMargin + insets.bottom
+        )
+        #endif
+        #if os(OSX)
+        position = CGPoint(
+            x: viewLeft + Constant.virtualControllerMargin,
+            y: viewBottom + Constant.virtualControllerMargin
+        )
+        #endif
+        return position
+    }
+
+    func buttonAttackPosition() -> CGPoint {
+        let position: CGPoint
+        #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+        position = CGPoint(
+            x: viewRight - Constant.virtualControllerMargin - insets.right,
+            y: viewBottom + Constant.virtualControllerMargin + insets.bottom
+        )
+        #endif
+        #if os(OSX)
+        position = CGPoint(
+            x: viewRight - Constant.virtualControllerMargin,
+            y: viewBottom + Constant.virtualControllerMargin
+        )
+        #endif
+        return position
     }
 }
