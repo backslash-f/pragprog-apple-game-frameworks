@@ -34,7 +34,9 @@ extension SKTileMapNode {
                 guard let tileDefinition = tileDefinition(atColumn: col, row: row) else {
                     continue
                 }
+
                 let bodySizeKey = Constant.UserData.bodySizeKey
+
                 guard let bodySizeValue = tileDefinition.userData?.value(forKey: bodySizeKey) as? String else {
                     continue
                 }
@@ -42,20 +44,28 @@ extension SKTileMapNode {
                 let xValue = CGFloat(col) * tileSize.width - halfWidth + (tileSize.width / 2)
                 let yValue = CGFloat(row) * tileSize.height - halfHeight + (tileSize.height / 2)
 
+                #if os(iOS) || os(tvOS)
                 let bodySize = NSCoder.cgPoint(for: bodySizeValue) // {x,y}
+                #endif
+                #if os(OSX)
+                let bodySize = NSPointToCGPoint(NSPointFromString(bodySizeValue))
+                #endif
                 let pSize = CGSize(width: bodySize.x, height: bodySize.y)
 
                 let tileNode = SKNode()
                 tileNode.position = CGPoint(x: xValue, y: yValue)
 
                 let bodyOffsetKey = Constant.UserData.bodyOffsetKey
+
                 if let bodyOffsetValue = tileDefinition.userData?.value(forKey: bodyOffsetKey) as? String {
+                    #if os(iOS) || os(tvOS)
                     let bodyOffset = NSCoder.cgPoint(for: bodyOffsetValue)
+                    #endif
+                    #if os(OSX)
+                    let bodyOffset = NSPointToCGPoint(NSPointFromString(bodyOffsetValue))
+                    #endif
                     let centerPoint = CGPoint(x: bodyOffset.x, y: bodyOffset.y)
-                    tileNode.physicsBody = SKPhysicsBody(
-                        rectangleOf: pSize,
-                        center: centerPoint
-                    )
+                    tileNode.physicsBody = SKPhysicsBody(rectangleOf: pSize, center: centerPoint)
                 } else {
                     tileNode.physicsBody = SKPhysicsBody(rectangleOf: pSize)
                 }
