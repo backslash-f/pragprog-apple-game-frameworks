@@ -55,6 +55,7 @@ extension MainScene {
         super.didMove(to: view)
         setupPlayer()
         setupCamera()
+        setupTiles()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -78,6 +79,7 @@ private extension MainScene {
 
     func setupPlayer() {
         player = childNode(withName: Constant.Node.Player.name) as? Player
+        player?.physicsBody?.categoryBitMask = PhysicsCategory.playerAndWall.rawValue
     }
 
     func setupCamera() {
@@ -88,6 +90,14 @@ private extension MainScene {
         let playerConstraint = SKConstraint.distance(distance, to: player)
 
         camera?.constraints = [playerConstraint]
+    }
+
+    func setupTiles() {
+        let grassMapNode = childNode(withName: Constant.Node.TileMap.grassTileMap) as? SKTileMapNode
+        grassMapNode?.setupEdgeLoop()
+
+        let dungeonMapNode = childNode(withName: Constant.Node.TileMap.dungeonTileMap) as? SKTileMapNode
+        dungeonMapNode?.setupMapPhysics()
     }
 
     func updateEntitiesDeltaTime(with currentTime: TimeInterval) {

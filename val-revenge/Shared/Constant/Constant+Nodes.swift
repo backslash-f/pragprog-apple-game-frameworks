@@ -46,5 +46,10 @@ extension Constant {
         struct Player {
             static let name = "Player"
         }
+
+        struct TileMap {
+            static let dungeonTileMap = "DungeonTileMap"
+            static let grassTileMap = "GrassTileMap"
+        }
     }
 }
