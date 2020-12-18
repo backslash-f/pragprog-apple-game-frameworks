@@ -61,6 +61,9 @@
 		07BD9461258A1B8F0052243F /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 07BD9460258A1B8F0052243F /* Device */; };
 		07BD9466258A1BA50052243F /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 07BD9465258A1BA50052243F /* Device */; };
 		07BD9468258A1BA90052243F /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 07BD9467258A1BA90052243F /* Device */; };
+		07C128DD258CC24900FF6E1A /* MainTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C128DC258CC24900FF6E1A /* MainTileSet.sks */; };
+		07C128DE258CC24900FF6E1A /* MainTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C128DC258CC24900FF6E1A /* MainTileSet.sks */; };
+		07C128DF258CC24900FF6E1A /* MainTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C128DC258CC24900FF6E1A /* MainTileSet.sks */; };
 		07CD5209257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
 		07CD520A257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
 		07CD520B257F8186001D0E18 /* ValsRevenge+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */; };
@@ -90,6 +93,7 @@
 		07BD94402589120E0052243F /* Controller.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Controller.sks; sourceTree = "<group>"; };
 		07BD944B2589131C0052243F /* ButtonAttack.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ButtonAttack.sks; sourceTree = "<group>"; };
 		07BD9455258919070052243F /* MainScene+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+Orientation.swift"; sourceTree = "<group>"; };
+		07C128DC258CC24900FF6E1A /* MainTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainTileSet.sks; sourceTree = "<group>"; };
 		07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValsRevenge+Logging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +243,7 @@
 			children = (
 				07BD944A258913060052243F /* Controller */,
 				079ADAD8257E26FE0018D7F0 /* Scene */,
+				07C128DB258CC1F500FF6E1A /* Tile */,
 				079ADACE257E26E40018D7F0 /* ContentView.swift */,
 				074CCA17257FAE5F00EA60BB /* Player.swift */,
 			);
@@ -272,6 +277,14 @@
 				07BD94402589120E0052243F /* Controller.sks */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		07C128DB258CC1F500FF6E1A /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				07C128DC258CC24900FF6E1A /* MainTileSet.sks */,
+			);
+			path = Tile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +411,7 @@
 			files = (
 				079ADA98257E23EB0018D7F0 /* Assets.xcassets in Resources */,
 				07BD94412589120E0052243F /* Controller.sks in Resources */,
+				07C128DD258CC24900FF6E1A /* MainTileSet.sks in Resources */,
 				072E90F8257EB2250001E1DA /* MainScene.sks in Resources */,
 				07BD944C2589131C0052243F /* ButtonAttack.sks in Resources */,
 			);
@@ -409,6 +423,7 @@
 			files = (
 				079ADA99257E23EB0018D7F0 /* Assets.xcassets in Resources */,
 				07BD94422589120E0052243F /* Controller.sks in Resources */,
+				07C128DE258CC24900FF6E1A /* MainTileSet.sks in Resources */,
 				072E90F9257EB2250001E1DA /* MainScene.sks in Resources */,
 				07BD944D2589131C0052243F /* ButtonAttack.sks in Resources */,
 			);
@@ -420,6 +435,7 @@
 			files = (
 				079ADA9A257E23EB0018D7F0 /* Assets.xcassets in Resources */,
 				07BD94432589120E0052243F /* Controller.sks in Resources */,
+				07C128DF258CC24900FF6E1A /* MainTileSet.sks in Resources */,
 				072E90FA257EB2250001E1DA /* MainScene.sks in Resources */,
 				07BD944E2589131C0052243F /* ButtonAttack.sks in Resources */,
 			);
