@@ -13,7 +13,7 @@ class GeneratorComponent: GKComponent {
 
     // MARK: - Properties
 
-    @GKInspectable var monsterType: String = Constant.Node.Monster.skeleton
+    @GKInspectable var monsterType: String = GameObject.defaultGeneratorType
     @GKInspectable var maxMonsters: Int = 10
 
     @GKInspectable var waitTime: TimeInterval = 5
