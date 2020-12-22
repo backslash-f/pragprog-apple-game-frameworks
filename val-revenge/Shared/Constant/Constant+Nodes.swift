@@ -38,6 +38,13 @@ extension Constant {
             static let bottomRight  = "\(name)BottomRight"
         }
 
+        struct HealthMeter {
+            static let name = "HealthMeter"
+            static let nameRegex = ".//health_"
+            static let full = "health_full"
+            static let empty = "health_empty"
+        }
+
         struct Knife {
             static let name = "Knife"
             static let imageName = "knife"
