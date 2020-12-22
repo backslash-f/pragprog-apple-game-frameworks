@@ -50,6 +50,12 @@ extension Constant {
             static let imageName = "knife"
         }
 
+        struct Monster {
+            static let goblin = "goblin"
+            static let skeleton = "skeleton"
+            static let imageNameSuffix = "_0"
+        }
+
         struct Player {
             static let name = "Player"
         }

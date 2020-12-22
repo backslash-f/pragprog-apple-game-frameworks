@@ -28,19 +28,22 @@ class HealthComponent: GKComponent {
     // MARK: - GKComponent
 
     override func didAddToEntity() {
-        guard let node = entity?.component(ofType: GKSKNodeComponent.self)?.node,
-              let healthMeter = SKReferenceNode(fileNamed: Constant.Node.HealthMeter.name) else {
-            return
-        }
-        healthMeter.position = CGPoint(x: 0, y: 100)
-        node.addChild(healthMeter)
-        updateHealth(0, forNode: node)
+        setupHealthMeter()
     }
 }
 
 // MARK: - Private
 
 private extension HealthComponent {
+
+    func setupHealthMeter() {
+        guard let healthMeter = SKReferenceNode(fileNamed: Constant.Node.HealthMeter.name) else {
+            return
+        }
+        healthMeter.position = CGPoint(x: 0, y: 100)
+        componentNode.addChild(healthMeter)
+        updateHealth(0, forNode: componentNode)
+    }
 
     func updateHealth(_ value: Int, forNode node: SKNode?) {
         currentHealth += value
@@ -56,8 +59,7 @@ private extension HealthComponent {
 
     func setupBar(at num: Int, tint: SKColor? = nil) {
         let healtRegex = Constant.Node.HealthMeter.nameRegex
-        guard let node = entity?.component(ofType: GKSKNodeComponent.self)?.node,
-              let health = node.childNode(withName: "\(healtRegex)\(num)") as? SKSpriteNode else {
+        guard let health = componentNode.childNode(withName: "\(healtRegex)\(num)") as? SKSpriteNode else {
             return
         }
         if currentHealth >= num {
