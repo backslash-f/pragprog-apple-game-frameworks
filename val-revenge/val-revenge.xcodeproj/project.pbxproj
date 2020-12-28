@@ -13,6 +13,9 @@
 		0706AB592592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */; };
 		0706AB5A2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */; };
 		0706AB5B2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */; };
+		070D08282599DCCE0039A256 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08272599DCCE0039A256 /* PlayerStates.swift */; };
+		070D08292599DCCE0039A256 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08272599DCCE0039A256 /* PlayerStates.swift */; };
+		070D082A2599DCCE0039A256 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08272599DCCE0039A256 /* PlayerStates.swift */; };
 		072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801E6257E6CBE00CFFA1F /* CSKScene */; };
 		072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EC257E6CDB00CFFA1F /* CSKScene */; };
 		072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EE257E6CDF00CFFA1F /* CSKScene */; };
@@ -150,6 +153,7 @@
 /* Begin PBXFileReference section */
 		0706AB4E259222060076A6B4 /* GeneratorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorComponent.swift; sourceTree = "<group>"; };
 		0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKComponent+Extensions.swift"; sourceTree = "<group>"; };
+		070D08272599DCCE0039A256 /* PlayerStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStates.swift; sourceTree = "<group>"; };
 		072E90F7257EB2250001E1DA /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		072E9112257EBD4E0001E1DA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		072E9120257EC4A90001E1DA /* Constant+Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenes.swift"; sourceTree = "<group>"; };
@@ -232,6 +236,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070D08222599D7F50039A256 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				070D08272599DCCE0039A256 /* PlayerStates.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		070D08232599D81F0039A256 /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				0756E3A32592203A002203C8 /* Entity */,
+				0756E34F258E9D21002203C8 /* Component */,
+				070D08222599D7F50039A256 /* State */,
+			);
+			path = GameLogic;
+			sourceTree = "<group>";
+		};
 		072801EB257E6CDB00CFFA1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,10 +364,9 @@
 			isa = PBXGroup;
 			children = (
 				079ADAC5257E26720018D7F0 /* App */,
-				0756E34F258E9D21002203C8 /* Component */,
 				072E9104257EBD000001E1DA /* Constant */,
-				0756E3A32592203A002203C8 /* Entity */,
 				078D24C02580FAAC00CB653D /* Extension */,
+				070D08232599D81F0039A256 /* GameLogic */,
 				079ADAAC257E26130018D7F0 /* Resource */,
 				079ADACD257E26CC0018D7F0 /* View */,
 			);
@@ -721,6 +742,7 @@
 				07C128EB258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */,
 				072E9113257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FB2592499F002970F7 /* AnimationComponent.swift in Sources */,
+				070D08282599DCCE0039A256 /* PlayerStates.swift in Sources */,
 				079ADAC7257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA18257FAE5F00EA60BB /* Player.swift in Sources */,
 				074CCA29257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
@@ -754,6 +776,7 @@
 				07C128EC258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */,
 				072E9114257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FC2592499F002970F7 /* AnimationComponent.swift in Sources */,
+				070D08292599DCCE0039A256 /* PlayerStates.swift in Sources */,
 				079ADAC8257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA19257FAE5F00EA60BB /* Player.swift in Sources */,
 				074CCA2A257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
@@ -787,6 +810,7 @@
 				07C128ED258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */,
 				072E9115257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FD2592499F002970F7 /* AnimationComponent.swift in Sources */,
+				070D082A2599DCCE0039A256 /* PlayerStates.swift in Sources */,
 				079ADAC9257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA1A257FAE5F00EA60BB /* Player.swift in Sources */,
 				074CCA2B257FB03200EA60BB /* Constant+Nodes.swift in Sources */,

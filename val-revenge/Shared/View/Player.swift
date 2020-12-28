@@ -6,6 +6,7 @@
 //  Copyright © 2020 backslash-f. All rights reserved.
 //
 
+import GameplayKit
 import SpriteKit
 
 // swiftlint:disable identifier_name
@@ -21,6 +22,10 @@ class Player: SKSpriteNode {
 
     var stance: Stance = .stop
 
+    // MARK: GKState
+
+    var stateMachine = GKStateMachine(states: [PlayerHasKeyState(), PlayerHasNoKeyState()])
+
     // MARK: Private Properties
 
     private var lastStance: Stance?
@@ -28,6 +33,13 @@ class Player: SKSpriteNode {
     private var playerMovementUnits: CGFloat = 100
 
     private var knifeMovementUnits: CGFloat = 300
+
+    // MARK: - Lifecycle
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupStates()
+    }
 }
 
 // MARK: - Interface
@@ -73,6 +85,10 @@ extension Player {
 // MARK: - Private
 
 private extension Player {
+
+    func setupStates() {
+        stateMachine.enter(PlayerHasNoKeyState.self)
+    }
 
     func stop() {
         physicsBody?.velocity = CGVector(dx: 0, dy: 0)
