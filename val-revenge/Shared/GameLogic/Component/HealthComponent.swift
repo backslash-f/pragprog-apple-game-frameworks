@@ -32,18 +32,9 @@ class HealthComponent: GKComponent {
     }
 }
 
-// MARK: - Private
+// MARK: - Interface
 
-private extension HealthComponent {
-
-    func setupHealthMeter() {
-        guard let healthMeter = SKReferenceNode(fileNamed: Constant.Node.HealthMeter.name) else {
-            return
-        }
-        healthMeter.position = CGPoint(x: 0, y: 100)
-        componentNode.addChild(healthMeter)
-        updateHealth(0, forNode: componentNode)
-    }
+extension HealthComponent {
 
     func updateHealth(_ value: Int, forNode node: SKNode?) {
         currentHealth += value
@@ -55,6 +46,20 @@ private extension HealthComponent {
                 setupBar(at: barNum, tint: .cyan) :
                 setupBar(at: barNum)
         }
+    }
+}
+
+// MARK: - Private
+
+private extension HealthComponent {
+
+    func setupHealthMeter() {
+        guard let healthMeter = SKReferenceNode(fileNamed: Constant.Node.HealthMeter.name) else {
+            return
+        }
+        healthMeter.position = CGPoint(x: 0, y: 100)
+        componentNode.addChild(healthMeter)
+        updateHealth(0, forNode: componentNode)
     }
 
     func setupBar(at num: Int, tint: SKColor? = nil) {

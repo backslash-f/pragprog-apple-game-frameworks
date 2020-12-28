@@ -19,6 +19,12 @@
 		070D082F2599E75F0039A256 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D082E2599E75F0039A256 /* CollectibleComponent.swift */; };
 		070D08302599E75F0039A256 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D082E2599E75F0039A256 /* CollectibleComponent.swift */; };
 		070D08312599E75F0039A256 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D082E2599E75F0039A256 /* CollectibleComponent.swift */; };
+		070D08392599F0630039A256 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08382599F0630039A256 /* PhysicsComponent.swift */; };
+		070D083A2599F0630039A256 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08382599F0630039A256 /* PhysicsComponent.swift */; };
+		070D083B2599F0630039A256 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08382599F0630039A256 /* PhysicsComponent.swift */; };
+		070D084D2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */; };
+		070D084E2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */; };
+		070D084F2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */; };
 		072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801E6257E6CBE00CFFA1F /* CSKScene */; };
 		072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EC257E6CDB00CFFA1F /* CSKScene */; };
 		072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EE257E6CDF00CFFA1F /* CSKScene */; };
@@ -142,9 +148,6 @@
 		07C128E4258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128E3258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift */; };
 		07C128E5258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128E3258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift */; };
 		07C128E6258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128E3258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift */; };
-		07C128EB258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128EA258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift */; };
-		07C128EC258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128EA258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift */; };
-		07C128ED258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128EA258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift */; };
 		07C128F2258CF12100FF6E1A /* Constant+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128F1258CF12100FF6E1A /* Constant+UserData.swift */; };
 		07C128F3258CF12100FF6E1A /* Constant+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128F1258CF12100FF6E1A /* Constant+UserData.swift */; };
 		07C128F4258CF12100FF6E1A /* Constant+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C128F1258CF12100FF6E1A /* Constant+UserData.swift */; };
@@ -158,6 +161,8 @@
 		0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKComponent+Extensions.swift"; sourceTree = "<group>"; };
 		070D08272599DCCE0039A256 /* PlayerStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStates.swift; sourceTree = "<group>"; };
 		070D082E2599E75F0039A256 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
+		070D08382599F0630039A256 /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComponent.swift; sourceTree = "<group>"; };
+		070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+PhysicsContact.swift"; sourceTree = "<group>"; };
 		072E90F7257EB2250001E1DA /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		072E9112257EBD4E0001E1DA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		072E9120257EC4A90001E1DA /* Constant+Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenes.swift"; sourceTree = "<group>"; };
@@ -204,7 +209,6 @@
 		07BD9455258919070052243F /* MainScene+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+Orientation.swift"; sourceTree = "<group>"; };
 		07C128DC258CC24900FF6E1A /* MainTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainTileSet.sks; sourceTree = "<group>"; };
 		07C128E3258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTileMapNode+Extensions.swift"; sourceTree = "<group>"; };
-		07C128EA258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValsRevenge+PhysicsCategory.swift"; sourceTree = "<group>"; };
 		07C128F1258CF12100FF6E1A /* Constant+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+UserData.swift"; sourceTree = "<group>"; };
 		07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValsRevenge+Logging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,6 +315,7 @@
 				070D082E2599E75F0039A256 /* CollectibleComponent.swift */,
 				0706AB4E259222060076A6B4 /* GeneratorComponent.swift */,
 				0756E350258E9D3C002203C8 /* HealthComponent.swift */,
+				070D08382599F0630039A256 /* PhysicsComponent.swift */,
 				0756E3AB259220E0002203C8 /* RenderComponent.swift */,
 			);
 			path = Component;
@@ -428,7 +433,6 @@
 			children = (
 				079ADAC6257E26AE0018D7F0 /* ValsRevenge.swift */,
 				07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */,
-				07C128EA258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -462,6 +466,7 @@
 				079ADAE4257E27420018D7F0 /* MainScene.swift */,
 				079ADADA257E27170018D7F0 /* MainSceneView.swift */,
 				07BD9455258919070052243F /* MainScene+Orientation.swift */,
+				070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -743,8 +748,8 @@
 				07C128F2258CF12100FF6E1A /* Constant+UserData.swift in Sources */,
 				079ADACF257E26E40018D7F0 /* ContentView.swift in Sources */,
 				078D24C22580FAC800CB653D /* String+Extensions.swift in Sources */,
+				070D084D2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */,
 				079ADAE5257E27420018D7F0 /* MainScene.swift in Sources */,
-				07C128EB258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */,
 				072E9113257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FB2592499F002970F7 /* AnimationComponent.swift in Sources */,
 				070D08282599DCCE0039A256 /* PlayerStates.swift in Sources */,
@@ -759,6 +764,7 @@
 				0798A10525924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB592592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
 				0706AB4F259222060076A6B4 /* GeneratorComponent.swift in Sources */,
+				070D08392599F0630039A256 /* PhysicsComponent.swift in Sources */,
 				074E952C258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				072E9121257EC4A90001E1DA /* Constant+Scenes.swift in Sources */,
 				079ADADB257E27170018D7F0 /* MainSceneView.swift in Sources */,
@@ -778,8 +784,8 @@
 				07C128F3258CF12100FF6E1A /* Constant+UserData.swift in Sources */,
 				079ADAD0257E26E40018D7F0 /* ContentView.swift in Sources */,
 				078D24C32580FAC800CB653D /* String+Extensions.swift in Sources */,
+				070D084E2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */,
 				079ADAE6257E27420018D7F0 /* MainScene.swift in Sources */,
-				07C128EC258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */,
 				072E9114257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FC2592499F002970F7 /* AnimationComponent.swift in Sources */,
 				070D08292599DCCE0039A256 /* PlayerStates.swift in Sources */,
@@ -794,6 +800,7 @@
 				0798A10625924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB5A2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
 				0706AB50259222060076A6B4 /* GeneratorComponent.swift in Sources */,
+				070D083A2599F0630039A256 /* PhysicsComponent.swift in Sources */,
 				074E952D258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				072E9122257EC4A90001E1DA /* Constant+Scenes.swift in Sources */,
 				079ADADC257E27170018D7F0 /* MainSceneView.swift in Sources */,
@@ -813,8 +820,8 @@
 				07C128F4258CF12100FF6E1A /* Constant+UserData.swift in Sources */,
 				079ADAD1257E26E40018D7F0 /* ContentView.swift in Sources */,
 				078D24C42580FAC800CB653D /* String+Extensions.swift in Sources */,
+				070D084F2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */,
 				079ADAE7257E27420018D7F0 /* MainScene.swift in Sources */,
-				07C128ED258CEF9800FF6E1A /* ValsRevenge+PhysicsCategory.swift in Sources */,
 				072E9115257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FD2592499F002970F7 /* AnimationComponent.swift in Sources */,
 				070D082A2599DCCE0039A256 /* PlayerStates.swift in Sources */,
@@ -829,6 +836,7 @@
 				0798A10725924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB5B2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
 				0706AB51259222060076A6B4 /* GeneratorComponent.swift in Sources */,
+				070D083B2599F0630039A256 /* PhysicsComponent.swift in Sources */,
 				074E952E258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				072E9123257EC4A90001E1DA /* Constant+Scenes.swift in Sources */,
 				079ADADD257E27170018D7F0 /* MainSceneView.swift in Sources */,

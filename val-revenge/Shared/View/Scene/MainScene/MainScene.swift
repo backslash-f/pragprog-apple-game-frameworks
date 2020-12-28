@@ -75,11 +75,11 @@ private extension MainScene {
 
     func setupScene() {
         scaleMode = .aspectFill
+        physicsWorld.contactDelegate = self
     }
 
     func setupPlayer() {
         player = childNode(withName: Constant.Node.Player.name) as? Player
-        player?.physicsBody?.categoryBitMask = PhysicsCategory.playerAndWall.rawValue
     }
 
     func setupCamera() {

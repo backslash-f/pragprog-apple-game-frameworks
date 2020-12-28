@@ -34,6 +34,23 @@ class Player: SKSpriteNode {
 
     private var knifeMovementUnits: CGFloat = 300
 
+    private var keys: Int = 0 {
+        didSet {
+            ValsRevenge.log("Keys: \(keys)", category: .player)
+            if keys < 1 {
+                stateMachine.enter(PlayerHasNoKeyState.self)
+            } else {
+                stateMachine.enter(PlayerHasKeyState.self)
+            }
+        }
+    }
+
+    private var treasure: Int = 0 {
+        didSet {
+            ValsRevenge.log("Treasure: \(treasure)", category: .player)
+        }
+    }
+
     // MARK: - Lifecycle
 
     required init?(coder aDecoder: NSCoder) {
@@ -78,6 +95,45 @@ extension Player {
     func updateAction() {
         if isAttacking {
             attack()
+        }
+    }
+
+    func collectItem(_ collectibleNode: SKNode) {
+        guard let collectible = collectibleNode.entity?.component(ofType: CollectibleComponent.self) else {
+            return
+        }
+
+        collectible.collectedItem()
+
+        switch GameObjectType(rawValue: collectible.collectibleType) {
+        case .key:
+            ValsRevenge.log("Collected key!", category: .player)
+            keys += collectible.value
+
+        case .food:
+            ValsRevenge.log("Collected food!", category: .player)
+            if let healthComponent = entity?.component(ofType: HealthComponent.self) {
+                healthComponent.updateHealth(collectible.value, forNode: self)
+            }
+
+        case .treasure:
+            ValsRevenge.log("Collected treasure!", category: .player)
+            treasure += collectible.value
+
+        default:
+            break
+        }
+    }
+
+    func useKeyToOpenDoor(_ doorNode: SKNode) {
+        ValsRevenge.log("Used key to open door", category: .player)
+        switch stateMachine.currentState {
+        case is PlayerHasKeyState:
+            keys -= 1
+            doorNode.removeFromParent()
+            run(SKAction.playSoundFileNamed("door_open", waitForCompletion: true))
+        default:
+            break
         }
     }
 }
@@ -132,8 +188,21 @@ private extension Player {
         ValsRevenge.log("🗡 Player is attacking!", category: .player)
 
         let knife = SKSpriteNode(imageNamed: Constant.Node.Knife.imageName)
+
+        // Setup up physics.
+        let physicsBody = SKPhysicsBody(rectangleOf: knife.size)
+        physicsBody.affectedByGravity = false
+        physicsBody.allowsRotation = true
+        physicsBody.isDynamic = true
+        physicsBody.categoryBitMask = PhysicsBody.projectile.categoryBitMask
+        physicsBody.contactTestBitMask = PhysicsBody.projectile.contactTestBitMask
+        physicsBody.collisionBitMask = PhysicsBody.projectile.collisionBitMask
+        knife.physicsBody = physicsBody
+
+        // Setup position.
         knife.position = .zero
         knife.zRotation = knifeRotation()
+
         addChild(knife)
 
         let throwAction = SKAction.move(by: knifeDirection(), duration: 0.25)
