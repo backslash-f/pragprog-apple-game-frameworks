@@ -16,6 +16,9 @@
 		070D08282599DCCE0039A256 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08272599DCCE0039A256 /* PlayerStates.swift */; };
 		070D08292599DCCE0039A256 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08272599DCCE0039A256 /* PlayerStates.swift */; };
 		070D082A2599DCCE0039A256 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D08272599DCCE0039A256 /* PlayerStates.swift */; };
+		070D082F2599E75F0039A256 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D082E2599E75F0039A256 /* CollectibleComponent.swift */; };
+		070D08302599E75F0039A256 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D082E2599E75F0039A256 /* CollectibleComponent.swift */; };
+		070D08312599E75F0039A256 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D082E2599E75F0039A256 /* CollectibleComponent.swift */; };
 		072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801E6257E6CBE00CFFA1F /* CSKScene */; };
 		072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EC257E6CDB00CFFA1F /* CSKScene */; };
 		072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EE257E6CDF00CFFA1F /* CSKScene */; };
@@ -154,6 +157,7 @@
 		0706AB4E259222060076A6B4 /* GeneratorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorComponent.swift; sourceTree = "<group>"; };
 		0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKComponent+Extensions.swift"; sourceTree = "<group>"; };
 		070D08272599DCCE0039A256 /* PlayerStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStates.swift; sourceTree = "<group>"; };
+		070D082E2599E75F0039A256 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
 		072E90F7257EB2250001E1DA /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		072E9112257EBD4E0001E1DA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		072E9120257EC4A90001E1DA /* Constant+Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenes.swift"; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				0798A0FA2592499F002970F7 /* AnimationComponent.swift */,
+				070D082E2599E75F0039A256 /* CollectibleComponent.swift */,
 				0706AB4E259222060076A6B4 /* GeneratorComponent.swift */,
 				0756E350258E9D3C002203C8 /* HealthComponent.swift */,
 				0756E3AB259220E0002203C8 /* RenderComponent.swift */,
@@ -745,6 +750,7 @@
 				070D08282599DCCE0039A256 /* PlayerStates.swift in Sources */,
 				079ADAC7257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA18257FAE5F00EA60BB /* Player.swift in Sources */,
+				070D082F2599E75F0039A256 /* CollectibleComponent.swift in Sources */,
 				074CCA29257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				0768BD11257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
 				07C128E4258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift in Sources */,
@@ -779,6 +785,7 @@
 				070D08292599DCCE0039A256 /* PlayerStates.swift in Sources */,
 				079ADAC8257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA19257FAE5F00EA60BB /* Player.swift in Sources */,
+				070D08302599E75F0039A256 /* CollectibleComponent.swift in Sources */,
 				074CCA2A257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				0768BD12257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
 				07C128E5258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift in Sources */,
@@ -813,6 +820,7 @@
 				070D082A2599DCCE0039A256 /* PlayerStates.swift in Sources */,
 				079ADAC9257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA1A257FAE5F00EA60BB /* Player.swift in Sources */,
+				070D08312599E75F0039A256 /* CollectibleComponent.swift in Sources */,
 				074CCA2B257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				0768BD13257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
 				07C128E6258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift in Sources */,

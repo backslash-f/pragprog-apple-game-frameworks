@@ -10,15 +10,19 @@ import SpriteKit
 import GameplayKit
 
 enum GameObjectType: String {
-    case goblin, skeleton
+    case goblin, skeleton, key, food, treasure
 }
 
 struct GameObject {
     static let defaultGeneratorType = GameObjectType.skeleton.rawValue
     static let defaultAnimationType = GameObjectType.skeleton.rawValue
+    static let defaultCollectibleType = GameObjectType.key.rawValue
 
-    static let skeleton = Skeleton()
     static let goblin = Goblin()
+    static let skeleton = Skeleton()
+    static let key = Key()
+    static let food = Food()
+    static let treasure = Treasure()
 
     struct Goblin {
         let animationSettings = Animation(
@@ -43,12 +47,50 @@ struct GameObject {
         )
     }
 
+    struct Key {
+        let collectibleSettings = CollectibleSettings(
+            type: .key,
+            collectSound: "key",
+            destroySound: "destroyed"
+        )
+    }
+
+    struct Food {
+        let collectibleSettings = CollectibleSettings(
+            type: .food,
+            collectSound: "food",
+            destroySound: "destroyed",
+            canDestroy: true
+        )
+    }
+
+    struct Treasure {
+        let collectibleSettings = CollectibleSettings(
+            type: .treasure,
+            collectSound: "treasure",
+            destroySound: "destroyed"
+        )
+    }
+
     static func forAnimationType(_ type: GameObjectType?) -> Animation? {
         switch type {
         case .skeleton:
             return GameObject.skeleton.animationSettings
         case .goblin:
             return GameObject.goblin.animationSettings
+        default:
+            return nil
+        }
+    }
+
+    static func forCollectibleType(_ type: GameObjectType?) -> CollectibleSettings? {
+        switch type {
+        case .key:
+            return GameObject.key.collectibleSettings
+        case .food:
+            return GameObject.food.collectibleSettings
+        case .treasure:
+            return GameObject.treasure.collectibleSettings
         default:
             return nil
         }
