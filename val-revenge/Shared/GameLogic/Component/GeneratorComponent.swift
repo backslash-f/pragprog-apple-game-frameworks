@@ -19,13 +19,42 @@ class GeneratorComponent: GKComponent {
     @GKInspectable var waitTime: TimeInterval = 5
     @GKInspectable var monsterHealth: Int = 3
 
+    var isRunning = false
+
     override class var supportsSecureCoding: Bool {
         true
     }
 
     // MARK: - GKComponent
 
-    override func didAddToEntity() {
+    override func update(deltaTime seconds: TimeInterval) {
+        handleMonsterGenerator()
+    }
+}
+
+// MARK: - Interface
+
+extension GeneratorComponent {
+
+    func handleMonsterGenerator() {
+        if let scene = componentNode.scene as? MainScene {
+            switch scene.mainGameStateMachine.currentState {
+            case is PauseState:
+                if isRunning == true {
+                    stopGenerator()
+                }
+            case is PlayingState:
+                if isRunning == false {
+                    startGenerator()
+                }
+            default:
+                break
+            }
+        }
+    }
+
+    func startGenerator() {
+        isRunning = true
         let waitAction = SKAction.wait(forDuration: waitTime)
         let spawnAction = SKAction.run { [weak self] in
             self?.spawnMonsterEntity()
@@ -36,11 +65,11 @@ class GeneratorComponent: GKComponent {
             SKAction.repeat(sequenceAction, count: maxMonsters)
         componentNode.run(repeatAction, withKey: Constant.Action.Key.spawnMonster)
     }
-}
 
-// MARK: - Interface
-
-extension GeneratorComponent {
+    func stopGenerator() {
+        isRunning = false
+        componentNode.removeAction(forKey: Constant.Action.Key.spawnMonster)
+    }
 
     func spawnMonsterEntity() {
         let monsterEntity = MonsterEntity(monsterType: monsterType)

@@ -50,6 +50,7 @@ extension MainScene {
             guard let self = self else {
                 return
             }
+            self.startGame()
             let position = touch.location(in: self)
             self.handleStance(atPosition: position)
             self.handleAction(atPosition: position)
@@ -93,16 +94,17 @@ extension MainScene {
     #if os(OSX)
     override func mouseDown(with event: NSEvent) {
         let position = event.location(in: self)
-        self.handleStance(atPosition: position)
-        self.handleAction(atPosition: position)
+        startGame()
+        handleStance(atPosition: position)
+        handleAction(atPosition: position)
     }
 
     override func mouseDragged(with event: NSEvent) {
-        self.touchUp(atPosition: event.location(in: self))
+        touchUp(atPosition: event.location(in: self))
     }
 
     override func mouseUp(with event: NSEvent) {
-        self.touchUp(atPosition: event.location(in: self))
+        touchUp(atPosition: event.location(in: self))
     }
     #endif
 }
@@ -110,6 +112,10 @@ extension MainScene {
 // MARK: - Private
 
 private extension MainScene {
+
+    func startGame() {
+        mainGameStateMachine.enter(PlayingState.self)
+    }
 
     func handleStance(atPosition position: CGPoint) {
         if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,

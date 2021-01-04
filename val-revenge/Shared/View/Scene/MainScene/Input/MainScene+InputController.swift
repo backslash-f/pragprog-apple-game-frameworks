@@ -63,6 +63,7 @@ private extension MainScene {
         extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
         extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler()
         extendedGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
+        extendedGamepadController.buttonB.valueChangedHandler = buttonHandlerStart()
         return true
     }
 
@@ -76,6 +77,7 @@ private extension MainScene {
         microGamepadController.allowsRotation = true
         microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
         microGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
+        microGamepadController.buttonX.valueChangedHandler = buttonHandlerStart()
         return true
     }
 
@@ -115,6 +117,14 @@ private extension MainScene {
     func buttonHandlerA() -> GCControllerButtonValueChangedHandler {
         return { [weak self] _, _, isPressed in
             self?.player?.isAttacking = isPressed
+        }
+    }
+
+    /// Notice: `buttonB` is the 􀨂 button in a Sony's Dualshock.
+    /// `buttonX` is the 􀊈 button in the MicroGamepad controller.
+    func buttonHandlerStart() -> GCControllerButtonValueChangedHandler {
+        return { [weak self] _, _, _ in
+            self?.mainGameStateMachine.enter(PlayingState.self)
         }
     }
 }
