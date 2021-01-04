@@ -22,6 +22,8 @@ class Player: SKSpriteNode {
 
     var stance: Stance = .stop
 
+    var agent = GKAgent2D()
+
     // MARK: GKState
 
     var stateMachine = GKStateMachine(states: [PlayerHasKeyState(), PlayerHasNoKeyState()])
@@ -55,6 +57,7 @@ class Player: SKSpriteNode {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupAgent()
         setupStates()
     }
 }
@@ -141,6 +144,10 @@ extension Player {
 // MARK: - Private
 
 private extension Player {
+
+    func setupAgent() {
+        agent.delegate = self
+    }
 
     func setupStates() {
         stateMachine.enter(PlayerHasNoKeyState.self)

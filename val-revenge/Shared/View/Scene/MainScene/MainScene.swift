@@ -90,6 +90,10 @@ private extension MainScene {
 
     func setupPlayer() {
         player = childNode(withName: Constant.Node.Player.name) as? Player
+        if let player = player {
+            player.stance = .stop
+            agentComponentSystem.addComponent(player.agent)
+        }
     }
 
     func setupCamera() {
