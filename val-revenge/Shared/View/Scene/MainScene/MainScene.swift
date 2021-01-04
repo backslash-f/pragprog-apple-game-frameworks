@@ -19,6 +19,7 @@ class MainScene: CSKScene {
 
     var entities = [GKEntity]()
     var graphs = [String: GKGraph]()
+    let agentComponentSystem = GKComponentSystem(componentClass: GKAgent2D.self)
 
     // MARK: Internal Properties
 
@@ -118,6 +119,7 @@ private extension MainScene {
             deltaTime = .zero
         }
         entities.forEach { $0.update(deltaTime: deltaTime) }
+        agentComponentSystem.update(deltaTime: deltaTime)
         lastUpdateTime = currentTime
     }
 }
