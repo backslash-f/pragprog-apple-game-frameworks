@@ -26,6 +26,10 @@ class MainScene: CSKScene {
 
     internal let device = Device()
 
+    // MARK: States
+
+    internal let mainGameStateMachine = GKStateMachine(states: [PauseState(), PlayingState()])
+
     // MARK: Private Properties
 
     private var lastUpdateTime: TimeInterval = .zero
@@ -53,6 +57,7 @@ extension MainScene {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        setupState()
         setupPlayer()
         setupCamera()
         setupTiles()
@@ -76,6 +81,10 @@ private extension MainScene {
     func setupScene() {
         scaleMode = .aspectFill
         physicsWorld.contactDelegate = self
+    }
+
+    func setupState() {
+        mainGameStateMachine.enter(PauseState.self)
     }
 
     func setupPlayer() {
