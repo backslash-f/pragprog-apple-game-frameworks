@@ -27,6 +27,10 @@ class GeneratorComponent: GKComponent {
 
     // MARK: - GKComponent
 
+    override func didAddToEntity() {
+        addPhysicsComponentToGenerator()
+    }
+
     override func update(deltaTime seconds: TimeInterval) {
         handleMonsterGenerator()
     }
@@ -35,6 +39,12 @@ class GeneratorComponent: GKComponent {
 // MARK: - Interface
 
 extension GeneratorComponent {
+
+    func addPhysicsComponentToGenerator() {
+        let physicsComponent = PhysicsComponent()
+        physicsComponent.bodyCategory = PhysicsCategory.monster.rawValue
+        componentNode.entity?.addComponent(physicsComponent)
+    }
 
     func handleMonsterGenerator() {
         if let scene = componentNode.scene as? MainScene {
@@ -80,11 +90,22 @@ extension GeneratorComponent {
         if let monsterNode = monsterEntity.component(ofType: RenderComponent.self)?.spriteNode {
             monsterNode.position = componentNode.position
             componentNode.parent?.addChild(monsterNode)
-            monsterNode.run(SKAction.moveBy(x: 100, y: 0, duration: 1.0))
+
+            // Initial spawn movement.
+            let randomPositions: [CGFloat] = [-50, -50, 50]
+            let randomX = randomPositions.randomElement() ?? 0
+            monsterNode.run(SKAction.moveBy(x: randomX, y: 0, duration: 1.0))
 
             let healthComponent = HealthComponent()
             healthComponent.currentHealth = monsterHealth
             monsterEntity.addComponent(healthComponent)
+
+            let agentComponent = AgentComponent()
+            monsterEntity.addComponent(agentComponent)
+
+            let physicsComponent = PhysicsComponent()
+            physicsComponent.bodyCategory = PhysicsCategory.monster.rawValue
+            monsterEntity.addComponent(physicsComponent)
         }
     }
 }
