@@ -25,6 +25,9 @@ class HealthComponent: GKComponent {
     private let healthFull = SKTexture(imageNamed: Constant.Node.HealthMeter.full)
     private let healthEmpty = SKTexture(imageNamed: Constant.Node.HealthMeter.empty)
 
+    private var hitAction = SKAction()
+    private var dieAction = SKAction()
+
     // MARK: - GKComponent
 
     override func didAddToEntity() {
@@ -42,6 +45,9 @@ extension HealthComponent {
             currentHealth = maxHealth
         }
         for barNum in 1...maxHealth {
+            if value < 0 { // Run hit or die actions.
+                currentHealth == 0 ? componentNode.run(dieAction) : componentNode.run(hitAction)
+            }
             (node as? Player) != nil ?
                 setupBar(at: barNum, tint: .cyan) :
                 setupBar(at: barNum)
@@ -60,6 +66,7 @@ private extension HealthComponent {
         healthMeter.position = CGPoint(x: 0, y: 100)
         componentNode.addChild(healthMeter)
         updateHealth(0, forNode: componentNode)
+        setupActions()
     }
 
     func setupBar(at num: Int, tint: SKColor? = nil) {
@@ -76,6 +83,28 @@ private extension HealthComponent {
         } else {
             health.texture = healthEmpty
             health.colorBlendFactor = 0.0
+        }
+    }
+
+    func setupActions() {
+        if (componentNode as? Player) != nil {
+            hitAction = SKAction.playSoundFileNamed("player_hit", waitForCompletion: false)
+            let playSound = SKAction.playSoundFileNamed("player_die", waitForCompletion: false)
+            dieAction = SKAction.run {
+                self.componentNode.run(playSound, completion: {
+                    #warning("TODO: Add code to restart the game")
+                    self.currentHealth = self.maxHealth
+                })
+            }
+        } else {
+            hitAction = SKAction.playSoundFileNamed("monster_hit", waitForCompletion: false)
+
+            let playSound = SKAction.playSoundFileNamed("monster_die", waitForCompletion: false)
+            dieAction = SKAction.run {
+                self.componentNode.run(playSound) {
+                    self.componentNode.removeFromParent()
+                }
+            }
         }
     }
 }
