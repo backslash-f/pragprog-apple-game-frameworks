@@ -13,6 +13,7 @@ extension MainScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         let playerBitMask = PhysicsBody.player.categoryBitMask
+        let projectileBitMask = PhysicsBody.projectile.categoryBitMask
         let monsterBitMask = PhysicsBody.monster.categoryBitMask
         let collectibleBitMask = PhysicsBody.collectible.categoryBitMask
         let doorBitMask = PhysicsBody.door.categoryBitMask
@@ -27,7 +28,7 @@ extension MainScene: SKPhysicsContactDelegate {
         case playerBitMask | monsterBitMask:
             handleCollisionPlayerMonster(contact: contact)
 
-        case playerBitMask | monsterBitMask:
+        case projectileBitMask | monsterBitMask:
             handleCollisionProjectileMonster(contact: contact)
 
         case playerBitMask | collectibleBitMask:
