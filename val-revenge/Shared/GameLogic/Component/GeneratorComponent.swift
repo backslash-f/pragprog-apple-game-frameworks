@@ -106,6 +106,10 @@ extension GeneratorComponent {
             let physicsComponent = PhysicsComponent()
             physicsComponent.bodyCategory = PhysicsCategory.monster.rawValue
             monsterEntity.addComponent(physicsComponent)
+
+            if let mainScene = componentNode.scene as? MainScene {
+                mainScene.entities.append(monsterEntity)
+            }
         }
     }
 }
