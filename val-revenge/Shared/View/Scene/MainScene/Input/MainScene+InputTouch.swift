@@ -39,10 +39,18 @@ extension MainScene {
     }
 
     func updateHUDLocation() {
+        #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
         player?.hud.position = CGPoint(
             x: (viewRight - Constant.virtualControllerMargin - insets.right),
             y: (viewTop - Constant.virtualControllerMargin - insets.top)
         )
+        #endif
+        #if os(OSX)
+        player?.hud.position = CGPoint(
+            x: (viewRight - Constant.virtualControllerMargin),
+            y: (viewTop - Constant.virtualControllerMargin)
+        )
+        #endif
     }
 }
 
