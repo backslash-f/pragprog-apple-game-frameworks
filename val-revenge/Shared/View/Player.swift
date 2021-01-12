@@ -28,7 +28,13 @@ class Player: SKSpriteNode {
 
     var stateMachine = GKStateMachine(states: [PlayerHasKeyState(), PlayerHasNoKeyState()])
 
+    var hud = SKNode()
+
     // MARK: Private Properties
+
+    private let treasureLabel = SKLabelNode(fontNamed: "AvenirNext-Bold")
+
+    private let keysLabel = SKLabelNode(fontNamed: "AvenirNext-Bold")
 
     private var lastStance: Stance?
 
@@ -39,6 +45,7 @@ class Player: SKSpriteNode {
     private var keys: Int = 0 {
         didSet {
             ValsRevenge.log("Keys: \(keys)", category: .player)
+            keysLabel.text = "Keys: \(keys)"
             if keys < 1 {
                 stateMachine.enter(PlayerHasNoKeyState.self)
             } else {
@@ -50,6 +57,7 @@ class Player: SKSpriteNode {
     private var treasure: Int = 0 {
         didSet {
             ValsRevenge.log("Treasure: \(treasure)", category: .player)
+            treasureLabel.text = "Treasure: \(treasure)"
         }
     }
 
@@ -139,11 +147,36 @@ extension Player {
             break
         }
     }
+
+    func setupHUD(scene: MainScene) {
+        // Set up the treasure label.
+        treasureLabel.text = "Treasure: \(treasure)"
+        treasureLabel.horizontalAlignmentMode = .right
+        treasureLabel.verticalAlignmentMode = .center
+        treasureLabel.position = CGPoint(x: 0, y: -treasureLabel.frame.height)
+        treasureLabel.zPosition += 1
+
+        // Set up the keys label.
+        keysLabel.text = "Keys: \(keys)"
+        keysLabel.horizontalAlignmentMode = .right
+        keysLabel.verticalAlignmentMode = .center
+        keysLabel.position = CGPoint(x: 0, y: treasureLabel.frame.minY - keysLabel.frame.height)
+        keysLabel.zPosition += 1
+
+        // Add the labels to the HUD.
+        hud.addChild(treasureLabel)
+        hud.addChild(keysLabel)
+
+        // Add the HUD to the scene.
+        scene.addChild(hud)
+    }
 }
 
 // MARK: - Private
 
 private extension Player {
+
+    // MARK: - Setup
 
     func setupAgent() {
         agent.delegate = self

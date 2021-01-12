@@ -37,6 +37,13 @@ extension MainScene {
         childNode(withName: Constant.Node.Controller.name)?.position = controllerPosition()
         childNode(withName: Constant.Node.ButtonAttack.name)?.position = buttonAttackPosition()
     }
+
+    func updateHUDLocation() {
+        player?.hud.position = CGPoint(
+            x: (viewRight - Constant.virtualControllerMargin - insets.right),
+            y: (viewTop - Constant.virtualControllerMargin - insets.top)
+        )
+    }
 }
 
 // MARK: - UIResponder

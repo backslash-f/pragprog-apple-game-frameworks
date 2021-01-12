@@ -73,6 +73,7 @@ extension MainScene {
 
     override func didFinishUpdate() {
         updateVirtualControllerLocation()
+        updateHUDLocation()
     }
 }
 
@@ -94,6 +95,7 @@ private extension MainScene {
         if let player = player {
             player.stance = .stop
             agentComponentSystem.addComponent(player.agent)
+            player.setupHUD(scene: self)
         }
     }
 
