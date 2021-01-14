@@ -21,6 +21,66 @@ class MainScene: CSKScene {
     var graphs = [String: GKGraph]()
     let agentComponentSystem = GKComponentSystem(componentClass: GKAgent2D.self)
 
+    // MARK: Controller
+
+    lazy var controllerMovement: Controller? = {
+        guard let player = player else {
+            return nil
+        }
+
+        let stickImage = SKSpriteNode(imageNamed: "player-val-head_0")
+        stickImage.setScale(0.75)
+
+        let controller =  Controller(
+            stickImage: stickImage,
+            attachedNode: player,
+            nodeSpeed: 4,
+            isMovement: true,
+            range: 55.0,
+            color: SKColor(
+                red: 59.0/255.0,
+                green: 111.0/255.0,
+                blue: 141.0/255.0,
+                alpha: 0.75)
+        )
+        controller.setScale(0.65)
+        controller.zPosition += 1
+
+        controller.anchorLeft()
+        controller.hideLargeArrows()
+        controller.hideSmallArrows()
+
+        return controller
+    }()
+
+    lazy var controllerAttack: Controller? = {
+        guard let player = player else {
+            return nil
+        }
+
+        let stickImage = SKSpriteNode(imageNamed: "controller_attack")
+        let controller =  Controller(
+            stickImage: stickImage,
+            attachedNode: player,
+            nodeSpeed: 25,
+            isMovement: false,
+            range: 55.0,
+            color: SKColor(
+                red: 160.0/255.0,
+                green: 65.0/255.0,
+                blue: 65.0/255.0,
+                alpha: 0.75)
+        )
+        controller.setScale(0.65)
+        controller.zPosition += 1
+
+        controller.anchorRight()
+        controller.hideLargeArrows()
+        controller.hideSmallArrows()
+
+        return controller
+    }()
+
     // MARK: Internal Properties
 
     internal var player: Player?
@@ -96,6 +156,12 @@ private extension MainScene {
             player.stance = .stop
             agentComponentSystem.addComponent(player.agent)
             player.setupHUD(scene: self)
+        }
+        if let controllerMovement = controllerMovement {
+            addChild(controllerMovement)
+        }
+        if let controllerAttack = controllerAttack {
+            addChild(controllerAttack)
         }
     }
 

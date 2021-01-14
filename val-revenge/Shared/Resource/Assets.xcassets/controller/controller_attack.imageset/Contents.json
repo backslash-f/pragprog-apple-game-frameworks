@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "controller_stop@1x.png",
+      "filename" : "controller_attack@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "controller_stop@2x.png",
+      "filename" : "controller_attack@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "controller_stop@3x.png",
+      "filename" : "controller_attack@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

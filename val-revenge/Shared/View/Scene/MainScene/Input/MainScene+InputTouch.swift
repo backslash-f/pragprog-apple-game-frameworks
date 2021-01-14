@@ -34,8 +34,35 @@ extension MainScene {
     }
 
     func updateVirtualControllerLocation() {
-        childNode(withName: Constant.Node.Controller.name)?.position = controllerPosition()
-        childNode(withName: Constant.Node.ButtonAttack.name)?.position = buttonAttackPosition()
+        let controllerMovementPosition: CGPoint
+        #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+        controllerMovementPosition = CGPoint(
+            x: (viewLeft + Constant.virtualControllerMargin + insets.left),
+            y: (viewBottom + Constant.virtualControllerMargin + insets.bottom)
+        )
+        #endif
+        #if os(OSX)
+        controllerMovementPosition = CGPoint(
+            x: (viewLeft + insets.left),
+            y: (viewBottom + insets.bottom)
+        )
+        #endif
+        controllerMovement?.position = controllerMovementPosition
+
+        let controllerAttackPosition: CGPoint
+        #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+        controllerAttackPosition = CGPoint(
+            x: (viewRight - Constant.virtualControllerMargin - insets.right),
+            y: (viewBottom + Constant.virtualControllerMargin + insets.bottom)
+        )
+        #endif
+        #if os(OSX)
+        controllerAttackPosition = CGPoint(
+            x: (viewRight + insets.right),
+            y: (viewBottom + insets.bottom)
+        )
+        #endif
+        controllerAttack?.position = controllerAttackPosition
     }
 
     func updateHUDLocation() {
