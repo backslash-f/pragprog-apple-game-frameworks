@@ -83,33 +83,7 @@ private extension MainScene {
 
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
         return { [weak self] _, xValue, yValue in
-
-            let deadZone: ClosedRange<Float> = -0.35...0.35
-            let positiveDisplacement: PartialRangeFrom<Float> = 0.35...
-            let negativeDisplacement: ClosedRange<Float> = -1.0...(-0.35)
-
-            let stance: Stance
-            switch (xValue, yValue) {
-            case (deadZone, positiveDisplacement):
-                stance = .up
-            case (positiveDisplacement, positiveDisplacement):
-                stance = .topRight
-            case (positiveDisplacement, deadZone):
-                stance = .right
-            case (positiveDisplacement, negativeDisplacement):
-                stance = .bottomRight
-            case (deadZone, negativeDisplacement):
-                stance = .down
-            case (negativeDisplacement, negativeDisplacement):
-                stance = .bottomLeft
-            case (negativeDisplacement, deadZone):
-                stance = .left
-            case (negativeDisplacement, positiveDisplacement):
-                stance = .topLeft
-            default:
-                stance = .stop
-            }
-            self?.player?.stance = stance
+            #warning("TODO: directionalControlHandler")
         }
     }
 

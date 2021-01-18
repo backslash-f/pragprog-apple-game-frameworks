@@ -23,6 +23,11 @@ class MainScene: CSKScene {
 
     // MARK: Controller
 
+    #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+    internal var leftTouch: UITouch?
+    internal var rightTouch: UITouch?
+    #endif
+
     lazy var controllerMovement: Controller? = {
         guard let player = player else {
             return nil
@@ -34,7 +39,7 @@ class MainScene: CSKScene {
         let controller =  Controller(
             stickImage: stickImage,
             attachedNode: player,
-            nodeSpeed: 4,
+            nodeSpeed: player.movementSpeed,
             isMovement: true,
             range: 55.0,
             color: SKColor(
@@ -62,7 +67,7 @@ class MainScene: CSKScene {
         let controller =  Controller(
             stickImage: stickImage,
             attachedNode: player,
-            nodeSpeed: 25,
+            nodeSpeed: player.projectileSpeed,
             isMovement: false,
             range: 55.0,
             color: SKColor(
@@ -127,8 +132,6 @@ extension MainScene {
 
     override func update(_ currentTime: TimeInterval) {
         updateEntitiesDeltaTime(with: currentTime)
-        player?.updatePosition()
-        player?.updateAction()
     }
 
     override func didFinishUpdate() {
@@ -153,7 +156,6 @@ private extension MainScene {
     func setupPlayer() {
         player = childNode(withName: Constant.Node.Player.name) as? Player
         if let player = player {
-            player.stance = .stop
             agentComponentSystem.addComponent(player.agent)
             player.setupHUD(scene: self)
         }

@@ -43,8 +43,8 @@ extension MainScene {
         #endif
         #if os(OSX)
         controllerMovementPosition = CGPoint(
-            x: (viewLeft + insets.left),
-            y: (viewBottom + insets.bottom)
+            x: (viewLeft + Constant.virtualControllerMargin),
+            y: (viewBottom + Constant.virtualControllerMargin)
         )
         #endif
         controllerMovement?.position = controllerMovementPosition
@@ -58,8 +58,8 @@ extension MainScene {
         #endif
         #if os(OSX)
         controllerAttackPosition = CGPoint(
-            x: (viewRight + insets.right),
-            y: (viewBottom + insets.bottom)
+            x: (viewRight - Constant.virtualControllerMargin),
+            y: (viewBottom + Constant.virtualControllerMargin)
         )
         #endif
         controllerAttack?.position = controllerAttackPosition
@@ -88,65 +88,31 @@ extension MainScene {
     #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         ValsRevenge.log("👇🏻 Touches began!", category: .inputTouch)
-        touches.forEach { [weak self] touch in
-            guard let self = self else {
-                return
-            }
-            self.startGame()
-            let position = touch.location(in: self)
-            self.handleStance(atPosition: position)
-            self.handleAction(atPosition: position)
+        self.startGame()
+        touches.forEach { touch in
+            handleTouchDown(atPosition: touch.location(in: self), touch: touch)
         }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         ValsRevenge.log("👉🏻 Touches moved!", category: .inputTouch)
-        touches.forEach { [weak self] touch in
-            guard let self = self else {
-                return
-            }
-            self.handleStance(atPosition: touch.location(in: self))
+        touches.forEach { touch in
+            handleTouchMoved(atPosition: touch.location(in: self), touch: touch)
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touches.forEach { [weak self] touch in
-            guard let self = self else {
-                return
-            }
-            self.touchUp(atPosition: touch.location(in: self))
+        ValsRevenge.log("✋🏻 Touches ended!", category: .inputTouch)
+        touches.forEach { touch in
+            handleTouchUp(atPosition: touch.location(in: self), touch: touch)
         }
     }
 
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touches.forEach { [weak self] touch in
-            guard let self = self else {
-                return
-            }
-            self.touchUp(atPosition: touch.location(in: self))
+        ValsRevenge.log("✋🏻 Touches cancelled!", category: .inputTouch)
+        touches.forEach { touch in
+            handleTouchUp(atPosition: touch.location(in: self), touch: touch)
         }
-    }
-    #endif
-}
-
-// MARK: - NSResponder
-
-extension MainScene {
-
-    #if os(OSX)
-    override func mouseDown(with event: NSEvent) {
-        let position = event.location(in: self)
-        startGame()
-        handleStance(atPosition: position)
-        handleAction(atPosition: position)
-    }
-
-    override func mouseDragged(with event: NSEvent) {
-        touchUp(atPosition: event.location(in: self))
-    }
-
-    override func mouseUp(with event: NSEvent) {
-        touchUp(atPosition: event.location(in: self))
     }
     #endif
 }
@@ -159,29 +125,55 @@ private extension MainScene {
         mainGameStateMachine.enter(PlayingState.self)
     }
 
-    func handleStance(atPosition position: CGPoint) {
-        if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,
-           nodeName != Constant.Node.ButtonAttack.name {
-            // Format stances, for example: "Up" -> "up"; "BottomLeft" -> "bottomLeft"
-            let stanceSuffix = nodeName.deletingPrefix(Constant.Node.Controller.name)
-            let stanceSuffixFirstLowercased = String(stanceSuffix.prefix(1).lowercased())
-            let stance = stanceSuffixFirstLowercased + stanceSuffix.dropFirst()
-            player?.stance = Stance(rawValue: stance) ?? .stop
+    #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
+    func handleTouchDown(atPosition position: CGPoint, touch: UITouch) {
+        let nodeAtPoint = atPoint(position)
+        if let controllerMovement = controllerMovement {
+            if controllerMovement.contains(nodeAtPoint) {
+                leftTouch = touch
+                controllerMovement.beginTracking()
+            }
+        }
+        if let controllerAttack = controllerAttack {
+            if controllerAttack.contains(nodeAtPoint) {
+                rightTouch = touch
+                controllerAttack.beginTracking()
+            }
         }
     }
 
-    func handleAction(atPosition position: CGPoint) {
-        let nodeName = (atPoint(position) as? SKSpriteNode)?.name
-        player?.isAttacking = (nodeName == Constant.Node.ButtonAttack.name)
-    }
-
-    func touchUp(atPosition position: CGPoint) {
-        ValsRevenge.log("👆🏻 Touch up!", category: .inputTouch)
-        if let nodeName = (atPoint(position) as? SKSpriteNode)?.name,
-           nodeName.starts(with: Constant.Node.Controller.name) {
-            player?.stance = .stop
+    func handleTouchMoved(atPosition position: CGPoint, touch: UITouch) {
+        switch touch {
+        case leftTouch:
+            if let controllerMovement = controllerMovement {
+                controllerMovement.moveJoystick(pos: position)
+            }
+        case rightTouch:
+            if let controllerAttack = controllerAttack {
+                controllerAttack.moveJoystick(pos: position)
+            }
+        default:
+            break
         }
     }
+
+    func handleTouchUp(atPosition position: CGPoint, touch: UITouch) {
+        switch touch {
+        case leftTouch:
+            if let controllerMovement = controllerMovement {
+                controllerMovement.endTracking()
+                leftTouch = touch
+            }
+        case rightTouch:
+            if let controllerAttack = controllerAttack {
+                controllerAttack.endTracking()
+                rightTouch = touch
+            }
+        default:
+            break
+        }
+    }
+    #endif
 
     func controllerPosition() -> CGPoint {
         let position: CGPoint
