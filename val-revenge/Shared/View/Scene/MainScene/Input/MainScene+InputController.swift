@@ -19,22 +19,20 @@ extension MainScene {
                 if isConnected {
                     self?.setupControllers()
                 } else {
-                    self?.showVirtualController()
+                    self?.mainGameStateMachine.enter(PauseState.self) // required by Apple
                 }
             }
             .store(in: &cancellables)
     }
 
     func setupControllers() {
-        guard let gameController = setupGameController() else {
-            return
+        guard let gamepadController = gcOverseer.controllers().last,
+              let extendedGamepadController = gamepadController.extendedGamepad else {
+            ValsRevenge.log("No extended gamepad controllers detected", category: .inputController)
+            return // Micro controllers are not supported for this game.
         }
-        if !setupExtendedController(in: gameController) {
-            if !setupMicroControllers(in: gameController) {
-                return
-            }
-        }
-        hideVirtualController()
+        gamepadController.playerIndex = .index1
+        setup(extendedGamepadController)
     }
 }
 
@@ -42,63 +40,24 @@ extension MainScene {
 
 private extension MainScene {
 
-    func setupGameController() -> GCController? {
-        guard let gameController = gcOverseer.controllers().first else {
-            ValsRevenge.log("No connected controllers", category: .inputController)
-            return nil
-        }
-        guard let firstPlayerIndex = GCControllerPlayerIndex(rawValue: 1) else {
-            ValsRevenge.log("Can't create a GCControllerPlayerIndex for player 1", category: .inputController)
-            return nil
-        }
-        gameController.playerIndex = firstPlayerIndex
-        return gameController
-    }
-
-    func setupExtendedController(in gameController: GCController) -> Bool {
-        guard let extendedGamepadController = gameController.extendedGamepad else {
-            ValsRevenge.log("No extended gamepad controllers detected", category: .inputTouch)
-            return false
-        }
-        extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
+    func setup(_ extendedGamepadController: GCExtendedGamepad) {
         extendedGamepadController.dpad.valueChangedHandler = directionalControlHandler()
-        extendedGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
-        extendedGamepadController.buttonB.valueChangedHandler = buttonHandlerStart()
-        return true
+        extendedGamepadController.leftThumbstick.valueChangedHandler = directionalControlHandler()
     }
 
-    func setupMicroControllers(in gameController: GCController) -> Bool {
-        guard let microGamepadController = gcOverseer.controllers().first?.microGamepad else {
-            ValsRevenge.log("No micro gamepad controllers detected", category: .inputController)
-            return false
-        }
-        // Couldn't get rotation to work:
-        // https://developer.apple.com/forums/thread/21562?page=1#644496022
-        microGamepadController.allowsRotation = true
-        microGamepadController.dpad.valueChangedHandler = directionalControlHandler()
-        microGamepadController.buttonA.valueChangedHandler = buttonHandlerA()
-        microGamepadController.buttonX.valueChangedHandler = buttonHandlerStart()
-        return true
-    }
-
+    /// Controls the player movement.
+    ///
+    /// Range: -1...1 | < 0 = Left | > 0 = Right | < 0 = Down | > 0 = Up
     func directionalControlHandler() -> GCControllerDirectionPadValueChangedHandler {
         return { [weak self] _, xValue, yValue in
-            #warning("TODO: directionalControlHandler")
-        }
-    }
-
-    /// Notice: `buttonA` is the 􀁡 button in a Sony's Dualshock.
-    func buttonHandlerA() -> GCControllerButtonValueChangedHandler {
-        return { [weak self] _, _, isPressed in
-            self?.player?.isAttacking = isPressed
-        }
-    }
-
-    /// Notice: `buttonB` is the 􀨂 button in a Sony's Dualshock.
-    /// `buttonX` is the 􀊈 button in the MicroGamepad controller.
-    func buttonHandlerStart() -> GCControllerButtonValueChangedHandler {
-        return { [weak self] _, _, _ in
+            let multiplier = Float(self?.controllerMovement?.range ?? 0.0)
+            let xAxis = CGFloat(xValue * multiplier)
+            let yAxis = CGFloat(yValue * multiplier)
+            let location = CGPoint(x: xAxis, y: yAxis)
+            self?.controllerMovement?.moveJoystick(pos: location)
             self?.mainGameStateMachine.enter(PlayingState.self)
         }
     }
+
+    #warning("TODO: attack handler")
 }

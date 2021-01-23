@@ -11,28 +11,6 @@ import SpriteKit
 /// Handles touch inputs (users interacting with the game via screen touching) and also mouse input (`macOS`).
 extension MainScene {
 
-    /// Shows the virtual pad and the attack button.
-    func showVirtualController() {
-        let unhideAction = SKAction.unhide()
-        enumerateChildNodes(withName: Constant.Node.Controller.name) { virtualController, _ in
-            virtualController.run(unhideAction)
-        }
-        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { buttonAttack, _ in
-            buttonAttack.run(unhideAction)
-        }
-    }
-
-    /// Hides the virtual pad and the attack button.
-    func hideVirtualController() {
-        let hideAction = SKAction.hide()
-        enumerateChildNodes(withName: Constant.Node.Controller.name) { virtualController, _ in
-            virtualController.run(hideAction)
-        }
-        enumerateChildNodes(withName: Constant.Node.ButtonAttack.name) { buttonAttack, _ in
-            buttonAttack.run(hideAction)
-        }
-    }
-
     func updateVirtualControllerLocation() {
         let controllerMovementPosition: CGPoint
         #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)

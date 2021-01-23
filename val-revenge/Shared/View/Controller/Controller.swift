@@ -19,7 +19,7 @@ class Controller: SKReferenceNode {
 
     private var base: SKNode!
     private var joystick: SKSpriteNode!
-    private var range: CGFloat!
+    private(set) var range: CGFloat!
 
     private var isTracking: Bool = false
 
