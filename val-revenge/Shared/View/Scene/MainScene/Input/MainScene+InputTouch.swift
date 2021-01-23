@@ -66,7 +66,6 @@ extension MainScene {
     #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         ValsRevenge.log("👇🏻 Touches began!", category: .inputTouch)
-        self.startGame()
         touches.forEach { touch in
             handleTouchDown(atPosition: touch.location(in: self), touch: touch)
         }
@@ -99,10 +98,6 @@ extension MainScene {
 
 private extension MainScene {
 
-    func startGame() {
-        mainGameStateMachine.enter(PlayingState.self)
-    }
-
     #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
     func handleTouchDown(atPosition position: CGPoint, touch: UITouch) {
         let nodeAtPoint = atPoint(position)
@@ -125,10 +120,12 @@ private extension MainScene {
         case leftTouch:
             if let controllerMovement = controllerMovement {
                 controllerMovement.moveJoystick(pos: position)
+                startGame()
             }
         case rightTouch:
             if let controllerAttack = controllerAttack {
                 controllerAttack.moveJoystick(pos: position)
+                startGame()
             }
         default:
             break

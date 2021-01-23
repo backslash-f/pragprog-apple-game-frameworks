@@ -140,6 +140,15 @@ extension MainScene {
     }
 }
 
+// MARK: - Internal
+
+internal extension MainScene {
+
+    func startGame() {
+        mainGameStateMachine.enter(PlayingState.self)
+    }
+}
+
 // MARK: - Private
 
 private extension MainScene {
