@@ -13,7 +13,7 @@ struct ContentView: View {
     // MARK: - Properties
 
     var body: some View {
-        MainSceneView().edgesIgnoringSafeArea(.all)
+        TitleSceneView().edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -92,8 +92,7 @@ private extension HealthComponent {
             let playSound = SKAction.playSoundFileNamed("player_die", waitForCompletion: false)
             dieAction = SKAction.run {
                 self.componentNode.run(playSound, completion: {
-                    #warning("TODO: Add code to restart the game")
-                    self.currentHealth = self.maxHealth
+                    self.componentNode.scene?.loadGameOverScene()
                 })
             }
         } else {

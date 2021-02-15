@@ -10,10 +10,21 @@ extension Constant {
 
     struct Scene {
 
+        struct Default {
+            static let width = 1024
+            static let height = 1336
+        }
+
+        struct GameOverScene {
+            static let name = "GameOverScene"
+        }
+
         struct MainScene {
             static let name = "MainScene"
-            static let defaultWidth = 1024
-            static let defaultHeight = 1336
+        }
+
+        struct TitleScene {
+            static let name = "TitleScene"
         }
     }
 }

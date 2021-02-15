@@ -25,7 +25,9 @@ extension MainScene {
             y: (viewBottom + Constant.virtualControllerMargin)
         )
         #endif
-        controllerMovement?.position = controllerMovementPosition
+        #warning("FIXME: Broken after chapter 15.")
+        // controllerMovement?.position = controllerMovementPosition
+        controllerMovement?.position = .zero
 
         let controllerAttackPosition: CGPoint
         #if os(iOS) || os(tvOS) || targetEnvironment(macCatalyst)
@@ -40,7 +42,9 @@ extension MainScene {
             y: (viewBottom + Constant.virtualControllerMargin)
         )
         #endif
-        controllerAttack?.position = controllerAttackPosition
+        #warning("FIXME: Broken after chapter 15.")
+        // controllerAttack?.position = controllerAttackPosition
+        controllerAttack?.position = .zero
     }
 
     func updateHUDLocation() {
