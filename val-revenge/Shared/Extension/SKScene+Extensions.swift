@@ -46,8 +46,10 @@ extension SKScene {
                     // Present the scene.
                     self.view?.presentScene(sceneNode, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
 
+                    #if os(iOS) || os(tvOS)
                     // Update the layout.
                     sceneNode.didChangeOrientation()
+                    #endif
                 }
             } else {
                 print("Can't load next scene: GameScene_\(level).")

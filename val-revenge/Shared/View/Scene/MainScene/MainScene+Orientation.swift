@@ -6,18 +6,17 @@
 //  Copyright © 2020 backslash-f. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension MainScene {
 
     func setupOrientationListener() {
-        #if os(iOS)
         device.$orientation.sink { [weak self] orientation in
             ValsRevenge.log("Device orientation changed to: \(orientation.rawValue)", category: .orientation)
             self?.didChangeOrientation(to: orientation)
         }
         .store(in: &cancellables)
-        #endif
     }
 
     func didChangeOrientation(to orientation: UIDeviceOrientation? = nil) {
@@ -31,3 +30,4 @@ extension MainScene {
         camera?.setScale(scale)
     }
 }
+#endif

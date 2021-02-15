@@ -18,21 +18,44 @@ class GameOverScene: SKScene {
         newGameButton = childNode(withName: "newGameButton") as? SKSpriteNode
         loadGameButton = childNode(withName: "loadGameButton") as? SKSpriteNode
     }
+}
 
-    // MARK: - Touch Handlers
+// MARK: - Touch Responder
 
-    func touchDown(atPoint pos: CGPoint) {
-        let nodeAtPoint = atPoint(pos)
+extension GameOverScene {
+    #if os(iOS) || os(tvOS)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touches.forEach { touch in
+            self.touchDown(atPoint: touch.location(in: self))
+        }
+    }
+    #endif
+    #if os(OSX)
+    override func touchesBegan(with event: NSEvent) {
+        touchDown(atPoint: event.location(in: self))
+    }
+    #endif
+}
+
+// MARK: - Private
+
+private extension GameOverScene {
+
+    func touchDown(atPoint cgPoint: CGPoint) {
+        #if os(iOS) || os(tvOS)
+        let nodeAtPoint = atPoint(cgPoint)
         if newGameButton.contains(nodeAtPoint) {
             startNewGame()
         } else if loadGameButton.contains(nodeAtPoint) {
             resumeSavedGame()
         }
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touches.forEach { touch in
-            self.touchDown(atPoint: touch.location(in: self))
+        #endif
+        #if os(OSX)
+        if newGameButton.contains(cgPoint) {
+            startNewGame()
+        } else if loadGameButton.contains(cgPoint) {
+            resumeSavedGame()
         }
+        #endif
     }
 }

@@ -104,16 +104,12 @@ class MainScene: CSKScene {
 
     override init(size: CGSize, debugSettings: DebugSettings = DebugSettings()) {
         super.init(size: size, debugSettings: debugSettings)
-        setupScene()
-        setupGameControllerListener()
-        setupOrientationListener()
+        setup()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupScene()
-        setupGameControllerListener()
-        setupOrientationListener()
+        setup()
     }
 }
 
@@ -152,6 +148,14 @@ internal extension MainScene {
 // MARK: - Private
 
 private extension MainScene {
+
+    func setup() {
+        setupScene()
+        setupGameControllerListener()
+        #if os(iOS) || os(tvOS)
+        setupOrientationListener()
+        #endif
+    }
 
     func setupScene() {
         scaleMode = .aspectFill
