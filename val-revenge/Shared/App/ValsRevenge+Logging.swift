@@ -14,6 +14,7 @@ enum LoggingCategories: String {
     case inputTouch         = "ValsRevenge_InputTouch"
     case orientation        = "ValsRevenge_Orientation"
     case player             = "ValsRevenge_Player"
+    case scene              = "ValsRevenge_Scene"
     case state              = "ValsRevenge_State"
 }
 

@@ -6,23 +6,28 @@
 //  Copyright © 2020 backslash-f. All rights reserved.
 //
 
+import UIKit
+
 extension MainScene {
 
     func setupOrientationListener() {
         #if os(iOS)
         device.$orientation.sink { [weak self] orientation in
-            switch orientation {
-            case .portrait, .portraitUpsideDown:
-                ValsRevenge.log("Device orientation changed to portrait", category: .orientation)
-                self?.camera?.setScale(1.0)
-            case .landscapeRight, .landscapeLeft:
-                ValsRevenge.log("Device orientation changed to landscape", category: .orientation)
-                self?.camera?.setScale(1.25)
-            default:
-                break
-            }
+            ValsRevenge.log("Device orientation changed to: \(orientation.rawValue)", category: .orientation)
+            self?.didChangeOrientation(to: orientation)
         }
         .store(in: &cancellables)
         #endif
+    }
+
+    func didChangeOrientation(to orientation: UIDeviceOrientation? = nil) {
+        let currentOrientation: UIDeviceOrientation
+        if let orientation = orientation {
+            currentOrientation = orientation
+        } else {
+            currentOrientation = UIDevice.current.orientation
+        }
+        let scale: CGFloat = currentOrientation.isPortrait ? 1.0 : 1.25
+        camera?.setScale(scale)
     }
 }

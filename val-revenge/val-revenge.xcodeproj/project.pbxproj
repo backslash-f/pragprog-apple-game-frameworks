@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0704E1C425DA6CD70054C442 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0704E1C025DA6CD70054C442 /* GameOverScene.sks */; };
+		0704E1C525DA6CD70054C442 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0704E1C025DA6CD70054C442 /* GameOverScene.sks */; };
+		0704E1C625DA6CD70054C442 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0704E1C025DA6CD70054C442 /* GameOverScene.sks */; };
+		0704E1C725DA6CD70054C442 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1C125DA6CD70054C442 /* TitleScene.swift */; };
+		0704E1C825DA6CD70054C442 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1C125DA6CD70054C442 /* TitleScene.swift */; };
+		0704E1C925DA6CD70054C442 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1C125DA6CD70054C442 /* TitleScene.swift */; };
+		0704E1CA25DA6CD70054C442 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1C225DA6CD70054C442 /* GameOverScene.swift */; };
+		0704E1CB25DA6CD70054C442 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1C225DA6CD70054C442 /* GameOverScene.swift */; };
+		0704E1CC25DA6CD70054C442 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1C225DA6CD70054C442 /* GameOverScene.swift */; };
+		0704E1CD25DA6CD70054C442 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0704E1C325DA6CD70054C442 /* TitleScene.sks */; };
+		0704E1CE25DA6CD70054C442 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0704E1C325DA6CD70054C442 /* TitleScene.sks */; };
+		0704E1CF25DA6CD70054C442 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0704E1C325DA6CD70054C442 /* TitleScene.sks */; };
+		0704E1DD25DA6D230054C442 /* SKScene+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1DC25DA6D230054C442 /* SKScene+Extensions.swift */; };
+		0704E1DE25DA6D230054C442 /* SKScene+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1DC25DA6D230054C442 /* SKScene+Extensions.swift */; };
+		0704E1DF25DA6D230054C442 /* SKScene+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704E1DC25DA6D230054C442 /* SKScene+Extensions.swift */; };
 		0706AB4F259222060076A6B4 /* GeneratorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706AB4E259222060076A6B4 /* GeneratorComponent.swift */; };
 		0706AB50259222060076A6B4 /* GeneratorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706AB4E259222060076A6B4 /* GeneratorComponent.swift */; };
 		0706AB51259222060076A6B4 /* GeneratorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706AB4E259222060076A6B4 /* GeneratorComponent.swift */; };
@@ -172,6 +187,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0704E1C025DA6CD70054C442 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		0704E1C125DA6CD70054C442 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		0704E1C225DA6CD70054C442 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		0704E1C325DA6CD70054C442 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
+		0704E1DC25DA6D230054C442 /* SKScene+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+Extensions.swift"; sourceTree = "<group>"; };
 		0706AB4E259222060076A6B4 /* GeneratorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorComponent.swift; sourceTree = "<group>"; };
 		0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKComponent+Extensions.swift"; sourceTree = "<group>"; };
 		070D08272599DCCE0039A256 /* PlayerStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStates.swift; sourceTree = "<group>"; };
@@ -384,6 +404,7 @@
 				07305B1525B59FFC0038EA11 /* CGFloat+Extensions.swift */,
 				0706AB582592224D0076A6B4 /* GKComponent+Extensions.swift */,
 				07727E8225A3233D00411322 /* SKNode+Extensions.swift */,
+				0704E1DC25DA6D230054C442 /* SKScene+Extensions.swift */,
 				0798A0F32592490B002970F7 /* SKTexture+Extensions.swift */,
 				07C128E3258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift */,
 				078D24C12580FAC800CB653D /* String+Extensions.swift */,
@@ -487,6 +508,10 @@
 			isa = PBXGroup;
 			children = (
 				079ADAD9257E270B0018D7F0 /* MainScene */,
+				0704E1C025DA6CD70054C442 /* GameOverScene.sks */,
+				0704E1C225DA6CD70054C442 /* GameOverScene.swift */,
+				0704E1C325DA6CD70054C442 /* TitleScene.sks */,
+				0704E1C125DA6CD70054C442 /* TitleScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -659,6 +684,8 @@
 				072E90F8257EB2250001E1DA /* MainScene.sks in Resources */,
 				0756E337258E99BB002203C8 /* monster_die.mp3 in Resources */,
 				0756E343258E99BB002203C8 /* food.mp3 in Resources */,
+				0704E1C425DA6CD70054C442 /* GameOverScene.sks in Resources */,
+				0704E1CD25DA6CD70054C442 /* TitleScene.sks in Resources */,
 				0756E346258E99BB002203C8 /* player_hit.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +710,8 @@
 				072E90F9257EB2250001E1DA /* MainScene.sks in Resources */,
 				0756E338258E99BB002203C8 /* monster_die.mp3 in Resources */,
 				0756E344258E99BB002203C8 /* food.mp3 in Resources */,
+				0704E1C525DA6CD70054C442 /* GameOverScene.sks in Resources */,
+				0704E1CE25DA6CD70054C442 /* TitleScene.sks in Resources */,
 				0756E347258E99BB002203C8 /* player_hit.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,6 +736,8 @@
 				072E90FA257EB2250001E1DA /* MainScene.sks in Resources */,
 				0756E339258E99BB002203C8 /* monster_die.mp3 in Resources */,
 				0756E345258E99BB002203C8 /* food.mp3 in Resources */,
+				0704E1C625DA6CD70054C442 /* GameOverScene.sks in Resources */,
+				0704E1CF25DA6CD70054C442 /* TitleScene.sks in Resources */,
 				0756E348258E99BB002203C8 /* player_hit.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,10 +825,13 @@
 				07305B1625B59FFC0038EA11 /* CGFloat+Extensions.swift in Sources */,
 				0756E3AC259220E0002203C8 /* RenderComponent.swift in Sources */,
 				07727E8A25A323AC00411322 /* AgentComponent.swift in Sources */,
+				0704E1DD25DA6D230054C442 /* SKScene+Extensions.swift in Sources */,
 				0756E351258E9D3C002203C8 /* HealthComponent.swift in Sources */,
+				0704E1CA25DA6CD70054C442 /* GameOverScene.swift in Sources */,
 				0798A10525924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB592592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
 				0706AB4F259222060076A6B4 /* GeneratorComponent.swift in Sources */,
+				0704E1C725DA6CD70054C442 /* TitleScene.swift in Sources */,
 				070D08392599F0630039A256 /* PhysicsComponent.swift in Sources */,
 				074E952C258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				07F1BCAE25B07EA700EB955D /* Controller.swift in Sources */,
@@ -836,10 +870,13 @@
 				07305B1725B59FFC0038EA11 /* CGFloat+Extensions.swift in Sources */,
 				0756E3AD259220E0002203C8 /* RenderComponent.swift in Sources */,
 				07727E8B25A323AC00411322 /* AgentComponent.swift in Sources */,
+				0704E1DE25DA6D230054C442 /* SKScene+Extensions.swift in Sources */,
 				0756E352258E9D3C002203C8 /* HealthComponent.swift in Sources */,
+				0704E1CB25DA6CD70054C442 /* GameOverScene.swift in Sources */,
 				0798A10625924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB5A2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
 				0706AB50259222060076A6B4 /* GeneratorComponent.swift in Sources */,
+				0704E1C825DA6CD70054C442 /* TitleScene.swift in Sources */,
 				070D083A2599F0630039A256 /* PhysicsComponent.swift in Sources */,
 				074E952D258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				07F1BCAF25B07EA700EB955D /* Controller.swift in Sources */,
@@ -878,10 +915,13 @@
 				07305B1825B59FFC0038EA11 /* CGFloat+Extensions.swift in Sources */,
 				0756E3AE259220E0002203C8 /* RenderComponent.swift in Sources */,
 				07727E8C25A323AC00411322 /* AgentComponent.swift in Sources */,
+				0704E1DF25DA6D230054C442 /* SKScene+Extensions.swift in Sources */,
 				0756E353258E9D3C002203C8 /* HealthComponent.swift in Sources */,
+				0704E1CC25DA6CD70054C442 /* GameOverScene.swift in Sources */,
 				0798A10725924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB5B2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
 				0706AB51259222060076A6B4 /* GeneratorComponent.swift in Sources */,
+				0704E1C925DA6CD70054C442 /* TitleScene.swift in Sources */,
 				070D083B2599F0630039A256 /* PhysicsComponent.swift in Sources */,
 				074E952E258276D200A4E89D /* MainScene+InputController.swift in Sources */,
 				07F1BCB025B07EA700EB955D /* Controller.swift in Sources */,
