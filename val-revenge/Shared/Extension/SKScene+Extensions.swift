@@ -46,7 +46,7 @@ extension SKScene {
                     // Present the scene.
                     self.view?.presentScene(sceneNode, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
 
-                    #if os(iOS) || os(tvOS)
+                    #if os(iOS)
                     // Update the layout.
                     sceneNode.didChangeOrientation()
                     #endif

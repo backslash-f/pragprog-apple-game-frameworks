@@ -152,7 +152,7 @@ private extension MainScene {
     func setup() {
         setupScene()
         setupGameControllerListener()
-        #if os(iOS) || os(tvOS)
+        #if os(iOS)
         setupOrientationListener()
         #endif
     }
