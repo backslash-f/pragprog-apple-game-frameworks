@@ -43,7 +43,7 @@ class Player: SKSpriteNode {
 
     private var knifeMovementUnits: CGFloat = 300
 
-    private var keys: Int = 0 {
+    private var keys: Int = GameData.shared.keys {
         didSet {
             ValsRevenge.log("Keys: \(keys)", category: .player)
             keysLabel.text = "Keys: \(keys)"
@@ -55,7 +55,7 @@ class Player: SKSpriteNode {
         }
     }
 
-    private var treasure: Int = 0 {
+    private var treasure: Int = GameData.shared.treasure {
         didSet {
             ValsRevenge.log("Treasure: \(treasure)", category: .player)
             treasureLabel.text = "Treasure: \(treasure)"
@@ -74,6 +74,10 @@ class Player: SKSpriteNode {
 // MARK: - Interface
 
 extension Player {
+
+    func getStats() -> (keys: Int, treasure: Int) {
+        (self.keys, self.treasure)
+    }
 
     func collectItem(_ collectibleNode: SKNode) {
         guard let collectible = collectibleNode.entity?.component(ofType: CollectibleComponent.self) else {

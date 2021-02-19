@@ -160,6 +160,9 @@
 		07B7A42325DB03E000D33E03 /* TitleSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A42225DB03E000D33E03 /* TitleSceneView.swift */; };
 		07B7A42425DB03E000D33E03 /* TitleSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A42225DB03E000D33E03 /* TitleSceneView.swift */; };
 		07B7A42525DB03E000D33E03 /* TitleSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A42225DB03E000D33E03 /* TitleSceneView.swift */; };
+		07B7A58825E04ED400D33E03 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A58725E04ED400D33E03 /* GameData.swift */; };
+		07B7A58925E04ED400D33E03 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A58725E04ED400D33E03 /* GameData.swift */; };
+		07B7A58A25E04ED400D33E03 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A58725E04ED400D33E03 /* GameData.swift */; };
 		07BD9456258919070052243F /* MainScene+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD9455258919070052243F /* MainScene+Orientation.swift */; };
 		07BD9457258919070052243F /* MainScene+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD9455258919070052243F /* MainScene+Orientation.swift */; };
 		07BD9458258919070052243F /* MainScene+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD9455258919070052243F /* MainScene+Orientation.swift */; };
@@ -244,6 +247,7 @@
 		079ADACE257E26E40018D7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		079ADAE4257E27420018D7F0 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		07B7A42225DB03E000D33E03 /* TitleSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSceneView.swift; sourceTree = "<group>"; };
+		07B7A58725E04ED400D33E03 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		07BD9455258919070052243F /* MainScene+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+Orientation.swift"; sourceTree = "<group>"; };
 		07C128DC258CC24900FF6E1A /* MainTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainTileSet.sks; sourceTree = "<group>"; };
 		07C128E3258CE9CD00FF6E1A /* SKTileMapNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTileMapNode+Extensions.swift"; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 				072E9104257EBD000001E1DA /* Constant */,
 				078D24C02580FAAC00CB653D /* Extension */,
 				070D08232599D81F0039A256 /* GameLogic */,
+				07B7A58625E04BA600D33E03 /* Persistence */,
 				079ADAAC257E26130018D7F0 /* Resource */,
 				079ADACD257E26CC0018D7F0 /* View */,
 			);
@@ -543,6 +548,14 @@
 				0704E1C225DA6CD70054C442 /* GameOverScene.swift */,
 			);
 			path = GameOverScene;
+			sourceTree = "<group>";
+		};
+		07B7A58625E04BA600D33E03 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				07B7A58725E04ED400D33E03 /* GameData.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		07BD944A258913060052243F /* Controller */ = {
@@ -826,6 +839,7 @@
 				079ADACF257E26E40018D7F0 /* ContentView.swift in Sources */,
 				078D24C22580FAC800CB653D /* String+Extensions.swift in Sources */,
 				070D084D2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */,
+				07B7A58825E04ED400D33E03 /* GameData.swift in Sources */,
 				079ADAE5257E27420018D7F0 /* MainScene.swift in Sources */,
 				072E9113257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FB2592499F002970F7 /* AnimationComponent.swift in Sources */,
@@ -871,6 +885,7 @@
 				079ADAD0257E26E40018D7F0 /* ContentView.swift in Sources */,
 				078D24C32580FAC800CB653D /* String+Extensions.swift in Sources */,
 				070D084E2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */,
+				07B7A58925E04ED400D33E03 /* GameData.swift in Sources */,
 				079ADAE6257E27420018D7F0 /* MainScene.swift in Sources */,
 				072E9114257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FC2592499F002970F7 /* AnimationComponent.swift in Sources */,
@@ -916,6 +931,7 @@
 				079ADAD1257E26E40018D7F0 /* ContentView.swift in Sources */,
 				078D24C42580FAC800CB653D /* String+Extensions.swift in Sources */,
 				070D084F2599F3E90039A256 /* MainScene+PhysicsContact.swift in Sources */,
+				07B7A58A25E04ED400D33E03 /* GameData.swift in Sources */,
 				079ADAE7257E27420018D7F0 /* MainScene.swift in Sources */,
 				072E9115257EBD4E0001E1DA /* Constant.swift in Sources */,
 				0798A0FD2592499F002970F7 /* AnimationComponent.swift in Sources */,

@@ -117,6 +117,11 @@ class MainScene: CSKScene {
 
 extension MainScene {
 
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+        GameData.shared.saveDataWithFileName("gamedata.json")
+    }
+
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         setupState()

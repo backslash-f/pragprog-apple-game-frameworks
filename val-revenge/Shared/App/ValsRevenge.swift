@@ -15,4 +15,10 @@ struct ValsRevenge: App {
             ContentView()
         }
     }
+
+    // MARK: - Lifecycle
+
+    init() {
+        GameData.shared.loadDataWithFileName("gamedata.json")
+    }
 }
