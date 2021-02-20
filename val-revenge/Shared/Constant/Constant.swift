@@ -10,5 +10,5 @@ import SwiftUI
 
 struct Constant {
 
-    static let virtualControllerMargin: CGFloat = 20
+    static let virtualControllerMargin: CGFloat = 40
 }

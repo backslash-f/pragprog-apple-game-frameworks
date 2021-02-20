@@ -123,14 +123,20 @@ extension Player {
         treasureLabel.text = "Treasure: \(treasure)"
         treasureLabel.horizontalAlignmentMode = .right
         treasureLabel.verticalAlignmentMode = .center
-        treasureLabel.position = CGPoint(x: 0, y: -treasureLabel.frame.height)
+        treasureLabel.position = CGPoint(
+            x: 0,
+            y: -treasureLabel.frame.height - 15
+        )
         treasureLabel.zPosition += 1
 
         // Set up the keys label.
         keysLabel.text = "Keys: \(keys)"
         keysLabel.horizontalAlignmentMode = .right
         keysLabel.verticalAlignmentMode = .center
-        keysLabel.position = CGPoint(x: 0, y: treasureLabel.frame.minY - keysLabel.frame.height)
+        keysLabel.position = CGPoint(
+            x: 0,
+            y: treasureLabel.frame.minY - keysLabel.frame.height
+        )
         keysLabel.zPosition += 1
 
         // Add the labels to the HUD.

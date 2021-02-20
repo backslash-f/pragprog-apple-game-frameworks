@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/backslash-f/cskscene",
         "state": {
           "branch": null,
-          "revision": "d16a57128f8378af6e3e672fe8d450de8674b540",
-          "version": "0.2.0"
+          "revision": "05e240ca57ad25f4f077f12d475c391f57c5d2a7",
+          "version": "0.2.1"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/backslash-f/gcoverseer",
         "state": {
           "branch": null,
-          "revision": "0809c26546d12c38ab179d6bb2cbb259b60b9aa4",
-          "version": "0.2.1"
+          "revision": "908810d48f09bc62842290997177212d77296f2f",
+          "version": "0.2.2"
         }
       }
     ]

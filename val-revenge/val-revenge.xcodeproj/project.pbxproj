@@ -43,9 +43,6 @@
 		072801E7257E6CBE00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801E6257E6CBE00CFFA1F /* CSKScene */; };
 		072801ED257E6CDB00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EC257E6CDB00CFFA1F /* CSKScene */; };
 		072801EF257E6CDF00CFFA1F /* CSKScene in Frameworks */ = {isa = PBXBuildFile; productRef = 072801EE257E6CDF00CFFA1F /* CSKScene */; };
-		072E90F8257EB2250001E1DA /* GameScene_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 072E90F7257EB2250001E1DA /* GameScene_1.sks */; };
-		072E90F9257EB2250001E1DA /* GameScene_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 072E90F7257EB2250001E1DA /* GameScene_1.sks */; };
-		072E90FA257EB2250001E1DA /* GameScene_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 072E90F7257EB2250001E1DA /* GameScene_1.sks */; };
 		072E9113257EBD4E0001E1DA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E9112257EBD4E0001E1DA /* Constant.swift */; };
 		072E9114257EBD4E0001E1DA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E9112257EBD4E0001E1DA /* Constant.swift */; };
 		072E9115257EBD4E0001E1DA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E9112257EBD4E0001E1DA /* Constant.swift */; };
@@ -187,6 +184,12 @@
 		07F1BCAE25B07EA700EB955D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BCAD25B07EA700EB955D /* Controller.swift */; };
 		07F1BCAF25B07EA700EB955D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BCAD25B07EA700EB955D /* Controller.swift */; };
 		07F1BCB025B07EA700EB955D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BCAD25B07EA700EB955D /* Controller.swift */; };
+		07F2FD1B25E13FC700AAFB3D /* GameScene_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F2FD1A25E13FC700AAFB3D /* GameScene_1.sks */; };
+		07F2FD1C25E13FC700AAFB3D /* GameScene_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F2FD1A25E13FC700AAFB3D /* GameScene_1.sks */; };
+		07F2FD1D25E13FC700AAFB3D /* GameScene_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F2FD1A25E13FC700AAFB3D /* GameScene_1.sks */; };
+		07F2FD2525E1411B00AAFB3D /* GameScene_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F2FD2425E1411B00AAFB3D /* GameScene_2.sks */; };
+		07F2FD2625E1411B00AAFB3D /* GameScene_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F2FD2425E1411B00AAFB3D /* GameScene_2.sks */; };
+		07F2FD2725E1411B00AAFB3D /* GameScene_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F2FD2425E1411B00AAFB3D /* GameScene_2.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,7 +204,6 @@
 		070D082E2599E75F0039A256 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
 		070D08382599F0630039A256 /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComponent.swift; sourceTree = "<group>"; };
 		070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+PhysicsContact.swift"; sourceTree = "<group>"; };
-		072E90F7257EB2250001E1DA /* GameScene_1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_1.sks; sourceTree = "<group>"; };
 		072E9112257EBD4E0001E1DA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		072E9120257EC4A90001E1DA /* Constant+Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Scenes.swift"; sourceTree = "<group>"; };
 		07305B0E25B59E7B0038EA11 /* Player+Attack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+Attack.swift"; sourceTree = "<group>"; };
@@ -255,6 +257,8 @@
 		07CD5208257F8186001D0E18 /* ValsRevenge+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValsRevenge+Logging.swift"; sourceTree = "<group>"; };
 		07F1BCA625B07E3200EB955D /* Controller.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Controller.sks; sourceTree = "<group>"; };
 		07F1BCAD25B07EA700EB955D /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		07F2FD1A25E13FC700AAFB3D /* GameScene_1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_1.sks; sourceTree = "<group>"; };
+		07F2FD2425E1411B00AAFB3D /* GameScene_2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_2.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,7 +527,8 @@
 			isa = PBXGroup;
 			children = (
 				0768BD0F257FBC0600628758 /* Input */,
-				072E90F7257EB2250001E1DA /* GameScene_1.sks */,
+				07F2FD1A25E13FC700AAFB3D /* GameScene_1.sks */,
+				07F2FD2425E1411B00AAFB3D /* GameScene_2.sks */,
 				079ADAE4257E27420018D7F0 /* MainScene.swift */,
 				07BD9455258919070052243F /* MainScene+Orientation.swift */,
 				070D084C2599F3E90039A256 /* MainScene+PhysicsContact.swift */,
@@ -698,11 +703,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0756E331258E99BB002203C8 /* door_open.mp3 in Resources */,
+				07F2FD1B25E13FC700AAFB3D /* GameScene_1.sks in Resources */,
 				0756E33A258E99BB002203C8 /* exit.mp3 in Resources */,
 				079ADA98257E23EB0018D7F0 /* Assets.xcassets in Resources */,
 				0756E340258E99BB002203C8 /* destroyed.mp3 in Resources */,
 				0756E33D258E99BB002203C8 /* player_die.mp3 in Resources */,
 				0756E334258E99BB002203C8 /* key.mp3 in Resources */,
+				07F2FD2525E1411B00AAFB3D /* GameScene_2.sks in Resources */,
 				0756E328258E99BB002203C8 /* treasure.mp3 in Resources */,
 				0756E32B258E99BB002203C8 /* throw.mp3 in Resources */,
 				0756E359258EA04B002203C8 /* HealthMeter.sks in Resources */,
@@ -710,7 +717,6 @@
 				0756E32E258E99BB002203C8 /* monster_hit.mp3 in Resources */,
 				07F1BCA725B07E3200EB955D /* Controller.sks in Resources */,
 				07C128DD258CC24900FF6E1A /* MainTileSet.sks in Resources */,
-				072E90F8257EB2250001E1DA /* GameScene_1.sks in Resources */,
 				0756E337258E99BB002203C8 /* monster_die.mp3 in Resources */,
 				0756E343258E99BB002203C8 /* food.mp3 in Resources */,
 				0704E1C425DA6CD70054C442 /* GameOverScene.sks in Resources */,
@@ -724,11 +730,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0756E332258E99BB002203C8 /* door_open.mp3 in Resources */,
+				07F2FD1C25E13FC700AAFB3D /* GameScene_1.sks in Resources */,
 				0756E33B258E99BB002203C8 /* exit.mp3 in Resources */,
 				079ADA99257E23EB0018D7F0 /* Assets.xcassets in Resources */,
 				0756E341258E99BB002203C8 /* destroyed.mp3 in Resources */,
 				0756E33E258E99BB002203C8 /* player_die.mp3 in Resources */,
 				0756E335258E99BB002203C8 /* key.mp3 in Resources */,
+				07F2FD2625E1411B00AAFB3D /* GameScene_2.sks in Resources */,
 				0756E329258E99BB002203C8 /* treasure.mp3 in Resources */,
 				0756E32C258E99BB002203C8 /* throw.mp3 in Resources */,
 				0756E35A258EA04B002203C8 /* HealthMeter.sks in Resources */,
@@ -736,7 +744,6 @@
 				0756E32F258E99BB002203C8 /* monster_hit.mp3 in Resources */,
 				07F1BCA825B07E3200EB955D /* Controller.sks in Resources */,
 				07C128DE258CC24900FF6E1A /* MainTileSet.sks in Resources */,
-				072E90F9257EB2250001E1DA /* GameScene_1.sks in Resources */,
 				0756E338258E99BB002203C8 /* monster_die.mp3 in Resources */,
 				0756E344258E99BB002203C8 /* food.mp3 in Resources */,
 				0704E1C525DA6CD70054C442 /* GameOverScene.sks in Resources */,
@@ -750,11 +757,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0756E333258E99BB002203C8 /* door_open.mp3 in Resources */,
+				07F2FD1D25E13FC700AAFB3D /* GameScene_1.sks in Resources */,
 				0756E33C258E99BB002203C8 /* exit.mp3 in Resources */,
 				079ADA9A257E23EB0018D7F0 /* Assets.xcassets in Resources */,
 				0756E342258E99BB002203C8 /* destroyed.mp3 in Resources */,
 				0756E33F258E99BB002203C8 /* player_die.mp3 in Resources */,
 				0756E336258E99BB002203C8 /* key.mp3 in Resources */,
+				07F2FD2725E1411B00AAFB3D /* GameScene_2.sks in Resources */,
 				0756E32A258E99BB002203C8 /* treasure.mp3 in Resources */,
 				0756E32D258E99BB002203C8 /* throw.mp3 in Resources */,
 				0756E35B258EA04B002203C8 /* HealthMeter.sks in Resources */,
@@ -762,7 +771,6 @@
 				0756E330258E99BB002203C8 /* monster_hit.mp3 in Resources */,
 				07F1BCA925B07E3200EB955D /* Controller.sks in Resources */,
 				07C128DF258CC24900FF6E1A /* MainTileSet.sks in Resources */,
-				072E90FA257EB2250001E1DA /* GameScene_1.sks in Resources */,
 				0756E339258E99BB002203C8 /* monster_die.mp3 in Resources */,
 				0756E345258E99BB002203C8 /* food.mp3 in Resources */,
 				0704E1C625DA6CD70054C442 /* GameOverScene.sks in Resources */,
@@ -1273,7 +1281,7 @@
 			repositoryURL = "https://github.com/backslash-f/cskscene";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 0.0.1;
 			};
 		};
 		07BD945F258A1B8F0052243F /* XCRemoteSwiftPackageReference "device" */ = {

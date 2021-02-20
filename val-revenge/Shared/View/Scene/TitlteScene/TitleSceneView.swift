@@ -15,7 +15,7 @@ struct TitleSceneView: View {
     // MARK: - Properties
 
     var body: some View {
-        SpriteView(scene: makeScene()).aspectRatio(contentMode: .fill)
+        SpriteView(scene: makeScene())
     }
 }
 

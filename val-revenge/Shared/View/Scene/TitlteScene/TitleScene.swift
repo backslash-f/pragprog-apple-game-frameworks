@@ -14,6 +14,13 @@ class TitleScene: SKScene {
     private var newGameButton: SKSpriteNode!
     private var loadGameButton: SKSpriteNode!
 
+    // MARK: - Lifecycle
+
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+        scaleMode = .aspectFill
+    }
+
     override func didMove(to view: SKView) {
         newGameButton = childNode(withName: "newGameButton") as? SKSpriteNode
         loadGameButton = childNode(withName: "loadGameButton") as? SKSpriteNode
@@ -32,7 +39,7 @@ extension TitleScene {
     }
     #endif
     #if os(OSX)
-    override func touchesBegan(with event: NSEvent) {
+    override func mouseDown(with event: NSEvent) {
         touchDown(atPoint: event.location(in: self))
     }
     #endif

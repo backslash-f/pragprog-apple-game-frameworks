@@ -31,7 +31,7 @@ extension GameOverScene {
     }
     #endif
     #if os(OSX)
-    override func touchesBegan(with event: NSEvent) {
+    override func mouseDown(with event: NSEvent) {
         touchDown(atPoint: event.location(in: self))
     }
     #endif
