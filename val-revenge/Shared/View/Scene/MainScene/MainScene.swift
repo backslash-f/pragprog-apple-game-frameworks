@@ -126,6 +126,7 @@ extension MainScene {
         super.didMove(to: view)
         setupState()
         setupPlayer()
+        setupMusic()
         setupCamera()
         setupTiles()
         startAdvancedNavigation()
@@ -183,6 +184,20 @@ private extension MainScene {
         if let controllerAttack = controllerAttack {
             addChild(controllerAttack)
         }
+    }
+
+    func setupMusic() {
+        let musicNode = SKAudioNode(fileNamed: "music")
+        musicNode.isPositional = false
+
+        // Make the audio node positional so that the music gets louder as the player gets closer to the exit.
+        if let exit = childNode(withName: "exit") {
+            musicNode.position = exit.position
+            musicNode.isPositional = true
+            listener = player
+        }
+        
+        addChild(musicNode)
     }
 
     func setupCamera() {
