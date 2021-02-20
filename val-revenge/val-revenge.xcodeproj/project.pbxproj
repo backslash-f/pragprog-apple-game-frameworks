@@ -64,6 +64,12 @@
 		074E952C258276D200A4E89D /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E952B258276D200A4E89D /* MainScene+InputController.swift */; };
 		074E952D258276D200A4E89D /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E952B258276D200A4E89D /* MainScene+InputController.swift */; };
 		074E952E258276D200A4E89D /* MainScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E952B258276D200A4E89D /* MainScene+InputController.swift */; };
+		0755C70A25E17143003E2D85 /* MenuScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0755C70925E17143003E2D85 /* MenuScene+InputController.swift */; };
+		0755C70B25E17143003E2D85 /* MenuScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0755C70925E17143003E2D85 /* MenuScene+InputController.swift */; };
+		0755C70C25E17143003E2D85 /* MenuScene+InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0755C70925E17143003E2D85 /* MenuScene+InputController.swift */; };
+		0755C71225E17175003E2D85 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0755C71125E17175003E2D85 /* MenuScene.swift */; };
+		0755C71325E17175003E2D85 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0755C71125E17175003E2D85 /* MenuScene.swift */; };
+		0755C71425E17175003E2D85 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0755C71125E17175003E2D85 /* MenuScene.swift */; };
 		0756E316258E99A3002203C8 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0756E315258E99A3002203C8 /* music.mp3 */; };
 		0756E317258E99A3002203C8 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0756E315258E99A3002203C8 /* music.mp3 */; };
 		0756E318258E99A3002203C8 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0756E315258E99A3002203C8 /* music.mp3 */; };
@@ -211,6 +217,8 @@
 		074CCA17257FAE5F00EA60BB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		074CCA28257FB03200EA60BB /* Constant+Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Nodes.swift"; sourceTree = "<group>"; };
 		074E952B258276D200A4E89D /* MainScene+InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScene+InputController.swift"; sourceTree = "<group>"; };
+		0755C70925E17143003E2D85 /* MenuScene+InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MenuScene+InputController.swift"; path = "Shared/View/Scene/MenuScene/MenuScene+InputController.swift"; sourceTree = SOURCE_ROOT; };
+		0755C71125E17175003E2D85 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		0756E315258E99A3002203C8 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		0756E31C258E99BA002203C8 /* treasure.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = treasure.mp3; sourceTree = "<group>"; };
 		0756E31D258E99BA002203C8 /* throw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = throw.mp3; sourceTree = "<group>"; };
@@ -337,6 +345,15 @@
 				07305B0E25B59E7B0038EA11 /* Player+Attack.swift */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		0755C71025E17151003E2D85 /* MenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				0755C71125E17175003E2D85 /* MenuScene.swift */,
+				0755C70925E17143003E2D85 /* MenuScene+InputController.swift */,
+			);
+			path = MenuScene;
 			sourceTree = "<group>";
 		};
 		0756E313258E9988002203C8 /* Music */ = {
@@ -516,6 +533,7 @@
 		079ADAD8257E26FE0018D7F0 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				0755C71025E17151003E2D85 /* MenuScene */,
 				07B7A42025DB03A300D33E03 /* TitlteScene */,
 				079ADAD9257E270B0018D7F0 /* MainScene */,
 				07B7A42125DB03A800D33E03 /* GameOverScene */,
@@ -855,6 +873,7 @@
 				079ADAC7257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA18257FAE5F00EA60BB /* Player.swift in Sources */,
 				070D082F2599E75F0039A256 /* CollectibleComponent.swift in Sources */,
+				0755C70A25E17143003E2D85 /* MenuScene+InputController.swift in Sources */,
 				074CCA29257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				07727E7625A308FC00411322 /* MainGameStates.swift in Sources */,
 				0768BD11257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
@@ -868,6 +887,7 @@
 				0704E1CA25DA6CD70054C442 /* GameOverScene.swift in Sources */,
 				0798A10525924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB592592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
+				0755C71225E17175003E2D85 /* MenuScene.swift in Sources */,
 				0706AB4F259222060076A6B4 /* GeneratorComponent.swift in Sources */,
 				0704E1C725DA6CD70054C442 /* TitleScene.swift in Sources */,
 				070D08392599F0630039A256 /* PhysicsComponent.swift in Sources */,
@@ -901,6 +921,7 @@
 				079ADAC8257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA19257FAE5F00EA60BB /* Player.swift in Sources */,
 				070D08302599E75F0039A256 /* CollectibleComponent.swift in Sources */,
+				0755C70B25E17143003E2D85 /* MenuScene+InputController.swift in Sources */,
 				074CCA2A257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				07727E7725A308FC00411322 /* MainGameStates.swift in Sources */,
 				0768BD12257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
@@ -914,6 +935,7 @@
 				0704E1CB25DA6CD70054C442 /* GameOverScene.swift in Sources */,
 				0798A10625924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB5A2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
+				0755C71325E17175003E2D85 /* MenuScene.swift in Sources */,
 				0706AB50259222060076A6B4 /* GeneratorComponent.swift in Sources */,
 				0704E1C825DA6CD70054C442 /* TitleScene.swift in Sources */,
 				070D083A2599F0630039A256 /* PhysicsComponent.swift in Sources */,
@@ -947,6 +969,7 @@
 				079ADAC9257E26AE0018D7F0 /* ValsRevenge.swift in Sources */,
 				074CCA1A257FAE5F00EA60BB /* Player.swift in Sources */,
 				070D08312599E75F0039A256 /* CollectibleComponent.swift in Sources */,
+				0755C70C25E17143003E2D85 /* MenuScene+InputController.swift in Sources */,
 				074CCA2B257FB03200EA60BB /* Constant+Nodes.swift in Sources */,
 				07727E7825A308FC00411322 /* MainGameStates.swift in Sources */,
 				0768BD13257FBC2500628758 /* MainScene+InputTouch.swift in Sources */,
@@ -960,6 +983,7 @@
 				0704E1CC25DA6CD70054C442 /* GameOverScene.swift in Sources */,
 				0798A10725924A85002970F7 /* GameObjects.swift in Sources */,
 				0706AB5B2592224D0076A6B4 /* GKComponent+Extensions.swift in Sources */,
+				0755C71425E17175003E2D85 /* MenuScene.swift in Sources */,
 				0706AB51259222060076A6B4 /* GeneratorComponent.swift in Sources */,
 				0704E1C925DA6CD70054C442 /* TitleScene.swift in Sources */,
 				070D083B2599F0630039A256 /* PhysicsComponent.swift in Sources */,

@@ -9,17 +9,12 @@
 import SpriteKit
 import GameplayKit
 
-class TitleScene: SKScene {
+class TitleScene: MenuScene {
 
     private var newGameButton: SKSpriteNode!
     private var loadGameButton: SKSpriteNode!
 
     // MARK: - Lifecycle
-
-    override func sceneDidLoad() {
-        super.sceneDidLoad()
-        scaleMode = .aspectFill
-    }
 
     override func didMove(to view: SKView) {
         newGameButton = childNode(withName: "newGameButton") as? SKSpriteNode
@@ -48,6 +43,8 @@ extension TitleScene {
 // MARK: - Private
 
 private extension TitleScene {
+
+    // MARK: - Responder
 
     func touchDown(atPoint cgPoint: CGPoint) {
         #if os(iOS) || os(tvOS)

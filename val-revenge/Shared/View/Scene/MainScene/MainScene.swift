@@ -196,7 +196,7 @@ private extension MainScene {
             musicNode.isPositional = true
             listener = player
         }
-        
+
         addChild(musicNode)
     }
 

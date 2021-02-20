@@ -25,14 +25,14 @@ private extension TitleSceneView {
 
     func makeScene() -> SKScene {
 
-        // Load 'TitleScene.sks' as a GKScene. This provides gameplay related content including entities and graphs.
+        // Load 'TitleScene.sks' as a GKScene.
         guard let gkScene = GKScene(fileNamed: Constant.Scene.TitleScene.name) else {
             let errorMessage = "Could not load \"TitleScene.sks\" as \"GKScene\""
             ValsRevenge.logError(errorMessage)
             fatalError(errorMessage)
         }
 
-        // Load 'TitleScene.sks' as a GKScene. This provides gameplay related content including entities and graphs.
+        // Load 'gkScene' as a TitleScene.
         guard let titleScene = gkScene.rootNode as? TitleScene else {
             let errorMessage = "Could not load \"TitleScene\" as GKScene's root node"
             ValsRevenge.logError(errorMessage)

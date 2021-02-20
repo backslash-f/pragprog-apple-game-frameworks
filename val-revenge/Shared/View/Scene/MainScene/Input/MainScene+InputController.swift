@@ -26,12 +26,11 @@ extension MainScene {
     }
 
     func setupControllers() {
-        guard let gamepadController = gcOverseer.controllers().last,
-              let extendedGamepadController = gamepadController.extendedGamepad else {
+        guard let extendedGamepadController = gcOverseer.controllers().compactMap({ $0.extendedGamepad }).first else {
             ValsRevenge.log("No extended gamepad controllers detected", category: .inputController)
             return // Micro controllers are not supported for this game.
         }
-        gamepadController.playerIndex = .index1
+        extendedGamepadController.controller?.playerIndex = .index1
         setup(extendedGamepadController)
     }
 }

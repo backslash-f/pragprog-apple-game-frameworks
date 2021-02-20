@@ -9,10 +9,12 @@
 import SpriteKit
 import GameplayKit
 
-class GameOverScene: SKScene {
+class GameOverScene: MenuScene {
 
     private var newGameButton: SKSpriteNode!
     private var loadGameButton: SKSpriteNode!
+
+    // MARK: - Lifecycle
 
     override func didMove(to view: SKView) {
         newGameButton = childNode(withName: "newGameButton") as? SKSpriteNode
@@ -40,6 +42,10 @@ extension GameOverScene {
 // MARK: - Private
 
 private extension GameOverScene {
+
+    // MARK: - Setup
+
+    // MARK: - Responder
 
     func touchDown(atPoint cgPoint: CGPoint) {
         #if os(iOS) || os(tvOS)

@@ -69,12 +69,20 @@ extension SKScene {
         // Create actions to load the game over scene
         let wait = SKAction.wait(forDuration: 0.50)
         let block = SKAction.run {
-            if let scene = GameOverScene(fileNamed: "GameOverScene") {
-                scene.scaleMode = .aspectFill
-                self.view?.presentScene(scene, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
-            } else {
-                ValsRevenge.log("Can't load game over scene.", category: .scene)
+            // Load 'GameOverScene.sks' as a GKScene.
+            guard let gkScene = GKScene(fileNamed: Constant.Scene.GameOverScene.name) else {
+                let errorMessage = "Could not load \"GameOverScene.sks\" as \"GKScene\""
+                ValsRevenge.logError(errorMessage)
+                fatalError(errorMessage)
             }
+            // Load 'gkScene' as a 'GameOverScene'.
+            guard let gameOverScene = gkScene.rootNode as? GameOverScene else {
+                let errorMessage = "Could not load \"GameOverScene\" as GKScene's root node"
+                ValsRevenge.logError(errorMessage)
+                fatalError(errorMessage)
+            }
+            let doorsOpenTransition = SKTransition.doorsOpenHorizontal(withDuration: 1.0)
+            self.view?.presentScene(gameOverScene, transition: doorsOpenTransition)
         }
 
         // Run the actions in sequence.
