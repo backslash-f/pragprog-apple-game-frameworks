@@ -24,6 +24,7 @@
 		04358A75254EEC4200244B70 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04358A74254EEC4200244B70 /* PlayerStates.swift */; };
 		04799959255053B400D6D78D /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04799958255053B400D6D78D /* GameData.swift */; };
 		075C1DB925E2DC19000C9851 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479994E254F230C00D6D78D /* GameKit.framework */; };
+		075C1DBB25E2E977000C9851 /* GameKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C1DBA25E2E977000C9851 /* GameKitHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		04358A74254EEC4200244B70 /* PlayerStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStates.swift; sourceTree = "<group>"; };
 		0479994E254F230C00D6D78D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		04799958255053B400D6D78D /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		075C1DBA25E2E977000C9851 /* GameKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKitHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +82,15 @@
 		042BFCE82549DA9E001D82EF /* hog */ = {
 			isa = PBXGroup;
 			children = (
-				042BFCF12549DA9E001D82EF /* GameViewController.swift */,
-				04799958255053B400D6D78D /* GameData.swift */,
-				042BFCF62549DAA0001D82EF /* Assets.xcassets */,
 				042BFD44254CD3FA001D82EF /* Scenes */,
 				042BFD4E254D8D90001D82EF /* Extensions */,
 				04358A7A254EFDE100244B70 /* States */,
 				0479995B2550545000D6D78D /* Objects */,
+				042BFCF62549DAA0001D82EF /* Assets.xcassets */,
 				042BFCE92549DA9E001D82EF /* AppDelegate.swift */,
+				042BFCF12549DA9E001D82EF /* GameViewController.swift */,
+				04799958255053B400D6D78D /* GameData.swift */,
+				075C1DBA25E2E977000C9851 /* GameKitHelper.swift */,
 				042BFCF32549DA9E001D82EF /* Main.storyboard */,
 				042BFCF82549DAA0001D82EF /* Info.plist */,
 			);
@@ -225,6 +228,7 @@
 				042BFCF02549DA9E001D82EF /* GameScene.swift in Sources */,
 				04358A75254EEC4200244B70 /* PlayerStates.swift in Sources */,
 				04799959255053B400D6D78D /* GameData.swift in Sources */,
+				075C1DBB25E2E977000C9851 /* GameKitHelper.swift in Sources */,
 				042BFD42254CD3EC001D82EF /* GameOverScene.swift in Sources */,
 				042BFCF22549DA9E001D82EF /* GameViewController.swift in Sources */,
 				042BFD05254B70B7001D82EF /* GameModel.swift in Sources */,
