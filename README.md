@@ -9,6 +9,7 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 
 ## Notes
 - Although the chapters in the book target **iOS** only, the projects in this repo target **macOS** 💻 and **tvOS** 📺 too.
+- The exception to this 👆🏻 is `Hog Dice` 🎲, which doesn't make much sense to port or to add controller support. 🙅🏻‍♀️
 - The projects rely on [the new Apple's `SceneView` structure](https://developer.apple.com/documentation/scenekit/sceneview). There is no `AppDelegate`, `ViewControllers` and/or `Storyboards`. We are living in the future. 🔮
 - `SwiftUI` and `Combine` are used whenever possible. 🦾
 - Controller support via [GCOverseer](https://github.com/backslash-f/gcoverseer) is added when possible. 🎮
@@ -24,4 +25,4 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ## Status
 ✅ Gloop Drop  
 ✅ Val's Revenge  
-🔨 Hog
+🔨 Hog Dice
