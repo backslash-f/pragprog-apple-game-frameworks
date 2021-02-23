@@ -66,9 +66,9 @@ class GameOverScene: SKScene {
     let nodeAtPoint = atPoint(pos)
     
     if leaderboardButton.contains(nodeAtPoint) {
-      // TODO: Add code to open Leaderboards
+        GameKitHelper.shared.showGKGameCenter(state: .leaderboards)
     } else if achievementsButton.contains(nodeAtPoint) {
-      // TODO: Add code to open Achievements
+        GameKitHelper.shared.showGKGameCenter(state: .achievements)
     } else if lobbyButton.contains(nodeAtPoint) {
       loadLobbyScene()
     }

@@ -66,7 +66,7 @@ class LobbyScene: SKScene {
     } else if findMatchButton.contains(nodeAtPoint) {
       // TODO: Add code to open find match
     } else if gameCenterButton.contains(nodeAtPoint) {
-      // TODO: Add code to open Game Center
+        GameKitHelper.shared.showGKGameCenter(state: .dashboard)
     }
     
     // ** TEST CODE (For Simulator Only) **

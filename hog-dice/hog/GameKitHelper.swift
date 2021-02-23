@@ -19,6 +19,8 @@ class GameKitHelper: NSObject {
     // Game Center & GameKit Related View Controllers.
     var authenticationViewController: UIViewController?
 
+    var gameCenterViewController: GKGameCenterViewController?
+
     // MARK: - GameCenter
 
     func authenticateLocalPlayer() {
@@ -65,8 +67,37 @@ class GameKitHelper: NSObject {
     }
 }
 
+// MARK: - GKGameCenterControllerDelegate
+
+extension GameKitHelper: GKGameCenterControllerDelegate {
+
+    // Show the Game Center View Controller.
+    func showGKGameCenter(state: GKGameCenterViewControllerState) {
+        guard GKLocalPlayer.local.isAuthenticated else {
+            return
+        }
+
+        // Prepare for new controller.
+        gameCenterViewController = nil
+
+        // Create the instance of the controller.
+        gameCenterViewController = GKGameCenterViewController(state: state)
+
+        // Set the delegate.
+        gameCenterViewController?.gameCenterDelegate = self
+
+        // Post the notification.
+        NotificationCenter.default.post(name: .presentGameCenterViewController, object: self)
+    }
+
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+}
+
 // MARK: - Notification Extension
 
 extension Notification.Name {
     static let presentAuthenticationViewController = Notification.Name("presentAuthenticationViewController")
+    static let presentGameCenterViewController = Notification.Name("presentGameCenterViewController")
 }

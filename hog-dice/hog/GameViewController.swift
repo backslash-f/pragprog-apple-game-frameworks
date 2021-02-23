@@ -17,8 +17,16 @@ class GameViewController: UIViewController {
         // Add Game Center Observers.
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.showAuthenticationViewController),
-            name: .presentAuthenticationViewController, object: nil
+            selector: #selector(showAuthenticationViewController),
+            name: .presentAuthenticationViewController,
+            object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(showGameCenterViewController),
+            name: .presentGameCenterViewController,
+            object: nil
         )
 
         // Authenticate the Local GC Player.
@@ -60,6 +68,12 @@ class GameViewController: UIViewController {
 
     @objc func showAuthenticationViewController() {
         if let viewController = GameKitHelper.shared.authenticationViewController {
+            present(viewController, animated: true, completion: nil)
+        }
+    }
+
+    @objc func showGameCenterViewController() {
+        if let viewController = GameKitHelper.shared.gameCenterViewController {
             present(viewController, animated: true, completion: nil)
         }
     }
