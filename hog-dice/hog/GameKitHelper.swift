@@ -21,6 +21,9 @@ class GameKitHelper: NSObject {
 
     var gameCenterViewController: GKGameCenterViewController?
 
+    // Leaderboard IDs.
+    static let leaderBoardIDMostWins = "com.backslashf.hogdice.leaderboards.mostwins"
+
     // MARK: - GameCenter
 
     func authenticateLocalPlayer() {
@@ -65,12 +68,52 @@ class GameKitHelper: NSObject {
             // Perform any other configurations as needed...
         }
     }
+
+    // Report Score
+    func reportScore(score: Int, forLeaderboardID leaderboardID: String, errorHandler: ((Error?)->Void)? = nil) {
+        guard GKLocalPlayer.local.isAuthenticated else {
+            return
+        }
+        GKLeaderboard.submitScore(
+            score,
+            context: 0,
+            player: GKLocalPlayer.local,
+            leaderboardIDs: [leaderboardID],
+            completionHandler: errorHandler ?? { error in
+                print("error: \(String(describing: error))")
+            }
+        )
+    }
+
+    // Report Achievement
+    func reportAchievements(achievements: [GKAchievement], errorHandler: ((Error?)->Void)? = nil) {
+        guard GKLocalPlayer.local.isAuthenticated else {
+            return
+        }
+        GKAchievement.report(achievements, withCompletionHandler: errorHandler)
+    }
+}
+
+// MARK: - Achievements
+
+class AchievementsHelper {
+    static let achievementIdFirstWin = "com.backslashf.hogdice.achievements.firstwin"
+
+    class func firstWinAchievement(didWin: Bool) -> GKAchievement {
+        let achievement = GKAchievement(identifier: AchievementsHelper.achievementIdFirstWin)
+
+        if didWin {
+            achievement.percentComplete = 100
+            achievement.showsCompletionBanner = true
+        }
+        return achievement
+    }
 }
 
 // MARK: - GKGameCenterControllerDelegate
 
 extension GameKitHelper: GKGameCenterControllerDelegate {
-
+    
     // Show the Game Center View Controller.
     func showGKGameCenter(state: GKGameCenterViewControllerState) {
         guard GKLocalPlayer.local.isAuthenticated else {
