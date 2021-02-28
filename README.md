@@ -26,3 +26,8 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ✅ Gloop Drop  
 ✅ Val's Revenge  
 ✅ Hog Dice
+
+## Trivia
+This repo is approved by Dr. Steve Brule
+
+<img src="https://i.imgur.com/ekJ5CEn.png" width="500">
