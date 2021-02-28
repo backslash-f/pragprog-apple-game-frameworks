@@ -25,4 +25,4 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ## Status
 ✅ Gloop Drop  
 ✅ Val's Revenge  
-🔨 Hog Dice
+✅ Hog Dice
