@@ -28,6 +28,6 @@ Repo for the projects in the book "*Apple Game Frameworks and Technologies - Bui
 ✅ Hog Dice
 
 ## Trivia
-This repo is approved by Dr. Steve Brule
+This repo is approved by _Dr. Steve Brule_.
 
 <img src="https://i.imgur.com/ekJ5CEn.png" width="500">
