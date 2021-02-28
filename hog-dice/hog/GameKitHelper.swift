@@ -21,6 +21,11 @@ class GameKitHelper: NSObject {
 
     var gameCenterViewController: GKGameCenterViewController?
 
+    var matchmakerViewController: GKTurnBasedMatchmakerViewController?
+
+    // Turn-based match properties
+    var currentMatch: GKTurnBasedMatch?
+
     // Leaderboard IDs.
     static let leaderBoardIDMostWins = "com.backslashf.hogdice.leaderboards.mostwins"
 
@@ -44,6 +49,8 @@ class GameKitHelper: NSObject {
                 // Player could not be authenticated.
                 // Disable Game Center in the game.
                 return
+            } else if GKLocalPlayer.local.isAuthenticated {
+                GKLocalPlayer.local.register(self)
             }
 
             // Player was successfully authenticated.
@@ -138,9 +145,104 @@ extension GameKitHelper: GKGameCenterControllerDelegate {
     }
 }
 
+// MARK: - GKTurnBasedMatchmakerViewControllerDelegate
+
+extension GameKitHelper: GKTurnBasedMatchmakerViewControllerDelegate {
+
+    func turnBasedMatchmakerViewControllerWasCancelled(_ viewController: GKTurnBasedMatchmakerViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+
+    func turnBasedMatchmakerViewController(_ viewController: GKTurnBasedMatchmakerViewController, didFailWithError error: Error) {
+        print("MatchmakerViewController failed with error: \(error)")
+    }
+
+    // Show the Turn Based Matchmaker View Controller (Find Match)
+    func findMatch() {
+        guard GKLocalPlayer.local.isAuthenticated else {
+            return
+        }
+
+        let request = GKMatchRequest()
+        request.minPlayers = 2
+        request.maxPlayers = 2
+        request.defaultNumberOfPlayers = 2
+
+        request.inviteMessage = "Do you want to play Hog Dice?"
+
+        matchmakerViewController = nil
+
+        matchmakerViewController = GKTurnBasedMatchmakerViewController(matchRequest: request)
+        matchmakerViewController?.turnBasedMatchmakerDelegate = self
+
+        NotificationCenter.default.post(name: .presentTurnBasedGameCenterViewController, object: nil)
+    }
+}
+
+// MARK: - GKLocalPlayerListener
+
+extension GameKitHelper: GKLocalPlayerListener {
+
+    func player(_ player: GKPlayer, receivedTurnEventFor match: GKTurnBasedMatch, didBecomeActive: Bool) {
+        matchmakerViewController?.dismiss(animated: true, completion: nil)
+        NotificationCenter.default.post(name: .receivedTurnEvent, object: match)
+    }
+
+    // Is it the player's turn?
+    func canTakeTurn() -> Bool {
+        guard let match = currentMatch else {
+            return false
+        }
+        return match.currentParticipant?.player == GKLocalPlayer.local
+    }
+
+    // The player's turn has ended
+    func endTurn(_ gcDataModel: GameCenterData, errorHandler: ((Error?)->Void)? = nil) {
+        guard let match = currentMatch else {
+            return
+        }
+        do {
+            match.message = nil
+            match.endTurn(withNextParticipants: match.opponents,
+                          turnTimeout: GKExchangeTimeoutDefault,
+                          match: try JSONEncoder().encode(gcDataModel),
+                          completionHandler: errorHandler)
+            print("Game Center Data has been sent.")
+        } catch {
+            print("There was an error sending the match data: \(error)")
+        }
+    }
+
+    // The player won the game.
+    func winGame(_ gcDataModel: GameCenterData, errorHandler: ((Error?)->Void)? = nil) {
+        guard let match = currentMatch else {
+            return
+        }
+        match.currentParticipant?.matchOutcome = .won
+        match.opponents.forEach { participant in
+            participant.matchOutcome = .lost
+        }
+        match.endMatchInTurn(withMatch: match.matchData ?? Data(), completionHandler: { error in })
+    }
+
+    // The player lost the game.
+    func lostGame(_ gcDataModel: GameCenterData, errorHandler: ((Error?)->Void)? = nil) {
+        guard let match = currentMatch else {
+            return
+        }
+        match.currentParticipant?.matchOutcome = .lost
+        match.opponents.forEach { participant in
+            participant.matchOutcome = .won
+        }
+        match.endMatchInTurn(withMatch: match.matchData ?? Data(), completionHandler: { error in })
+    }
+}
+
 // MARK: - Notification Extension
 
 extension Notification.Name {
     static let presentAuthenticationViewController = Notification.Name("presentAuthenticationViewController")
     static let presentGameCenterViewController = Notification.Name("presentGameCenterViewController")
+    static let presentTurnBasedGameCenterViewController = Notification.Name("presentTurnBasedGameCenterViewController")
+    static let receivedTurnEvent = Notification.Name("receivedTurnEvent")
 }

@@ -29,6 +29,13 @@ class GameViewController: UIViewController {
             object: nil
         )
 
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.showTurnBasedMatchmakerViewController),
+            name: .presentTurnBasedGameCenterViewController,
+            object: nil
+        )
+
         // Authenticate the Local GC Player.
         GameKitHelper.shared.authenticateLocalPlayer()
 
@@ -74,6 +81,12 @@ class GameViewController: UIViewController {
 
     @objc func showGameCenterViewController() {
         if let viewController = GameKitHelper.shared.gameCenterViewController {
+            present(viewController, animated: true, completion: nil)
+        }
+    }
+
+    @objc func showTurnBasedMatchmakerViewController() {
+        if let viewController = GameKitHelper.shared.matchmakerViewController {
             present(viewController, animated: true, completion: nil)
         }
     }

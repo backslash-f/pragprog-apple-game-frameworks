@@ -23,6 +23,9 @@
 		042BFD4B254D88A6001D82EF /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 042BFD4A254D88A6001D82EF /* GameOverScene.sks */; };
 		04358A75254EEC4200244B70 /* PlayerStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04358A74254EEC4200244B70 /* PlayerStates.swift */; };
 		04799959255053B400D6D78D /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04799958255053B400D6D78D /* GameData.swift */; };
+		073EA01A25EBA91500571F19 /* GameKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EA01925EBA91500571F19 /* GameKit+Extensions.swift */; };
+		073EA01D25EBA9C600571F19 /* GameCenterPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EA01C25EBA9C600571F19 /* GameCenterPlayer.swift */; };
+		073EA02125EBAA1600571F19 /* GameCenterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EA02025EBAA1600571F19 /* GameCenterData.swift */; };
 		075C1DB925E2DC19000C9851 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479994E254F230C00D6D78D /* GameKit.framework */; };
 		075C1DBB25E2E977000C9851 /* GameKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C1DBA25E2E977000C9851 /* GameKitHelper.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,9 @@
 		04358A74254EEC4200244B70 /* PlayerStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStates.swift; sourceTree = "<group>"; };
 		0479994E254F230C00D6D78D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		04799958255053B400D6D78D /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		073EA01925EBA91500571F19 /* GameKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameKit+Extensions.swift"; sourceTree = "<group>"; };
+		073EA01C25EBA9C600571F19 /* GameCenterPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterPlayer.swift; sourceTree = "<group>"; };
+		073EA02025EBAA1600571F19 /* GameCenterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterData.swift; sourceTree = "<group>"; };
 		075C1DBA25E2E977000C9851 /* GameKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKitHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,10 +88,11 @@
 		042BFCE82549DA9E001D82EF /* hog */ = {
 			isa = PBXGroup;
 			children = (
-				042BFD44254CD3FA001D82EF /* Scenes */,
 				042BFD4E254D8D90001D82EF /* Extensions */,
-				04358A7A254EFDE100244B70 /* States */,
+				073EA02325EBAA2B00571F19 /* GameCenter */,
 				0479995B2550545000D6D78D /* Objects */,
+				042BFD44254CD3FA001D82EF /* Scenes */,
+				04358A7A254EFDE100244B70 /* States */,
 				042BFCF62549DAA0001D82EF /* Assets.xcassets */,
 				042BFCE92549DA9E001D82EF /* AppDelegate.swift */,
 				042BFCF12549DA9E001D82EF /* GameViewController.swift */,
@@ -123,6 +130,7 @@
 			children = (
 				042BFD3E254CCF0B001D82EF /* SKScene+SceneManager.swift */,
 				042BFD0D254C729C001D82EF /* SKTexture+LoadTextures.swift */,
+				073EA01925EBA91500571F19 /* GameKit+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +158,15 @@
 				042BFD36254CA17A001D82EF /* Player.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		073EA02325EBAA2B00571F19 /* GameCenter */ = {
+			isa = PBXGroup;
+			children = (
+				073EA01C25EBA9C600571F19 /* GameCenterPlayer.swift */,
+				073EA02025EBAA1600571F19 /* GameCenterData.swift */,
+			);
+			path = GameCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,16 +241,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073EA02125EBAA1600571F19 /* GameCenterData.swift in Sources */,
 				042BFD0E254C729D001D82EF /* SKTexture+LoadTextures.swift in Sources */,
 				042BFCF02549DA9E001D82EF /* GameScene.swift in Sources */,
 				04358A75254EEC4200244B70 /* PlayerStates.swift in Sources */,
 				04799959255053B400D6D78D /* GameData.swift in Sources */,
+				073EA01A25EBA91500571F19 /* GameKit+Extensions.swift in Sources */,
 				075C1DBB25E2E977000C9851 /* GameKitHelper.swift in Sources */,
 				042BFD42254CD3EC001D82EF /* GameOverScene.swift in Sources */,
 				042BFCF22549DA9E001D82EF /* GameViewController.swift in Sources */,
 				042BFD05254B70B7001D82EF /* GameModel.swift in Sources */,
 				042BFD37254CA17A001D82EF /* Player.swift in Sources */,
 				042BFCEA2549DA9E001D82EF /* AppDelegate.swift in Sources */,
+				073EA01D25EBA9C600571F19 /* GameCenterPlayer.swift in Sources */,
 				042BFD46254CD422001D82EF /* LobbyScene.swift in Sources */,
 				042BFD3F254CCF0B001D82EF /* SKScene+SceneManager.swift in Sources */,
 			);
